@@ -29,9 +29,9 @@ namespace CapaPresentacion
             textBoxEmail.Text = "";
             textBoxPass.Text = "";
 
-            this.Close(); //cuando el formulario principal se cierra tambien se cierra el programa
+            //this.Close(); //cuando el formulario principal se cierra tambien se cierra el programa
 
-            //this.Show(); //muestra de nuevo el formulario de inicio cuando el principal se cierra
+            this.Show(); //muestra de nuevo el formulario de inicio cuando el principal se cierra
         }
 
         private void BCancelar_Click(object sender, EventArgs e)

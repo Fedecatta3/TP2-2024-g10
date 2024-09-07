@@ -30,36 +30,37 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxApellido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxContactoEmerg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.checkBoxFemenino = new System.Windows.Forms.CheckBox();
             this.checkBoxMasculino = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BConfirmarAlumno = new FontAwesome.Sharp.IconButton();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxCoach = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxTipoMembresia = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -75,13 +76,13 @@ namespace CapaPresentacion
             this.label2.TabIndex = 2;
             this.label2.Text = "NUEVO ALUMNO";
             // 
-            // textBox2
+            // textBoxApellido
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(530, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 24);
-            this.textBox2.TabIndex = 17;
+            this.textBoxApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxApellido.Location = new System.Drawing.Point(530, 80);
+            this.textBoxApellido.Name = "textBoxApellido";
+            this.textBoxApellido.Size = new System.Drawing.Size(240, 24);
+            this.textBoxApellido.TabIndex = 17;
             // 
             // label3
             // 
@@ -105,21 +106,21 @@ namespace CapaPresentacion
             this.label4.TabIndex = 15;
             this.label4.Text = "Apellido *";
             // 
-            // textBox1
+            // textBoxNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(266, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 24);
-            this.textBox1.TabIndex = 16;
+            this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNombre.Location = new System.Drawing.Point(266, 80);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.Size = new System.Drawing.Size(240, 24);
+            this.textBoxNombre.TabIndex = 16;
             // 
-            // textBox3
+            // textBoxDNI
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(266, 135);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 24);
-            this.textBox3.TabIndex = 19;
+            this.textBoxDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDNI.Location = new System.Drawing.Point(266, 135);
+            this.textBoxDNI.Name = "textBoxDNI";
+            this.textBoxDNI.Size = new System.Drawing.Size(240, 24);
+            this.textBoxDNI.TabIndex = 19;
             // 
             // label5
             // 
@@ -132,13 +133,13 @@ namespace CapaPresentacion
             this.label5.TabIndex = 18;
             this.label5.Text = "DNI *";
             // 
-            // textBox5
+            // textBoxEmail
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(266, 190);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(240, 24);
-            this.textBox5.TabIndex = 24;
+            this.textBoxEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmail.Location = new System.Drawing.Point(266, 190);
+            this.textBoxEmail.Name = "textBoxEmail";
+            this.textBoxEmail.Size = new System.Drawing.Size(240, 24);
+            this.textBoxEmail.TabIndex = 24;
             // 
             // label8
             // 
@@ -183,13 +184,13 @@ namespace CapaPresentacion
             this.label7.TabIndex = 23;
             this.label7.Text = "Sexo";
             // 
-            // textBox6
+            // textBoxContactoEmerg
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(530, 244);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(240, 24);
-            this.textBox6.TabIndex = 27;
+            this.textBoxContactoEmerg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContactoEmerg.Location = new System.Drawing.Point(530, 244);
+            this.textBoxContactoEmerg.Name = "textBoxContactoEmerg";
+            this.textBoxContactoEmerg.Size = new System.Drawing.Size(240, 24);
+            this.textBoxContactoEmerg.TabIndex = 27;
             // 
             // label1
             // 
@@ -212,13 +213,13 @@ namespace CapaPresentacion
             this.textBox7.Size = new System.Drawing.Size(203, 24);
             this.textBox7.TabIndex = 29;
             // 
-            // textBox8
+            // textBoxTelefono
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(266, 244);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(240, 24);
-            this.textBox8.TabIndex = 31;
+            this.textBoxTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTelefono.Location = new System.Drawing.Point(266, 244);
+            this.textBoxTelefono.Name = "textBoxTelefono";
+            this.textBoxTelefono.Size = new System.Drawing.Size(240, 24);
+            this.textBoxTelefono.TabIndex = 31;
             // 
             // label9
             // 
@@ -256,12 +257,13 @@ namespace CapaPresentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.BCancelar);
             this.panel1.Controls.Add(this.BConfirmarAlumno);
-            this.panel1.Controls.Add(this.comboBox3);
+            this.panel1.Controls.Add(this.comboBoxPlan);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.comboBoxCoach);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.comboBoxTipoMembresia);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 367);
@@ -271,7 +273,7 @@ namespace CapaPresentacion
             // 
             // BConfirmarAlumno
             // 
-            this.BConfirmarAlumno.BackColor = System.Drawing.Color.OrangeRed;
+            this.BConfirmarAlumno.BackColor = System.Drawing.Color.Green;
             this.BConfirmarAlumno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BConfirmarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BConfirmarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -291,15 +293,15 @@ namespace CapaPresentacion
             this.BConfirmarAlumno.UseVisualStyleBackColor = false;
             this.BConfirmarAlumno.Click += new System.EventHandler(this.BConfirmarAlumno_Click);
             // 
-            // comboBox3
+            // comboBoxPlan
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(527, 47);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(200, 26);
-            this.comboBox3.TabIndex = 24;
+            this.comboBoxPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPlan.FormattingEnabled = true;
+            this.comboBoxPlan.Location = new System.Drawing.Point(527, 47);
+            this.comboBoxPlan.Name = "comboBoxPlan";
+            this.comboBoxPlan.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxPlan.TabIndex = 24;
             // 
             // label13
             // 
@@ -312,15 +314,15 @@ namespace CapaPresentacion
             this.label13.TabIndex = 25;
             this.label13.Text = "Plan de entrenamiento:";
             // 
-            // comboBox2
+            // comboBoxCoach
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(295, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 26);
-            this.comboBox2.TabIndex = 22;
+            this.comboBoxCoach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCoach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCoach.FormattingEnabled = true;
+            this.comboBoxCoach.Location = new System.Drawing.Point(295, 47);
+            this.comboBoxCoach.Name = "comboBoxCoach";
+            this.comboBoxCoach.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxCoach.TabIndex = 22;
             // 
             // label12
             // 
@@ -333,15 +335,15 @@ namespace CapaPresentacion
             this.label12.TabIndex = 23;
             this.label12.Text = "Coach a cargo:";
             // 
-            // comboBox1
+            // comboBoxTipoMembresia
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(63, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 26);
-            this.comboBox1.TabIndex = 20;
+            this.comboBoxTipoMembresia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoMembresia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoMembresia.FormattingEnabled = true;
+            this.comboBoxTipoMembresia.Location = new System.Drawing.Point(63, 47);
+            this.comboBoxTipoMembresia.Name = "comboBoxTipoMembresia";
+            this.comboBoxTipoMembresia.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxTipoMembresia.TabIndex = 20;
             // 
             // label11
             // 
@@ -354,14 +356,14 @@ namespace CapaPresentacion
             this.label11.TabIndex = 21;
             this.label11.Text = "Tipo membresia:";
             // 
-            // textBox4
+            // textBoxObservaciones
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(266, 298);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(504, 55);
-            this.textBox4.TabIndex = 35;
+            this.textBoxObservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxObservaciones.Location = new System.Drawing.Point(266, 298);
+            this.textBoxObservaciones.Multiline = true;
+            this.textBoxObservaciones.Name = "textBoxObservaciones";
+            this.textBoxObservaciones.Size = new System.Drawing.Size(504, 55);
+            this.textBoxObservaciones.TabIndex = 35;
             // 
             // label10
             // 
@@ -399,6 +401,28 @@ namespace CapaPresentacion
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // BCancelar
+            // 
+            this.BCancelar.BackColor = System.Drawing.Color.Red;
+            this.BCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BCancelar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BCancelar.ForeColor = System.Drawing.Color.White;
+            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
+            this.BCancelar.IconColor = System.Drawing.Color.White;
+            this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BCancelar.IconSize = 35;
+            this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BCancelar.Location = new System.Drawing.Point(487, 89);
+            this.BCancelar.Name = "BCancelar";
+            this.BCancelar.Size = new System.Drawing.Size(135, 35);
+            this.BCancelar.TabIndex = 27;
+            this.BCancelar.Text = "CANCELAR";
+            this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BCancelar.UseVisualStyleBackColor = false;
+            this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
+            // 
             // NuevoAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,22 +430,22 @@ namespace CapaPresentacion
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(790, 507);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBoxObservaciones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.checkBoxMasculino);
             this.Controls.Add(this.checkBoxFemenino);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBoxTelefono);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxContactoEmerg);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxApellido);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxNombre);
+            this.Controls.Add(this.textBoxDNI);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
@@ -445,33 +469,34 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxNombre;
+        private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxContactoEmerg;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkBoxFemenino;
         private System.Windows.Forms.CheckBox checkBoxMasculino;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxObservaciones;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxPlan;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxCoach;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxTipoMembresia;
         private System.Windows.Forms.Label label11;
         private FontAwesome.Sharp.IconButton BConfirmarAlumno;
+        private FontAwesome.Sharp.IconButton BCancelar;
     }
 }

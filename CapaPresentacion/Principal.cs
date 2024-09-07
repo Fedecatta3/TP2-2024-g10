@@ -91,5 +91,40 @@ namespace CapaPresentacion
             //textBoxFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
             //textBoxFecha.Text = DateTime.Now.ToString("dddd, dd MMMM yyyy");
         }
+
+        private void menuMantenimiento_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, null, new Mantenimiento());
+        }
+
+        private void nuevoPlanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void subMenuVerPlanes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuPagos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuReportes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuBackUp_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuAcercaDe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,14 +32,13 @@ namespace CapaPresentacion
             this.menuOpciones = new System.Windows.Forms.MenuStrip();
             this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.menuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
-            this.subMenuMembresias = new FontAwesome.Sharp.IconMenuItem();
             this.menuAlumnos = new FontAwesome.Sharp.IconMenuItem();
             this.subMenuNuevoAlumno = new FontAwesome.Sharp.IconMenuItem();
             this.subMenuListaAlumnos = new FontAwesome.Sharp.IconMenuItem();
             this.menuPlanes = new FontAwesome.Sharp.IconMenuItem();
             this.menuPagos = new FontAwesome.Sharp.IconMenuItem();
             this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
-            this.menuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
+            this.menuBackUp = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.contenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,6 +46,9 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.BCerrarSesion = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.nuevoPlanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.subMenuVerPlanes = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAcercaDe = new FontAwesome.Sharp.IconMenuItem();
             this.menuOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +65,7 @@ namespace CapaPresentacion
             this.menuPlanes,
             this.menuPagos,
             this.menuReportes,
+            this.menuBackUp,
             this.menuAcercaDe});
             this.menuOpciones.Location = new System.Drawing.Point(0, 93);
             this.menuOpciones.Name = "menuOpciones";
@@ -90,8 +93,6 @@ namespace CapaPresentacion
             // menuMantenimiento
             // 
             this.menuMantenimiento.AutoSize = false;
-            this.menuMantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subMenuMembresias});
             this.menuMantenimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuMantenimiento.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
             this.menuMantenimiento.IconColor = System.Drawing.Color.Black;
@@ -102,15 +103,7 @@ namespace CapaPresentacion
             this.menuMantenimiento.Name = "menuMantenimiento";
             this.menuMantenimiento.Size = new System.Drawing.Size(220, 54);
             this.menuMantenimiento.Text = "Mantenimiento";
-            // 
-            // subMenuMembresias
-            // 
-            this.subMenuMembresias.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.subMenuMembresias.IconColor = System.Drawing.Color.Black;
-            this.subMenuMembresias.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.subMenuMembresias.Name = "subMenuMembresias";
-            this.subMenuMembresias.Size = new System.Drawing.Size(188, 30);
-            this.subMenuMembresias.Text = "Membresias";
+            this.menuMantenimiento.Click += new System.EventHandler(this.menuMantenimiento_Click);
             // 
             // menuAlumnos
             // 
@@ -152,6 +145,9 @@ namespace CapaPresentacion
             // menuPlanes
             // 
             this.menuPlanes.AutoSize = false;
+            this.menuPlanes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoPlanToolStripMenuItem,
+            this.subMenuVerPlanes});
             this.menuPlanes.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuPlanes.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
             this.menuPlanes.IconColor = System.Drawing.Color.Black;
@@ -176,6 +172,7 @@ namespace CapaPresentacion
             this.menuPagos.Name = "menuPagos";
             this.menuPagos.Size = new System.Drawing.Size(220, 54);
             this.menuPagos.Text = "Pagos";
+            this.menuPagos.Click += new System.EventHandler(this.menuPagos_Click);
             // 
             // menuReportes
             // 
@@ -190,20 +187,22 @@ namespace CapaPresentacion
             this.menuReportes.Name = "menuReportes";
             this.menuReportes.Size = new System.Drawing.Size(220, 54);
             this.menuReportes.Text = "Reportes";
+            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
             // 
-            // menuAcercaDe
+            // menuBackUp
             // 
-            this.menuAcercaDe.AutoSize = false;
-            this.menuAcercaDe.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAcercaDe.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            this.menuAcercaDe.IconColor = System.Drawing.Color.Black;
-            this.menuAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuAcercaDe.IconSize = 50;
-            this.menuAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuAcercaDe.Name = "menuAcercaDe";
-            this.menuAcercaDe.Size = new System.Drawing.Size(220, 54);
-            this.menuAcercaDe.Text = "Acerca de";
+            this.menuBackUp.AutoSize = false;
+            this.menuBackUp.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBackUp.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
+            this.menuBackUp.IconColor = System.Drawing.Color.Black;
+            this.menuBackUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuBackUp.IconSize = 50;
+            this.menuBackUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuBackUp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuBackUp.Name = "menuBackUp";
+            this.menuBackUp.Size = new System.Drawing.Size(220, 54);
+            this.menuBackUp.Text = " Back-Up";
+            this.menuBackUp.Click += new System.EventHandler(this.menuBackUp_Click);
             // 
             // menuTitulo
             // 
@@ -299,16 +298,45 @@ namespace CapaPresentacion
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
+            // nuevoPlanToolStripMenuItem
+            // 
+            this.nuevoPlanToolStripMenuItem.Name = "nuevoPlanToolStripMenuItem";
+            this.nuevoPlanToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.nuevoPlanToolStripMenuItem.Text = "Nuevo plan";
+            this.nuevoPlanToolStripMenuItem.Click += new System.EventHandler(this.nuevoPlanToolStripMenuItem_Click);
+            // 
+            // subMenuVerPlanes
+            // 
+            this.subMenuVerPlanes.Name = "subMenuVerPlanes";
+            this.subMenuVerPlanes.Size = new System.Drawing.Size(183, 30);
+            this.subMenuVerPlanes.Text = "Ver planes";
+            this.subMenuVerPlanes.Click += new System.EventHandler(this.subMenuVerPlanes_Click);
+            // 
+            // menuAcercaDe
+            // 
+            this.menuAcercaDe.AutoSize = false;
+            this.menuAcercaDe.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuAcercaDe.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.menuAcercaDe.IconColor = System.Drawing.Color.Black;
+            this.menuAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuAcercaDe.IconSize = 50;
+            this.menuAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuAcercaDe.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuAcercaDe.Name = "menuAcercaDe";
+            this.menuAcercaDe.Size = new System.Drawing.Size(220, 54);
+            this.menuAcercaDe.Text = "Acerca de";
+            this.menuAcercaDe.Click += new System.EventHandler(this.menuAcercaDe_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BCerrarSesion);
-            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.menuOpciones);
             this.Controls.Add(this.menuTitulo);
@@ -335,16 +363,18 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconMenuItem menuPlanes;
         private FontAwesome.Sharp.IconMenuItem menuPagos;
         private FontAwesome.Sharp.IconMenuItem menuReportes;
-        private FontAwesome.Sharp.IconMenuItem menuAcercaDe;
+        private FontAwesome.Sharp.IconMenuItem menuBackUp;
         private System.Windows.Forms.Panel contenedor;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton BCerrarSesion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconMenuItem subMenuMembresias;
         private FontAwesome.Sharp.IconMenuItem subMenuNuevoAlumno;
         private FontAwesome.Sharp.IconMenuItem subMenuListaAlumnos;
+        private System.Windows.Forms.ToolStripMenuItem nuevoPlanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem subMenuVerPlanes;
+        private FontAwesome.Sharp.IconMenuItem menuAcercaDe;
     }
 }
 

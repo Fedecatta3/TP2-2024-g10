@@ -27,5 +27,27 @@ namespace CapaPresentacion
                 var resultado = modal.ShowDialog();
             }
         }
+
+        private void BCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Seguro desea eliminar todos los datos ingresados?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                textBoxNombre.Clear();
+                textBoxApellido.Clear();
+                textBoxDNI.Clear();
+                textBoxEmail.Clear();
+                textBoxTelefono.Clear();
+                textBoxContactoEmerg.Clear();
+                textBoxObservaciones.Clear();
+                checkBoxFemenino.Checked = false;
+                checkBoxMasculino.Checked = false;
+                dateTimePicker1.Value = DateTime.Now;
+                comboBoxCoach.SelectedIndex = -1;
+                comboBoxPlan.SelectedIndex = -1;
+                comboBoxTipoMembresia.SelectedIndex = -1;
+                pictureBox1.Image = null;
+            }
+        }
     }
 }
