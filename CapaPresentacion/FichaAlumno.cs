@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class ListaAlumnos : Form
+    public partial class FichaAlumno : Form
     {
-        public ListaAlumnos()
+        public FichaAlumno()
         {
             InitializeComponent();
         }
 
-        private void BVerFicha_Click(object sender, EventArgs e)
+        private void BCobrarCuota_Click(object sender, EventArgs e)
         {
-            //Modal para ver ficha del alumno
-            using (var modal = new FichaAlumno())
+            //Modal para cobrar cuota del alumno
+            using (var modal = new CobrarCuotaAlumno())
             {
                 var resultado = modal.ShowDialog();
             }

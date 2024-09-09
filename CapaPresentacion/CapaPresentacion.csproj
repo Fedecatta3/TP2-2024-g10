@@ -59,6 +59,12 @@
     <Compile Include="CobrarCuotaAlumno.Designer.cs">
       <DependentUpon>CobrarCuotaAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="FichaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichaAlumno.Designer.cs">
+      <DependentUpon>FichaAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="ListaAlumnos.Designer.cs">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPlanesDeEntrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPlanesDeEntrenamiento.Designer.cs">
+      <DependentUpon>ListaPlanesDeEntrenamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>
@@ -89,17 +101,35 @@
     <Compile Include="NuevoAlumno.Designer.cs">
       <DependentUpon>NuevoAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoEjercicio.Designer.cs">
+      <DependentUpon>NuevoEjercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoMedioPago.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NuevoMedioPago.Designer.cs">
       <DependentUpon>NuevoMedioPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevoPlanEntrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoPlanEntrenamiento.Designer.cs">
+      <DependentUpon>NuevoPlanEntrenamiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoRol.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NuevoRol.Designer.cs">
       <DependentUpon>NuevoRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios.cs">
       <SubType>Form</SubType>
@@ -118,11 +148,17 @@
     <EmbeddedResource Include="CobrarCuotaAlumno.resx">
       <DependentUpon>CobrarCuotaAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FichaAlumno.resx">
+      <DependentUpon>FichaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaAlumnos.resx">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaPlanesDeEntrenamiento.resx">
+      <DependentUpon>ListaPlanesDeEntrenamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento.resx">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
@@ -133,11 +169,20 @@
     <EmbeddedResource Include="NuevoAlumno.resx">
       <DependentUpon>NuevoAlumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NuevoEjercicio.resx">
+      <DependentUpon>NuevoEjercicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NuevoMedioPago.resx">
       <DependentUpon>NuevoMedioPago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NuevoPlanEntrenamiento.resx">
+      <DependentUpon>NuevoPlanEntrenamiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NuevoRol.resx">
       <DependentUpon>NuevoRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>

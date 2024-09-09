@@ -97,34 +97,34 @@ namespace CapaPresentacion
             AbrirFormulario((IconMenuItem)sender, null, new Mantenimiento());
         }
 
-        private void nuevoPlanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void subMenuVerPlanes_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menuPagos_Click(object sender, EventArgs e)
         {
-
+           AbrirFormulario((IconMenuItem)sender, null, new Pagos());
         }
 
         private void menuReportes_Click(object sender, EventArgs e)
         {
-
+            //AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento());
         }
 
         private void menuBackUp_Click(object sender, EventArgs e)
         {
-
+           // AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento());
         }
 
         private void menuAcercaDe_Click(object sender, EventArgs e)
         {
+            //AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento());
+        }
 
+        private void subMenuNuevoPlan_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuPlanes, (IconMenuItem)sender, new NuevoPlanEntrenamiento());
+        }
+
+        private void subMenuVerPlanes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuPlanes, (IconMenuItem)sender, new ListaPlanesDeEntrenamiento());
         }
     }
 }
