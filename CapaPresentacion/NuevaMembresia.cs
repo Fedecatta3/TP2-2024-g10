@@ -24,9 +24,8 @@ namespace CapaPresentacion
             {
                 textBoxNombreMembresia.Clear();
                 textBoxCosto.Clear();
+                textBoxDuracion.Clear();
                 comboBoxEstado.SelectedIndex = -1;
-                dateTimePicker1.Value = DateTime.Now;
-                dateTimePicker2.Value = DateTime.Now;
             }
         }
 
@@ -45,6 +44,11 @@ namespace CapaPresentacion
                     this.Close();
                 }
             }
+        }
+
+        private void NuevaMembresia_Load(object sender, EventArgs e)
+        {
+            textBoxFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

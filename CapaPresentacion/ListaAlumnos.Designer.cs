@@ -31,11 +31,6 @@ namespace CapaPresentacion
         {
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -44,6 +39,12 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BVerFicha = new FontAwesome.Sharp.IconButton();
+            this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,8 +69,9 @@ namespace CapaPresentacion
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDusuario,
             this.NombreCompleto,
-            this.Membresia,
-            this.Vencimiento,
+            this.DNI,
+            this.Email,
+            this.Telefono,
             this.Accion});
             this.dataGridView1.Location = new System.Drawing.Point(12, 51);
             this.dataGridView1.MultiSelect = false;
@@ -78,35 +80,6 @@ namespace CapaPresentacion
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(766, 415);
             this.dataGridView1.TabIndex = 27;
-            // 
-            // IDusuario
-            // 
-            this.IDusuario.HeaderText = "IDusuario";
-            this.IDusuario.Name = "IDusuario";
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Nombre completo";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.Width = 180;
-            // 
-            // Membresia
-            // 
-            this.Membresia.HeaderText = "Membresia";
-            this.Membresia.Name = "Membresia";
-            this.Membresia.Width = 180;
-            // 
-            // Vencimiento
-            // 
-            this.Vencimiento.HeaderText = "Vencimiento";
-            this.Vencimiento.Name = "Vencimiento";
-            this.Vencimiento.Width = 150;
-            // 
-            // Accion
-            // 
-            this.Accion.HeaderText = "Accion";
-            this.Accion.Name = "Accion";
-            this.Accion.Width = 110;
             // 
             // iconButton2
             // 
@@ -219,6 +192,40 @@ namespace CapaPresentacion
             this.BVerFicha.UseVisualStyleBackColor = false;
             this.BVerFicha.Click += new System.EventHandler(this.BVerFicha_Click);
             // 
+            // IDusuario
+            // 
+            this.IDusuario.HeaderText = "IDusuario";
+            this.IDusuario.Name = "IDusuario";
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "Nombre completo";
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.Width = 180;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "E-mail";
+            this.Email.Name = "Email";
+            this.Email.Width = 180;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Accion
+            // 
+            this.Accion.HeaderText = "Accion";
+            this.Accion.Name = "Accion";
+            this.Accion.Width = 110;
+            // 
             // ListaAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,13 +259,14 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDusuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Accion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton BVerFicha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDusuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Accion;
     }
 }

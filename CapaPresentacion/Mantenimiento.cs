@@ -26,15 +26,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void BNuevoRol_Click(object sender, EventArgs e)
-        {
-            //Modal para agregar nuevo rol
-            using (var modal = new NuevoRol())
-            {
-                var resultado = modal.ShowDialog();
-            }
-        }
-
         private void BNuevoMedioPago_Click(object sender, EventArgs e)
         {
             //Modal para agregar nuevo medio de pago

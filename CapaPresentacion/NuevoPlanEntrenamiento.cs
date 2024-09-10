@@ -20,7 +20,7 @@ namespace CapaPresentacion
         private void BAgregarEjercicio_Click(object sender, EventArgs e)
         {
             //Modal para agregar nuevo ejercicio
-            using (var modal = new NuevoEjercicio())
+            using (var modal = new Ejercicios())
             {
                 var resultado = modal.ShowDialog();
             }

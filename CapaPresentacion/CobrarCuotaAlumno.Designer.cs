@@ -33,10 +33,6 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PlanEntrenamiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CoachACargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,14 +53,19 @@ namespace CapaPresentacion
             this.label4 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accion = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,10 +83,11 @@ namespace CapaPresentacion
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NombreCompleto,
-            this.PlanEntrenamiento,
-            this.CoachACargo,
-            this.TipoMembresia});
+            this.Membresia,
+            this.Periodo,
+            this.Monto,
+            this.Cantidad,
+            this.Accion});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -94,7 +96,7 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 19);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -107,30 +109,6 @@ namespace CapaPresentacion
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Size = new System.Drawing.Size(755, 253);
             this.dataGridView1.TabIndex = 20;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Nombre completo";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.Width = 180;
-            // 
-            // PlanEntrenamiento
-            // 
-            this.PlanEntrenamiento.HeaderText = "Plan de Entrenamiento";
-            this.PlanEntrenamiento.Name = "PlanEntrenamiento";
-            this.PlanEntrenamiento.Width = 180;
-            // 
-            // CoachACargo
-            // 
-            this.CoachACargo.HeaderText = "Coach a cargo";
-            this.CoachACargo.Name = "CoachACargo";
-            this.CoachACargo.Width = 180;
-            // 
-            // TipoMembresia
-            // 
-            this.TipoMembresia.HeaderText = "Tipo membresia";
-            this.TipoMembresia.Name = "TipoMembresia";
-            this.TipoMembresia.Width = 172;
             // 
             // label3
             // 
@@ -374,26 +352,12 @@ namespace CapaPresentacion
             this.label7.TabIndex = 41;
             this.label7.Text = "VUELTO:";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(658, 25);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(99, 22);
-            this.numericUpDown1.TabIndex = 62;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // textBoxFecha
             // 
             this.textBoxFecha.BackColor = System.Drawing.Color.White;
             this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFecha.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxFecha.Location = new System.Drawing.Point(56, 25);
+            this.textBoxFecha.Location = new System.Drawing.Point(655, 16);
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.ReadOnly = true;
             this.textBoxFecha.Size = new System.Drawing.Size(123, 22);
@@ -402,27 +366,77 @@ namespace CapaPresentacion
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(6, 25);
+            this.label9.Location = new System.Drawing.Point(604, 16);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 39;
             this.label9.Text = "Fecha:";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBoxFecha);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.numericUpDown1);
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Location = new System.Drawing.Point(12, 44);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(766, 315);
+            this.groupBox3.Size = new System.Drawing.Size(766, 283);
             this.groupBox3.TabIndex = 64;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(13, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 64;
+            this.label2.Text = "Alumno:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(77, 14);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(172, 20);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "Nombre completo - DNI";
+            // 
+            // Membresia
+            // 
+            this.Membresia.HeaderText = "Membresia";
+            this.Membresia.Name = "Membresia";
+            this.Membresia.Width = 180;
+            // 
+            // Periodo
+            // 
+            this.Periodo.HeaderText = "Periodo";
+            this.Periodo.Name = "Periodo";
+            this.Periodo.Width = 180;
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            this.Monto.Width = 180;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // Accion
+            // 
+            this.Accion.HeaderText = "Accion";
+            this.Accion.Name = "Accion";
+            this.Accion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Accion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Accion.Width = 172;
             // 
             // CobrarCuotaAlumno
             // 
@@ -430,8 +444,12 @@ namespace CapaPresentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(790, 507);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBoxFecha);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
@@ -447,9 +465,7 @@ namespace CapaPresentacion
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,15 +491,17 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBoxFecha;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PlanEntrenamiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CoachACargo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoMembresia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewButtonColumn Accion;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
     }
 }

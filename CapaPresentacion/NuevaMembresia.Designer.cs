@@ -30,11 +30,10 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,16 +41,17 @@ namespace CapaPresentacion
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNombreMembresia = new System.Windows.Forms.TextBox();
             this.BGuardarUsuario = new FontAwesome.Sharp.IconButton();
+            this.textBoxDuracion = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxDuracion);
+            this.groupBox1.Controls.Add(this.textBoxFecha);
             this.groupBox1.Controls.Add(this.BCancelar);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.comboBoxEstado);
             this.groupBox1.Controls.Add(this.label1);
@@ -63,6 +63,16 @@ namespace CapaPresentacion
             this.groupBox1.Size = new System.Drawing.Size(411, 219);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // textBoxFecha
+            // 
+            this.textBoxFecha.BackColor = System.Drawing.Color.White;
+            this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFecha.Location = new System.Drawing.Point(15, 112);
+            this.textBoxFecha.Name = "textBoxFecha";
+            this.textBoxFecha.ReadOnly = true;
+            this.textBoxFecha.Size = new System.Drawing.Size(177, 24);
+            this.textBoxFecha.TabIndex = 59;
             // 
             // BCancelar
             // 
@@ -92,17 +102,7 @@ namespace CapaPresentacion
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 58;
-            this.label4.Text = "Fecha fin:";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(216, 112);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.Size = new System.Drawing.Size(177, 24);
-            this.dateTimePicker2.TabIndex = 57;
+            this.label4.Text = "Duracion:";
             // 
             // label3
             // 
@@ -111,19 +111,9 @@ namespace CapaPresentacion
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(11, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 20);
+            this.label3.Size = new System.Drawing.Size(115, 20);
             this.label3.TabIndex = 56;
-            this.label3.Text = "Fecha inicio:";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(15, 112);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(177, 24);
-            this.dateTimePicker1.TabIndex = 55;
+            this.label3.Text = "Fecha creacion:";
             // 
             // label2
             // 
@@ -208,6 +198,15 @@ namespace CapaPresentacion
             this.BGuardarUsuario.UseVisualStyleBackColor = false;
             this.BGuardarUsuario.Click += new System.EventHandler(this.BGuardarUsuario_Click);
             // 
+            // textBoxDuracion
+            // 
+            this.textBoxDuracion.BackColor = System.Drawing.Color.White;
+            this.textBoxDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDuracion.Location = new System.Drawing.Point(216, 112);
+            this.textBoxDuracion.Name = "textBoxDuracion";
+            this.textBoxDuracion.Size = new System.Drawing.Size(177, 24);
+            this.textBoxDuracion.TabIndex = 60;
+            // 
             // NuevaMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +218,7 @@ namespace CapaPresentacion
             this.Name = "NuevaMembresia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar nueva Membresia";
+            this.Load += new System.EventHandler(this.NuevaMembresia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -235,10 +235,10 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxEstado;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton BCancelar;
         private FontAwesome.Sharp.IconButton BGuardarUsuario;
+        private System.Windows.Forms.TextBox textBoxFecha;
+        private System.Windows.Forms.TextBox textBoxDuracion;
     }
 }

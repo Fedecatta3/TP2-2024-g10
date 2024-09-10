@@ -40,7 +40,7 @@ namespace CapaPresentacion
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,7 +90,7 @@ namespace CapaPresentacion
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDusuario,
-            this.NombreCompleto,
+            this.MedioPago,
             this.Membresia,
             this.Vencimiento,
             this.Total,
@@ -189,11 +189,11 @@ namespace CapaPresentacion
             this.IDusuario.Name = "IDusuario";
             this.IDusuario.Width = 200;
             // 
-            // NombreCompleto
+            // MedioPago
             // 
-            this.NombreCompleto.HeaderText = "Tipo Membresia";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.Width = 150;
+            this.MedioPago.HeaderText = "Medio de pago";
+            this.MedioPago.Name = "MedioPago";
+            this.MedioPago.Width = 150;
             // 
             // Membresia
             // 
@@ -253,7 +253,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDusuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MedioPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vencimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
