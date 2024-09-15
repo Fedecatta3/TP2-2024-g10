@@ -104,17 +104,12 @@ namespace CapaPresentacion
 
         private void menuReportes_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento());
+            AbrirFormulario((IconMenuItem)sender, null, new Reportes());
         }
 
         private void menuBackUp_Click(object sender, EventArgs e)
         {
-           // AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento());
-        }
-
-        private void menuAcercaDe_Click(object sender, EventArgs e)
-        {
-            //AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento());
+           AbrirFormulario((IconMenuItem)sender, null, new BackUp());
         }
 
         private void subMenuNuevoPlan_Click(object sender, EventArgs e)

@@ -43,7 +43,7 @@ namespace CapaPresentacion
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxFormaPago = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
@@ -97,8 +97,8 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(5, 19);
-            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,7 +215,7 @@ namespace CapaPresentacion
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.comboBoxFormaPago);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.iconButton7);
@@ -241,15 +241,15 @@ namespace CapaPresentacion
             this.label8.TabIndex = 53;
             this.label8.Text = "FORMA DE PAGO:";
             // 
-            // comboBox1
+            // comboBoxFormaPago
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(19, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(155, 24);
-            this.comboBox1.TabIndex = 52;
+            this.comboBoxFormaPago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFormaPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFormaPago.FormattingEnabled = true;
+            this.comboBoxFormaPago.Location = new System.Drawing.Point(19, 56);
+            this.comboBoxFormaPago.Name = "comboBoxFormaPago";
+            this.comboBoxFormaPago.Size = new System.Drawing.Size(155, 24);
+            this.comboBoxFormaPago.TabIndex = 52;
             // 
             // label6
             // 
@@ -272,7 +272,7 @@ namespace CapaPresentacion
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(155, 24);
             this.textBox4.TabIndex = 48;
-            this.textBox4.Text = "0";
+            this.textBox4.Text = "30.000";
             // 
             // iconButton7
             // 
@@ -403,40 +403,44 @@ namespace CapaPresentacion
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(77, 14);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(172, 20);
+            this.label10.Size = new System.Drawing.Size(156, 20);
             this.label10.TabIndex = 65;
-            this.label10.Text = "Nombre completo - DNI";
+            this.label10.Text = "Juan Perez - 45689003";
             // 
             // Membresia
             // 
             this.Membresia.HeaderText = "Membresia";
             this.Membresia.Name = "Membresia";
+            this.Membresia.ReadOnly = true;
             this.Membresia.Width = 180;
             // 
             // Periodo
             // 
             this.Periodo.HeaderText = "Periodo";
             this.Periodo.Name = "Periodo";
+            this.Periodo.ReadOnly = true;
             this.Periodo.Width = 180;
             // 
             // Monto
             // 
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
+            this.Monto.ReadOnly = true;
             this.Monto.Width = 180;
             // 
             // Cantidad
             // 
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // Accion
             // 
             this.Accion.HeaderText = "Accion";
             this.Accion.Name = "Accion";
+            this.Accion.ReadOnly = true;
             this.Accion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Accion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Accion.Width = 172;
             // 
             // CobrarCuotaAlumno
             // 
@@ -492,16 +496,16 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxFormaPago;
         private System.Windows.Forms.TextBox textBoxFecha;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewButtonColumn Accion;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label10;
     }
 }
