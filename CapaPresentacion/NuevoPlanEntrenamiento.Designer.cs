@@ -322,22 +322,22 @@ namespace CapaPresentacion
             // 
             // BCancelar
             // 
-            this.BCancelar.BackColor = System.Drawing.Color.Red;
+            this.BCancelar.BackColor = System.Drawing.Color.DodgerBlue;
             this.BCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCancelar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BCancelar.ForeColor = System.Drawing.Color.White;
-            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
+            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.BCancelar.IconColor = System.Drawing.Color.White;
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 35;
             this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(475, 460);
+            this.BCancelar.Location = new System.Drawing.Point(492, 460);
             this.BCancelar.Name = "BCancelar";
-            this.BCancelar.Size = new System.Drawing.Size(135, 35);
+            this.BCancelar.Size = new System.Drawing.Size(118, 35);
             this.BCancelar.TabIndex = 29;
-            this.BCancelar.Text = "CANCELAR";
+            this.BCancelar.Text = "LIMPIAR";
             this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BCancelar.UseVisualStyleBackColor = false;
             // 

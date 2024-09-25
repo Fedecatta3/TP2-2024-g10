@@ -84,10 +84,6 @@ namespace CapaPresentacion
             AbrirFormulario(menuAlumnos, (IconMenuItem)sender, new NuevoAlumno());
         }
 
-        private void subMenuListaAlumnos_Click(object sender, EventArgs e){
-            AbrirFormulario(menuAlumnos, (IconMenuItem)sender, new ListaAlumnos());
-        }
-
         private void menuUsuarios_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, null, new Usuarios());
@@ -151,6 +147,11 @@ namespace CapaPresentacion
         {
             labelHora.Text = DateTime.Now.ToLongTimeString();
             labelFecha.Text = DateTime.Now.ToString("dddd, MMMM yyyy");
+        }
+
+        private void menuAlumnos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, null, new ListaAlumnos(usuarioActual));
         }
     }
 }

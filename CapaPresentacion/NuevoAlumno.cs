@@ -25,6 +25,8 @@ namespace CapaPresentacion
             using (var modal = new CobrarCuotaAlumno())
             {
                 var resultado = modal.ShowDialog();
+
+                this.Close(); //cierra modal actual
             }
         }
 

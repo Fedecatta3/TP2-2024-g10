@@ -31,6 +31,15 @@ namespace CapaPresentacion
         {
             this.components = new System.ComponentModel.Container();
             this.menuOpciones = new System.Windows.Forms.MenuStrip();
+            this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
+            this.menuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
+            this.menuAlumnos = new FontAwesome.Sharp.IconMenuItem();
+            this.menuPlanes = new FontAwesome.Sharp.IconMenuItem();
+            this.subMenuNuevoPlan = new FontAwesome.Sharp.IconMenuItem();
+            this.subMenuVerPlanes = new FontAwesome.Sharp.IconMenuItem();
+            this.menuPagos = new FontAwesome.Sharp.IconMenuItem();
+            this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
+            this.menuBackUp = new FontAwesome.Sharp.IconMenuItem();
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.contenedor = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,17 +47,6 @@ namespace CapaPresentacion
             this.rolUsuario = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.BCerrarSesion = new FontAwesome.Sharp.IconButton();
-            this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
-            this.menuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
-            this.menuAlumnos = new FontAwesome.Sharp.IconMenuItem();
-            this.subMenuNuevoAlumno = new FontAwesome.Sharp.IconMenuItem();
-            this.subMenuListaAlumnos = new FontAwesome.Sharp.IconMenuItem();
-            this.menuPlanes = new FontAwesome.Sharp.IconMenuItem();
-            this.subMenuNuevoPlan = new FontAwesome.Sharp.IconMenuItem();
-            this.subMenuVerPlanes = new FontAwesome.Sharp.IconMenuItem();
-            this.menuPagos = new FontAwesome.Sharp.IconMenuItem();
-            this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
-            this.menuBackUp = new FontAwesome.Sharp.IconMenuItem();
             this.labelHora = new System.Windows.Forms.Label();
             this.labelFecha = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
@@ -75,6 +73,134 @@ namespace CapaPresentacion
             this.menuOpciones.Size = new System.Drawing.Size(210, 507);
             this.menuOpciones.TabIndex = 0;
             this.menuOpciones.Text = "menuStrip1";
+            // 
+            // menuUsuarios
+            // 
+            this.menuUsuarios.AutoSize = false;
+            this.menuUsuarios.BackColor = System.Drawing.Color.OrangeRed;
+            this.menuUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.UsersGear;
+            this.menuUsuarios.IconColor = System.Drawing.Color.Black;
+            this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuUsuarios.IconSize = 50;
+            this.menuUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuUsuarios.Name = "menuUsuarios";
+            this.menuUsuarios.Size = new System.Drawing.Size(220, 54);
+            this.menuUsuarios.Text = "Usuarios";
+            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
+            // 
+            // menuMantenimiento
+            // 
+            this.menuMantenimiento.AutoSize = false;
+            this.menuMantenimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuMantenimiento.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
+            this.menuMantenimiento.IconColor = System.Drawing.Color.Black;
+            this.menuMantenimiento.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuMantenimiento.IconSize = 50;
+            this.menuMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuMantenimiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuMantenimiento.Name = "menuMantenimiento";
+            this.menuMantenimiento.Size = new System.Drawing.Size(220, 54);
+            this.menuMantenimiento.Text = "Mantenimiento";
+            this.menuMantenimiento.Click += new System.EventHandler(this.menuMantenimiento_Click);
+            // 
+            // menuAlumnos
+            // 
+            this.menuAlumnos.AutoSize = false;
+            this.menuAlumnos.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuAlumnos.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
+            this.menuAlumnos.IconColor = System.Drawing.Color.Black;
+            this.menuAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuAlumnos.IconSize = 50;
+            this.menuAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuAlumnos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuAlumnos.Name = "menuAlumnos";
+            this.menuAlumnos.Size = new System.Drawing.Size(220, 54);
+            this.menuAlumnos.Text = "Alumnos";
+            this.menuAlumnos.Click += new System.EventHandler(this.menuAlumnos_Click);
+            // 
+            // menuPlanes
+            // 
+            this.menuPlanes.AutoSize = false;
+            this.menuPlanes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.subMenuNuevoPlan,
+            this.subMenuVerPlanes});
+            this.menuPlanes.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuPlanes.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
+            this.menuPlanes.IconColor = System.Drawing.Color.Black;
+            this.menuPlanes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuPlanes.IconSize = 50;
+            this.menuPlanes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuPlanes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuPlanes.Name = "menuPlanes";
+            this.menuPlanes.Size = new System.Drawing.Size(220, 54);
+            this.menuPlanes.Text = "Planes";
+            // 
+            // subMenuNuevoPlan
+            // 
+            this.subMenuNuevoPlan.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.subMenuNuevoPlan.IconColor = System.Drawing.Color.Black;
+            this.subMenuNuevoPlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.subMenuNuevoPlan.Name = "subMenuNuevoPlan";
+            this.subMenuNuevoPlan.Size = new System.Drawing.Size(183, 30);
+            this.subMenuNuevoPlan.Text = "Nuevo Plan";
+            this.subMenuNuevoPlan.Click += new System.EventHandler(this.subMenuNuevoPlan_Click);
+            // 
+            // subMenuVerPlanes
+            // 
+            this.subMenuVerPlanes.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.subMenuVerPlanes.IconColor = System.Drawing.Color.Black;
+            this.subMenuVerPlanes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.subMenuVerPlanes.Name = "subMenuVerPlanes";
+            this.subMenuVerPlanes.Size = new System.Drawing.Size(183, 30);
+            this.subMenuVerPlanes.Text = "Ver Planes";
+            this.subMenuVerPlanes.Click += new System.EventHandler(this.subMenuVerPlanes_Click);
+            // 
+            // menuPagos
+            // 
+            this.menuPagos.AutoSize = false;
+            this.menuPagos.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuPagos.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
+            this.menuPagos.IconColor = System.Drawing.Color.Black;
+            this.menuPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuPagos.IconSize = 50;
+            this.menuPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuPagos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuPagos.Name = "menuPagos";
+            this.menuPagos.Size = new System.Drawing.Size(220, 54);
+            this.menuPagos.Text = "Pagos";
+            this.menuPagos.Click += new System.EventHandler(this.menuPagos_Click);
+            // 
+            // menuReportes
+            // 
+            this.menuReportes.AutoSize = false;
+            this.menuReportes.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuReportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.menuReportes.IconColor = System.Drawing.Color.Black;
+            this.menuReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuReportes.IconSize = 50;
+            this.menuReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuReportes.Name = "menuReportes";
+            this.menuReportes.Size = new System.Drawing.Size(220, 54);
+            this.menuReportes.Text = "Reportes";
+            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
+            // 
+            // menuBackUp
+            // 
+            this.menuBackUp.AutoSize = false;
+            this.menuBackUp.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuBackUp.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
+            this.menuBackUp.IconColor = System.Drawing.Color.Black;
+            this.menuBackUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.menuBackUp.IconSize = 50;
+            this.menuBackUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuBackUp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.menuBackUp.Name = "menuBackUp";
+            this.menuBackUp.Size = new System.Drawing.Size(220, 54);
+            this.menuBackUp.Text = " Back-Up";
+            this.menuBackUp.Click += new System.EventHandler(this.menuBackUp_Click);
             // 
             // menuTitulo
             // 
@@ -170,156 +296,6 @@ namespace CapaPresentacion
             this.BCerrarSesion.UseVisualStyleBackColor = false;
             this.BCerrarSesion.Click += new System.EventHandler(this.BCerrarSesion_Click);
             // 
-            // menuUsuarios
-            // 
-            this.menuUsuarios.AutoSize = false;
-            this.menuUsuarios.BackColor = System.Drawing.Color.OrangeRed;
-            this.menuUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuUsuarios.IconChar = FontAwesome.Sharp.IconChar.UsersGear;
-            this.menuUsuarios.IconColor = System.Drawing.Color.Black;
-            this.menuUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuUsuarios.IconSize = 50;
-            this.menuUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuUsuarios.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(220, 54);
-            this.menuUsuarios.Text = "Usuarios";
-            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
-            // 
-            // menuMantenimiento
-            // 
-            this.menuMantenimiento.AutoSize = false;
-            this.menuMantenimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuMantenimiento.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
-            this.menuMantenimiento.IconColor = System.Drawing.Color.Black;
-            this.menuMantenimiento.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuMantenimiento.IconSize = 50;
-            this.menuMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuMantenimiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuMantenimiento.Name = "menuMantenimiento";
-            this.menuMantenimiento.Size = new System.Drawing.Size(220, 54);
-            this.menuMantenimiento.Text = "Mantenimiento";
-            this.menuMantenimiento.Click += new System.EventHandler(this.menuMantenimiento_Click);
-            // 
-            // menuAlumnos
-            // 
-            this.menuAlumnos.AutoSize = false;
-            this.menuAlumnos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subMenuNuevoAlumno,
-            this.subMenuListaAlumnos});
-            this.menuAlumnos.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuAlumnos.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
-            this.menuAlumnos.IconColor = System.Drawing.Color.Black;
-            this.menuAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuAlumnos.IconSize = 50;
-            this.menuAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuAlumnos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuAlumnos.Name = "menuAlumnos";
-            this.menuAlumnos.Size = new System.Drawing.Size(220, 54);
-            this.menuAlumnos.Text = "Alumnos";
-            // 
-            // subMenuNuevoAlumno
-            // 
-            this.subMenuNuevoAlumno.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.subMenuNuevoAlumno.IconColor = System.Drawing.Color.Black;
-            this.subMenuNuevoAlumno.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.subMenuNuevoAlumno.Name = "subMenuNuevoAlumno";
-            this.subMenuNuevoAlumno.Size = new System.Drawing.Size(227, 30);
-            this.subMenuNuevoAlumno.Text = "Nuevo alumno";
-            this.subMenuNuevoAlumno.Click += new System.EventHandler(this.subMenuNuevoAlumno_Click);
-            // 
-            // subMenuListaAlumnos
-            // 
-            this.subMenuListaAlumnos.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.subMenuListaAlumnos.IconColor = System.Drawing.Color.Black;
-            this.subMenuListaAlumnos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.subMenuListaAlumnos.Name = "subMenuListaAlumnos";
-            this.subMenuListaAlumnos.Size = new System.Drawing.Size(227, 30);
-            this.subMenuListaAlumnos.Text = "Lista de alumnos";
-            this.subMenuListaAlumnos.Click += new System.EventHandler(this.subMenuListaAlumnos_Click);
-            // 
-            // menuPlanes
-            // 
-            this.menuPlanes.AutoSize = false;
-            this.menuPlanes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subMenuNuevoPlan,
-            this.subMenuVerPlanes});
-            this.menuPlanes.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuPlanes.IconChar = FontAwesome.Sharp.IconChar.ClipboardCheck;
-            this.menuPlanes.IconColor = System.Drawing.Color.Black;
-            this.menuPlanes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuPlanes.IconSize = 50;
-            this.menuPlanes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuPlanes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuPlanes.Name = "menuPlanes";
-            this.menuPlanes.Size = new System.Drawing.Size(220, 54);
-            this.menuPlanes.Text = "Planes";
-            // 
-            // subMenuNuevoPlan
-            // 
-            this.subMenuNuevoPlan.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.subMenuNuevoPlan.IconColor = System.Drawing.Color.Black;
-            this.subMenuNuevoPlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.subMenuNuevoPlan.Name = "subMenuNuevoPlan";
-            this.subMenuNuevoPlan.Size = new System.Drawing.Size(183, 30);
-            this.subMenuNuevoPlan.Text = "Nuevo Plan";
-            this.subMenuNuevoPlan.Click += new System.EventHandler(this.subMenuNuevoPlan_Click);
-            // 
-            // subMenuVerPlanes
-            // 
-            this.subMenuVerPlanes.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.subMenuVerPlanes.IconColor = System.Drawing.Color.Black;
-            this.subMenuVerPlanes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.subMenuVerPlanes.Name = "subMenuVerPlanes";
-            this.subMenuVerPlanes.Size = new System.Drawing.Size(183, 30);
-            this.subMenuVerPlanes.Text = "Ver Planes";
-            this.subMenuVerPlanes.Click += new System.EventHandler(this.subMenuVerPlanes_Click);
-            // 
-            // menuPagos
-            // 
-            this.menuPagos.AutoSize = false;
-            this.menuPagos.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuPagos.IconChar = FontAwesome.Sharp.IconChar.SackDollar;
-            this.menuPagos.IconColor = System.Drawing.Color.Black;
-            this.menuPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuPagos.IconSize = 50;
-            this.menuPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuPagos.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuPagos.Name = "menuPagos";
-            this.menuPagos.Size = new System.Drawing.Size(220, 54);
-            this.menuPagos.Text = "Pagos";
-            this.menuPagos.Click += new System.EventHandler(this.menuPagos_Click);
-            // 
-            // menuReportes
-            // 
-            this.menuReportes.AutoSize = false;
-            this.menuReportes.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuReportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
-            this.menuReportes.IconColor = System.Drawing.Color.Black;
-            this.menuReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuReportes.IconSize = 50;
-            this.menuReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuReportes.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuReportes.Name = "menuReportes";
-            this.menuReportes.Size = new System.Drawing.Size(220, 54);
-            this.menuReportes.Text = "Reportes";
-            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
-            // 
-            // menuBackUp
-            // 
-            this.menuBackUp.AutoSize = false;
-            this.menuBackUp.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuBackUp.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
-            this.menuBackUp.IconColor = System.Drawing.Color.Black;
-            this.menuBackUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.menuBackUp.IconSize = 50;
-            this.menuBackUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuBackUp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.menuBackUp.Name = "menuBackUp";
-            this.menuBackUp.Size = new System.Drawing.Size(220, 54);
-            this.menuBackUp.Text = " Back-Up";
-            this.menuBackUp.Click += new System.EventHandler(this.menuBackUp_Click);
-            // 
             // labelHora
             // 
             this.labelHora.AutoSize = true;
@@ -392,8 +368,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label nombreUsuario;
         private System.Windows.Forms.Label rolUsuario;
-        private FontAwesome.Sharp.IconMenuItem subMenuNuevoAlumno;
-        private FontAwesome.Sharp.IconMenuItem subMenuListaAlumnos;
         private FontAwesome.Sharp.IconMenuItem subMenuNuevoPlan;
         private FontAwesome.Sharp.IconMenuItem subMenuVerPlanes;
         private System.Windows.Forms.Label labelHora;

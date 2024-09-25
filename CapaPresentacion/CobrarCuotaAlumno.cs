@@ -34,7 +34,7 @@ namespace CapaPresentacion
         private void BCobrarInscripcion_Click(object sender, EventArgs e)
         {
             // Mostra el MessageBox
-            DialogResult resultado = MessageBox.Show("El pago se realizó correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            DialogResult resultado = MessageBox.Show("El pago se realizó correctamente! Nuevo alumno incripto.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Verificar si el usuario hizo clic en "Aceptar"
             if (resultado == DialogResult.OK)

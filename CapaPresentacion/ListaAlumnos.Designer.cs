@@ -31,6 +31,12 @@ namespace CapaPresentacion
         {
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -39,12 +45,7 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BVerFicha = new FontAwesome.Sharp.IconButton();
-            this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BNuevoAlumno = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,8 +79,42 @@ namespace CapaPresentacion
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 415);
+            this.dataGridView1.Size = new System.Drawing.Size(766, 394);
             this.dataGridView1.TabIndex = 27;
+            // 
+            // IDusuario
+            // 
+            this.IDusuario.HeaderText = "IDusuario";
+            this.IDusuario.Name = "IDusuario";
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.HeaderText = "Nombre completo";
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.Width = 180;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.HeaderText = "E-mail";
+            this.Email.Name = "Email";
+            this.Email.Width = 180;
+            // 
+            // Telefono
+            // 
+            this.Telefono.HeaderText = "Telefono";
+            this.Telefono.Name = "Telefono";
+            // 
+            // Accion
+            // 
+            this.Accion.HeaderText = "Accion";
+            this.Accion.Name = "Accion";
+            this.Accion.Width = 110;
             // 
             // iconButton2
             // 
@@ -154,7 +189,7 @@ namespace CapaPresentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 472);
+            this.label3.Location = new System.Drawing.Point(8, 450);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(160, 20);
             this.label3.TabIndex = 35;
@@ -165,7 +200,7 @@ namespace CapaPresentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(172, 472);
+            this.label1.Location = new System.Drawing.Point(165, 450);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 36;
@@ -184,7 +219,7 @@ namespace CapaPresentacion
             this.BVerFicha.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BVerFicha.IconSize = 30;
             this.BVerFicha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BVerFicha.Location = new System.Drawing.Point(681, 470);
+            this.BVerFicha.Location = new System.Drawing.Point(336, 456);
             this.BVerFicha.Name = "BVerFicha";
             this.BVerFicha.Size = new System.Drawing.Size(97, 34);
             this.BVerFicha.TabIndex = 37;
@@ -192,45 +227,34 @@ namespace CapaPresentacion
             this.BVerFicha.UseVisualStyleBackColor = false;
             this.BVerFicha.Click += new System.EventHandler(this.BVerFicha_Click);
             // 
-            // IDusuario
+            // BNuevoAlumno
             // 
-            this.IDusuario.HeaderText = "IDusuario";
-            this.IDusuario.Name = "IDusuario";
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.HeaderText = "Nombre completo";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.Width = 180;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.Width = 150;
-            // 
-            // Email
-            // 
-            this.Email.HeaderText = "E-mail";
-            this.Email.Name = "Email";
-            this.Email.Width = 180;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "Telefono";
-            this.Telefono.Name = "Telefono";
-            // 
-            // Accion
-            // 
-            this.Accion.HeaderText = "Accion";
-            this.Accion.Name = "Accion";
-            this.Accion.Width = 110;
+            this.BNuevoAlumno.BackColor = System.Drawing.Color.Green;
+            this.BNuevoAlumno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BNuevoAlumno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BNuevoAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BNuevoAlumno.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BNuevoAlumno.ForeColor = System.Drawing.Color.White;
+            this.BNuevoAlumno.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BNuevoAlumno.IconColor = System.Drawing.Color.White;
+            this.BNuevoAlumno.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BNuevoAlumno.IconSize = 30;
+            this.BNuevoAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BNuevoAlumno.Location = new System.Drawing.Point(624, 451);
+            this.BNuevoAlumno.Name = "BNuevoAlumno";
+            this.BNuevoAlumno.Size = new System.Drawing.Size(154, 45);
+            this.BNuevoAlumno.TabIndex = 40;
+            this.BNuevoAlumno.Text = "NUEVO ALUMNO";
+            this.BNuevoAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BNuevoAlumno.UseVisualStyleBackColor = false;
+            this.BNuevoAlumno.Click += new System.EventHandler(this.BNuevoAlumno_Click);
             // 
             // ListaAlumnos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 507);
+            this.Controls.Add(this.BNuevoAlumno);
             this.Controls.Add(this.BVerFicha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -244,6 +268,7 @@ namespace CapaPresentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaAlumnos";
             this.Text = "ListaAlumnos";
+            this.Load += new System.EventHandler(this.ListaAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -268,5 +293,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Accion;
+        private FontAwesome.Sharp.IconButton BNuevoAlumno;
     }
 }
