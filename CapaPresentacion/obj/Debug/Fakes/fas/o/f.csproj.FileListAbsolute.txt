@@ -1,0 +1,12 @@
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.xml
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\Accessibility.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\FontAwesome.Sharp.Fakes.pdb

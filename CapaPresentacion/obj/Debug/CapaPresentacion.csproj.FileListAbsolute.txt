@@ -1,0 +1,247 @@
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csprojFakesResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fakes.args
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\Accessibility.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.fakesconfig
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.xml
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.ah
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.ch
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.cs
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.csproj
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.fakes
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.fakesconfig
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.snk
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.FileListAbsolute.txt
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\FontAwesome.Sharp.Fakes.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.CobrarCuotaAlumno.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.FichaAlumno.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaAlumnos.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPlanesDeEntrenamiento.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevaMembresia.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoAlumno.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Ejercicios.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoMedioPago.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoPlanEntrenamiento.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoRol.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.CobrarCuotaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.FichaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaAlumnos.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPlanesDeEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevaMembresia.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Ejercicios.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoMedioPago.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoPlanEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoRol.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.xml
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.dll
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.xml
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.BackUp.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.CobrarCuotaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.FichaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaAlumnos.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPlanesDeEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevaMembresia.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Ejercicios.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoMedioPago.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoPlanEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoRol.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\PROYECTO2\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.BackUp.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.CobrarCuotaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.FichaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaAlumnos.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPlanesDeEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevaMembresia.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Ejercicios.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoMedioPago.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoPlanEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.xml
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoUsuario.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.fakesconfig
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.xml
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csprojFakesResolveAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fakes.args
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\Accessibility.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.fakesconfig
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\FontAwesome.Sharp.Fakes.xml
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\b\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.ah
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.ch
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.cs
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.csproj
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.fakes
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.fakesconfig
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\f.snk
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csproj.FileListAbsolute.txt
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\f.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\FontAwesome.Sharp.Fakes.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\Fakes\fas\o\FontAwesome.Sharp.Fakes.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.BackUp.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.CobrarCuotaAlumno.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.FichaAlumno.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaAlumnos.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPlanesDeEntrenamiento.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevaMembresia.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoAlumno.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Ejercicios.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoMedioPago.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoPlanEntrenamiento.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoUsuario.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\FontAwesome.Sharp.Fakes.xml
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.BackUp.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.CobrarCuotaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.FichaAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Inicio.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaAlumnos.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPlanesDeEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Mantenimiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevaMembresia.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoAlumno.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Ejercicios.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoMedioPago.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoPlanEntrenamiento.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.NuevoUsuario.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Pagos.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Reportes.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Usuarios.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
