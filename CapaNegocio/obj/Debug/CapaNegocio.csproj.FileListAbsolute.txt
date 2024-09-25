@@ -1,0 +1,46 @@
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-G10-ultimo\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\Usuario\Desktop\TP22024\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\RODRIGUEZ\Downloads\TP2-2024-g10-master (3)\TP2-2024-g10-master\CapaNegocio\obj\Debug\CapaNegocio.pdb
