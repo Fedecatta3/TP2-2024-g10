@@ -148,5 +148,77 @@ namespace CapaDatos
 
             return respuesta;
         }
+
+        public bool Eliminar(Usuario obj, out string mensaje)
+        {
+            bool respuesta = false;
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    SqlCommand cmd = new SqlCommand("SP_ELIMINARUSUARIO", conexion);
+                    cmd.Parameters.AddWithValue("id_usuario", obj.id_usuario);
+
+                    //parametros de salida
+                    cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    conexion.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+                mensaje = ex.Message;
+            }
+
+            return respuesta;
+        }
+
+
+
+        public bool Restaurar(Usuario obj, out string mensaje)
+        {
+            bool respuesta = false;
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    SqlCommand cmd = new SqlCommand("SP_RESTAURARUSUARIO", conexion);
+                    cmd.Parameters.AddWithValue("id_usuario", obj.id_usuario);
+
+                    //parametros de salida
+                    cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    conexion.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    respuesta = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+                mensaje = ex.Message;
+            }
+
+            return respuesta;
+        }
     }
 }

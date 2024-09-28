@@ -65,9 +65,23 @@ namespace CapaNegocio
         }
 
 
+
         public bool Editar(Usuario obj, out string mensaje)
         {
             return objcd_usuario.Editar(obj, out mensaje);
+        }
+        
+
+
+        public bool Eliminar(Usuario obj, out string mensaje)
+        {
+            return objcd_usuario.Eliminar(obj, out mensaje);
+        }
+
+
+        public bool Restaurar(Usuario obj, out string mensaje)
+        {
+            return objcd_usuario.Restaurar(obj, out mensaje);
         }
     }
 }

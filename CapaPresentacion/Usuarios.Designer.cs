@@ -123,6 +123,7 @@ namespace CapaPresentacion
             this.dgvdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdata.Size = new System.Drawing.Size(766, 394);
             this.dgvdata.TabIndex = 19;
+            this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
             this.dgvdata.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdata_ColumnHeaderMouseClick);
             // 
             // Editar
