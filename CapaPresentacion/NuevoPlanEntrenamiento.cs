@@ -25,5 +25,14 @@ namespace CapaPresentacion
                 var resultado = modal.ShowDialog();
             }
         }
+
+        private void BAgregarCoach_Click(object sender, EventArgs e)
+        {
+            //Modal para agregar nuevo ejercicio
+            using (var modal = new AgregarCoachAlPlan())
+            {
+                var resultado = modal.ShowDialog();
+            }
+        }
     }
 }

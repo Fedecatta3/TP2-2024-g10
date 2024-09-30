@@ -88,20 +88,32 @@ namespace CapaPresentacion
                 apellido = textBoxApellido.Text
             };
 
-            int idUsuarioGenerado = new CN_usuario().Registrar(objUsuario, out mensaje);
-
-            if(idUsuarioGenerado == 0) //mensaje de error 
+            if(objUsuario.id_usuario == 0) //crear un usuario nuevo
             {
-                MessageBox.Show(mensaje);
+                int idUsuarioGenerado = new CN_usuario().Registrar(objUsuario, out mensaje);
+
+                if (idUsuarioGenerado == 0) //mensaje de error 
+                {
+                    MessageBox.Show(mensaje);
+                }
+                else
+                {
+                    // Mensaje de éxito
+                    MessageBox.Show("Usuario ingresado con éxito.");
+
+                    UsuarioRegistrado?.Invoke(); // Dispara el evento de usuario registrado para actualizar el DataGrid
+
+                    this.Close();
+                }
             }
-            else
+            else //editar usuario
             {
-                // Mensaje de éxito
-                MessageBox.Show("Usuario ingresado con éxito.");
+                bool resultado = new CN_usuario().Editar(objUsuario, out mensaje);
 
-                UsuarioRegistrado?.Invoke(); // Dispara el evento de usuario registrado para actualizar el DataGrid
-
-                this.Close();
+                if (resultado)
+                {
+                    
+                }
             }
         }
 
@@ -174,5 +186,41 @@ namespace CapaPresentacion
                 e.Handled = true; // Ignora la tecla si no es letra o espacio
             }
         }
+
+
+
+        // Carga los datos en el form para realizar la modificacion
+        public void CargarDatosUsuario(int idUsuario)
+        {
+            string mensaje = string.Empty;
+            Usuario usuario = new CN_usuario().ObtenerUsuarioPorId(idUsuario, out mensaje);
+
+            if (usuario == null)
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si el usuario no fue encontrado
+            }
+
+            // Cargar los datos en los controles del formulario
+            textBoxID.Text = idUsuario.ToString();
+            textBoxNombre.Text = usuario.nombre;
+            textBoxApellido.Text = usuario.apellido;
+            textBoxDNI.Text = usuario.dni;
+            textBoxEmail.Text = usuario.email;
+            textBoxTelefono.Text = usuario.telefono;
+            textBoxPass.Text = usuario.contraseña;
+            dateTimePicker1.Value = Convert.ToDateTime(usuario.fecha_nacimiento);
+
+            /* // Seleccionar el rol en el ComboBoxRol
+             comboBoxRol.SelectedValue = usuario.id_rol.id_rol;
+             MessageBox.Show($"ID Rol: {usuario.id_rol.id_rol}", "Depuración");
+
+             // Seleccionar el estado en el ComboBoxEstado
+             comboBoxEstado.SelectedValue = usuario.estado ? 1 : 0;
+             MessageBox.Show($"Estado: {(usuario.estado ? 1 : 0)}", "Depuración");*/
+
+        }
+
+
     }
 }

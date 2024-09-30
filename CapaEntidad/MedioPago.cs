@@ -11,7 +11,7 @@ namespace CapaEntidad
         public int id_medioPago { get; set; }
         public string nombre { get; set; }
         public decimal comision { get; set; }
-        public string fechaCreacion { get; set; }
+        public DateTime fechaCreacion { get; set; }
         public Boolean estado {get;set;}
     }
 }

@@ -17,7 +17,6 @@ namespace CapaDatos
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena)) {
                 try
                 {
-                    //string query = "select id_usuario,id_rol,nombre,email,telefono,dni,fecha_nacimiento,estado, contraseña, apellido FROM usuario ";
 
                     string query = "SELECT u.id_usuario, u.id_rol, r.descripcion AS rol_descripcion, u.nombre, u.email, u.telefono, u.dni, u.fecha_nacimiento, u.estado, u.contraseña, u.apellido " +
                                "FROM Usuario u " +
@@ -34,7 +33,6 @@ namespace CapaDatos
                             lista.Add(new Usuario()
                             {
                                 id_usuario = Convert.ToInt32(dr["id_usuario"]),
-                                //id_rol = new Rol { id_rol = Convert.ToInt32(dr["id_rol"]) },
                                 id_rol = new Rol { id_rol = Convert.ToInt32(dr["id_rol"]),
                                                    descripcion = dr["rol_descripcion"].ToString()},
                                 nombre = dr["nombre"].ToString(),
@@ -219,6 +217,49 @@ namespace CapaDatos
             }
 
             return respuesta;
+        }
+
+
+
+        public Usuario ObtenerUsuarioPorId(int idUsuario, out string mensaje)
+        {
+            Usuario usuario = null;
+            mensaje = string.Empty;
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("SP_OBTENERUSUARIO", conexion);
+                    cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    conexion.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        usuario = new Usuario
+                        {
+                            id_usuario = Convert.ToInt32(reader["id_usuario"]),
+                            nombre = reader["nombre"].ToString(),
+                            apellido = reader["apellido"].ToString(),
+                            email = reader["email"].ToString(),
+                            telefono = reader["telefono"].ToString(),
+                            dni = reader["dni"].ToString(),
+                            fecha_nacimiento = reader["fecha_nacimiento"].ToString(),
+                            estado = Convert.ToBoolean(reader["estado"]),
+                            id_rol = new Rol { id_rol = Convert.ToInt32(reader["id_rol"]) }
+                        };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    mensaje = ex.Message; // Captura el mensaje de error
+                }
+            }
+
+            return usuario;
         }
     }
 }

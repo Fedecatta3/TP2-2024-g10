@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,30 @@ namespace CapaPresentacion
 {
     public partial class Ejercicios : Form
     {
+        private CN_Ejercicio objCN_Ejercicio = new CN_Ejercicio(); // Capa de negocio para ejercicios
+
         public Ejercicios()
         {
             InitializeComponent();
+            CargarEjercicios(); // Cargar datos cuando se abra el formulario
+        }
+
+        // Método para cargar ejercicios en el DataGridView
+        private void CargarEjercicios()
+        {
+            List<Ejercicio> listaEjercicios = objCN_Ejercicio.Listar();
+
+            dataGridViewEjercicios.DataSource = null;
+            dataGridViewEjercicios.Columns.Clear();
+
+            // Enlazar la lista con el DataGridView
+            dataGridViewEjercicios.DataSource = listaEjercicios;
+
+            // Opcionalmente, ajustar los nombres de las columnas
+            dataGridViewEjercicios.Columns["id_ejercicio"].HeaderText = "ID";
+            dataGridViewEjercicios.Columns["nombre"].HeaderText = "Nombre";
+            dataGridViewEjercicios.Columns["repeticiones"].HeaderText = "Repeticiones";
+            dataGridViewEjercicios.Columns["tiempo"].HeaderText = "Tiempo (segundos)";
         }
 
         private void BCancelar_Click(object sender, EventArgs e)

@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CN_Ejercicio.cs" />
+    <Compile Include="CN_medioPago.cs" />
+    <Compile Include="CN_membresia.cs" />
     <Compile Include="CN_permiso.cs" />
+    <Compile Include="CN_PlanEntrenamiento.cs" />
     <Compile Include="CN_rol.cs" />
     <Compile Include="CN_usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

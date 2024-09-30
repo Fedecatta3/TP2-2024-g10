@@ -31,16 +31,7 @@ namespace CapaPresentacion
         private void Usuarios_Load(object sender, EventArgs e)
         {
             //lista los usuarios de la bd
-            List<Usuario> listausuario = new CN_usuario().Listar();
-
-            foreach (Usuario item in listausuario)
-            {
-                dgvdata.Rows.Add(new object[ ] { "Editar", "Eliminar", item.id_usuario, item.nombre + " " + item.apellido, item.dni, item.email, item.fecha_nacimiento, item.telefono, "", item.id_rol.descripcion, item.estado == true ? "Activo" : "Inactivo"});
-            }
-
-            labelCantUsuarios.Text = $"{listausuario.Count} usuarios";
-
-
+            NuevoUsuario_UsuarioRegistrado();
 
             // Cambia el color de texto de la fila seleccionada en el DataGridView
             dgvdata.DefaultCellStyle.SelectionForeColor = Color.Black;
@@ -62,8 +53,8 @@ namespace CapaPresentacion
                 string accion = item.estado ? "Eliminar" : "Restaurar";
 
 
-                dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre + " " + item.apellido,item.dni,
-                    item.email,item.fecha_nacimiento,item.telefono,"",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo" });
+                dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
+                    item.email,item.fecha_nacimiento,item.telefono,"",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
             }
 
             labelCantUsuarios.Text = $"{listausuario.Count} usuarios";
@@ -155,9 +146,33 @@ namespace CapaPresentacion
         }
 
 
-        //BOTON ELIMINAR / RESTAURAR DE REGISTROS
+        //BOTON ELIMINAR / RESTAURAR / EDITAR DE REGISTROS
         private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Verificar si se hizo clic en la columna de editar
+            if (e.ColumnIndex == dgvdata.Columns["Editar"].Index && e.RowIndex >= 0)
+            {
+                // Obtener el ID del usuario de la fila seleccionada
+                int id_usuario = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idUsuario"].Value);
+
+                // Abrir el formulario de NuevoUsuario con los datos seleccionados
+                using (var modal = new NuevoUsuario())
+                {
+                    // Pasar los datos al formulario de NuevoUsuario
+                    modal.CargarDatosUsuario(id_usuario);
+
+                    // Mostrar el formulario como un modal
+                    var resultado = modal.ShowDialog();
+
+                    if (resultado == DialogResult.OK)
+                    {
+                        // Refrescar el DataGridView después de editar
+                        NuevoUsuario_UsuarioRegistrado();
+                    }
+                }
+            }
+
+
             // Verificar si se hizo click en la columna de eliminar
             if (e.ColumnIndex == dgvdata.Columns["eliminar"].Index && e.RowIndex >= 0)
             {

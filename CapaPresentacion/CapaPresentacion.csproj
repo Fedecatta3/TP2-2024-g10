@@ -59,6 +59,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarCoachAlPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarCoachAlPlan.Designer.cs">
+      <DependentUpon>AgregarCoachAlPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="BackUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\opcionCombo.cs" />
+    <EmbeddedResource Include="AgregarCoachAlPlan.resx">
+      <DependentUpon>AgregarCoachAlPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BackUp.resx">
       <DependentUpon>BackUp.cs</DependentUpon>
     </EmbeddedResource>

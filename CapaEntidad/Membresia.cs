@@ -11,7 +11,7 @@ namespace CapaEntidad
         public int id_membresia { get; set; }
         public string nombre { get; set; }
         public int duracion { get; set; }
-        public string fecha_creacion { get; set; }
+        public DateTime fecha_creacion { get; set; }
         public decimal costo { get; set; }
         public Boolean estado {get; set;}
     }

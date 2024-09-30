@@ -174,6 +174,7 @@ namespace CapaPresentacion
             this.BAgregarCoach.Text = "AGREGAR COACH";
             this.BAgregarCoach.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BAgregarCoach.UseVisualStyleBackColor = false;
+            this.BAgregarCoach.Click += new System.EventHandler(this.BAgregarCoach_Click);
             // 
             // dataGridView2
             // 

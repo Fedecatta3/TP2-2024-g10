@@ -33,6 +33,13 @@ namespace CapaPresentacion
                 textBoxDni.Text = "";
                 textBoxContraseña.Text = "";
             }
+            else if (!ousuario.estado)
+            {
+                MessageBox.Show("El usuario está inactivo.", "Usuario Inactivo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                textBoxDni.Text = "";
+                textBoxContraseña.Text = "";
+            }
             else
             {
                 Principal form = new Principal(ousuario); //crea una instancia del formulario principal

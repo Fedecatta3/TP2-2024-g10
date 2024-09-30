@@ -36,36 +36,36 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.BNuevaMembresia = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.BNuevoMedioPago = new FontAwesome.Sharp.IconButton();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.DGV_Membresias = new System.Windows.Forms.DataGridView();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCreacionMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Accion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.BNuevoMedioPago = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.DGV_MediosDePago = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.EstadoMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Membresias)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_MediosDePago)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,13 +76,21 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.iconButton1);
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.DGV_Membresias);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(766, 277);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MEMBRESIAS";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.Location = new System.Drawing.Point(224, 48);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(180, 24);
+            this.textBox8.TabIndex = 40;
             // 
             // BNuevaMembresia
             // 
@@ -166,10 +174,10 @@ namespace CapaPresentacion
             this.label14.TabIndex = 36;
             this.label14.Text = "Buscar por:";
             // 
-            // dataGridView1
+            // DGV_Membresias
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DGV_Membresias.AllowUserToAddRows = false;
+            this.DGV_Membresias.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,9 +185,9 @@ namespace CapaPresentacion
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_Membresias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DGV_Membresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Membresias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Tipo,
             this.Duracion,
             this.FechaCreacionMembresia,
@@ -193,10 +201,10 @@ namespace CapaPresentacion
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 78);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
+            this.DGV_Membresias.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DGV_Membresias.Location = new System.Drawing.Point(11, 78);
+            this.DGV_Membresias.MultiSelect = false;
+            this.DGV_Membresias.Name = "DGV_Membresias";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -204,96 +212,9 @@ namespace CapaPresentacion
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 188);
-            this.dataGridView1.TabIndex = 21;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.iconButton3);
-            this.groupBox3.Controls.Add(this.BNuevoMedioPago);
-            this.groupBox3.Controls.Add(this.iconButton4);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.dataGridView3);
-            this.groupBox3.Location = new System.Drawing.Point(12, 295);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(766, 200);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "MEDIOS DE PAGO";
-            // 
-            // BNuevoMedioPago
-            // 
-            this.BNuevoMedioPago.BackColor = System.Drawing.Color.OrangeRed;
-            this.BNuevoMedioPago.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BNuevoMedioPago.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BNuevoMedioPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BNuevoMedioPago.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BNuevoMedioPago.ForeColor = System.Drawing.Color.White;
-            this.BNuevoMedioPago.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.BNuevoMedioPago.IconColor = System.Drawing.Color.White;
-            this.BNuevoMedioPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BNuevoMedioPago.IconSize = 35;
-            this.BNuevoMedioPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BNuevoMedioPago.Location = new System.Drawing.Point(586, 132);
-            this.BNuevoMedioPago.Name = "BNuevoMedioPago";
-            this.BNuevoMedioPago.Size = new System.Drawing.Size(125, 55);
-            this.BNuevoMedioPago.TabIndex = 45;
-            this.BNuevoMedioPago.Text = "AGREGAR";
-            this.BNuevoMedioPago.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BNuevoMedioPago.UseVisualStyleBackColor = false;
-            this.BNuevoMedioPago.Click += new System.EventHandler(this.BNuevoMedioPago_Click);
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Comision,
-            this.FechaCreacion,
-            this.dataGridViewButtonColumn2,
-            this.EstadoMedioPago});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView3.Location = new System.Drawing.Point(11, 19);
-            this.dataGridView3.MultiSelect = false;
-            this.dataGridView3.Name = "dataGridView3";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView3.Size = new System.Drawing.Size(564, 168);
-            this.dataGridView3.TabIndex = 40;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(224, 48);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(180, 24);
-            this.textBox8.TabIndex = 40;
+            this.DGV_Membresias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DGV_Membresias.Size = new System.Drawing.Size(742, 188);
+            this.DGV_Membresias.TabIndex = 21;
             // 
             // Tipo
             // 
@@ -327,6 +248,22 @@ namespace CapaPresentacion
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.iconButton3);
+            this.groupBox3.Controls.Add(this.BNuevoMedioPago);
+            this.groupBox3.Controls.Add(this.iconButton4);
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.DGV_MediosDePago);
+            this.groupBox3.Location = new System.Drawing.Point(12, 295);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(766, 200);
+            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "MEDIOS DE PAGO";
+            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -353,6 +290,28 @@ namespace CapaPresentacion
             this.iconButton3.TabIndex = 44;
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.UseVisualStyleBackColor = false;
+            // 
+            // BNuevoMedioPago
+            // 
+            this.BNuevoMedioPago.BackColor = System.Drawing.Color.OrangeRed;
+            this.BNuevoMedioPago.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BNuevoMedioPago.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BNuevoMedioPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BNuevoMedioPago.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BNuevoMedioPago.ForeColor = System.Drawing.Color.White;
+            this.BNuevoMedioPago.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.BNuevoMedioPago.IconColor = System.Drawing.Color.White;
+            this.BNuevoMedioPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BNuevoMedioPago.IconSize = 35;
+            this.BNuevoMedioPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BNuevoMedioPago.Location = new System.Drawing.Point(586, 132);
+            this.BNuevoMedioPago.Name = "BNuevoMedioPago";
+            this.BNuevoMedioPago.Size = new System.Drawing.Size(125, 55);
+            this.BNuevoMedioPago.TabIndex = 45;
+            this.BNuevoMedioPago.Text = "AGREGAR";
+            this.BNuevoMedioPago.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BNuevoMedioPago.UseVisualStyleBackColor = false;
+            this.BNuevoMedioPago.Click += new System.EventHandler(this.BNuevoMedioPago_Click);
             // 
             // iconButton4
             // 
@@ -395,6 +354,47 @@ namespace CapaPresentacion
             this.label1.TabIndex = 42;
             this.label1.Text = "Buscar por:";
             // 
+            // DGV_MediosDePago
+            // 
+            this.DGV_MediosDePago.AllowUserToAddRows = false;
+            this.DGV_MediosDePago.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_MediosDePago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DGV_MediosDePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_MediosDePago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Comision,
+            this.FechaCreacion,
+            this.dataGridViewButtonColumn2,
+            this.EstadoMedioPago});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGV_MediosDePago.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DGV_MediosDePago.Location = new System.Drawing.Point(11, 19);
+            this.DGV_MediosDePago.MultiSelect = false;
+            this.DGV_MediosDePago.Name = "DGV_MediosDePago";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGV_MediosDePago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.DGV_MediosDePago.Size = new System.Drawing.Size(564, 168);
+            this.DGV_MediosDePago.TabIndex = 40;
+            // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
@@ -433,10 +433,10 @@ namespace CapaPresentacion
             this.Text = "ListaUsuarios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Membresias)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_MediosDePago)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,14 +445,14 @@ namespace CapaPresentacion
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Membresias;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label14;
         private FontAwesome.Sharp.IconButton BNuevaMembresia;
         private FontAwesome.Sharp.IconButton BNuevoMedioPago;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView DGV_MediosDePago;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duracion;
