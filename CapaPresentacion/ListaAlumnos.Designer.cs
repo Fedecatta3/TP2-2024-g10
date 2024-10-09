@@ -30,7 +30,7 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DGV_Alumnos = new System.Windows.Forms.DataGridView();
             this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@ namespace CapaPresentacion
             this.label1 = new System.Windows.Forms.Label();
             this.BVerFicha = new FontAwesome.Sharp.IconButton();
             this.BNuevoAlumno = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Alumnos)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -62,25 +62,25 @@ namespace CapaPresentacion
             this.label13.Text = "LISTA DE ALUMNOS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView1
+            // DGV_Alumnos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DGV_Alumnos.AllowUserToAddRows = false;
+            this.DGV_Alumnos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.DGV_Alumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_Alumnos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDusuario,
             this.NombreCompleto,
             this.DNI,
             this.Email,
             this.Telefono,
             this.Accion});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 51);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 394);
-            this.dataGridView1.TabIndex = 27;
+            this.DGV_Alumnos.Location = new System.Drawing.Point(12, 51);
+            this.DGV_Alumnos.MultiSelect = false;
+            this.DGV_Alumnos.Name = "DGV_Alumnos";
+            this.DGV_Alumnos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.DGV_Alumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGV_Alumnos.Size = new System.Drawing.Size(766, 394);
+            this.DGV_Alumnos.TabIndex = 27;
             // 
             // IDusuario
             // 
@@ -264,12 +264,12 @@ namespace CapaPresentacion
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_Alumnos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaAlumnos";
             this.Text = "ListaAlumnos";
             this.Load += new System.EventHandler(this.ListaAlumnos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Alumnos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,7 +278,7 @@ namespace CapaPresentacion
         #endregion
 
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DGV_Alumnos;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.TextBox textBox8;

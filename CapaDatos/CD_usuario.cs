@@ -114,7 +114,7 @@ namespace CapaDatos
                 {
                     SqlCommand cmd = new SqlCommand("SP_EDITARUSUARIO", conexion);
                     cmd.Parameters.AddWithValue("id_usuario", obj.id_usuario);
-                    cmd.Parameters.AddWithValue("id_rol", obj.id_rol);
+                    cmd.Parameters.AddWithValue("id_rol", obj.id_rol.id_rol); // Accede al id dentro del objeto Rol
                     cmd.Parameters.AddWithValue("nombre", obj.nombre);
                     cmd.Parameters.AddWithValue("email", obj.email);
                     cmd.Parameters.AddWithValue("telefono", obj.telefono);
@@ -248,8 +248,13 @@ namespace CapaDatos
                             telefono = reader["telefono"].ToString(),
                             dni = reader["dni"].ToString(),
                             fecha_nacimiento = reader["fecha_nacimiento"].ToString(),
+                            contraseña = reader["contraseña"].ToString(),
                             estado = Convert.ToBoolean(reader["estado"]),
-                            id_rol = new Rol { id_rol = Convert.ToInt32(reader["id_rol"]) }
+                            id_rol = new Rol
+                            {
+                                id_rol = Convert.ToInt32(reader["id_rol"]),
+                                descripcion = reader["descripcion_rol"].ToString()
+                            }
                         };
                     }
                 }

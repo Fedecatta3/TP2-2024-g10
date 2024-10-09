@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="CN_Alumno.cs" />
     <Compile Include="CN_Ejercicio.cs" />
+    <Compile Include="CN_Horario.cs" />
     <Compile Include="CN_medioPago.cs" />
     <Compile Include="CN_membresia.cs" />
     <Compile Include="CN_permiso.cs" />

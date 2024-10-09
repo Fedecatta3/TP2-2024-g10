@@ -283,3 +283,4 @@ C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPres
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.AgregarCoachAlPlan.resources
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.AgregarHorarioUsuario.resources

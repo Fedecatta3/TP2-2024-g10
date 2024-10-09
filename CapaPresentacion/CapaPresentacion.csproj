@@ -65,6 +65,12 @@
     <Compile Include="AgregarCoachAlPlan.Designer.cs">
       <DependentUpon>AgregarCoachAlPlan.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarHorarioUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarHorarioUsuario.Designer.cs">
+      <DependentUpon>AgregarHorarioUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="BackUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     <Compile Include="Utilidades\opcionCombo.cs" />
     <EmbeddedResource Include="AgregarCoachAlPlan.resx">
       <DependentUpon>AgregarCoachAlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarHorarioUsuario.resx">
+      <DependentUpon>AgregarHorarioUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BackUp.resx">
       <DependentUpon>BackUp.cs</DependentUpon>

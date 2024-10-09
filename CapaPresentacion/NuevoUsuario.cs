@@ -17,10 +17,12 @@ namespace CapaPresentacion
     public partial class NuevoUsuario : Form
     {
         public event Action UsuarioRegistrado;
+        private int usuarioValor = 0;
 
-        public NuevoUsuario()
+        public NuevoUsuario(int usuarioNuevo) //si recibe 1 es nuevo Usuario, si recibe 0 es modificacion de Usuario
         {
             InitializeComponent();
+            usuarioValor = usuarioNuevo;
         }
 
         private void BCancelar_Click(object sender, EventArgs e)
@@ -37,26 +39,33 @@ namespace CapaPresentacion
                 textBoxConfirmarPass.Clear();
                 dateTimePicker1.Value = DateTime.Now;
                 comboBoxRol.SelectedIndex = 0;
-                comboBoxHorario.SelectedIndex = -1;
                 comboBoxEstado.SelectedIndex = 0;
             }
         }
 
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
-            comboBoxEstado.Items.Add(new opcionCombo() { Valor = 1 , Texto = "Activo" });
-            comboBoxEstado.Items.Add(new opcionCombo() { Valor = 0, Texto = "Inactivo" });
-            comboBoxEstado.DisplayMember = "Texto";
-            comboBoxEstado.ValueMember = "Valor";
-            comboBoxEstado.SelectedIndex = 0;
+            if(usuarioValor == 1)
+            {
+                verHorario.Visible = false;
 
-            List<Rol> listarol = new CN_rol().Listar();
-            foreach(Rol item in listarol)   {
-                comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion});
+                // Cargar ComboBox de Estado
+                comboBoxEstado.Items.Add(new opcionCombo() { Valor = 1, Texto = "Activo" });
+                comboBoxEstado.Items.Add(new opcionCombo() { Valor = 0, Texto = "Inactivo" });
+                comboBoxEstado.DisplayMember = "Texto";
+                comboBoxEstado.ValueMember = "Valor";
+                comboBoxEstado.SelectedIndex = 0; // Selecciona el primer elemento por defecto al crear un nuevo usuario
+
+                // Cargar ComboBox de Roles
+                List<Rol> listarol = new CN_rol().Listar();
+                foreach (Rol item in listarol)
+                {
+                    comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                }
+                comboBoxRol.DisplayMember = "Texto";
+                comboBoxRol.ValueMember = "Valor";
+                comboBoxRol.SelectedIndex = 0; // Selecciona el primer elemento por defecto al crear un nuevo usuario
             }
-            comboBoxRol.DisplayMember = "Texto";
-            comboBoxRol.ValueMember = "Valor";
-            comboBoxRol.SelectedIndex = 0;
         }
 
         private void BGuardarUsuario_Click(object sender, EventArgs e)
@@ -102,8 +111,15 @@ namespace CapaPresentacion
                     MessageBox.Show("Usuario ingresado con éxito.");
 
                     UsuarioRegistrado?.Invoke(); // Dispara el evento de usuario registrado para actualizar el DataGrid
-
                     this.Close();
+
+
+                    // Abrir el formulario para agregar horario
+                    using (var agregarHorarioForm = new AgregarHorarioUsuario(idUsuarioGenerado))
+                    {
+                        agregarHorarioForm.ShowDialog();
+                    }
+
                 }
             }
             else //editar usuario
@@ -112,7 +128,17 @@ namespace CapaPresentacion
 
                 if (resultado)
                 {
-                    
+                    // Mensaje de éxito
+                    MessageBox.Show("Usuario actualizado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    UsuarioRegistrado?.Invoke(); // Dispara el evento de usuario actualizado para refrescar la vista
+
+                    this.Close(); // Cierra el formulario
+                }
+                else
+                {
+                    // Mostrar el mensaje de error
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -192,6 +218,8 @@ namespace CapaPresentacion
         // Carga los datos en el form para realizar la modificacion
         public void CargarDatosUsuario(int idUsuario)
         {
+            BCancelar.Visible = false;
+
             string mensaje = string.Empty;
             Usuario usuario = new CN_usuario().ObtenerUsuarioPorId(idUsuario, out mensaje);
 
@@ -211,16 +239,35 @@ namespace CapaPresentacion
             textBoxPass.Text = usuario.contraseña;
             dateTimePicker1.Value = Convert.ToDateTime(usuario.fecha_nacimiento);
 
-            /* // Seleccionar el rol en el ComboBoxRol
-             comboBoxRol.SelectedValue = usuario.id_rol.id_rol;
-             MessageBox.Show($"ID Rol: {usuario.id_rol.id_rol}", "Depuración");
+            //carga de comboBox rol
+            int valorRol = usuario.id_rol.id_rol - 1;
 
-             // Seleccionar el estado en el ComboBoxEstado
-             comboBoxEstado.SelectedValue = usuario.estado ? 1 : 0;
-             MessageBox.Show($"Estado: {(usuario.estado ? 1 : 0)}", "Depuración");*/
+            List<Rol> listarol = new CN_rol().Listar();
+            foreach (Rol item in listarol)
+            {
+                comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+            }
+            comboBoxRol.DisplayMember = "Texto";
+            comboBoxRol.ValueMember = "Valor";
+            comboBoxRol.SelectedIndex = valorRol;
 
+            //carga comboBox de Estado
+            int valorEstado = usuario.estado ? 0 : 1;
+
+            comboBoxEstado.Items.Add(new opcionCombo() { Valor = 1, Texto = "Activo" });
+            comboBoxEstado.Items.Add(new opcionCombo() { Valor = 0, Texto = "Inactivo" });
+            comboBoxEstado.DisplayMember = "Texto";
+            comboBoxEstado.ValueMember = "Valor";
+            comboBoxEstado.SelectedIndex = valorEstado;
         }
 
-
+        private void verHorario_Click(object sender, EventArgs e)
+        {/*
+            //Modal para ver horario del usuario
+            using (var modal = new AgregarHorarioUsuario())
+            {
+                var resultado = modal.ShowDialog();
+            }*/
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace CapaPresentacion
         private void BNuevoUsuario_Click(object sender, EventArgs e)
         {
             //Modal para agregar nuevo usuario
-            using (var modal = new NuevoUsuario())
+            using (var modal = new NuevoUsuario(1))
             {
                 modal.UsuarioRegistrado += NuevoUsuario_UsuarioRegistrado; // Evento
                 var resultado = modal.ShowDialog();
@@ -156,10 +156,12 @@ namespace CapaPresentacion
                 int id_usuario = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idUsuario"].Value);
 
                 // Abrir el formulario de NuevoUsuario con los datos seleccionados
-                using (var modal = new NuevoUsuario())
+                using (var modal = new NuevoUsuario(0))
                 {
                     // Pasar los datos al formulario de NuevoUsuario
                     modal.CargarDatosUsuario(id_usuario);
+
+                    modal.UsuarioRegistrado += NuevoUsuario_UsuarioRegistrado; // Evento
 
                     // Mostrar el formulario como un modal
                     var resultado = modal.ShowDialog();
