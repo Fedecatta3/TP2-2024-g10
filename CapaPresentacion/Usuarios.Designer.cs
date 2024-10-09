@@ -62,7 +62,7 @@ namespace CapaPresentacion
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Horario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Horario = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -347,12 +347,13 @@ namespace CapaPresentacion
             // 
             // Horario
             // 
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
             this.Horario.DefaultCellStyle = dataGridViewCellStyle10;
             this.Horario.HeaderText = "Horario";
             this.Horario.Name = "Horario";
-            this.Horario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Horario.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Horario.Width = 54;
             // 
             // Rol
@@ -430,7 +431,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario;
+        private System.Windows.Forms.DataGridViewButtonColumn Horario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;

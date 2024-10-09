@@ -12,10 +12,12 @@ namespace CapaPresentacion
     {
 
         private int columnaSeleccionada = -1; // Variable para almacenar el índice de la columna seleccionada
+        private Usuario usuarioActual; // Objeto usuario actual
 
-        public Usuarios()
+        public Usuarios(Usuario usuario)
         {
             InitializeComponent();
+            usuarioActual = usuario;
         }
 
         private void BNuevoUsuario_Click(object sender, EventArgs e)
@@ -44,20 +46,39 @@ namespace CapaPresentacion
 
         private void NuevoUsuario_UsuarioRegistrado()
         {
-            // Actualiza el DataGrid una vez ingresado un nuevo registro
-            List<Usuario> listausuario = new CN_usuario().Listar();
-            dgvdata.Rows.Clear(); // Limpia el DataGrid antes de actualizar
-            foreach (Usuario item in listausuario)
+            if (usuarioActual.id_rol.id_rol == 2) //usuario administrador, solo se listan coachs y administradores
             {
-                // Verifica si el usuario está activo o inactivo
-                string accion = item.estado ? "Eliminar" : "Restaurar";
+                List<Usuario> listausuario = new CN_usuario().Listar();
+                dgvdata.Rows.Clear(); // Limpia el DataGrid antes de actualizar
+                foreach (Usuario item in listausuario)
+                {
+                    if (item.id_rol.id_rol != 1)
+                    {
+                        // Verifica si el usuario está activo o inactivo
+                        string accion = item.estado ? "Eliminar" : "Restaurar";
 
+                        dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
+                        item.email,item.fecha_nacimiento,item.telefono,"Ver horario",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
+                    }
+                }
 
-                dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
-                    item.email,item.fecha_nacimiento,item.telefono,"",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
+                labelCantUsuarios.Text = $"{dgvdata.Rows.Count} usuarios";
             }
+            else //para usuario Propietario se listan todos 
+            {
+                List<Usuario> listausuario = new CN_usuario().Listar();
+                dgvdata.Rows.Clear(); // Limpia el DataGrid antes de actualizar
+                foreach (Usuario item in listausuario)
+                {
+                    // Verifica si el usuario está activo o inactivo
+                    string accion = item.estado ? "Eliminar" : "Restaurar";
 
-            labelCantUsuarios.Text = $"{listausuario.Count} usuarios";
+                    dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
+                    item.email,item.fecha_nacimiento,item.telefono,"Ver horario",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
+                }
+
+                labelCantUsuarios.Text = $"{listausuario.Count} usuarios";
+            }
         }
 
         private void dgvdata_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -146,7 +167,7 @@ namespace CapaPresentacion
         }
 
 
-        //BOTON ELIMINAR / RESTAURAR / EDITAR DE REGISTROS
+        //BOTON ELIMINAR / RESTAURAR / EDITAR DE REGISTROS / VER HORARIO
         private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verificar si se hizo clic en la columna de editar
@@ -229,6 +250,30 @@ namespace CapaPresentacion
                             MessageBox.Show("Error al restaurar el usuario: " + mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
+                }
+            }
+
+            // Verificar si se hizo click en la columna de ver horario
+            if (e.ColumnIndex == dgvdata.Columns["horario"].Index && e.RowIndex >= 0)
+            {
+                // Obtener el ID del usuario de la fila seleccionada
+                int idUsuario = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["IdUsuario"].Value);
+                string nombreUsuario = string.Empty;
+
+                List<Usuario> listausuario = new CN_usuario().Listar();
+                foreach (Usuario item in listausuario)
+                {
+                    if(item.id_usuario == idUsuario)
+                    {
+                        nombreUsuario = item.nombre + " " + item.apellido;
+                        break;
+                    }
+                }
+
+                //Modal para ver horario del usuario
+                using (var modal = new AgregarHorarioUsuario(idUsuario, nombreUsuario))
+                {
+                    var resultado = modal.ShowDialog();
                 }
             }
         }

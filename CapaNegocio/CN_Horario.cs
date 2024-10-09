@@ -17,5 +17,17 @@ namespace CapaNegocio
         {
             return cd_horario.Registrar(obj, out mensaje); // Llama al método Registrar de la capa de datos
         }
+
+        //Metodo para listar los horarios a traves del 'Id usuario'
+        public List<Horario> Listar(int idUsuario)
+        {
+            return cd_horario.Listar(idUsuario);
+        }
+
+        //Metodo para eliminar un horario
+        public bool Eliminar(int idHorario, out string mensaje)
+        {
+            return cd_horario.EliminarHorario(idHorario, out mensaje);
+        }
     }
 }

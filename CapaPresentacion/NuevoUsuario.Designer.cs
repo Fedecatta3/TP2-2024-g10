@@ -31,7 +31,6 @@ namespace CapaPresentacion
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.verHorario = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxConfirmarPass = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@ namespace CapaPresentacion
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.verHorario);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.textBoxConfirmarPass);
             this.groupBox1.Controls.Add(this.label9);
@@ -90,26 +88,6 @@ namespace CapaPresentacion
             this.groupBox1.Size = new System.Drawing.Size(766, 290);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            // 
-            // verHorario
-            // 
-            this.verHorario.BackColor = System.Drawing.Color.OrangeRed;
-            this.verHorario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.verHorario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.verHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.verHorario.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verHorario.ForeColor = System.Drawing.Color.White;
-            this.verHorario.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.verHorario.IconColor = System.Drawing.Color.White;
-            this.verHorario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.verHorario.IconSize = 30;
-            this.verHorario.Location = new System.Drawing.Point(532, 163);
-            this.verHorario.Name = "verHorario";
-            this.verHorario.Size = new System.Drawing.Size(215, 38);
-            this.verHorario.TabIndex = 33;
-            this.verHorario.Text = "VER HORARIO";
-            this.verHorario.UseVisualStyleBackColor = false;
-            this.verHorario.Click += new System.EventHandler(this.verHorario_Click);
             // 
             // label12
             // 
@@ -390,7 +368,7 @@ namespace CapaPresentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "NuevoUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NUEVO USUARIO";
+            this.Text = "USUARIO";
             this.Load += new System.EventHandler(this.NuevoUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -429,6 +407,5 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
-        private FontAwesome.Sharp.IconButton verHorario;
     }
 }

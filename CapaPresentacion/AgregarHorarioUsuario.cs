@@ -17,10 +17,11 @@ namespace CapaPresentacion
         private CN_Horario cn_horario = new CN_Horario(); // Instancia de la capa de negocio
         private int idUsuario; // Variable para almacenar el ID del usuario
 
-        public AgregarHorarioUsuario(int idUsuario)
+        public AgregarHorarioUsuario(int idUsuario, string nombreUsuario)
         {
             InitializeComponent();
             this.idUsuario = idUsuario; // Asignar el ID del usuario
+            this.labelNombreUsuario.Text = nombreUsuario.ToUpper();
             ConfigurarNumericUpDown();
         }
 
@@ -106,6 +107,7 @@ namespace CapaPresentacion
             }
 
             MessageBox.Show("Horario agregado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            actualizarDataGrid();
 
             // Limpiar los CheckBox
             checkBoxLunes.Checked = false;
@@ -117,8 +119,60 @@ namespace CapaPresentacion
             // Restablecer los valores de NumericUpDown a su valor mínimo
             NUDhoraInicio.Value = NUDhoraInicio.Minimum;
             NUDhoraFin.Value = NUDhoraFin.Minimum;
+        }
 
-            //this.Close(); // Cierra el formulario después de registrar
+        private void AgregarHorarioUsuario_Load(object sender, EventArgs e)
+        {
+            actualizarDataGrid();
+        }
+
+        private void actualizarDataGrid()
+        {
+            //Listar horarios a traves del ID
+            List<Horario> listaHorarios = new CN_Horario().Listar(idUsuario);
+            dgvdataHorarios.Rows.Clear();
+            foreach (Horario item in listaHorarios)
+            {
+                dgvdataHorarios.Rows.Add(new object[] { item.id_horario, item.diaSemana, item.horaInicio, item.horaFin, "Eliminar" });
+            }
+        }
+
+        private void dgvdataHorarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificar si se hizo click en la columna de eliminar
+            if (e.ColumnIndex == dgvdataHorarios.Columns["eliminar"].Index && e.RowIndex >= 0)
+            {
+                // Confirmar eliminación
+                DialogResult resultado = MessageBox.Show("¿Seguro que desea eliminar este horario?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    // Obtener el id_horario de la fila seleccionada
+                    int idHorario = Convert.ToInt32(dgvdataHorarios.Rows[e.RowIndex].Cells["idHorario"].Value);
+
+                    // Llamar al método de la CapaNegocio para eliminar el horario
+                    CN_Horario cn_horario = new CN_Horario();
+                    string mensaje = string.Empty;
+
+                    bool respuesta = cn_horario.Eliminar(idHorario, out mensaje);
+
+                    if (respuesta)
+                    {
+                        MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        actualizarDataGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void BCancelar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No se asignaron horarios al usuario.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
     }
 }

@@ -47,7 +47,6 @@ namespace CapaPresentacion
         {
             if(usuarioValor == 1)
             {
-                verHorario.Visible = false;
 
                 // Cargar ComboBox de Estado
                 comboBoxEstado.Items.Add(new opcionCombo() { Valor = 1, Texto = "Activo" });
@@ -113,9 +112,9 @@ namespace CapaPresentacion
                     UsuarioRegistrado?.Invoke(); // Dispara el evento de usuario registrado para actualizar el DataGrid
                     this.Close();
 
-
+                    string nombreUsuario = textBoxNombre.Text + " " + textBoxApellido.Text;
                     // Abrir el formulario para agregar horario
-                    using (var agregarHorarioForm = new AgregarHorarioUsuario(idUsuarioGenerado))
+                    using (var agregarHorarioForm = new AgregarHorarioUsuario(idUsuarioGenerado, nombreUsuario))
                     {
                         agregarHorarioForm.ShowDialog();
                     }
@@ -261,13 +260,5 @@ namespace CapaPresentacion
             comboBoxEstado.SelectedIndex = valorEstado;
         }
 
-        private void verHorario_Click(object sender, EventArgs e)
-        {/*
-            //Modal para ver horario del usuario
-            using (var modal = new AgregarHorarioUsuario())
-            {
-                var resultado = modal.ShowDialog();
-            }*/
-        }
     }
 }

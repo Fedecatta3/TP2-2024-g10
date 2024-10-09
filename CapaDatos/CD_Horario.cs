@@ -50,5 +50,80 @@ namespace CapaDatos
 
             return respuesta;
         }
+
+
+        public List<Horario> Listar(int idUsuario)
+        {
+            List<Horario> lista = new List<Horario>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+
+                    string query = "SELECT * FROM Horario WHERE id_usuario = @idUsuario";
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@idUsuario", idUsuario);
+                    cmd.CommandType = CommandType.Text;
+
+                    conexion.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new Horario()
+                            {
+                                id_horario = Convert.ToInt32(dr["id_horario"]),
+                                id_usuario = new Usuario { id_usuario = Convert.ToInt32(dr["id_usuario"]) },
+                                diaSemana = dr["diaSemana"].ToString(),
+                                horaInicio = dr["horaInicio"].ToString(),
+                                horaFin = dr["horaFin"].ToString(),
+                                estado = Convert.ToBoolean(dr["estado"])
+
+
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error: " + ex.Message);
+                }
+            }
+            return lista;
+        }
+
+        public bool EliminarHorario(int idHorario, out string mensaje)
+        {
+            bool resultado = false;
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    SqlCommand cmd = new SqlCommand("SP_EliminarHorario", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_horario", idHorario);
+
+                    // Parámetro de salida para el mensaje
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                    resultado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                mensaje = ex.Message;
+                resultado = false;
+            }
+
+            return resultado;
+        }
     }
 }
