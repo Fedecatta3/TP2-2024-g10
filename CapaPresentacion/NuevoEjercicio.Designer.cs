@@ -29,13 +29,15 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BGuardarEjercicio = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBoxMinutos = new System.Windows.Forms.CheckBox();
-            this.checkBoxSegundos = new System.Windows.Forms.CheckBox();
             this.textBoxTiempo = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,17 +46,19 @@ namespace CapaPresentacion
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNombreEjercicio = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewEjercicios = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Repeticiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.EstadoMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.dataGridViewEjercicios = new System.Windows.Forms.DataGridView();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.idEjercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.repeticiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEjercicios)).BeginInit();
@@ -72,7 +76,7 @@ namespace CapaPresentacion
             this.BGuardarEjercicio.IconColor = System.Drawing.Color.White;
             this.BGuardarEjercicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BGuardarEjercicio.IconSize = 30;
-            this.BGuardarEjercicio.Location = new System.Drawing.Point(642, 32);
+            this.BGuardarEjercicio.Location = new System.Drawing.Point(48, 211);
             this.BGuardarEjercicio.Name = "BGuardarEjercicio";
             this.BGuardarEjercicio.Size = new System.Drawing.Size(35, 35);
             this.BGuardarEjercicio.TabIndex = 29;
@@ -81,9 +85,8 @@ namespace CapaPresentacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Controls.Add(this.BGuardarEjercicio);
-            this.groupBox1.Controls.Add(this.checkBoxMinutos);
-            this.groupBox1.Controls.Add(this.checkBoxSegundos);
             this.groupBox1.Controls.Add(this.textBoxTiempo);
             this.groupBox1.Controls.Add(this.BCancelar);
             this.groupBox1.Controls.Add(this.label3);
@@ -93,39 +96,20 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.textBoxNombreEjercicio);
             this.groupBox1.Location = new System.Drawing.Point(11, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(686, 100);
+            this.groupBox1.Size = new System.Drawing.Size(217, 258);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar nuevo ejercicio";
-            // 
-            // checkBoxMinutos
-            // 
-            this.checkBoxMinutos.AutoSize = true;
-            this.checkBoxMinutos.Location = new System.Drawing.Point(499, 73);
-            this.checkBoxMinutos.Name = "checkBoxMinutos";
-            this.checkBoxMinutos.Size = new System.Drawing.Size(63, 17);
-            this.checkBoxMinutos.TabIndex = 59;
-            this.checkBoxMinutos.Text = "Minutos";
-            this.checkBoxMinutos.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSegundos
-            // 
-            this.checkBoxSegundos.AutoSize = true;
-            this.checkBoxSegundos.Location = new System.Drawing.Point(419, 73);
-            this.checkBoxSegundos.Name = "checkBoxSegundos";
-            this.checkBoxSegundos.Size = new System.Drawing.Size(74, 17);
-            this.checkBoxSegundos.TabIndex = 58;
-            this.checkBoxSegundos.Text = "Segundos";
-            this.checkBoxSegundos.UseVisualStyleBackColor = true;
             // 
             // textBoxTiempo
             // 
             this.textBoxTiempo.BackColor = System.Drawing.Color.White;
             this.textBoxTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTiempo.Location = new System.Drawing.Point(410, 43);
+            this.textBoxTiempo.Location = new System.Drawing.Point(6, 171);
             this.textBoxTiempo.Name = "textBoxTiempo";
-            this.textBoxTiempo.Size = new System.Drawing.Size(177, 24);
+            this.textBoxTiempo.Size = new System.Drawing.Size(205, 24);
             this.textBoxTiempo.TabIndex = 57;
+            this.textBoxTiempo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTiempo_KeyPress);
             // 
             // BCancelar
             // 
@@ -139,7 +123,7 @@ namespace CapaPresentacion
             this.BCancelar.IconColor = System.Drawing.Color.White;
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 30;
-            this.BCancelar.Location = new System.Drawing.Point(601, 32);
+            this.BCancelar.Location = new System.Drawing.Point(7, 211);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(35, 35);
             this.BCancelar.TabIndex = 28;
@@ -151,18 +135,18 @@ namespace CapaPresentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(406, 20);
+            this.label3.Location = new System.Drawing.Point(5, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 20);
+            this.label3.Size = new System.Drawing.Size(170, 20);
             this.label3.TabIndex = 56;
-            this.label3.Text = "Cantidad de tiempo:";
+            this.label3.Text = "Tiempo (en segundos):";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(206, 20);
+            this.label1.Location = new System.Drawing.Point(5, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 42;
@@ -172,10 +156,11 @@ namespace CapaPresentacion
             // 
             this.textBoxRepeticiones.BackColor = System.Drawing.Color.White;
             this.textBoxRepeticiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRepeticiones.Location = new System.Drawing.Point(210, 43);
+            this.textBoxRepeticiones.Location = new System.Drawing.Point(6, 106);
             this.textBoxRepeticiones.Name = "textBoxRepeticiones";
-            this.textBoxRepeticiones.Size = new System.Drawing.Size(177, 24);
+            this.textBoxRepeticiones.Size = new System.Drawing.Size(205, 24);
             this.textBoxRepeticiones.TabIndex = 43;
+            this.textBoxRepeticiones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxRepeticiones_KeyPress);
             // 
             // label6
             // 
@@ -192,9 +177,9 @@ namespace CapaPresentacion
             // 
             this.textBoxNombreEjercicio.BackColor = System.Drawing.Color.White;
             this.textBoxNombreEjercicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombreEjercicio.Location = new System.Drawing.Point(9, 43);
+            this.textBoxNombreEjercicio.Location = new System.Drawing.Point(6, 43);
             this.textBoxNombreEjercicio.Name = "textBoxNombreEjercicio";
-            this.textBoxNombreEjercicio.Size = new System.Drawing.Size(180, 24);
+            this.textBoxNombreEjercicio.Size = new System.Drawing.Size(205, 24);
             this.textBoxNombreEjercicio.TabIndex = 41;
             // 
             // groupBox2
@@ -205,88 +190,19 @@ namespace CapaPresentacion
             this.groupBox2.Controls.Add(this.iconButton1);
             this.groupBox2.Controls.Add(this.comboBox4);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Location = new System.Drawing.Point(11, 116);
+            this.groupBox2.Location = new System.Drawing.Point(235, 10);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(686, 270);
+            this.groupBox2.Size = new System.Drawing.Size(522, 258);
             this.groupBox2.TabIndex = 29;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de ejercicios";
             // 
-            // dataGridViewEjercicios
-            // 
-            this.dataGridViewEjercicios.AllowUserToAddRows = false;
-            this.dataGridViewEjercicios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Repeticiones,
-            this.Tiempo,
-            this.dataGridViewButtonColumn2,
-            this.EstadoMedioPago});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEjercicios.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewEjercicios.Location = new System.Drawing.Point(13, 55);
-            this.dataGridViewEjercicios.MultiSelect = false;
-            this.dataGridViewEjercicios.Name = "dataGridViewEjercicios";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewEjercicios.Size = new System.Drawing.Size(664, 209);
-            this.dataGridViewEjercicios.TabIndex = 46;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 180;
-            // 
-            // Repeticiones
-            // 
-            this.Repeticiones.HeaderText = "Repeticiones";
-            this.Repeticiones.Name = "Repeticiones";
-            this.Repeticiones.Width = 120;
-            // 
-            // Tiempo
-            // 
-            this.Tiempo.HeaderText = "Tiempo";
-            this.Tiempo.Name = "Tiempo";
-            this.Tiempo.Width = 120;
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.HeaderText = "Accion";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            // 
-            // EstadoMedioPago
-            // 
-            this.EstadoMedioPago.HeaderText = "Estado";
-            this.EstadoMedioPago.Name = "EstadoMedioPago";
-            // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(298, 25);
+            this.textBox8.Location = new System.Drawing.Point(272, 25);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(180, 24);
+            this.textBox8.Size = new System.Drawing.Size(163, 24);
             this.textBox8.TabIndex = 45;
             // 
             // iconButton2
@@ -301,7 +217,7 @@ namespace CapaPresentacion
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(521, 23);
+            this.iconButton2.Location = new System.Drawing.Point(478, 23);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(35, 26);
             this.iconButton2.TabIndex = 44;
@@ -320,7 +236,7 @@ namespace CapaPresentacion
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(484, 23);
+            this.iconButton1.Location = new System.Drawing.Point(441, 23);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(35, 26);
             this.iconButton1.TabIndex = 43;
@@ -333,9 +249,9 @@ namespace CapaPresentacion
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(85, 23);
+            this.comboBox4.Location = new System.Drawing.Point(79, 25);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(204, 26);
+            this.comboBox4.Size = new System.Drawing.Size(179, 26);
             this.comboBox4.TabIndex = 41;
             // 
             // label14
@@ -343,23 +259,139 @@ namespace CapaPresentacion
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(10, 28);
+            this.label14.Location = new System.Drawing.Point(6, 30);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 15);
             this.label14.TabIndex = 42;
             this.label14.Text = "Buscar por:";
             // 
+            // dataGridViewEjercicios
+            // 
+            this.dataGridViewEjercicios.AllowUserToAddRows = false;
+            this.dataGridViewEjercicios.AllowUserToDeleteRows = false;
+            this.dataGridViewEjercicios.AllowUserToResizeColumns = false;
+            this.dataGridViewEjercicios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewEjercicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewEjercicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewEjercicios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEjercicio,
+            this.dataGridViewTextBoxColumn1,
+            this.repeticiones,
+            this.tiempo,
+            this.editar,
+            this.eliminar});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEjercicios.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewEjercicios.Location = new System.Drawing.Point(6, 57);
+            this.dataGridViewEjercicios.MultiSelect = false;
+            this.dataGridViewEjercicios.Name = "dataGridViewEjercicios";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewEjercicios.RowHeadersWidth = 30;
+            this.dataGridViewEjercicios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEjercicios.Size = new System.Drawing.Size(510, 189);
+            this.dataGridViewEjercicios.TabIndex = 47;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BackColor = System.Drawing.Color.White;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(187, 222);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(24, 24);
+            this.textBoxID.TabIndex = 58;
+            this.textBoxID.Visible = false;
+            // 
+            // idEjercicio
+            // 
+            this.idEjercicio.HeaderText = "ID";
+            this.idEjercicio.Name = "idEjercicio";
+            this.idEjercicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idEjercicio.Visible = false;
+            this.idEjercicio.Width = 25;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Width = 58;
+            // 
+            // repeticiones
+            // 
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.repeticiones.DefaultCellStyle = dataGridViewCellStyle4;
+            this.repeticiones.HeaderText = "Repeticiones";
+            this.repeticiones.Name = "repeticiones";
+            this.repeticiones.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.repeticiones.Width = 85;
+            // 
+            // tiempo
+            // 
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.tiempo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tiempo.HeaderText = "Tiempo en segundos";
+            this.tiempo.Name = "tiempo";
+            this.tiempo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.tiempo.Width = 116;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Name = "editar";
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.editar.Width = 64;
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Name = "eliminar";
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.eliminar.Width = 78;
+            // 
             // Ejercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 398);
+            this.ClientSize = new System.Drawing.Size(769, 278);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Ejercicios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ejercicios";
+            this.Text = "AGREGAR EJERCICIO";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -379,8 +411,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox textBoxRepeticiones;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxNombreEjercicio;
-        private System.Windows.Forms.CheckBox checkBoxMinutos;
-        private System.Windows.Forms.CheckBox checkBoxSegundos;
         private System.Windows.Forms.TextBox textBoxTiempo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox8;
@@ -389,10 +419,12 @@ namespace CapaPresentacion
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView dataGridViewEjercicios;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Repeticiones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tiempo;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoMedioPago;
+        private System.Windows.Forms.TextBox textBoxID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEjercicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn repeticiones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tiempo;
+        private System.Windows.Forms.DataGridViewButtonColumn editar;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminar;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaEntidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace CapaPresentacion
 {
     public partial class NuevoPlanEntrenamiento : Form
     {
-        public NuevoPlanEntrenamiento()
+        private Usuario usuarioActual; // Objeto usuario actual
+
+        public NuevoPlanEntrenamiento(Usuario usuario)
         {
             InitializeComponent();
+            usuarioActual = usuario;
         }
 
         private void BAgregarEjercicio_Click(object sender, EventArgs e)
@@ -28,8 +32,8 @@ namespace CapaPresentacion
 
         private void BAgregarCoach_Click(object sender, EventArgs e)
         {
-            //Modal para agregar nuevo ejercicio
-            using (var modal = new AgregarCoachAlPlan())
+            //Modal para agregar nuevo coach
+            using (var modal = new AgregarCoachAlPlan(usuarioActual))
             {
                 var resultado = modal.ShowDialog();
             }

@@ -135,7 +135,7 @@ namespace CapaPresentacion
 
         private void subMenuNuevoPlan_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menuPlanes, (IconMenuItem)sender, new NuevoPlanEntrenamiento());
+            AbrirFormulario(menuPlanes, (IconMenuItem)sender, new NuevoPlanEntrenamiento(usuarioActual));
         }
 
         private void subMenuVerPlanes_Click(object sender, EventArgs e)

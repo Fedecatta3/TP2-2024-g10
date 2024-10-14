@@ -26,18 +26,13 @@ namespace CapaPresentacion
         private void CargarEjercicios()
         {
             List<Ejercicio> listaEjercicios = objCN_Ejercicio.Listar();
+            dataGridViewEjercicios.Rows.Clear();
 
-            dataGridViewEjercicios.DataSource = null;
-            dataGridViewEjercicios.Columns.Clear();
+            foreach (Ejercicio item in listaEjercicios)
+            {
+                dataGridViewEjercicios.Rows.Add(new object[] {item.id_ejercicio, item.nombre, item.repeticiones, item.tiempo, "Editar", "Eliminar"});
+            }
 
-            // Enlazar la lista con el DataGridView
-            dataGridViewEjercicios.DataSource = listaEjercicios;
-
-            // Opcionalmente, ajustar los nombres de las columnas
-            dataGridViewEjercicios.Columns["id_ejercicio"].HeaderText = "ID";
-            dataGridViewEjercicios.Columns["nombre"].HeaderText = "Nombre";
-            dataGridViewEjercicios.Columns["repeticiones"].HeaderText = "Repeticiones";
-            dataGridViewEjercicios.Columns["tiempo"].HeaderText = "Tiempo (segundos)";
         }
 
         private void BCancelar_Click(object sender, EventArgs e)
@@ -48,25 +43,64 @@ namespace CapaPresentacion
                 textBoxNombreEjercicio.Clear();
                 textBoxRepeticiones.Clear();
                 textBoxTiempo.Clear();
-                checkBoxMinutos.Checked = false;
-                checkBoxSegundos.Checked = false;
             }
         }
 
         private void BGuardarEjercicio_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Seguro desea ingresar el nuevo ejercicio?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (respuesta == DialogResult.Yes)
-            {
-                DialogResult confirmacion = MessageBox.Show("Nuevo ejercicio ingresado correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string mensaje = string.Empty;
 
-                // Verificar si el usuario hizo clic en "Aceptar"
-                if (confirmacion == DialogResult.OK)
+            // Validar que los campos no estén vacíos antes de convertir los valores
+            if (string.IsNullOrWhiteSpace(textBoxNombreEjercicio.Text) ||
+                string.IsNullOrWhiteSpace(textBoxRepeticiones.Text) ||
+                string.IsNullOrWhiteSpace(textBoxTiempo.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Detener la ejecución si hay campos vacíos
+            }
+            else
+            {
+                Ejercicio objEjercicio = new Ejercicio()
                 {
-                    // Cerrar el modal automáticamente
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    //id_ejercicio = Convert.ToInt32(textBoxID.Text),
+                    nombre = textBoxNombreEjercicio.Text,
+                    repeticiones = Convert.ToInt32(textBoxRepeticiones.Text),
+                    tiempo = Convert.ToInt32(textBoxTiempo.Text)
+                };
+
+                int ejercicioRegistrado = objCN_Ejercicio.Agregar(objEjercicio, out mensaje);
+
+                if (ejercicioRegistrado == 0)
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else
+                {
+                    DialogResult confirmacion = MessageBox.Show("Nuevo ejercicio ingresado correctamente.", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarEjercicios();
+
+                    textBoxNombreEjercicio.Clear();
+                    textBoxRepeticiones.Clear();
+                    textBoxTiempo.Clear();
+                }
+            }
+        }
+
+        private void textBoxRepeticiones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo admite numeros
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; //ignora la tecla si no es numero o backspace
+            }
+        }
+
+        private void textBoxTiempo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo admite numeros
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; //ignora la tecla si no es numero o backspace
             }
         }
     }
