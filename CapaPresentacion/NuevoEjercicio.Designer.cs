@@ -38,6 +38,7 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BGuardarEjercicio = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxTiempo = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,15 +47,14 @@ namespace CapaPresentacion
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNombreEjercicio = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewEjercicios = new System.Windows.Forms.DataGridView();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridViewEjercicios = new System.Windows.Forms.DataGridView();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.idEjercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repeticiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -100,6 +100,16 @@ namespace CapaPresentacion
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregar nuevo ejercicio";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BackColor = System.Drawing.Color.White;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(187, 222);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(24, 24);
+            this.textBoxID.TabIndex = 58;
+            this.textBoxID.Visible = false;
             // 
             // textBoxTiempo
             // 
@@ -197,6 +207,60 @@ namespace CapaPresentacion
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista de ejercicios";
             // 
+            // dataGridViewEjercicios
+            // 
+            this.dataGridViewEjercicios.AllowUserToAddRows = false;
+            this.dataGridViewEjercicios.AllowUserToDeleteRows = false;
+            this.dataGridViewEjercicios.AllowUserToResizeColumns = false;
+            this.dataGridViewEjercicios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewEjercicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewEjercicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewEjercicios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idEjercicio,
+            this.nombre,
+            this.repeticiones,
+            this.tiempo,
+            this.editar,
+            this.eliminar});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEjercicios.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewEjercicios.Location = new System.Drawing.Point(6, 57);
+            this.dataGridViewEjercicios.MultiSelect = false;
+            this.dataGridViewEjercicios.Name = "dataGridViewEjercicios";
+            this.dataGridViewEjercicios.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewEjercicios.RowHeadersWidth = 30;
+            this.dataGridViewEjercicios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEjercicios.Size = new System.Drawing.Size(510, 189);
+            this.dataGridViewEjercicios.TabIndex = 47;
+            this.dataGridViewEjercicios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEjercicios_CellDoubleClick);
+            // 
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -265,85 +329,25 @@ namespace CapaPresentacion
             this.label14.TabIndex = 42;
             this.label14.Text = "Buscar por:";
             // 
-            // dataGridViewEjercicios
-            // 
-            this.dataGridViewEjercicios.AllowUserToAddRows = false;
-            this.dataGridViewEjercicios.AllowUserToDeleteRows = false;
-            this.dataGridViewEjercicios.AllowUserToResizeColumns = false;
-            this.dataGridViewEjercicios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewEjercicios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewEjercicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridViewEjercicios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEjercicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEjercicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEjercicios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idEjercicio,
-            this.dataGridViewTextBoxColumn1,
-            this.repeticiones,
-            this.tiempo,
-            this.editar,
-            this.eliminar});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEjercicios.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewEjercicios.Location = new System.Drawing.Point(6, 57);
-            this.dataGridViewEjercicios.MultiSelect = false;
-            this.dataGridViewEjercicios.Name = "dataGridViewEjercicios";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewEjercicios.RowHeadersWidth = 30;
-            this.dataGridViewEjercicios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridViewEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEjercicios.Size = new System.Drawing.Size(510, 189);
-            this.dataGridViewEjercicios.TabIndex = 47;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.BackColor = System.Drawing.Color.White;
-            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(187, 222);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(24, 24);
-            this.textBoxID.TabIndex = 58;
-            this.textBoxID.Visible = false;
-            // 
             // idEjercicio
             // 
             this.idEjercicio.HeaderText = "ID";
             this.idEjercicio.Name = "idEjercicio";
+            this.idEjercicio.ReadOnly = true;
             this.idEjercicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idEjercicio.Visible = false;
             this.idEjercicio.Width = 25;
             // 
-            // dataGridViewTextBoxColumn1
+            // nombre
             // 
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn1.Width = 58;
+            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nombre.Width = 58;
             // 
             // repeticiones
             // 
@@ -352,6 +356,7 @@ namespace CapaPresentacion
             this.repeticiones.DefaultCellStyle = dataGridViewCellStyle4;
             this.repeticiones.HeaderText = "Repeticiones";
             this.repeticiones.Name = "repeticiones";
+            this.repeticiones.ReadOnly = true;
             this.repeticiones.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.repeticiones.Width = 85;
             // 
@@ -362,6 +367,7 @@ namespace CapaPresentacion
             this.tiempo.DefaultCellStyle = dataGridViewCellStyle5;
             this.tiempo.HeaderText = "Tiempo en segundos";
             this.tiempo.Name = "tiempo";
+            this.tiempo.ReadOnly = true;
             this.tiempo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.tiempo.Width = 116;
             // 
@@ -369,6 +375,7 @@ namespace CapaPresentacion
             // 
             this.editar.HeaderText = "Editar";
             this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
             this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.editar.Width = 64;
@@ -377,6 +384,7 @@ namespace CapaPresentacion
             // 
             this.eliminar.HeaderText = "Eliminar";
             this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
             this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.eliminar.Width = 78;
@@ -421,7 +429,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridView dataGridViewEjercicios;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.DataGridViewTextBoxColumn idEjercicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn repeticiones;
         private System.Windows.Forms.DataGridViewTextBoxColumn tiempo;
         private System.Windows.Forms.DataGridViewButtonColumn editar;

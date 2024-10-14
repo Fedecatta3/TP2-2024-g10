@@ -15,11 +15,13 @@ namespace CapaPresentacion
     public partial class Ejercicios : Form
     {
         private CN_Ejercicio objCN_Ejercicio = new CN_Ejercicio(); // Capa de negocio para ejercicios
+        private NuevoPlanEntrenamiento planEntrenamientoForm; // Referencia al formulario principal
 
-        public Ejercicios()
+        public Ejercicios(NuevoPlanEntrenamiento planEntrenamiento)
         {
             InitializeComponent();
             CargarEjercicios(); // Cargar datos cuando se abra el formulario
+            planEntrenamientoForm = planEntrenamiento;
         }
 
         // Método para cargar ejercicios en el DataGridView
@@ -101,6 +103,33 @@ namespace CapaPresentacion
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
             {
                 e.Handled = true; //ignora la tecla si no es numero o backspace
+            }
+        }
+
+        private void dataGridViewEjercicios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                // Obtener el ID y otros datos del coach seleccionado
+                int idEjercicio = Convert.ToInt32(dataGridViewEjercicios.Rows[e.RowIndex].Cells["idEjercicio"].Value);
+                string nombre = dataGridViewEjercicios.Rows[e.RowIndex].Cells["nombre"].Value.ToString();
+                int repeticion = Convert.ToInt32(dataGridViewEjercicios.Rows[e.RowIndex].Cells["repeticiones"].Value);
+                int v_tiempo = Convert.ToInt32(dataGridViewEjercicios.Rows[e.RowIndex].Cells["tiempo"].Value);
+
+                // Crear objeto Ejercicio con los datos seleccionado
+                Ejercicio EjercicioSeleccionado = new Ejercicio()
+                {
+                    id_ejercicio = idEjercicio,
+                    nombre = nombre,
+                    repeticiones = repeticion,
+                    tiempo = v_tiempo
+                };
+
+                // Pasar el ejercicio seleccionado al formulario NuevoPlanEntrenamiento
+                planEntrenamientoForm.ActualizarEjerciciosSeleccionados(EjercicioSeleccionado);
+
+                // Cerrar el formulario actual
+                this.Close();
             }
         }
     }
