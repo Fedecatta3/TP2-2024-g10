@@ -32,7 +32,6 @@ namespace CapaDatos
                             fechaInicio = Convert.ToDateTime(reader["fechaInicio"]),
                             fechaFin = Convert.ToDateTime(reader["fechaFin"]),
                             cantSeries = Convert.ToInt32(reader["cantSeries"]),
-                            total = Convert.ToInt32(reader["total"]),
                             estado = Convert.ToBoolean(reader["estado"])
                         });
                     }
@@ -54,7 +53,6 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("fechaInicio", plan.fechaInicio);
                 cmd.Parameters.AddWithValue("fechaFin", plan.fechaFin);
                 cmd.Parameters.AddWithValue("cantSeries", plan.cantSeries);
-                cmd.Parameters.AddWithValue("total", plan.total);
                 cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
@@ -83,7 +81,6 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("fechaInicio", plan.fechaInicio);
                 cmd.Parameters.AddWithValue("fechaFin", plan.fechaFin);
                 cmd.Parameters.AddWithValue("cantSeries", plan.cantSeries);
-                cmd.Parameters.AddWithValue("total", plan.total);
                 cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 

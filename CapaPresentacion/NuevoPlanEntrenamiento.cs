@@ -1,4 +1,5 @@
 ﻿using CapaEntidad;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -127,6 +128,63 @@ namespace CapaPresentacion
 
                 // Eliminar la fila del DataGridView
                 dataGridViewEjerciciosSeleccionados.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo admite numeros
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; //ignora la tecla si no es numero o backspace
+            }
+        }
+
+        private void BConfirmarPlan_Click(object sender, EventArgs e) //CHEKEAR VALIDACIONES
+        {
+            // Verifica si el DataGridView de ejercicios tiene filas
+            if (dataGridViewEjerciciosSeleccionados.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe seleccionar al menos un ejercicio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string mensaje = string.Empty;
+
+            PlanEntrenamiento nuevoPlan = new PlanEntrenamiento()
+            {
+                nombre = textBoxNombrePlan.Text,
+                cantSeries = Convert.ToInt32(textBoxCantSeries.Text),
+                fechaInicio = dateTimePicker1.Value, 
+                fechaFin = dateTimePicker2.Value 
+            };
+
+            CN_PlanEntrenamiento objCN_PlanEntrenamiento = new CN_PlanEntrenamiento();
+
+            bool resultado = objCN_PlanEntrenamiento.Agregar(nuevoPlan, out mensaje);
+
+            if (!resultado)
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("El plan de entrenamiento se agregó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                textBoxNombrePlan.Clear();
+                textBoxCantSeries.Clear();
+                dateTimePicker1.Value = DateTime.Now;
+                dateTimePicker2.Value = DateTime.Now;
+                dataGridViewEjerciciosSeleccionados.Rows.Clear();
+
+                // Limpia el dataGrid de coach seleccionados menos el registro que pertenece al usuario actual
+                for (int i = dataGridCoachSeleccionados.Rows.Count - 1; i >= 0; i--)
+                {
+                    // Verifica si el ID del usuario de la fila no es el del usuario actual
+                    if (Convert.ToInt32(dataGridCoachSeleccionados.Rows[i].Cells["id_usuario"].Value) != usuarioActual.id_usuario)
+                    {
+                        dataGridCoachSeleccionados.Rows.RemoveAt(i);
+                    }
+                }
             }
         }
     }

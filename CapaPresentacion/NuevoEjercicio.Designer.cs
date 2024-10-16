@@ -48,17 +48,17 @@ namespace CapaPresentacion
             this.textBoxNombreEjercicio = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridViewEjercicios = new System.Windows.Forms.DataGridView();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.idEjercicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.repeticiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEjercicios)).BeginInit();
@@ -259,7 +259,68 @@ namespace CapaPresentacion
             this.dataGridViewEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEjercicios.Size = new System.Drawing.Size(510, 189);
             this.dataGridViewEjercicios.TabIndex = 47;
+            this.dataGridViewEjercicios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEjercicios_CellContentClick);
             this.dataGridViewEjercicios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEjercicios_CellDoubleClick);
+            // 
+            // idEjercicio
+            // 
+            this.idEjercicio.HeaderText = "ID";
+            this.idEjercicio.Name = "idEjercicio";
+            this.idEjercicio.ReadOnly = true;
+            this.idEjercicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idEjercicio.Visible = false;
+            this.idEjercicio.Width = 25;
+            // 
+            // nombre
+            // 
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nombre.Width = 58;
+            // 
+            // repeticiones
+            // 
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.repeticiones.DefaultCellStyle = dataGridViewCellStyle4;
+            this.repeticiones.HeaderText = "Repeticiones";
+            this.repeticiones.Name = "repeticiones";
+            this.repeticiones.ReadOnly = true;
+            this.repeticiones.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.repeticiones.Width = 85;
+            // 
+            // tiempo
+            // 
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.tiempo.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tiempo.HeaderText = "Tiempo en segundos";
+            this.tiempo.Name = "tiempo";
+            this.tiempo.ReadOnly = true;
+            this.tiempo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.tiempo.Width = 116;
+            // 
+            // editar
+            // 
+            this.editar.HeaderText = "Editar";
+            this.editar.Name = "editar";
+            this.editar.ReadOnly = true;
+            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.editar.Width = 64;
+            // 
+            // eliminar
+            // 
+            this.eliminar.HeaderText = "Eliminar";
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.eliminar.Width = 78;
             // 
             // textBox8
             // 
@@ -328,66 +389,6 @@ namespace CapaPresentacion
             this.label14.Size = new System.Drawing.Size(69, 15);
             this.label14.TabIndex = 42;
             this.label14.Text = "Buscar por:";
-            // 
-            // idEjercicio
-            // 
-            this.idEjercicio.HeaderText = "ID";
-            this.idEjercicio.Name = "idEjercicio";
-            this.idEjercicio.ReadOnly = true;
-            this.idEjercicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.idEjercicio.Visible = false;
-            this.idEjercicio.Width = 25;
-            // 
-            // nombre
-            // 
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.nombre.DefaultCellStyle = dataGridViewCellStyle3;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nombre.Width = 58;
-            // 
-            // repeticiones
-            // 
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.repeticiones.DefaultCellStyle = dataGridViewCellStyle4;
-            this.repeticiones.HeaderText = "Repeticiones";
-            this.repeticiones.Name = "repeticiones";
-            this.repeticiones.ReadOnly = true;
-            this.repeticiones.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.repeticiones.Width = 85;
-            // 
-            // tiempo
-            // 
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.tiempo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.tiempo.HeaderText = "Tiempo en segundos";
-            this.tiempo.Name = "tiempo";
-            this.tiempo.ReadOnly = true;
-            this.tiempo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.tiempo.Width = 116;
-            // 
-            // editar
-            // 
-            this.editar.HeaderText = "Editar";
-            this.editar.Name = "editar";
-            this.editar.ReadOnly = true;
-            this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.editar.Width = 64;
-            // 
-            // eliminar
-            // 
-            this.eliminar.HeaderText = "Eliminar";
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.eliminar.Width = 78;
             // 
             // Ejercicios
             // 

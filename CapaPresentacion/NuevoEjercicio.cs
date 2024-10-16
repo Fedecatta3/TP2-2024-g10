@@ -132,5 +132,14 @@ namespace CapaPresentacion
                 this.Close();
             }
         }
+
+        private void dataGridViewEjercicios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //verifica que hizo click en la columna editar
+            if (e.ColumnIndex == dataGridViewEjercicios.Columns["Editar"].Index && e.RowIndex >= 0)
+            {
+
+            }
+        }
     }
 }
