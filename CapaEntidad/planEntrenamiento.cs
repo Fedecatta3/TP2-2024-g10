@@ -13,7 +13,6 @@ namespace CapaEntidad
         public DateTime fechaInicio { get; set; }
         public DateTime fechaFin { get; set; }
         public int cantSeries { get; set; }
-        public int total { get; set; }
         public Boolean estado {get;set;}
     }
 }

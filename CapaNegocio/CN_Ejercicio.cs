@@ -21,12 +21,6 @@ namespace CapaNegocio
         // Método para agregar un nuevo ejercicio
         public int Agregar(Ejercicio ejercicio, out string mensaje)
         {
-            if (string.IsNullOrWhiteSpace(ejercicio.nombre) || ejercicio.repeticiones < 0 || ejercicio.tiempo < 0)
-            {
-                mensaje = "Todos los campos son obligatorios.";
-                return 0; // Indica que la operación no se realizó
-            }
-
             return objCD_Ejercicio.Agregar(ejercicio, out mensaje);
         }
 

@@ -76,6 +76,7 @@ namespace CapaPresentacion
             this.tiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.BConfirmarPlan = new FontAwesome.Sharp.IconButton();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCoachSeleccionados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEjerciciosSeleccionados)).BeginInit();
@@ -520,6 +521,7 @@ namespace CapaPresentacion
             this.BCancelar.Text = "LIMPIAR";
             this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BCancelar.UseVisualStyleBackColor = false;
+            this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
             // 
             // BConfirmarPlan
             // 
@@ -543,11 +545,21 @@ namespace CapaPresentacion
             this.BConfirmarPlan.UseVisualStyleBackColor = false;
             this.BConfirmarPlan.Click += new System.EventHandler(this.BConfirmarPlan_Click);
             // 
+            // textBoxID
+            // 
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(24, 465);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(29, 24);
+            this.textBoxID.TabIndex = 30;
+            this.textBoxID.Visible = false;
+            // 
             // NuevoPlanEntrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 507);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BCancelar);
             this.Controls.Add(this.BConfirmarPlan);
             this.Controls.Add(this.groupBox1);
@@ -598,5 +610,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn tiempo;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }

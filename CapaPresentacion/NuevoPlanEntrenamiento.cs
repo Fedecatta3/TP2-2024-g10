@@ -140,7 +140,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void BConfirmarPlan_Click(object sender, EventArgs e) //CHEKEAR VALIDACIONES
+        private void BConfirmarPlan_Click(object sender, EventArgs e)
         {
             // Verifica si el DataGridView de ejercicios tiene filas
             if (dataGridViewEjerciciosSeleccionados.Rows.Count == 0)
@@ -151,39 +151,98 @@ namespace CapaPresentacion
 
             string mensaje = string.Empty;
 
+            // Validaciones de campos vacíos
+            if (string.IsNullOrWhiteSpace(textBoxNombrePlan.Text) ||
+                string.IsNullOrWhiteSpace(textBoxCantSeries.Text) ||
+                (dateTimePicker1.Value == DateTime.MinValue) ||
+                (dateTimePicker2.Value == DateTime.MinValue))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (Convert.ToInt32(textBoxCantSeries.Text) <= 0)
+            {
+                MessageBox.Show("El campo 'Cantidad de Series' debe ser mayor a cero.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (dateTimePicker2.Value <= dateTimePicker1.Value)
+            {
+                MessageBox.Show("La fecha de fin no puede ser menor o igual a la fecha de inicio.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             PlanEntrenamiento nuevoPlan = new PlanEntrenamiento()
             {
                 nombre = textBoxNombrePlan.Text,
+                fechaInicio = dateTimePicker1.Value.Date, // Solo la fecha, sin la hora
+                fechaFin = dateTimePicker2.Value.Date,
                 cantSeries = Convert.ToInt32(textBoxCantSeries.Text),
-                fechaInicio = dateTimePicker1.Value, 
-                fechaFin = dateTimePicker2.Value 
+                estado = true // Estado activo por defecto
             };
 
-            CN_PlanEntrenamiento objCN_PlanEntrenamiento = new CN_PlanEntrenamiento();
+            CN_PlanEntrenamiento planNegocio = new CN_PlanEntrenamiento();
+            int idPlanGenerado = planNegocio.Agregar(nuevoPlan, out mensaje);
 
-            bool resultado = objCN_PlanEntrenamiento.Agregar(nuevoPlan, out mensaje);
-
-            if (!resultado)
+            if (idPlanGenerado == 0)
             {
                 MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("El plan de entrenamiento se agregó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                textBoxNombrePlan.Clear();
-                textBoxCantSeries.Clear();
-                dateTimePicker1.Value = DateTime.Now;
-                dateTimePicker2.Value = DateTime.Now;
-                dataGridViewEjerciciosSeleccionados.Rows.Clear();
+                // Listas para almacenar los IDs seleccionados
+                List<int> listaEjercicios = new List<int>();
+                List<int> listaUsuarios = new List<int>();
 
-                // Limpia el dataGrid de coach seleccionados menos el registro que pertenece al usuario actual
-                for (int i = dataGridCoachSeleccionados.Rows.Count - 1; i >= 0; i--)
+                // Recorrer el DataGridView de ejercicios seleccionados
+                foreach (DataGridViewRow row in dataGridViewEjerciciosSeleccionados.Rows)
                 {
-                    // Verifica si el ID del usuario de la fila no es el del usuario actual
-                    if (Convert.ToInt32(dataGridCoachSeleccionados.Rows[i].Cells["id_usuario"].Value) != usuarioActual.id_usuario)
-                    {
-                        dataGridCoachSeleccionados.Rows.RemoveAt(i);
-                    }
+                    int idEjercicio = Convert.ToInt32(row.Cells["idEjercicio"].Value);
+                    listaEjercicios.Add(idEjercicio);
+                }
+
+                // Recorrer el DataGridView de usuarios seleccionados
+                foreach (DataGridViewRow row in dataGridCoachSeleccionados.Rows)
+                {
+                    int idUsuario = Convert.ToInt32(row.Cells["idUsuario"].Value);
+                    listaUsuarios.Add(idUsuario);
+                }
+
+                // Asociar ejercicios y usuarios al plan generado
+                planNegocio.AsociarEjercicios(idPlanGenerado, listaEjercicios);
+                planNegocio.AsociarUsuarios(idPlanGenerado, listaUsuarios);
+
+                MessageBox.Show("El plan de entrenamiento se agregó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                limpiarCampos();
+            }
+        }
+
+        private void BCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult respuesta = MessageBox.Show("¿Seguro desea eliminar todos los datos ingresados?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (respuesta == DialogResult.Yes)
+            {
+                limpiarCampos();
+            }
+        }
+
+        private void limpiarCampos()
+        {
+            textBoxNombrePlan.Clear();
+            textBoxCantSeries.Clear();
+            dateTimePicker1.Value = DateTime.Now;
+            dateTimePicker2.Value = DateTime.Now;
+            dataGridViewEjerciciosSeleccionados.Rows.Clear();
+
+            // Limpia el dataGrid de coach seleccionados menos el registro que pertenece al usuario actual
+            for (int i = dataGridCoachSeleccionados.Rows.Count - 1; i >= 0; i--)
+            {
+                // Verifica si el ID del usuario de la fila no es el del usuario actual
+                if (Convert.ToInt32(dataGridCoachSeleccionados.Rows[i].Cells["idUsuario"].Value) != usuarioActual.id_usuario)
+                {
+                    dataGridCoachSeleccionados.Rows.RemoveAt(i);
                 }
             }
         }
