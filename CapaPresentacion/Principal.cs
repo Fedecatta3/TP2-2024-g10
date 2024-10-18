@@ -133,16 +133,6 @@ namespace CapaPresentacion
             AbrirFormulario((IconMenuItem)sender, null, new BackUp());
         }
 
-        private void subMenuNuevoPlan_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(menuPlanes, (IconMenuItem)sender, new NuevoPlanEntrenamiento(usuarioActual));
-        }
-
-        private void subMenuVerPlanes_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(menuPlanes, (IconMenuItem)sender, new ListaPlanesDeEntrenamiento());
-        }
-
         private void horaFecha_Tick(object sender, EventArgs e)
         {
             labelHora.Text = DateTime.Now.ToLongTimeString();
@@ -152,6 +142,11 @@ namespace CapaPresentacion
         private void menuAlumnos_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, null, new ListaAlumnos(usuarioActual));
+        }
+
+        private void menuPlanes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, null, new ListaPlanesDeEntrenamiento(usuarioActual));
         }
     }
 }

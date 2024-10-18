@@ -65,52 +65,52 @@ namespace CapaDatos
         }
 
         // Método para editar un ejercicio
-        public bool Editar(Ejercicio ejercicio, out string mensaje)
+        public int Editar(Ejercicio ejercicio, out string mensaje)
         {
-            bool resultado = false;
+            int resultado = 0;
             mensaje = string.Empty;
 
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
             {
                 SqlCommand cmd = new SqlCommand("SP_EDITAR_EJERCICIO", conexion);
-                cmd.Parameters.AddWithValue("id_ejercicio", ejercicio.id_ejercicio);
-                cmd.Parameters.AddWithValue("nombre", ejercicio.nombre);
-                cmd.Parameters.AddWithValue("repeticiones", ejercicio.repeticiones);
-                cmd.Parameters.AddWithValue("tiempo", ejercicio.tiempo);
-                cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                cmd.Parameters.AddWithValue("@id_ejercicio", ejercicio.id_ejercicio);
+                cmd.Parameters.AddWithValue("@nombre", ejercicio.nombre);
+                cmd.Parameters.AddWithValue("@repeticiones", ejercicio.repeticiones);
+                cmd.Parameters.AddWithValue("@tiempo", ejercicio.tiempo);
+                cmd.Parameters.Add("@respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 conexion.Open();
                 cmd.ExecuteNonQuery();
 
-                resultado = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
-                mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                resultado = Convert.ToInt32(cmd.Parameters["@respuesta"].Value);
+                mensaje = cmd.Parameters["@mensaje"].Value.ToString();
             }
             return resultado;
         }
 
         // Método para eliminar un ejercicio
-        public bool Eliminar(int id_ejercicio, out string mensaje)
+        public int Eliminar(int id_ejercicio, out string mensaje)
         {
-            bool resultado = false;
+            int resultado = 0;
             mensaje = string.Empty;
 
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
             {
                 SqlCommand cmd = new SqlCommand("SP_ELIMINAR_EJERCICIO", conexion);
-                cmd.Parameters.AddWithValue("id_ejercicio", id_ejercicio);
-                cmd.Parameters.Add("respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                cmd.Parameters.AddWithValue("@id_ejercicio", id_ejercicio);
+                cmd.Parameters.Add("@respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 conexion.Open();
                 cmd.ExecuteNonQuery();
 
-                resultado = Convert.ToBoolean(cmd.Parameters["respuesta"].Value);
-                mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                resultado = Convert.ToInt32(cmd.Parameters["@respuesta"].Value);
+                mensaje = cmd.Parameters["@mensaje"].Value.ToString();
             }
             return resultado;
         }

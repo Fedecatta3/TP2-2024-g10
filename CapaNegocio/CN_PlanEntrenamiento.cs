@@ -12,6 +12,7 @@ namespace CapaNegocio
     {
         private CD_PlanEntrenamiento objCD_PlanEntrenamiento = new CD_PlanEntrenamiento();
 
+        //Metodo para listar los planes de entrenamiento
         public List<PlanEntrenamiento> Listar()
         {
             return objCD_PlanEntrenamiento.Listar();

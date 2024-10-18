@@ -29,77 +29,59 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.labelCantPlanes = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreCompleto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CantSeries = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BLimpiar = new FontAwesome.Sharp.IconButton();
+            this.Bbuscar = new FontAwesome.Sharp.IconButton();
+            this.dgvdataListaPlanes = new System.Windows.Forms.DataGridView();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.idPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.series = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ejercicios = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Coachs = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LnombreColumna = new System.Windows.Forms.Label();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.LBuscar = new System.Windows.Forms.Label();
+            this.BNuevoPlan = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdataListaPlanes)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelCantPlanes
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(155, 472);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "0 planes";
+            this.labelCantPlanes.AutoSize = true;
+            this.labelCantPlanes.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCantPlanes.ForeColor = System.Drawing.Color.Black;
+            this.labelCantPlanes.Location = new System.Drawing.Point(154, 451);
+            this.labelCantPlanes.Name = "labelCantPlanes";
+            this.labelCantPlanes.Size = new System.Drawing.Size(64, 20);
+            this.labelCantPlanes.TabIndex = 46;
+            this.labelCantPlanes.Text = "0 planes";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(12, 472);
+            this.label3.Location = new System.Drawing.Point(11, 451);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 20);
             this.label3.TabIndex = 45;
             this.label3.Text = "Cantidad de planes:";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(491, 12);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(180, 24);
-            this.textBox8.TabIndex = 40;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.BackColor = System.Drawing.Color.White;
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(316, 12);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(169, 26);
-            this.comboBox4.TabIndex = 41;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(246, 17);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 15);
-            this.label14.TabIndex = 42;
-            this.label14.Text = "Buscar por:";
             // 
             // label13
             // 
@@ -114,150 +96,292 @@ namespace CapaPresentacion
             this.label13.Text = "LISTA DE PLANES";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView1
+            // BLimpiar
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDusuario,
-            this.NombreCompleto,
-            this.Membresia,
-            this.Vencimiento,
-            this.CantSeries,
+            this.BLimpiar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BLimpiar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BLimpiar.ForeColor = System.Drawing.Color.White;
+            this.BLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.BLimpiar.IconColor = System.Drawing.Color.White;
+            this.BLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BLimpiar.IconSize = 25;
+            this.BLimpiar.Location = new System.Drawing.Point(728, 12);
+            this.BLimpiar.Name = "BLimpiar";
+            this.BLimpiar.Size = new System.Drawing.Size(35, 24);
+            this.BLimpiar.TabIndex = 44;
+            this.BLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BLimpiar.UseVisualStyleBackColor = false;
+            this.BLimpiar.Click += new System.EventHandler(this.BLimpiar_Click);
+            // 
+            // Bbuscar
+            // 
+            this.Bbuscar.BackColor = System.Drawing.Color.LimeGreen;
+            this.Bbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Bbuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bbuscar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bbuscar.ForeColor = System.Drawing.Color.White;
+            this.Bbuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.Bbuscar.IconColor = System.Drawing.Color.White;
+            this.Bbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Bbuscar.IconSize = 20;
+            this.Bbuscar.Location = new System.Drawing.Point(677, 12);
+            this.Bbuscar.Name = "Bbuscar";
+            this.Bbuscar.Size = new System.Drawing.Size(35, 24);
+            this.Bbuscar.TabIndex = 43;
+            this.Bbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bbuscar.UseVisualStyleBackColor = false;
+            this.Bbuscar.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // dgvdataListaPlanes
+            // 
+            this.dgvdataListaPlanes.AllowUserToAddRows = false;
+            this.dgvdataListaPlanes.AllowUserToDeleteRows = false;
+            this.dgvdataListaPlanes.AllowUserToResizeColumns = false;
+            this.dgvdataListaPlanes.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvdataListaPlanes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvdataListaPlanes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvdataListaPlanes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdataListaPlanes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvdataListaPlanes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdataListaPlanes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Editar,
+            this.eliminar,
+            this.idPlan,
+            this.Nombre,
+            this.fechaInicio,
+            this.fechaFin,
+            this.series,
             this.Ejercicios,
-            this.Coachs,
-            this.Accion});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 51);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 415);
-            this.dataGridView1.TabIndex = 38;
+            this.Estado});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvdataListaPlanes.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvdataListaPlanes.Location = new System.Drawing.Point(12, 51);
+            this.dgvdataListaPlanes.MultiSelect = false;
+            this.dgvdataListaPlanes.Name = "dgvdataListaPlanes";
+            this.dgvdataListaPlanes.ReadOnly = true;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdataListaPlanes.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvdataListaPlanes.RowHeadersWidth = 30;
+            this.dgvdataListaPlanes.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvdataListaPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvdataListaPlanes.Size = new System.Drawing.Size(765, 394);
+            this.dgvdataListaPlanes.TabIndex = 47;
+            this.dgvdataListaPlanes.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdataListaPlanes_ColumnHeaderMouseClick);
             // 
-            // iconButton2
+            // Editar
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(728, 12);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(35, 24);
-            this.iconButton2.TabIndex = 44;
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Editar.HeaderText = "";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Width = 5;
             // 
-            // iconButton1
+            // eliminar
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(677, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(35, 24);
-            this.iconButton1.TabIndex = 43;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 5;
             // 
-            // IDusuario
+            // idPlan
             // 
-            this.IDusuario.HeaderText = "IDplan";
-            this.IDusuario.Name = "IDusuario";
+            this.idPlan.HeaderText = "Idplan";
+            this.idPlan.Name = "idPlan";
+            this.idPlan.ReadOnly = true;
+            this.idPlan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idPlan.Visible = false;
+            this.idPlan.Width = 47;
             // 
-            // NombreCompleto
+            // Nombre
             // 
-            this.NombreCompleto.HeaderText = "Nombre plan";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.Width = 180;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 58;
             // 
-            // Membresia
+            // fechaInicio
             // 
-            this.Membresia.HeaderText = "Fecha inicio";
-            this.Membresia.Name = "Membresia";
-            this.Membresia.Width = 180;
+            this.fechaInicio.HeaderText = "Fecha Inicio";
+            this.fechaInicio.Name = "fechaInicio";
+            this.fechaInicio.ReadOnly = true;
+            this.fechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaInicio.Width = 71;
             // 
-            // Vencimiento
+            // fechaFin
             // 
-            this.Vencimiento.HeaderText = "Fecha fin";
-            this.Vencimiento.Name = "Vencimiento";
-            this.Vencimiento.Width = 150;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.fechaFin.DefaultCellStyle = dataGridViewCellStyle6;
+            this.fechaFin.HeaderText = "Fecha Fin";
+            this.fechaFin.Name = "fechaFin";
+            this.fechaFin.ReadOnly = true;
+            this.fechaFin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaFin.Width = 60;
             // 
-            // CantSeries
+            // series
             // 
-            this.CantSeries.HeaderText = "Cantidad de series";
-            this.CantSeries.Name = "CantSeries";
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.series.DefaultCellStyle = dataGridViewCellStyle7;
+            this.series.HeaderText = "Series";
+            this.series.Name = "series";
+            this.series.ReadOnly = true;
+            this.series.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.series.Width = 48;
             // 
             // Ejercicios
             // 
-            this.Ejercicios.HeaderText = "Ejercicios";
+            this.Ejercicios.HeaderText = "Ejercicios Asociados";
             this.Ejercicios.Name = "Ejercicios";
+            this.Ejercicios.ReadOnly = true;
+            this.Ejercicios.Width = 113;
             // 
-            // Coachs
+            // Estado
             // 
-            this.Coachs.HeaderText = "Coach/s";
-            this.Coachs.Name = "Coachs";
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Estado.Width = 51;
             // 
-            // Accion
+            // LnombreColumna
             // 
-            this.Accion.HeaderText = "Accion";
-            this.Accion.Name = "Accion";
-            this.Accion.Width = 110;
+            this.LnombreColumna.AutoSize = true;
+            this.LnombreColumna.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnombreColumna.ForeColor = System.Drawing.Color.Red;
+            this.LnombreColumna.Location = new System.Drawing.Point(371, 18);
+            this.LnombreColumna.Name = "LnombreColumna";
+            this.LnombreColumna.Size = new System.Drawing.Size(93, 15);
+            this.LnombreColumna.TabIndex = 50;
+            this.LnombreColumna.Text = "Nombre campo";
+            this.LnombreColumna.Visible = false;
+            // 
+            // textBoxBusqueda
+            // 
+            this.textBoxBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBusqueda.Location = new System.Drawing.Point(491, 13);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(180, 24);
+            this.textBoxBusqueda.TabIndex = 48;
+            // 
+            // LBuscar
+            // 
+            this.LBuscar.AutoSize = true;
+            this.LBuscar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBuscar.Location = new System.Drawing.Point(301, 18);
+            this.LBuscar.Name = "LBuscar";
+            this.LBuscar.Size = new System.Drawing.Size(69, 15);
+            this.LBuscar.TabIndex = 49;
+            this.LBuscar.Text = "Buscar por:";
+            this.LBuscar.Visible = false;
+            // 
+            // BNuevoPlan
+            // 
+            this.BNuevoPlan.BackColor = System.Drawing.Color.Green;
+            this.BNuevoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BNuevoPlan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BNuevoPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BNuevoPlan.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BNuevoPlan.ForeColor = System.Drawing.Color.White;
+            this.BNuevoPlan.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BNuevoPlan.IconColor = System.Drawing.Color.White;
+            this.BNuevoPlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BNuevoPlan.IconSize = 30;
+            this.BNuevoPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BNuevoPlan.Location = new System.Drawing.Point(579, 451);
+            this.BNuevoPlan.Name = "BNuevoPlan";
+            this.BNuevoPlan.Size = new System.Drawing.Size(198, 45);
+            this.BNuevoPlan.TabIndex = 51;
+            this.BNuevoPlan.Text = "AGREGAR NUEVO PLAN";
+            this.BNuevoPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BNuevoPlan.UseVisualStyleBackColor = false;
+            this.BNuevoPlan.Click += new System.EventHandler(this.BNuevoPlan_Click);
             // 
             // ListaPlanesDeEntrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 507);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BNuevoPlan);
+            this.Controls.Add(this.LnombreColumna);
+            this.Controls.Add(this.textBoxBusqueda);
+            this.Controls.Add(this.LBuscar);
+            this.Controls.Add(this.labelCantPlanes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.BLimpiar);
+            this.Controls.Add(this.Bbuscar);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvdataListaPlanes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaPlanesDeEntrenamiento";
             this.Text = "ListaPlanesDeEntrenamiento";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ListaPlanesDeEntrenamiento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdataListaPlanes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCantPlanes;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label14;
+        private FontAwesome.Sharp.IconButton BLimpiar;
+        private FontAwesome.Sharp.IconButton Bbuscar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDusuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreCompleto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CantSeries;
+        private System.Windows.Forms.DataGridView dgvdataListaPlanes;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn eliminar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPlan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn series;
         private System.Windows.Forms.DataGridViewButtonColumn Ejercicios;
-        private System.Windows.Forms.DataGridViewButtonColumn Coachs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Accion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Label LnombreColumna;
+        private System.Windows.Forms.TextBox textBoxBusqueda;
+        private System.Windows.Forms.Label LBuscar;
+        private FontAwesome.Sharp.IconButton BNuevoPlan;
     }
 }

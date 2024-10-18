@@ -45,7 +45,6 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxNombrePlan = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -81,17 +80,6 @@ namespace CapaPresentacion
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCoachSeleccionados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEjerciciosSeleccionados)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(211, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(365, 27);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "NUEVO PLAN DE ENTRENAMIENTO";
             // 
             // label3
             // 
@@ -170,7 +158,7 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dataGridCoachSeleccionados);
             this.groupBox1.Controls.Add(this.dataGridViewEjerciciosSeleccionados);
-            this.groupBox1.Location = new System.Drawing.Point(12, 46);
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(766, 404);
             this.groupBox1.TabIndex = 26;
@@ -514,7 +502,7 @@ namespace CapaPresentacion
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 35;
             this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(492, 460);
+            this.BCancelar.Location = new System.Drawing.Point(492, 417);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(118, 35);
             this.BCancelar.TabIndex = 29;
@@ -536,11 +524,11 @@ namespace CapaPresentacion
             this.BConfirmarPlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BConfirmarPlan.IconSize = 30;
             this.BConfirmarPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BConfirmarPlan.Location = new System.Drawing.Point(622, 460);
+            this.BConfirmarPlan.Location = new System.Drawing.Point(616, 417);
             this.BConfirmarPlan.Name = "BConfirmarPlan";
-            this.BConfirmarPlan.Size = new System.Drawing.Size(144, 35);
+            this.BConfirmarPlan.Size = new System.Drawing.Size(162, 35);
             this.BConfirmarPlan.TabIndex = 28;
-            this.BConfirmarPlan.Text = "CREAR PLAN";
+            this.BConfirmarPlan.Text = "GUARDAR PLAN";
             this.BConfirmarPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BConfirmarPlan.UseVisualStyleBackColor = false;
             this.BConfirmarPlan.Click += new System.EventHandler(this.BConfirmarPlan_Click);
@@ -548,7 +536,7 @@ namespace CapaPresentacion
             // textBoxID
             // 
             this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(24, 465);
+            this.textBoxID.Location = new System.Drawing.Point(24, 422);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(29, 24);
             this.textBoxID.TabIndex = 30;
@@ -558,15 +546,15 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(790, 463);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.BCancelar);
             this.Controls.Add(this.BConfirmarPlan);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "NuevoPlanEntrenamiento";
-            this.Text = "NuevoPlanEntrenamiento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "PLAN ENTRENAMIENTO";
             this.Load += new System.EventHandler(this.NuevoPlanEntrenamiento_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -578,8 +566,6 @@ namespace CapaPresentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxNombrePlan;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

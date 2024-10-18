@@ -18,6 +18,8 @@ namespace CapaPresentacion
         private List<Usuario> coachsSeleccionados = new List<Usuario>(); // Lista de coachs seleccionados
         private List<Ejercicio> ejerciciosSeleccionados = new List<Ejercicio>(); // Lista de ejercicios seleccionados
 
+        public event Action PlanRegistrado; // evento para actualiar la vista
+
         public NuevoPlanEntrenamiento(Usuario usuario)
         {
             InitializeComponent();
@@ -215,7 +217,8 @@ namespace CapaPresentacion
 
                 MessageBox.Show("El plan de entrenamiento se agregó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                limpiarCampos();
+                PlanRegistrado?.Invoke(); // Dispara el evento de plan agregado para refrescar la vista
+                this.Close(); // Cierra el formulario
             }
         }
 

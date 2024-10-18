@@ -25,13 +25,13 @@ namespace CapaNegocio
         }
 
         // Método para editar un ejercicio existente
-        public bool Editar(Ejercicio ejercicio, out string mensaje)
+        public int Editar(Ejercicio ejercicio, out string mensaje)
         {
             return objCD_Ejercicio.Editar(ejercicio, out mensaje);
         }
 
         // Método para eliminar un ejercicio
-        public bool Eliminar(int id_ejercicio, out string mensaje)
+        public int Eliminar(int id_ejercicio, out string mensaje)
         {
             return objCD_Ejercicio.Eliminar(id_ejercicio, out mensaje);
         }

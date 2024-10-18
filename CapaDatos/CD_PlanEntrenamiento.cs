@@ -15,12 +15,14 @@ namespace CapaDatos
         public List<PlanEntrenamiento> Listar()
         {
             List<PlanEntrenamiento> lista = new List<PlanEntrenamiento>();
+
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
             {
                 SqlCommand cmd = new SqlCommand("SP_LISTAR_PLAN_ENTRENAMIENTO", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 conexion.Open();
+
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
