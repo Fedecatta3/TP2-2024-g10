@@ -45,6 +45,10 @@ namespace CapaPresentacion
             this.BLimpiar = new FontAwesome.Sharp.IconButton();
             this.Bbuscar = new FontAwesome.Sharp.IconButton();
             this.dgvdataListaPlanes = new System.Windows.Forms.DataGridView();
+            this.LnombreColumna = new System.Windows.Forms.Label();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.LBuscar = new System.Windows.Forms.Label();
+            this.BNuevoPlan = new FontAwesome.Sharp.IconButton();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,12 +56,8 @@ namespace CapaPresentacion
             this.fechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.series = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ejercicios = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.detallesPlan = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LnombreColumna = new System.Windows.Forms.Label();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.LBuscar = new System.Windows.Forms.Label();
-            this.BNuevoPlan = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdataListaPlanes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,7 +164,7 @@ namespace CapaPresentacion
             this.fechaInicio,
             this.fechaFin,
             this.series,
-            this.Ejercicios,
+            this.detallesPlan,
             this.Estado});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
@@ -191,97 +191,8 @@ namespace CapaPresentacion
             this.dgvdataListaPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdataListaPlanes.Size = new System.Drawing.Size(765, 394);
             this.dgvdataListaPlanes.TabIndex = 47;
+            this.dgvdataListaPlanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdataListaPlanes_CellContentClick);
             this.dgvdataListaPlanes.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdataListaPlanes_ColumnHeaderMouseClick);
-            // 
-            // Editar
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Editar.HeaderText = "";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Width = 5;
-            // 
-            // eliminar
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.eliminar.HeaderText = "";
-            this.eliminar.Name = "eliminar";
-            this.eliminar.ReadOnly = true;
-            this.eliminar.Width = 5;
-            // 
-            // idPlan
-            // 
-            this.idPlan.HeaderText = "Idplan";
-            this.idPlan.Name = "idPlan";
-            this.idPlan.ReadOnly = true;
-            this.idPlan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.idPlan.Visible = false;
-            this.idPlan.Width = 47;
-            // 
-            // Nombre
-            // 
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 58;
-            // 
-            // fechaInicio
-            // 
-            this.fechaInicio.HeaderText = "Fecha Inicio";
-            this.fechaInicio.Name = "fechaInicio";
-            this.fechaInicio.ReadOnly = true;
-            this.fechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaInicio.Width = 71;
-            // 
-            // fechaFin
-            // 
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.fechaFin.DefaultCellStyle = dataGridViewCellStyle6;
-            this.fechaFin.HeaderText = "Fecha Fin";
-            this.fechaFin.Name = "fechaFin";
-            this.fechaFin.ReadOnly = true;
-            this.fechaFin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaFin.Width = 60;
-            // 
-            // series
-            // 
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.series.DefaultCellStyle = dataGridViewCellStyle7;
-            this.series.HeaderText = "Series";
-            this.series.Name = "series";
-            this.series.ReadOnly = true;
-            this.series.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.series.Width = 48;
-            // 
-            // Ejercicios
-            // 
-            this.Ejercicios.HeaderText = "Ejercicios Asociados";
-            this.Ejercicios.Name = "Ejercicios";
-            this.Ejercicios.ReadOnly = true;
-            this.Ejercicios.Width = 113;
-            // 
-            // Estado
-            // 
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Estado.Width = 51;
             // 
             // LnombreColumna
             // 
@@ -338,6 +249,96 @@ namespace CapaPresentacion
             this.BNuevoPlan.UseVisualStyleBackColor = false;
             this.BNuevoPlan.Click += new System.EventHandler(this.BNuevoPlan_Click);
             // 
+            // Editar
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Editar.HeaderText = "";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Width = 5;
+            // 
+            // eliminar
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.eliminar.HeaderText = "";
+            this.eliminar.Name = "eliminar";
+            this.eliminar.ReadOnly = true;
+            this.eliminar.Width = 5;
+            // 
+            // idPlan
+            // 
+            this.idPlan.HeaderText = "Idplan";
+            this.idPlan.Name = "idPlan";
+            this.idPlan.ReadOnly = true;
+            this.idPlan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idPlan.Visible = false;
+            this.idPlan.Width = 47;
+            // 
+            // Nombre
+            // 
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 58;
+            // 
+            // fechaInicio
+            // 
+            this.fechaInicio.HeaderText = "Fecha Inicio";
+            this.fechaInicio.Name = "fechaInicio";
+            this.fechaInicio.ReadOnly = true;
+            this.fechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaInicio.Width = 79;
+            // 
+            // fechaFin
+            // 
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.fechaFin.DefaultCellStyle = dataGridViewCellStyle6;
+            this.fechaFin.HeaderText = "Fecha Fin";
+            this.fechaFin.Name = "fechaFin";
+            this.fechaFin.ReadOnly = true;
+            this.fechaFin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaFin.Width = 67;
+            // 
+            // series
+            // 
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.series.DefaultCellStyle = dataGridViewCellStyle7;
+            this.series.HeaderText = "Series";
+            this.series.Name = "series";
+            this.series.ReadOnly = true;
+            this.series.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.series.Width = 48;
+            // 
+            // detallesPlan
+            // 
+            this.detallesPlan.HeaderText = "";
+            this.detallesPlan.Name = "detallesPlan";
+            this.detallesPlan.ReadOnly = true;
+            this.detallesPlan.Width = 5;
+            // 
+            // Estado
+            // 
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Estado.Width = 51;
+            // 
             // ListaPlanesDeEntrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -370,6 +371,10 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton Bbuscar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dgvdataListaPlanes;
+        private System.Windows.Forms.Label LnombreColumna;
+        private System.Windows.Forms.TextBox textBoxBusqueda;
+        private System.Windows.Forms.Label LBuscar;
+        private FontAwesome.Sharp.IconButton BNuevoPlan;
         private System.Windows.Forms.DataGridViewButtonColumn Editar;
         private System.Windows.Forms.DataGridViewButtonColumn eliminar;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPlan;
@@ -377,11 +382,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaFin;
         private System.Windows.Forms.DataGridViewTextBoxColumn series;
-        private System.Windows.Forms.DataGridViewButtonColumn Ejercicios;
+        private System.Windows.Forms.DataGridViewButtonColumn detallesPlan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Label LnombreColumna;
-        private System.Windows.Forms.TextBox textBoxBusqueda;
-        private System.Windows.Forms.Label LBuscar;
-        private FontAwesome.Sharp.IconButton BNuevoPlan;
     }
 }

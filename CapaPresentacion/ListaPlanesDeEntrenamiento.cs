@@ -37,7 +37,7 @@ namespace CapaPresentacion
             foreach (PlanEntrenamiento item in listaPlanes)
             {
                 dgvdataListaPlanes.Rows.Add(new object[] {"Editar", "Eliminar", item.id_plan, item.nombre, item.fechaInicio,
-                    item.fechaFin, item.cantSeries, "Ver ejercicios", item.estado == true ? "Activo" : "Inactivo" });
+                    item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
             }
 
             labelCantPlanes.Text = $"{dgvdataListaPlanes.Rows.Count} planes";
@@ -145,6 +145,24 @@ namespace CapaPresentacion
             {
                 modal.PlanRegistrado += CargarPlanesDeEntrenamiento; //evento
                 var resultado = modal.ShowDialog();
+            }
+        }
+
+        private void dgvdataListaPlanes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //verifica que hizo click en la columna 'detalles plan'
+            if (e.ColumnIndex == dgvdataListaPlanes.Columns["detallesPlan"].Index && e.RowIndex >= 0)
+            {
+                /*// Obtener el ID del plan de la fila seleccionada
+                int idPlan = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idPlan"].Value);
+
+                List<Ejercicio> listaEjercicios = new CN_Ejercicio().Listar();
+
+                //Modal para ver ejercicios del plan
+                using (var modal = new NuevoPlanEntrenamiento(usuarioActual))
+                {
+                    var resultado = modal.ShowDialog();
+                }*/
             }
         }
     }
