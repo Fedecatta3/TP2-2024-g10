@@ -42,15 +42,41 @@ namespace CapaNegocio
             }
         }
 
-        // Método para editar un plan de entrenamiento con validaciones similares
+        // Método para editar un plan de entrenamiento 
         public int Editar(PlanEntrenamiento plan, out string mensaje)
         {
             return objCD_PlanEntrenamiento.Editar(plan, out mensaje);
         }
 
+        // Metodo para eliminar un plan de entrenamiento
         public int Eliminar(int id_plan, out string mensaje)
         {
             return objCD_PlanEntrenamiento.Eliminar(id_plan, out mensaje);
         }
+
+        // Metodo para restaurar un plan de entrenamiento
+        public int Restaurar(int id_plan, out string mensaje)
+        {
+            return objCD_PlanEntrenamiento.Restaurar(id_plan, out mensaje);
+        }
+
+        // Metodo para obtener un plan a traves de la ID
+        public PlanEntrenamiento ObtenerPlanPorID(int idPlan, out string mensaje)
+        {
+            return objCD_PlanEntrenamiento.ObtenerPlanPorID(idPlan, out mensaje);
+        }
+
+
+        // METODOS PARA LISTAR EJERCICIOS Y COACHS EN BASE AL ID_PLAN
+        public List<Ejercicio> ListarEjerciciosPorPlan(int idPlan)
+        {
+            return objCD_PlanEntrenamiento.ListarEjerciciosPorPlan(idPlan);
+        }
+
+        public List<Usuario> ListarCoachsPorPlan(int idPlan)
+        {
+            return objCD_PlanEntrenamiento.ListarCoachsPorPlan(idPlan);
+        }
+
     }
 }

@@ -36,7 +36,9 @@ namespace CapaPresentacion
             dgvdataListaPlanes.Rows.Clear();
             foreach (PlanEntrenamiento item in listaPlanes)
             {
-                dgvdataListaPlanes.Rows.Add(new object[] {"Editar", "Eliminar", item.id_plan, item.nombre, item.fechaInicio,
+                string accion = item.estado ? "Eliminar" : "Restaurar";
+
+                dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio,
                     item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
             }
 
@@ -153,16 +155,84 @@ namespace CapaPresentacion
             //verifica que hizo click en la columna 'detalles plan'
             if (e.ColumnIndex == dgvdataListaPlanes.Columns["detallesPlan"].Index && e.RowIndex >= 0)
             {
-                /*// Obtener el ID del plan de la fila seleccionada
-                int idPlan = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idPlan"].Value);
+                // Obtener el ID del plan de la fila seleccionada
+                int idPlan = Convert.ToInt32(dgvdataListaPlanes.Rows[e.RowIndex].Cells["idPlan"].Value);
 
-                List<Ejercicio> listaEjercicios = new CN_Ejercicio().Listar();
-
-                //Modal para ver ejercicios del plan
-                using (var modal = new NuevoPlanEntrenamiento(usuarioActual))
+                //Modal para ver detalles del plan
+                using (var modal = new DetallesPlanEntrenamiento(idPlan))
                 {
                     var resultado = modal.ShowDialog();
-                }*/
+                }
+            }
+
+            // Verificar si se hizo click en la columna de editar
+            if (e.ColumnIndex == dgvdataListaPlanes.Columns["editar"].Index && e.RowIndex >= 0)
+            {
+                // Obtener el ID del plan de la fila seleccionada
+                int idPlan = Convert.ToInt32(dgvdataListaPlanes.Rows[e.RowIndex].Cells["idPlan"].Value);
+
+                using (var modal = new NuevoPlanEntrenamiento(usuarioActual))
+                {
+                    modal.CargarDatosPlan(idPlan);
+                    var resultado = modal.ShowDialog();
+
+                    if (resultado == DialogResult.OK)
+                    {
+                        // Refrescar el DataGridView después de editar
+                        CargarPlanesDeEntrenamiento();
+                    }
+                }
+            }
+
+
+            // Verificar si se hizo click en la columna de eliminar
+            if (e.ColumnIndex == dgvdataListaPlanes.Columns["eliminar"].Index && e.RowIndex >= 0)
+            {
+                // Obtener el ID del plan de la fila seleccionada
+                int idPlan = Convert.ToInt32(dgvdataListaPlanes.Rows[e.RowIndex].Cells["idPlan"].Value);
+
+                string estadoActual = dgvdataListaPlanes.Rows[e.RowIndex].Cells["Estado"].Value.ToString();
+
+                string mensaje = string.Empty;
+
+                if (estadoActual == "Activo")
+                {
+                    DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este plan?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        int respuesta = new CN_PlanEntrenamiento().Eliminar(idPlan, out mensaje);
+
+                        if(respuesta == 1)
+                        {
+                            MessageBox.Show(mensaje, "Eliminación exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CargarPlanesDeEntrenamiento();
+                        }
+                        else
+                        {
+                            MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else //plan inactivo
+                {
+                    DialogResult result = MessageBox.Show("¿Estás seguro de que deseas restaurar este plan?", "Confirmar restauración", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        int respuesta = new CN_PlanEntrenamiento().Restaurar(idPlan, out mensaje);
+
+                        if (respuesta == 1)
+                        {
+                            MessageBox.Show(mensaje, "Restauracion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            CargarPlanesDeEntrenamiento();
+                        }
+                        else
+                        {
+                            MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
             }
         }
     }

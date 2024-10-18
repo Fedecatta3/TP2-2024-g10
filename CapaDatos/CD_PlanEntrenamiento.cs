@@ -150,19 +150,169 @@ namespace CapaDatos
             using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
             {
                 SqlCommand cmd = new SqlCommand("SP_ELIMINAR_PLAN_ENTRENAMIENTO", conexion);
-                cmd.Parameters.AddWithValue("@id_plan", id_plan);
+                cmd.Parameters.Add("@id_plan", SqlDbType.Int).Value = id_plan;
                 cmd.Parameters.Add("@respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                conexion.Open();
-                cmd.ExecuteNonQuery();
+                try
+                {
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
 
-                resultado = Convert.ToInt32(cmd.Parameters["@respuesta"].Value);
-                mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                    resultado = Convert.ToInt32(cmd.Parameters["@respuesta"].Value);
+                    mensaje = cmd.Parameters["@mensaje"].Value?.ToString() ?? string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    mensaje = $"Error: {ex.Message}";
+                }
             }
+
             return resultado;
         }
+
+
+        // Metodo para restaurar un plan de entrenamiento
+        public int Restaurar(int id_plan, out string mensaje)
+        {
+            int resultado = 0;
+            mensaje = string.Empty;
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_RESTAURAR_PLAN_ENTRENAMIENTO", conexion);
+                cmd.Parameters.Add("@id_plan", SqlDbType.Int).Value = id_plan;
+                cmd.Parameters.Add("@respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                try
+                {
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+
+                    resultado = Convert.ToInt32(cmd.Parameters["@respuesta"].Value);
+                    mensaje = cmd.Parameters["@mensaje"].Value?.ToString() ?? string.Empty;
+                }
+                catch (Exception ex)
+                {
+                    mensaje = $"Error: {ex.Message}";
+                }
+            }
+
+            return resultado;
+        }
+
+
+        public PlanEntrenamiento ObtenerPlanPorID(int idPlan, out string mensaje)
+        {
+            PlanEntrenamiento plan = null;
+            mensaje = string.Empty;
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand("SP_OBTENER_PLAN_ENTRENAMIENTO_PORID", conexion);
+                    cmd.Parameters.AddWithValue("@id_plan", idPlan);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    conexion.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        plan = new PlanEntrenamiento
+                        {
+                            id_plan = Convert.ToInt32(reader["id_plan"]),
+                            nombre = reader["nombre"].ToString(),
+                            fechaInicio = Convert.ToDateTime(reader["fechaInicio"]),
+                            fechaFin = Convert.ToDateTime(reader["fechaFin"]),
+                            cantSeries = Convert.ToInt32(reader["cantSeries"]),
+                            estado = Convert.ToBoolean(reader["estado"])
+                        };
+                    }
+                }
+                catch (Exception ex)
+                {
+                    mensaje = ex.Message; // Captura el mensaje de error
+                }
+            }
+
+            return plan;
+        }
+
+
+        // METODOS PARA LISTAR EJERCICIOS Y COACHS EN BASE AL ID_PLAN
+        public List<Ejercicio> ListarEjerciciosPorPlan(int idPlan)
+        {
+            List<Ejercicio> lista = new List<Ejercicio>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_LISTAR_EJERCICIOS_POR_PLAN", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Agregar el parámetro que está esperando el procedimiento almacenado
+                cmd.Parameters.AddWithValue("@id_plan", idPlan);
+
+                conexion.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    lista.Add(new Ejercicio()
+                    {
+                        id_ejercicio = Convert.ToInt32(dr["id_ejercicio"]),
+                        nombre = dr["nombre"].ToString(),
+                        repeticiones = Convert.ToInt32(dr["repeticiones"]),
+                        tiempo = Convert.ToInt32(dr["tiempo"])
+                    });
+                }
+                dr.Close();
+            }
+
+            return lista;
+        }
+
+
+        public List<Usuario> ListarCoachsPorPlan(int idPlan)
+        {
+            List<Usuario> lista = new List<Usuario>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_LISTAR_COACHS_POR_PLAN", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Agregar el parámetro que está esperando el procedimiento almacenado
+                cmd.Parameters.AddWithValue("@id_plan", idPlan);
+
+                conexion.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Usuario coach = new Usuario
+                    {
+                        id_usuario = Convert.ToInt32(reader["id_usuario"]),
+                        nombre = reader["nombre"].ToString(),
+                        apellido = reader["apellido"].ToString(),
+                        dni = reader["dni"].ToString(),
+                        email = reader["email"].ToString(),
+                        fecha_nacimiento = reader["fecha_nacimiento"].ToString(),
+                        telefono = reader["telefono"].ToString()
+                    };
+                    lista.Add(coach);
+                }
+                reader.Close();
+            }
+
+            return lista;
+        }
+
     }
 }

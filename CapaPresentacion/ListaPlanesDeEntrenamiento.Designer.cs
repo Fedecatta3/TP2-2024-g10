@@ -180,7 +180,7 @@ namespace CapaPresentacion
             this.dgvdataListaPlanes.ReadOnly = true;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
@@ -297,7 +297,7 @@ namespace CapaPresentacion
             this.fechaInicio.Name = "fechaInicio";
             this.fechaInicio.ReadOnly = true;
             this.fechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaInicio.Width = 79;
+            this.fechaInicio.Width = 71;
             // 
             // fechaFin
             // 
@@ -308,7 +308,7 @@ namespace CapaPresentacion
             this.fechaFin.Name = "fechaFin";
             this.fechaFin.ReadOnly = true;
             this.fechaFin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaFin.Width = 67;
+            this.fechaFin.Width = 60;
             // 
             // series
             // 
@@ -323,10 +323,11 @@ namespace CapaPresentacion
             // 
             // detallesPlan
             // 
-            this.detallesPlan.HeaderText = "";
+            this.detallesPlan.HeaderText = "Ejercicios / Coach";
             this.detallesPlan.Name = "detallesPlan";
             this.detallesPlan.ReadOnly = true;
-            this.detallesPlan.Width = 5;
+            this.detallesPlan.Text = "";
+            this.detallesPlan.Width = 68;
             // 
             // Estado
             // 

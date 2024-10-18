@@ -249,5 +249,24 @@ namespace CapaPresentacion
                 }
             }
         }
+
+
+
+        // Carga los datos en el form para realizar la modificacion
+        public void CargarDatosPlan(int idPlan)
+        {
+            BCancelar.Visible = false;
+
+            string mensaje = string.Empty;
+
+            PlanEntrenamiento plan = new CN_PlanEntrenamiento().ObtenerPlanPorID(idPlan, out mensaje);
+
+            // Carga de datos
+            textBoxID.Text = idPlan.ToString();
+            textBoxNombrePlan.Text = plan.nombre;
+            textBoxCantSeries.Text = plan.cantSeries.ToString();
+            dateTimePicker1.Value = Convert.ToDateTime(plan.fechaInicio);
+            dateTimePicker2.Value = Convert.ToDateTime(plan.fechaFin);
+        }
     }
 }
