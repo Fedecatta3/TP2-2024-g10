@@ -48,6 +48,16 @@ namespace CapaNegocio
             return objCD_PlanEntrenamiento.Editar(plan, out mensaje);
         }
 
+        public void EliminarPlan_Usuario(int idPlan)
+        {
+            objCD_PlanEntrenamiento.EliminarPlan_Usuario(idPlan);
+        }
+
+        public void EliminarPlan_Ejercicio(int idPlan)
+        {
+            objCD_PlanEntrenamiento.EliminarPlan_Ejercicio(idPlan);
+        }
+
         // Metodo para eliminar un plan de entrenamiento
         public int Eliminar(int id_plan, out string mensaje)
         {

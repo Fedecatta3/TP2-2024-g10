@@ -127,6 +127,8 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@fechaInicio", plan.fechaInicio);
                 cmd.Parameters.AddWithValue("@fechaFin", plan.fechaFin);
                 cmd.Parameters.AddWithValue("@cantSeries", plan.cantSeries);
+                cmd.Parameters.AddWithValue("@estado", plan.estado);
+
                 cmd.Parameters.Add("@respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("@mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
@@ -136,9 +138,39 @@ namespace CapaDatos
                 cmd.ExecuteNonQuery();
 
                 resultado = Convert.ToInt32(cmd.Parameters["@respuesta"].Value);
-                mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                mensaje = cmd.Parameters["@mensaje"].Value.ToString();
             }
             return resultado;
+        }
+
+
+        // Metodos para realizar la modificacion de ejercicios/usuarios con el plan
+        public void EliminarPlan_Ejercicio(int idPlan)
+        {
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_ELIMINAR_PLAN_EJERCICIO", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id_plan", idPlan);
+
+                conexion.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public void EliminarPlan_Usuario(int idPlan)
+        {
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_ELIMINAR_USUARIO_PLAN", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id_plan", idPlan);
+
+                conexion.Open();
+                cmd.ExecuteNonQuery();
+            }
         }
 
         // Método para eliminar un plan de entrenamiento

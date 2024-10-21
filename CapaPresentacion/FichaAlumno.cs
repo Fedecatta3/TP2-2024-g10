@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,13 @@ namespace CapaPresentacion
 {
     public partial class FichaAlumno : Form
     {
-        public FichaAlumno()
+        private int alumno;
+        private CN_Alumno objCN_Alumno = new CN_Alumno(); // Capa de negocio para alumnos
+
+        public FichaAlumno(int idAlumno)
         {
             InitializeComponent();
+            alumno = idAlumno;
         }
 
         private void BCobrarCuota_Click(object sender, EventArgs e)
@@ -23,6 +29,26 @@ namespace CapaPresentacion
             using (var modal = new CobrarCuotaAlumno())
             {
                 var resultado = modal.ShowDialog();
+            }
+        }
+
+        private void FichaAlumno_Load(object sender, EventArgs e)
+        {
+            List<Alumno> listaAlumnos = objCN_Alumno.Listar();
+
+            foreach (Alumno item in listaAlumnos)
+            {
+                if (item.id_alumno == alumno)
+                {
+                    labelNombreCompleto.Text = item.nombre + " " + item.apellido;
+                    labelDNI.Text = item.dni;
+                    labelFechaNacimiento.Text = item.fecha_nacimiento.ToString();
+                    labelEmail.Text = item.email;
+                    labelSexo.Text = item.sexo;
+                    labelTelefono.Text = item.telefono;
+                    labelContactoEmergencia.Text = item.contacto_emergencia;
+                    labelObservacion.Text = item.observaciones;
+                }
             }
         }
     }

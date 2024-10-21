@@ -30,30 +30,39 @@ namespace CapaPresentacion
         {
             List<Alumno> listaAlumnos = objCN_Alumno.Listar();
 
-            DGV_Alumnos.DataSource = null;
-            DGV_Alumnos.Columns.Clear();
+            dgvdata.Rows.Clear(); // Limpia el DataGrid antes de actualizar
+            foreach (Alumno item in listaAlumnos)
+            {
+                if(usuarioActual.id_rol.id_rol == 3)
+                {
+                    labelTITULO.Text = "MIS ALUMNOS";
 
-            // Enlazar la lista con el DataGridView
-            DGV_Alumnos.DataSource = listaAlumnos;
+                    if(item.id_usuario == usuarioActual.id_usuario)
+                    {
+                        dgvdata.Rows.Add(new object[]{"Ver ficha",item.id_alumno,item.nombre, item.apellido,item.dni,
+                        item.email,item.fecha_nacimiento,item.telefono, item.contacto_emergencia, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
 
-            // Ajustar los nombres de las columnas si es necesario
-            DGV_Alumnos.Columns["id_alumno"].HeaderText = "ID";
-            DGV_Alumnos.Columns["nombre"].HeaderText = "Nombre";
-            DGV_Alumnos.Columns["apellido"].HeaderText = "Apellido";
-            DGV_Alumnos.Columns["dni"].HeaderText = "DNI";
-            DGV_Alumnos.Columns["email"].HeaderText = "Email";
-            DGV_Alumnos.Columns["telefono"].HeaderText = "Teléfono";
-            DGV_Alumnos.Columns["estado"].HeaderText = "Estado";
+                    }
+                }
+                else
+                {
+                    dgvdata.Rows.Add(new object[]{"Ver ficha",item.id_alumno,item.nombre, item.apellido,item.dni,
+                    item.email,item.fecha_nacimiento,item.telefono, item.contacto_emergencia, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
+
+                }
+            }
+
+            labelCantidad.Text = $"{dgvdata.Rows.Count} alumnos";
         }
 
-        private void BVerFicha_Click(object sender, EventArgs e)
+        /*private void BVerFicha_Click(object sender, EventArgs e)
         {
             //Modal para ver ficha del alumno
             using (var modal = new FichaAlumno())
             {
                 var resultado = modal.ShowDialog();
             }
-        }
+        }*/
 
         private void BNuevoAlumno_Click(object sender, EventArgs e)
         {
@@ -76,6 +85,21 @@ namespace CapaPresentacion
             if (usuarioActual.id_rol.descripcion == "Coach")
             {
                 BNuevoAlumno.Visible = false;
+            }
+        }
+
+        private void dgvdata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvdata.Columns["verFicha"].Index && e.RowIndex >= 0)
+            {
+                // Obtener el ID del alumno de la fila seleccionada
+                int idAlumno = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idAlumno"].Value);
+
+                //Modal para ver ficha del alumno
+                using (var modal = new FichaAlumno(idAlumno))
+                {
+                    var resultado = modal.ShowDialog();
+                }
             }
         }
     }

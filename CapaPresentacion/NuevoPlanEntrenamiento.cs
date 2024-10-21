@@ -175,50 +175,97 @@ namespace CapaPresentacion
                 return;
             }
 
-            PlanEntrenamiento nuevoPlan = new PlanEntrenamiento()
+            PlanEntrenamiento planEntre = new PlanEntrenamiento()
             {
+                id_plan = Convert.ToInt32(textBoxID.Text),
                 nombre = textBoxNombrePlan.Text,
                 fechaInicio = dateTimePicker1.Value.Date, // Solo la fecha, sin la hora
                 fechaFin = dateTimePicker2.Value.Date,
                 cantSeries = Convert.ToInt32(textBoxCantSeries.Text),
                 estado = true // Estado activo por defecto
             };
-
-            CN_PlanEntrenamiento planNegocio = new CN_PlanEntrenamiento();
-            int idPlanGenerado = planNegocio.Agregar(nuevoPlan, out mensaje);
-
-            if (idPlanGenerado == 0)
+            
+            if(textBoxID.Text == "0") //crea nuevo plan
             {
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CN_PlanEntrenamiento planNegocio = new CN_PlanEntrenamiento();
+                int idPlanGenerado = planNegocio.Agregar(planEntre, out mensaje);
+
+                if (idPlanGenerado == 0)
+                {
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // Listas para almacenar los IDs seleccionados
+                    List<int> listaEjercicios = new List<int>();
+                    List<int> listaUsuarios = new List<int>();
+
+                    // Recorrer el DataGridView de ejercicios seleccionados
+                    foreach (DataGridViewRow row in dataGridViewEjerciciosSeleccionados.Rows)
+                    {
+                        int idEjercicio = Convert.ToInt32(row.Cells["idEjercicio"].Value);
+                        listaEjercicios.Add(idEjercicio);
+                    }
+
+                    // Recorrer el DataGridView de usuarios seleccionados
+                    foreach (DataGridViewRow row in dataGridCoachSeleccionados.Rows)
+                    {
+                        int idUsuario = Convert.ToInt32(row.Cells["idUsuario"].Value);
+                        listaUsuarios.Add(idUsuario);
+                    }
+
+                    // Asociar ejercicios y usuarios al plan generado
+                    planNegocio.AsociarEjercicios(idPlanGenerado, listaEjercicios);
+                    planNegocio.AsociarUsuarios(idPlanGenerado, listaUsuarios);
+
+                    MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    PlanRegistrado?.Invoke(); // Dispara el evento de plan agregado para refrescar la vista
+                    this.Close(); // Cierra el formulario
+                }
             }
-            else
+            else //modifica plan
             {
-                // Listas para almacenar los IDs seleccionados
-                List<int> listaEjercicios = new List<int>();
-                List<int> listaUsuarios = new List<int>();
+                CN_PlanEntrenamiento planNegocio = new CN_PlanEntrenamiento();
+                int idPlanModificado = planNegocio.Editar(planEntre, out mensaje);
 
-                // Recorrer el DataGridView de ejercicios seleccionados
-                foreach (DataGridViewRow row in dataGridViewEjerciciosSeleccionados.Rows)
+                planNegocio.EliminarPlan_Ejercicio(planEntre.id_plan);
+
+                planNegocio.EliminarPlan_Usuario(planEntre.id_plan);
+
+                if (idPlanModificado == 0)
                 {
-                    int idEjercicio = Convert.ToInt32(row.Cells["idEjercicio"].Value);
-                    listaEjercicios.Add(idEjercicio);
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                // Recorrer el DataGridView de usuarios seleccionados
-                foreach (DataGridViewRow row in dataGridCoachSeleccionados.Rows)
+                else
                 {
-                    int idUsuario = Convert.ToInt32(row.Cells["idUsuario"].Value);
-                    listaUsuarios.Add(idUsuario);
+                    // Listas para almacenar los IDs seleccionados
+                    List<int> listaEjercicios = new List<int>();
+                    List<int> listaUsuarios = new List<int>();
+
+                    // Recorrer el DataGridView de ejercicios seleccionados
+                    foreach (DataGridViewRow row in dataGridViewEjerciciosSeleccionados.Rows)
+                    {
+                        int idEjercicio = Convert.ToInt32(row.Cells["idEjercicio"].Value);
+                        listaEjercicios.Add(idEjercicio);
+                    }
+
+                    // Recorrer el DataGridView de usuarios seleccionados
+                    foreach (DataGridViewRow row in dataGridCoachSeleccionados.Rows)
+                    {
+                        int idUsuario = Convert.ToInt32(row.Cells["idUsuario"].Value);
+                        listaUsuarios.Add(idUsuario);
+                    }
+
+                    // Asociar ejercicios y usuarios al plan generado
+                    planNegocio.AsociarEjercicios(idPlanModificado, listaEjercicios);
+                    planNegocio.AsociarUsuarios(idPlanModificado, listaUsuarios);
+
+                    MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    PlanRegistrado?.Invoke(); // Dispara el evento de plan agregado para refrescar la vista
+                    this.Close(); // Cierra el formulario
                 }
-
-                // Asociar ejercicios y usuarios al plan generado
-                planNegocio.AsociarEjercicios(idPlanGenerado, listaEjercicios);
-                planNegocio.AsociarUsuarios(idPlanGenerado, listaUsuarios);
-
-                MessageBox.Show("El plan de entrenamiento se agregó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                PlanRegistrado?.Invoke(); // Dispara el evento de plan agregado para refrescar la vista
-                this.Close(); // Cierra el formulario
             }
         }
 
@@ -267,6 +314,22 @@ namespace CapaPresentacion
             textBoxCantSeries.Text = plan.cantSeries.ToString();
             dateTimePicker1.Value = Convert.ToDateTime(plan.fechaInicio);
             dateTimePicker2.Value = Convert.ToDateTime(plan.fechaFin);
+
+            // Cargar ejercicios en el DataGridView
+            List<Ejercicio> listaEjercicios = new CN_PlanEntrenamiento().ListarEjerciciosPorPlan(idPlan);
+            dataGridViewEjerciciosSeleccionados.Rows.Clear();
+            foreach (Ejercicio ejercicio in listaEjercicios)
+            {
+                dataGridViewEjerciciosSeleccionados.Rows.Add("Eliminar", ejercicio.id_ejercicio, ejercicio.nombre, ejercicio.repeticiones, ejercicio.tiempo);
+            }
+
+            // Cargar coachs en el DataGridView
+            List<Usuario> listaCoachs = new CN_PlanEntrenamiento().ListarCoachsPorPlan(idPlan);
+            dataGridCoachSeleccionados.Rows.Clear();
+            foreach (Usuario coach in listaCoachs)
+            {
+                dataGridCoachSeleccionados.Rows.Add("Eliminar", coach.id_usuario, coach.nombre, coach.apellido, coach.dni, coach.email, coach.fecha_nacimiento, coach.telefono);
+            }
         }
     }
 }

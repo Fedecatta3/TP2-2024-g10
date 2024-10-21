@@ -173,14 +173,10 @@ namespace CapaPresentacion
 
                 using (var modal = new NuevoPlanEntrenamiento(usuarioActual))
                 {
+                    modal.PlanRegistrado += CargarPlanesDeEntrenamiento; //evento
+
                     modal.CargarDatosPlan(idPlan);
                     var resultado = modal.ShowDialog();
-
-                    if (resultado == DialogResult.OK)
-                    {
-                        // Refrescar el DataGridView después de editar
-                        CargarPlanesDeEntrenamiento();
-                    }
                 }
             }
 
