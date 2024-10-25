@@ -67,7 +67,7 @@ namespace CapaPresentacion
             this.dgvdataAgregarCoach.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -103,6 +103,7 @@ namespace CapaPresentacion
             this.dgvdataAgregarCoach.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvdataAgregarCoach.RowHeadersWidth = 30;
             this.dgvdataAgregarCoach.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvdataAgregarCoach.RowTemplate.Height = 30;
             this.dgvdataAgregarCoach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdataAgregarCoach.Size = new System.Drawing.Size(544, 202);
             this.dgvdataAgregarCoach.TabIndex = 46;
@@ -125,14 +126,14 @@ namespace CapaPresentacion
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 58;
+            this.Nombre.Width = 63;
             // 
             // Apellido
             // 
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Apellido.Width = 57;
+            this.Apellido.Width = 64;
             // 
             // DNI
             // 
@@ -142,7 +143,7 @@ namespace CapaPresentacion
             this.DNI.HeaderText = "DNI";
             this.DNI.Name = "DNI";
             this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DNI.Width = 34;
+            this.DNI.Width = 37;
             // 
             // Email
             // 
@@ -152,7 +153,7 @@ namespace CapaPresentacion
             this.Email.HeaderText = "E-mail";
             this.Email.Name = "Email";
             this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Email.Width = 49;
+            this.Email.Width = 52;
             // 
             // FechaNacimiento
             // 
@@ -162,7 +163,7 @@ namespace CapaPresentacion
             this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
             this.FechaNacimiento.Name = "FechaNacimiento";
             this.FechaNacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FechaNacimiento.Width = 102;
+            this.FechaNacimiento.Width = 111;
             // 
             // Telefono
             // 
@@ -172,7 +173,7 @@ namespace CapaPresentacion
             this.Telefono.HeaderText = "Telefono";
             this.Telefono.Name = "Telefono";
             this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Telefono.Width = 61;
+            this.Telefono.Width = 68;
             // 
             // Blimpiar
             // 
@@ -218,11 +219,11 @@ namespace CapaPresentacion
             // 
             this.LnombreColumna.AutoSize = true;
             this.LnombreColumna.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnombreColumna.ForeColor = System.Drawing.Color.Red;
-            this.LnombreColumna.Location = new System.Drawing.Point(199, 20);
+            this.LnombreColumna.Location = new System.Drawing.Point(194, 20);
             this.LnombreColumna.Name = "LnombreColumna";
-            this.LnombreColumna.Size = new System.Drawing.Size(93, 15);
+            this.LnombreColumna.Size = new System.Drawing.Size(102, 16);
             this.LnombreColumna.TabIndex = 53;
             this.LnombreColumna.Text = "Nombre campo";
             this.LnombreColumna.Visible = false;
@@ -231,10 +232,10 @@ namespace CapaPresentacion
             // 
             this.LBuscar.AutoSize = true;
             this.LBuscar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBuscar.Location = new System.Drawing.Point(129, 20);
+            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBuscar.Location = new System.Drawing.Point(120, 20);
             this.LBuscar.Name = "LBuscar";
-            this.LBuscar.Size = new System.Drawing.Size(69, 15);
+            this.LBuscar.Size = new System.Drawing.Size(76, 16);
             this.LBuscar.TabIndex = 52;
             this.LBuscar.Text = "Buscar por:";
             this.LBuscar.Visible = false;

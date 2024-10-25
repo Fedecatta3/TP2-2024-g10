@@ -75,7 +75,7 @@ namespace CapaPresentacion
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -107,7 +107,8 @@ namespace CapaPresentacion
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 253);
+            this.dataGridView1.RowTemplate.Height = 30;
+            this.dataGridView1.Size = new System.Drawing.Size(765, 253);
             this.dataGridView1.TabIndex = 20;
             // 
             // Membresia
@@ -345,7 +346,7 @@ namespace CapaPresentacion
             this.textBox2.Location = new System.Drawing.Point(639, 471);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(139, 24);
+            this.textBox2.Size = new System.Drawing.Size(149, 24);
             this.textBox2.TabIndex = 46;
             this.textBox2.Text = "0";
             // 
@@ -368,7 +369,7 @@ namespace CapaPresentacion
             this.textBox6.Location = new System.Drawing.Point(639, 414);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(139, 24);
+            this.textBox6.Size = new System.Drawing.Size(149, 24);
             this.textBox6.TabIndex = 43;
             this.textBox6.Text = "0";
             // 
@@ -388,7 +389,7 @@ namespace CapaPresentacion
             this.textBoxFecha.BackColor = System.Drawing.Color.White;
             this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFecha.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBoxFecha.Location = new System.Drawing.Point(655, 16);
+            this.textBoxFecha.Location = new System.Drawing.Point(665, 14);
             this.textBoxFecha.Name = "textBoxFecha";
             this.textBoxFecha.ReadOnly = true;
             this.textBoxFecha.Size = new System.Drawing.Size(123, 22);
@@ -399,7 +400,7 @@ namespace CapaPresentacion
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(604, 16);
+            this.label9.Location = new System.Drawing.Point(614, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(53, 20);
             this.label9.TabIndex = 39;
@@ -411,7 +412,7 @@ namespace CapaPresentacion
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 44);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(766, 283);
+            this.groupBox3.Size = new System.Drawing.Size(776, 283);
             this.groupBox3.TabIndex = 64;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detalles";
@@ -443,7 +444,7 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(800, 507);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label2);

@@ -212,11 +212,11 @@ namespace CapaPresentacion
             // 
             this.LnombreColumna.AutoSize = true;
             this.LnombreColumna.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnombreColumna.ForeColor = System.Drawing.Color.Red;
-            this.LnombreColumna.Location = new System.Drawing.Point(166, 30);
+            this.LnombreColumna.Location = new System.Drawing.Point(153, 30);
             this.LnombreColumna.Name = "LnombreColumna";
-            this.LnombreColumna.Size = new System.Drawing.Size(93, 15);
+            this.LnombreColumna.Size = new System.Drawing.Size(102, 16);
             this.LnombreColumna.TabIndex = 49;
             this.LnombreColumna.Text = "Nombre campo";
             this.LnombreColumna.Visible = false;
@@ -225,10 +225,10 @@ namespace CapaPresentacion
             // 
             this.LBuscar.AutoSize = true;
             this.LBuscar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBuscar.Location = new System.Drawing.Point(96, 30);
+            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBuscar.Location = new System.Drawing.Point(80, 30);
             this.LBuscar.Name = "LBuscar";
-            this.LBuscar.Size = new System.Drawing.Size(69, 15);
+            this.LBuscar.Size = new System.Drawing.Size(76, 16);
             this.LBuscar.TabIndex = 48;
             this.LBuscar.Text = "Buscar por:";
             this.LBuscar.Visible = false;
@@ -246,7 +246,7 @@ namespace CapaPresentacion
             this.dataGridViewEjercicios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -282,6 +282,7 @@ namespace CapaPresentacion
             this.dataGridViewEjercicios.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewEjercicios.RowHeadersWidth = 30;
             this.dataGridViewEjercicios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewEjercicios.RowTemplate.Height = 30;
             this.dataGridViewEjercicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewEjercicios.Size = new System.Drawing.Size(510, 189);
             this.dataGridViewEjercicios.TabIndex = 47;
@@ -307,7 +308,7 @@ namespace CapaPresentacion
             this.nombre.Name = "nombre";
             this.nombre.ReadOnly = true;
             this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nombre.Width = 58;
+            this.nombre.Width = 63;
             // 
             // repeticiones
             // 
@@ -318,7 +319,7 @@ namespace CapaPresentacion
             this.repeticiones.Name = "repeticiones";
             this.repeticiones.ReadOnly = true;
             this.repeticiones.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.repeticiones.Width = 85;
+            this.repeticiones.Width = 94;
             // 
             // tiempo
             // 
@@ -329,7 +330,7 @@ namespace CapaPresentacion
             this.tiempo.Name = "tiempo";
             this.tiempo.ReadOnly = true;
             this.tiempo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.tiempo.Width = 116;
+            this.tiempo.Width = 128;
             // 
             // editar
             // 
@@ -337,7 +338,7 @@ namespace CapaPresentacion
             this.editar.Name = "editar";
             this.editar.ReadOnly = true;
             this.editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.editar.Width = 45;
+            this.editar.Width = 49;
             // 
             // eliminar
             // 
@@ -345,7 +346,7 @@ namespace CapaPresentacion
             this.eliminar.Name = "eliminar";
             this.eliminar.ReadOnly = true;
             this.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.eliminar.Width = 59;
+            this.eliminar.Width = 62;
             // 
             // textBoxBuscar
             // 

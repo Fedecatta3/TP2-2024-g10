@@ -22,7 +22,7 @@ namespace CapaPresentacion
         private void BConfirmarAlumno_Click(object sender, EventArgs e)
         {
             //Modal para confirmar la inscripcion del alumno
-            using (var modal = new CobrarCuotaAlumno())
+            using (var modal = new DetallesNuevoAlumno())
             {
                 var resultado = modal.ShowDialog();
 
@@ -45,9 +45,6 @@ namespace CapaPresentacion
                 checkBoxFemenino.Checked = false;
                 checkBoxMasculino.Checked = false;
                 dateTimePicker1.Value = DateTime.Now;
-                comboBoxCoach.SelectedIndex = -1;
-                comboBoxPlan.SelectedIndex = -1;
-                comboBoxTipoMembresia.SelectedIndex = -1;
                 pictureBox1.Image = null;
             }
         }

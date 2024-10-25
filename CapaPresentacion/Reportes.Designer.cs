@@ -36,9 +36,9 @@ namespace CapaPresentacion
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace CapaPresentacion
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(539, 84);
+            this.label5.Location = new System.Drawing.Point(636, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 15);
             this.label5.TabIndex = 59;
@@ -87,7 +87,7 @@ namespace CapaPresentacion
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(542, 101);
+            this.dateTimePicker2.Location = new System.Drawing.Point(639, 102);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker2.Size = new System.Drawing.Size(130, 24);
@@ -98,7 +98,7 @@ namespace CapaPresentacion
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(396, 84);
+            this.label4.Location = new System.Drawing.Point(493, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 15);
             this.label4.TabIndex = 57;
@@ -108,7 +108,7 @@ namespace CapaPresentacion
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(399, 102);
+            this.dateTimePicker1.Location = new System.Drawing.Point(496, 103);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker1.Size = new System.Drawing.Size(130, 24);
@@ -122,7 +122,7 @@ namespace CapaPresentacion
             this.label13.ForeColor = System.Drawing.Color.OrangeRed;
             this.label13.Location = new System.Drawing.Point(12, 73);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(765, 64);
+            this.label13.Size = new System.Drawing.Size(866, 64);
             this.label13.TabIndex = 53;
             this.label13.Text = "REPORTES";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -137,7 +137,7 @@ namespace CapaPresentacion
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(766, 351);
+            this.dataGridView1.Size = new System.Drawing.Size(866, 351);
             this.dataGridView1.TabIndex = 52;
             // 
             // panel1
@@ -146,10 +146,32 @@ namespace CapaPresentacion
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.iconPictureBox1);
-            this.panel1.Location = new System.Drawing.Point(167, 12);
+            this.panel1.Location = new System.Drawing.Point(190, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(142, 49);
+            this.panel1.Size = new System.Drawing.Size(155, 49);
             this.panel1.TabIndex = 60;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(50, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 16);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "00";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Location = new System.Drawing.Point(47, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Cant Usuarios";
             // 
             // iconPictureBox1
             // 
@@ -165,37 +187,15 @@ namespace CapaPresentacion
             this.iconPictureBox1.TabIndex = 61;
             this.iconPictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(47, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
-            this.label1.TabIndex = 61;
-            this.label1.Text = "Cant Usuarios";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(50, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 16);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "00";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MistyRose;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.iconPictureBox2);
-            this.panel2.Location = new System.Drawing.Point(323, 12);
+            this.panel2.Location = new System.Drawing.Point(365, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(142, 49);
+            this.panel2.Size = new System.Drawing.Size(155, 49);
             this.panel2.TabIndex = 61;
             // 
             // label3
@@ -242,7 +242,7 @@ namespace CapaPresentacion
             this.panel3.Controls.Add(this.iconPictureBox3);
             this.panel3.Location = new System.Drawing.Point(12, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(142, 49);
+            this.panel3.Size = new System.Drawing.Size(155, 49);
             this.panel3.TabIndex = 62;
             // 
             // label7
@@ -287,9 +287,9 @@ namespace CapaPresentacion
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.iconPictureBox4);
-            this.panel4.Location = new System.Drawing.Point(479, 12);
+            this.panel4.Location = new System.Drawing.Point(544, 12);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(142, 49);
+            this.panel4.Size = new System.Drawing.Size(155, 49);
             this.panel4.TabIndex = 63;
             // 
             // label9
@@ -334,9 +334,9 @@ namespace CapaPresentacion
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.iconPictureBox5);
-            this.panel5.Location = new System.Drawing.Point(633, 12);
+            this.panel5.Location = new System.Drawing.Point(723, 12);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(142, 49);
+            this.panel5.Size = new System.Drawing.Size(155, 49);
             this.panel5.TabIndex = 64;
             // 
             // label11
@@ -387,7 +387,7 @@ namespace CapaPresentacion
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 20;
-            this.iconButton4.Location = new System.Drawing.Point(683, 100);
+            this.iconButton4.Location = new System.Drawing.Point(780, 101);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(35, 24);
             this.iconButton4.TabIndex = 68;
@@ -400,7 +400,7 @@ namespace CapaPresentacion
             this.comboBoxReportes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxReportes.FormattingEnabled = true;
-            this.comboBoxReportes.Location = new System.Drawing.Point(177, 102);
+            this.comboBoxReportes.Location = new System.Drawing.Point(274, 103);
             this.comboBoxReportes.Name = "comboBoxReportes";
             this.comboBoxReportes.Size = new System.Drawing.Size(205, 26);
             this.comboBoxReportes.TabIndex = 66;
@@ -410,7 +410,7 @@ namespace CapaPresentacion
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(174, 84);
+            this.label14.Location = new System.Drawing.Point(271, 85);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 15);
             this.label14.TabIndex = 67;
@@ -428,7 +428,7 @@ namespace CapaPresentacion
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 25;
-            this.iconButton3.Location = new System.Drawing.Point(735, 101);
+            this.iconButton3.Location = new System.Drawing.Point(832, 102);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(35, 24);
             this.iconButton3.TabIndex = 69;
@@ -439,7 +439,7 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(890, 507);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.comboBoxReportes);

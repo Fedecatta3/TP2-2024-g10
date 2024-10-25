@@ -185,7 +185,7 @@ namespace CapaPresentacion
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1000, 93);
+            this.menuTitulo.Size = new System.Drawing.Size(1100, 93);
             this.menuTitulo.TabIndex = 1;
             this.menuTitulo.Text = "menuStrip2";
             // 
@@ -195,7 +195,7 @@ namespace CapaPresentacion
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(210, 93);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(790, 507);
+            this.contenedor.Size = new System.Drawing.Size(890, 507);
             this.contenedor.TabIndex = 3;
             // 
             // label1
@@ -204,7 +204,7 @@ namespace CapaPresentacion
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(703, 26);
+            this.label1.Location = new System.Drawing.Point(791, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 18);
             this.label1.TabIndex = 6;
@@ -216,7 +216,7 @@ namespace CapaPresentacion
             this.nombreUsuario.BackColor = System.Drawing.Color.Black;
             this.nombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.nombreUsuario.Location = new System.Drawing.Point(764, 26);
+            this.nombreUsuario.Location = new System.Drawing.Point(852, 26);
             this.nombreUsuario.Name = "nombreUsuario";
             this.nombreUsuario.Size = new System.Drawing.Size(131, 18);
             this.nombreUsuario.TabIndex = 7;
@@ -228,7 +228,7 @@ namespace CapaPresentacion
             this.rolUsuario.BackColor = System.Drawing.Color.Black;
             this.rolUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rolUsuario.ForeColor = System.Drawing.Color.Gray;
-            this.rolUsuario.Location = new System.Drawing.Point(703, 47);
+            this.rolUsuario.Location = new System.Drawing.Point(791, 47);
             this.rolUsuario.Name = "rolUsuario";
             this.rolUsuario.Size = new System.Drawing.Size(107, 18);
             this.rolUsuario.TabIndex = 8;
@@ -265,7 +265,7 @@ namespace CapaPresentacion
             this.BCerrarSesion.IconColor = System.Drawing.Color.Red;
             this.BCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCerrarSesion.IconSize = 50;
-            this.BCerrarSesion.Location = new System.Drawing.Point(933, 17);
+            this.BCerrarSesion.Location = new System.Drawing.Point(1021, 17);
             this.BCerrarSesion.Name = "BCerrarSesion";
             this.BCerrarSesion.Size = new System.Drawing.Size(67, 62);
             this.BCerrarSesion.TabIndex = 5;
@@ -303,7 +303,7 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1100, 600);
             this.Controls.Add(this.labelFecha);
             this.Controls.Add(this.labelHora);
             this.Controls.Add(this.iconButton1);

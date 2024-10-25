@@ -45,10 +45,6 @@ namespace CapaPresentacion
             this.BLimpiar = new FontAwesome.Sharp.IconButton();
             this.Bbuscar = new FontAwesome.Sharp.IconButton();
             this.dgvdataListaPlanes = new System.Windows.Forms.DataGridView();
-            this.LnombreColumna = new System.Windows.Forms.Label();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.LBuscar = new System.Windows.Forms.Label();
-            this.BNuevoPlan = new FontAwesome.Sharp.IconButton();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +54,10 @@ namespace CapaPresentacion
             this.series = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detallesPlan = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LnombreColumna = new System.Windows.Forms.Label();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.LBuscar = new System.Windows.Forms.Label();
+            this.BNuevoPlan = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdataListaPlanes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +91,7 @@ namespace CapaPresentacion
             this.label13.ForeColor = System.Drawing.Color.OrangeRed;
             this.label13.Location = new System.Drawing.Point(12, 5);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(765, 40);
+            this.label13.Size = new System.Drawing.Size(866, 40);
             this.label13.TabIndex = 39;
             this.label13.Text = "LISTA DE PLANES";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,7 +108,7 @@ namespace CapaPresentacion
             this.BLimpiar.IconColor = System.Drawing.Color.White;
             this.BLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BLimpiar.IconSize = 25;
-            this.BLimpiar.Location = new System.Drawing.Point(728, 12);
+            this.BLimpiar.Location = new System.Drawing.Point(832, 13);
             this.BLimpiar.Name = "BLimpiar";
             this.BLimpiar.Size = new System.Drawing.Size(35, 24);
             this.BLimpiar.TabIndex = 44;
@@ -128,7 +128,7 @@ namespace CapaPresentacion
             this.Bbuscar.IconColor = System.Drawing.Color.White;
             this.Bbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Bbuscar.IconSize = 20;
-            this.Bbuscar.Location = new System.Drawing.Point(677, 12);
+            this.Bbuscar.Location = new System.Drawing.Point(781, 13);
             this.Bbuscar.Name = "Bbuscar";
             this.Bbuscar.Size = new System.Drawing.Size(35, 24);
             this.Bbuscar.TabIndex = 43;
@@ -149,7 +149,7 @@ namespace CapaPresentacion
             this.dgvdataListaPlanes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -168,7 +168,7 @@ namespace CapaPresentacion
             this.Estado});
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -188,66 +188,12 @@ namespace CapaPresentacion
             this.dgvdataListaPlanes.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvdataListaPlanes.RowHeadersWidth = 30;
             this.dgvdataListaPlanes.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvdataListaPlanes.RowTemplate.Height = 30;
             this.dgvdataListaPlanes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvdataListaPlanes.Size = new System.Drawing.Size(765, 394);
+            this.dgvdataListaPlanes.Size = new System.Drawing.Size(866, 394);
             this.dgvdataListaPlanes.TabIndex = 47;
             this.dgvdataListaPlanes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdataListaPlanes_CellContentClick);
             this.dgvdataListaPlanes.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdataListaPlanes_ColumnHeaderMouseClick);
-            // 
-            // LnombreColumna
-            // 
-            this.LnombreColumna.AutoSize = true;
-            this.LnombreColumna.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LnombreColumna.ForeColor = System.Drawing.Color.Red;
-            this.LnombreColumna.Location = new System.Drawing.Point(371, 18);
-            this.LnombreColumna.Name = "LnombreColumna";
-            this.LnombreColumna.Size = new System.Drawing.Size(93, 15);
-            this.LnombreColumna.TabIndex = 50;
-            this.LnombreColumna.Text = "Nombre campo";
-            this.LnombreColumna.Visible = false;
-            // 
-            // textBoxBusqueda
-            // 
-            this.textBoxBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBusqueda.Location = new System.Drawing.Point(491, 13);
-            this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(180, 24);
-            this.textBoxBusqueda.TabIndex = 48;
-            // 
-            // LBuscar
-            // 
-            this.LBuscar.AutoSize = true;
-            this.LBuscar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBuscar.Location = new System.Drawing.Point(301, 18);
-            this.LBuscar.Name = "LBuscar";
-            this.LBuscar.Size = new System.Drawing.Size(69, 15);
-            this.LBuscar.TabIndex = 49;
-            this.LBuscar.Text = "Buscar por:";
-            this.LBuscar.Visible = false;
-            // 
-            // BNuevoPlan
-            // 
-            this.BNuevoPlan.BackColor = System.Drawing.Color.Green;
-            this.BNuevoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BNuevoPlan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BNuevoPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BNuevoPlan.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BNuevoPlan.ForeColor = System.Drawing.Color.White;
-            this.BNuevoPlan.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.BNuevoPlan.IconColor = System.Drawing.Color.White;
-            this.BNuevoPlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BNuevoPlan.IconSize = 30;
-            this.BNuevoPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BNuevoPlan.Location = new System.Drawing.Point(579, 451);
-            this.BNuevoPlan.Name = "BNuevoPlan";
-            this.BNuevoPlan.Size = new System.Drawing.Size(198, 45);
-            this.BNuevoPlan.TabIndex = 51;
-            this.BNuevoPlan.Text = "AGREGAR NUEVO PLAN";
-            this.BNuevoPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BNuevoPlan.UseVisualStyleBackColor = false;
-            this.BNuevoPlan.Click += new System.EventHandler(this.BNuevoPlan_Click);
             // 
             // Editar
             // 
@@ -289,7 +235,7 @@ namespace CapaPresentacion
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 58;
+            this.Nombre.Width = 63;
             // 
             // fechaInicio
             // 
@@ -297,7 +243,7 @@ namespace CapaPresentacion
             this.fechaInicio.Name = "fechaInicio";
             this.fechaInicio.ReadOnly = true;
             this.fechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaInicio.Width = 71;
+            this.fechaInicio.Width = 77;
             // 
             // fechaFin
             // 
@@ -308,7 +254,7 @@ namespace CapaPresentacion
             this.fechaFin.Name = "fechaFin";
             this.fechaFin.ReadOnly = true;
             this.fechaFin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaFin.Width = 60;
+            this.fechaFin.Width = 66;
             // 
             // series
             // 
@@ -319,7 +265,7 @@ namespace CapaPresentacion
             this.series.Name = "series";
             this.series.ReadOnly = true;
             this.series.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.series.Width = 48;
+            this.series.Width = 53;
             // 
             // detallesPlan
             // 
@@ -327,7 +273,7 @@ namespace CapaPresentacion
             this.detallesPlan.Name = "detallesPlan";
             this.detallesPlan.ReadOnly = true;
             this.detallesPlan.Text = "";
-            this.detallesPlan.Width = 68;
+            this.detallesPlan.Width = 75;
             // 
             // Estado
             // 
@@ -338,13 +284,68 @@ namespace CapaPresentacion
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Estado.Width = 51;
+            this.Estado.Width = 57;
+            // 
+            // LnombreColumna
+            // 
+            this.LnombreColumna.AutoSize = true;
+            this.LnombreColumna.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnombreColumna.ForeColor = System.Drawing.Color.Red;
+            this.LnombreColumna.Location = new System.Drawing.Point(475, 19);
+            this.LnombreColumna.Name = "LnombreColumna";
+            this.LnombreColumna.Size = new System.Drawing.Size(102, 16);
+            this.LnombreColumna.TabIndex = 50;
+            this.LnombreColumna.Text = "Nombre campo";
+            this.LnombreColumna.Visible = false;
+            // 
+            // textBoxBusqueda
+            // 
+            this.textBoxBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBusqueda.Location = new System.Drawing.Point(595, 14);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(180, 24);
+            this.textBoxBusqueda.TabIndex = 48;
+            // 
+            // LBuscar
+            // 
+            this.LBuscar.AutoSize = true;
+            this.LBuscar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBuscar.Location = new System.Drawing.Point(401, 19);
+            this.LBuscar.Name = "LBuscar";
+            this.LBuscar.Size = new System.Drawing.Size(76, 16);
+            this.LBuscar.TabIndex = 49;
+            this.LBuscar.Text = "Buscar por:";
+            this.LBuscar.Visible = false;
+            // 
+            // BNuevoPlan
+            // 
+            this.BNuevoPlan.BackColor = System.Drawing.Color.Green;
+            this.BNuevoPlan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BNuevoPlan.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BNuevoPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BNuevoPlan.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BNuevoPlan.ForeColor = System.Drawing.Color.White;
+            this.BNuevoPlan.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BNuevoPlan.IconColor = System.Drawing.Color.White;
+            this.BNuevoPlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BNuevoPlan.IconSize = 30;
+            this.BNuevoPlan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BNuevoPlan.Location = new System.Drawing.Point(680, 451);
+            this.BNuevoPlan.Name = "BNuevoPlan";
+            this.BNuevoPlan.Size = new System.Drawing.Size(198, 45);
+            this.BNuevoPlan.TabIndex = 51;
+            this.BNuevoPlan.Text = "AGREGAR NUEVO PLAN";
+            this.BNuevoPlan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BNuevoPlan.UseVisualStyleBackColor = false;
+            this.BNuevoPlan.Click += new System.EventHandler(this.BNuevoPlan_Click);
             // 
             // ListaPlanesDeEntrenamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(890, 507);
             this.Controls.Add(this.BNuevoPlan);
             this.Controls.Add(this.LnombreColumna);
             this.Controls.Add(this.textBoxBusqueda);

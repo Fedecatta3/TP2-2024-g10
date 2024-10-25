@@ -54,7 +54,7 @@ namespace CapaPresentacion
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 35;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(298, 261);
+            this.iconButton2.Location = new System.Drawing.Point(358, 265);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(160, 49);
             this.iconButton2.TabIndex = 39;
@@ -74,7 +74,7 @@ namespace CapaPresentacion
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(531, 192);
+            this.iconButton1.Location = new System.Drawing.Point(591, 196);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(102, 26);
             this.iconButton1.TabIndex = 38;
@@ -86,7 +86,7 @@ namespace CapaPresentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(116, 195);
+            this.label1.Location = new System.Drawing.Point(176, 199);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 21);
             this.label1.TabIndex = 37;
@@ -105,7 +105,7 @@ namespace CapaPresentacion
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 35;
             this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(531, 134);
+            this.BCancelar.Location = new System.Drawing.Point(591, 138);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(102, 26);
             this.BCancelar.TabIndex = 36;
@@ -117,7 +117,7 @@ namespace CapaPresentacion
             this.comboBoxCoach.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCoach.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCoach.FormattingEnabled = true;
-            this.comboBoxCoach.Location = new System.Drawing.Point(240, 134);
+            this.comboBoxCoach.Location = new System.Drawing.Point(300, 138);
             this.comboBoxCoach.Name = "comboBoxCoach";
             this.comboBoxCoach.Size = new System.Drawing.Size(276, 26);
             this.comboBoxCoach.TabIndex = 35;
@@ -127,7 +127,7 @@ namespace CapaPresentacion
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(116, 135);
+            this.label3.Location = new System.Drawing.Point(176, 139);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 21);
             this.label3.TabIndex = 33;
@@ -136,7 +136,7 @@ namespace CapaPresentacion
             // textBoxNombre
             // 
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(240, 194);
+            this.textBoxNombre.Location = new System.Drawing.Point(300, 198);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(276, 24);
             this.textBoxNombre.TabIndex = 34;
@@ -146,7 +146,7 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(11, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(766, 67);
+            this.groupBox1.Size = new System.Drawing.Size(867, 67);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             // 
@@ -155,7 +155,7 @@ namespace CapaPresentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(304, 16);
+            this.label2.Location = new System.Drawing.Point(359, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 36);
             this.label2.TabIndex = 3;
@@ -165,7 +165,7 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(890, 507);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label1);

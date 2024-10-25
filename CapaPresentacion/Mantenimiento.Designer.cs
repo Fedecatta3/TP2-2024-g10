@@ -79,7 +79,7 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.DGV_Membresias);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(766, 277);
+            this.groupBox1.Size = new System.Drawing.Size(866, 277);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MEMBRESIAS";
@@ -105,7 +105,7 @@ namespace CapaPresentacion
             this.BNuevaMembresia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BNuevaMembresia.IconSize = 35;
             this.BNuevaMembresia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BNuevaMembresia.Location = new System.Drawing.Point(628, 17);
+            this.BNuevaMembresia.Location = new System.Drawing.Point(728, 17);
             this.BNuevaMembresia.Name = "BNuevaMembresia";
             this.BNuevaMembresia.Size = new System.Drawing.Size(125, 55);
             this.BNuevaMembresia.TabIndex = 39;
@@ -126,7 +126,7 @@ namespace CapaPresentacion
             this.iconButton2.IconColor = System.Drawing.Color.White;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(447, 46);
+            this.iconButton2.Location = new System.Drawing.Point(450, 46);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(35, 26);
             this.iconButton2.TabIndex = 38;
@@ -145,7 +145,7 @@ namespace CapaPresentacion
             this.iconButton1.IconColor = System.Drawing.Color.White;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(410, 46);
+            this.iconButton1.Location = new System.Drawing.Point(413, 46);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(35, 26);
             this.iconButton1.TabIndex = 37;
@@ -158,7 +158,7 @@ namespace CapaPresentacion
             this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(11, 46);
+            this.comboBox4.Location = new System.Drawing.Point(14, 46);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(204, 26);
             this.comboBox4.TabIndex = 35;
@@ -168,7 +168,7 @@ namespace CapaPresentacion
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(8, 25);
+            this.label14.Location = new System.Drawing.Point(11, 25);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 15);
             this.label14.TabIndex = 36;
@@ -196,13 +196,13 @@ namespace CapaPresentacion
             this.Estado});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV_Membresias.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Membresias.Location = new System.Drawing.Point(11, 78);
+            this.DGV_Membresias.Location = new System.Drawing.Point(13, 78);
             this.DGV_Membresias.MultiSelect = false;
             this.DGV_Membresias.Name = "DGV_Membresias";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -213,7 +213,8 @@ namespace CapaPresentacion
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGV_Membresias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGV_Membresias.Size = new System.Drawing.Size(742, 188);
+            this.DGV_Membresias.RowTemplate.Height = 30;
+            this.DGV_Membresias.Size = new System.Drawing.Size(840, 188);
             this.DGV_Membresias.TabIndex = 21;
             // 
             // Tipo
@@ -259,7 +260,7 @@ namespace CapaPresentacion
             this.groupBox3.Controls.Add(this.DGV_MediosDePago);
             this.groupBox3.Location = new System.Drawing.Point(12, 295);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(766, 200);
+            this.groupBox3.Size = new System.Drawing.Size(866, 200);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "MEDIOS DE PAGO";
@@ -267,9 +268,9 @@ namespace CapaPresentacion
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(582, 66);
+            this.textBox1.Location = new System.Drawing.Point(629, 70);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 24);
+            this.textBox1.Size = new System.Drawing.Size(222, 24);
             this.textBox1.TabIndex = 45;
             // 
             // iconButton3
@@ -284,7 +285,7 @@ namespace CapaPresentacion
             this.iconButton3.IconColor = System.Drawing.Color.White;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 25;
-            this.iconButton3.Location = new System.Drawing.Point(718, 96);
+            this.iconButton3.Location = new System.Drawing.Point(816, 100);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(35, 26);
             this.iconButton3.TabIndex = 44;
@@ -304,7 +305,7 @@ namespace CapaPresentacion
             this.BNuevoMedioPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BNuevoMedioPago.IconSize = 35;
             this.BNuevoMedioPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BNuevoMedioPago.Location = new System.Drawing.Point(586, 132);
+            this.BNuevoMedioPago.Location = new System.Drawing.Point(726, 132);
             this.BNuevoMedioPago.Name = "BNuevoMedioPago";
             this.BNuevoMedioPago.Size = new System.Drawing.Size(125, 55);
             this.BNuevoMedioPago.TabIndex = 45;
@@ -325,7 +326,7 @@ namespace CapaPresentacion
             this.iconButton4.IconColor = System.Drawing.Color.White;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 20;
-            this.iconButton4.Location = new System.Drawing.Point(681, 96);
+            this.iconButton4.Location = new System.Drawing.Point(779, 100);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(35, 26);
             this.iconButton4.TabIndex = 43;
@@ -338,9 +339,9 @@ namespace CapaPresentacion
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(582, 34);
+            this.comboBox1.Location = new System.Drawing.Point(629, 38);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(171, 26);
+            this.comboBox1.Size = new System.Drawing.Size(222, 26);
             this.comboBox1.TabIndex = 41;
             // 
             // label1
@@ -348,7 +349,7 @@ namespace CapaPresentacion
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(579, 16);
+            this.label1.Location = new System.Drawing.Point(626, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 15);
             this.label1.TabIndex = 42;
@@ -381,18 +382,19 @@ namespace CapaPresentacion
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DGV_MediosDePago.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV_MediosDePago.Location = new System.Drawing.Point(11, 19);
+            this.DGV_MediosDePago.Location = new System.Drawing.Point(14, 19);
             this.DGV_MediosDePago.MultiSelect = false;
             this.DGV_MediosDePago.Name = "DGV_MediosDePago";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGV_MediosDePago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DGV_MediosDePago.Size = new System.Drawing.Size(564, 168);
+            this.DGV_MediosDePago.RowTemplate.Height = 30;
+            this.DGV_MediosDePago.Size = new System.Drawing.Size(606, 168);
             this.DGV_MediosDePago.TabIndex = 40;
             // 
             // Nombre
@@ -425,7 +427,7 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(890, 507);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -81,7 +81,7 @@ namespace CapaPresentacion
             this.dgvdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -104,7 +104,7 @@ namespace CapaPresentacion
             this.Contraseña});
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -116,7 +116,7 @@ namespace CapaPresentacion
             this.dgvdata.ReadOnly = true;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
@@ -124,8 +124,9 @@ namespace CapaPresentacion
             this.dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvdata.RowHeadersWidth = 30;
             this.dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvdata.RowTemplate.Height = 30;
             this.dgvdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvdata.Size = new System.Drawing.Size(766, 394);
+            this.dgvdata.Size = new System.Drawing.Size(866, 394);
             this.dgvdata.TabIndex = 19;
             this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
             this.dgvdata.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdata_ColumnHeaderMouseClick);
@@ -138,7 +139,7 @@ namespace CapaPresentacion
             this.label13.ForeColor = System.Drawing.Color.OrangeRed;
             this.label13.Location = new System.Drawing.Point(12, 5);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(765, 40);
+            this.label13.Size = new System.Drawing.Size(866, 40);
             this.label13.TabIndex = 26;
             this.label13.Text = "LISTA DE USUARIOS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,10 +148,10 @@ namespace CapaPresentacion
             // 
             this.LBuscar.AutoSize = true;
             this.LBuscar.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBuscar.Location = new System.Drawing.Point(301, 17);
+            this.LBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBuscar.Location = new System.Drawing.Point(401, 18);
             this.LBuscar.Name = "LBuscar";
-            this.LBuscar.Size = new System.Drawing.Size(69, 15);
+            this.LBuscar.Size = new System.Drawing.Size(76, 16);
             this.LBuscar.TabIndex = 27;
             this.LBuscar.Text = "Buscar por:";
             this.LBuscar.Visible = false;
@@ -158,7 +159,7 @@ namespace CapaPresentacion
             // textBoxBusqueda
             // 
             this.textBoxBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBusqueda.Location = new System.Drawing.Point(491, 12);
+            this.textBoxBusqueda.Location = new System.Drawing.Point(595, 13);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(180, 24);
             this.textBoxBusqueda.TabIndex = 26;
@@ -198,7 +199,7 @@ namespace CapaPresentacion
             this.BNuevoUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BNuevoUsuario.IconSize = 30;
             this.BNuevoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BNuevoUsuario.Location = new System.Drawing.Point(623, 450);
+            this.BNuevoUsuario.Location = new System.Drawing.Point(724, 450);
             this.BNuevoUsuario.Name = "BNuevoUsuario";
             this.BNuevoUsuario.Size = new System.Drawing.Size(154, 45);
             this.BNuevoUsuario.TabIndex = 39;
@@ -219,7 +220,7 @@ namespace CapaPresentacion
             this.BLimpiar.IconColor = System.Drawing.Color.White;
             this.BLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BLimpiar.IconSize = 25;
-            this.BLimpiar.Location = new System.Drawing.Point(728, 12);
+            this.BLimpiar.Location = new System.Drawing.Point(832, 13);
             this.BLimpiar.Name = "BLimpiar";
             this.BLimpiar.Size = new System.Drawing.Size(35, 24);
             this.BLimpiar.TabIndex = 29;
@@ -239,7 +240,7 @@ namespace CapaPresentacion
             this.BBuscar.IconColor = System.Drawing.Color.White;
             this.BBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BBuscar.IconSize = 20;
-            this.BBuscar.Location = new System.Drawing.Point(677, 12);
+            this.BBuscar.Location = new System.Drawing.Point(781, 13);
             this.BBuscar.Name = "BBuscar";
             this.BBuscar.Size = new System.Drawing.Size(35, 24);
             this.BBuscar.TabIndex = 28;
@@ -251,11 +252,11 @@ namespace CapaPresentacion
             // 
             this.LnombreColumna.AutoSize = true;
             this.LnombreColumna.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LnombreColumna.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LnombreColumna.ForeColor = System.Drawing.Color.Red;
-            this.LnombreColumna.Location = new System.Drawing.Point(371, 17);
+            this.LnombreColumna.Location = new System.Drawing.Point(475, 18);
             this.LnombreColumna.Name = "LnombreColumna";
-            this.LnombreColumna.Size = new System.Drawing.Size(93, 15);
+            this.LnombreColumna.Size = new System.Drawing.Size(102, 16);
             this.LnombreColumna.TabIndex = 40;
             this.LnombreColumna.Text = "Nombre campo";
             this.LnombreColumna.Visible = false;
@@ -289,7 +290,7 @@ namespace CapaPresentacion
             this.idUsuario.ReadOnly = true;
             this.idUsuario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idUsuario.Visible = false;
-            this.idUsuario.Width = 66;
+            this.idUsuario.Width = 72;
             // 
             // Nombre
             // 
@@ -300,7 +301,7 @@ namespace CapaPresentacion
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 58;
+            this.Nombre.Width = 63;
             // 
             // Apellido
             // 
@@ -308,7 +309,7 @@ namespace CapaPresentacion
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
             this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Apellido.Width = 57;
+            this.Apellido.Width = 64;
             // 
             // DNI
             // 
@@ -319,7 +320,7 @@ namespace CapaPresentacion
             this.DNI.Name = "DNI";
             this.DNI.ReadOnly = true;
             this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DNI.Width = 34;
+            this.DNI.Width = 37;
             // 
             // Email
             // 
@@ -330,7 +331,7 @@ namespace CapaPresentacion
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
             this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Email.Width = 49;
+            this.Email.Width = 52;
             // 
             // FechaNacimiento
             // 
@@ -341,7 +342,7 @@ namespace CapaPresentacion
             this.FechaNacimiento.Name = "FechaNacimiento";
             this.FechaNacimiento.ReadOnly = true;
             this.FechaNacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FechaNacimiento.Width = 102;
+            this.FechaNacimiento.Width = 111;
             // 
             // Telefono
             // 
@@ -352,14 +353,14 @@ namespace CapaPresentacion
             this.Telefono.Name = "Telefono";
             this.Telefono.ReadOnly = true;
             this.Telefono.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Telefono.Width = 61;
+            this.Telefono.Width = 68;
             // 
             // horario
             // 
             this.horario.HeaderText = "Horario";
             this.horario.Name = "horario";
             this.horario.ReadOnly = true;
-            this.horario.Width = 54;
+            this.horario.Width = 59;
             // 
             // Rol
             // 
@@ -370,7 +371,7 @@ namespace CapaPresentacion
             this.Rol.Name = "Rol";
             this.Rol.ReadOnly = true;
             this.Rol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Rol.Width = 32;
+            this.Rol.Width = 35;
             // 
             // Estado
             // 
@@ -381,7 +382,7 @@ namespace CapaPresentacion
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Estado.Width = 51;
+            this.Estado.Width = 57;
             // 
             // Contraseña
             // 
@@ -390,7 +391,7 @@ namespace CapaPresentacion
             this.Contraseña.ReadOnly = true;
             this.Contraseña.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.Contraseña.Visible = false;
-            this.Contraseña.Width = 76;
+            this.Contraseña.Width = 83;
             // 
             // Usuarios
             // 
@@ -398,7 +399,7 @@ namespace CapaPresentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(790, 507);
+            this.ClientSize = new System.Drawing.Size(890, 507);
             this.Controls.Add(this.LnombreColumna);
             this.Controls.Add(this.BNuevoUsuario);
             this.Controls.Add(this.labelCantUsuarios);

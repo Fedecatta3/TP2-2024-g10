@@ -29,12 +29,12 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BGuardarHorario = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,27 +50,22 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvdataHorarios = new System.Windows.Forms.DataGridView();
-            this.labelNombreUsuario = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.idHorario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaSemana = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.horaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.BCancelar = new FontAwesome.Sharp.IconButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelNombreUsuario = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDhoraFin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDhoraInicio)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdataHorarios)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.BCancelar);
             this.groupBox1.Controls.Add(this.BGuardarHorario);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.NUDhoraFin);
@@ -103,9 +98,9 @@ namespace CapaPresentacion
             this.BGuardarHorario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BGuardarHorario.IconSize = 25;
             this.BGuardarHorario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BGuardarHorario.Location = new System.Drawing.Point(359, 111);
+            this.BGuardarHorario.Location = new System.Drawing.Point(347, 111);
             this.BGuardarHorario.Name = "BGuardarHorario";
-            this.BGuardarHorario.Size = new System.Drawing.Size(95, 35);
+            this.BGuardarHorario.Size = new System.Drawing.Size(103, 35);
             this.BGuardarHorario.TabIndex = 28;
             this.BGuardarHorario.Text = "AGREGAR";
             this.BGuardarHorario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -234,18 +229,18 @@ namespace CapaPresentacion
             this.dgvdataHorarios.AllowUserToDeleteRows = false;
             this.dgvdataHorarios.AllowUserToResizeColumns = false;
             this.dgvdataHorarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvdataHorarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvdataHorarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvdataHorarios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdataHorarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdataHorarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvdataHorarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdataHorarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idHorario,
@@ -253,54 +248,32 @@ namespace CapaPresentacion
             this.horaInicio,
             this.horaFin,
             this.eliminar});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvdataHorarios.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvdataHorarios.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvdataHorarios.Location = new System.Drawing.Point(12, 21);
             this.dgvdataHorarios.MultiSelect = false;
             this.dgvdataHorarios.Name = "dgvdataHorarios";
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdataHorarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdataHorarios.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvdataHorarios.RowHeadersWidth = 30;
             this.dgvdataHorarios.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvdataHorarios.RowTemplate.Height = 30;
             this.dgvdataHorarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvdataHorarios.Size = new System.Drawing.Size(438, 146);
             this.dgvdataHorarios.TabIndex = 35;
             this.dgvdataHorarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdataHorarios_CellContentClick);
-            // 
-            // labelNombreUsuario
-            // 
-            this.labelNombreUsuario.AutoSize = true;
-            this.labelNombreUsuario.BackColor = System.Drawing.Color.Black;
-            this.labelNombreUsuario.ForeColor = System.Drawing.Color.White;
-            this.labelNombreUsuario.Location = new System.Drawing.Point(275, 17);
-            this.labelNombreUsuario.Name = "labelNombreUsuario";
-            this.labelNombreUsuario.Size = new System.Drawing.Size(90, 13);
-            this.labelNombreUsuario.TabIndex = 2;
-            this.labelNombreUsuario.Text = "Nombre completo";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Black;
-            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(208, 12);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 20);
-            this.label11.TabIndex = 34;
-            this.label11.Text = "Usuario:";
             // 
             // idHorario
             // 
@@ -316,9 +289,9 @@ namespace CapaPresentacion
             // 
             // horaInicio
             // 
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.horaInicio.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.horaInicio.DefaultCellStyle = dataGridViewCellStyle3;
             this.horaInicio.HeaderText = "Hora inicio";
             this.horaInicio.Name = "horaInicio";
             this.horaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -330,56 +303,35 @@ namespace CapaPresentacion
             // 
             // eliminar
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            this.eliminar.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.eliminar.DefaultCellStyle = dataGridViewCellStyle4;
             this.eliminar.HeaderText = "";
             this.eliminar.Name = "eliminar";
             // 
-            // BCancelar
+            // labelNombreUsuario
             // 
-            this.BCancelar.BackColor = System.Drawing.Color.Red;
-            this.BCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BCancelar.Font = new System.Drawing.Font("Microsoft PhagsPa", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCancelar.ForeColor = System.Drawing.Color.White;
-            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.CircleXmark;
-            this.BCancelar.IconColor = System.Drawing.Color.White;
-            this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BCancelar.IconSize = 25;
-            this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(254, 111);
-            this.BCancelar.Name = "BCancelar";
-            this.BCancelar.Size = new System.Drawing.Size(99, 35);
-            this.BCancelar.TabIndex = 29;
-            this.BCancelar.Text = "CANCELAR";
-            this.BCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BCancelar.UseVisualStyleBackColor = false;
-            this.BCancelar.Click += new System.EventHandler(this.BCancelar_Click);
+            this.labelNombreUsuario.AutoSize = true;
+            this.labelNombreUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.labelNombreUsuario.ForeColor = System.Drawing.Color.Black;
+            this.labelNombreUsuario.Location = new System.Drawing.Point(79, 23);
+            this.labelNombreUsuario.Name = "labelNombreUsuario";
+            this.labelNombreUsuario.Size = new System.Drawing.Size(90, 13);
+            this.labelNombreUsuario.TabIndex = 2;
+            this.labelNombreUsuario.Text = "Nombre completo";
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label5.Location = new System.Drawing.Point(12, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 20);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "ASIGNAR HORARIOS";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.labelNombreUsuario);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(489, 43);
-            this.panel1.TabIndex = 36;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(12, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(67, 20);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Usuario:";
             // 
             // AgregarHorarioUsuario
             // 
@@ -387,14 +339,14 @@ namespace CapaPresentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(489, 406);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelNombreUsuario);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AgregarHorarioUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HORARIO";
+            this.Text = "HORARIOS";
             this.Load += new System.EventHandler(this.AgregarHorarioUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -402,8 +354,6 @@ namespace CapaPresentacion
             ((System.ComponentModel.ISupportInitialize)(this.NUDhoraInicio)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdataHorarios)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -433,8 +383,5 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn horaInicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaFin;
         private System.Windows.Forms.DataGridViewButtonColumn eliminar;
-        private FontAwesome.Sharp.IconButton BCancelar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
     }
 }

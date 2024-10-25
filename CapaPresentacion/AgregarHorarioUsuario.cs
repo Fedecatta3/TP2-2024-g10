@@ -153,7 +153,7 @@ namespace CapaPresentacion
                     // Llamar al método de la CapaNegocio para eliminar el horario
                     CN_Horario cn_horario = new CN_Horario();
                     string mensaje = string.Empty;
-
+                    
                     bool respuesta = cn_horario.Eliminar(idHorario, out mensaje);
 
                     if (respuesta)
@@ -169,10 +169,5 @@ namespace CapaPresentacion
             }
         }
 
-        private void BCancelar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("No se asignaron horarios al usuario.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
-        }
     }
 }
