@@ -88,5 +88,10 @@ namespace CapaNegocio
             return objCD_PlanEntrenamiento.ListarCoachsPorPlan(idPlan);
         }
 
+
+        public List<PlanEntrenamiento> ListarPlanesPorCoachs(int idUsuario)
+        {
+            return objCD_PlanEntrenamiento.ListarPlanesPorCoachs(idUsuario);
+        }
     }
 }

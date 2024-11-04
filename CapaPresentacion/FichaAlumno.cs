@@ -25,11 +25,12 @@ namespace CapaPresentacion
 
         private void BCobrarCuota_Click(object sender, EventArgs e)
         {
+            /*
             //Modal para cobrar cuota del alumno
             using (var modal = new CobrarCuotaAlumno())
             {
                 var resultado = modal.ShowDialog();
-            }
+            }*/
         }
 
         private void FichaAlumno_Load(object sender, EventArgs e)

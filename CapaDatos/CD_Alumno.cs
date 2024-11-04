@@ -57,5 +57,57 @@ namespace CapaDatos
             }
             return lista;
         }
+
+
+        public int Registrar(Alumno obj, out string mensaje)
+        {
+            int idAlumnoGenerado = 0;
+            mensaje = string.Empty;
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+                {
+                    SqlCommand cmd = new SqlCommand("SP_REGISTRARALUMNO", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Agregar parámetros de entrada
+                    cmd.Parameters.AddWithValue("id_usuario", obj.id_usuario);
+                    cmd.Parameters.AddWithValue("id_membresia", obj.id_membresia);
+                    cmd.Parameters.AddWithValue("id_plan", obj.id_plan);
+                    cmd.Parameters.AddWithValue("nombre", obj.nombre);
+                    cmd.Parameters.AddWithValue("apellido", obj.apellido);
+                    cmd.Parameters.AddWithValue("email", obj.email);
+                    cmd.Parameters.AddWithValue("telefono", obj.telefono);
+                    cmd.Parameters.AddWithValue("foto", obj.foto);
+                    cmd.Parameters.AddWithValue("dni", obj.dni);
+                    cmd.Parameters.AddWithValue("fecha_nacimiento", obj.fecha_nacimiento);
+                    cmd.Parameters.AddWithValue("contacto_emergencia", obj.contacto_emergencia);
+                    cmd.Parameters.AddWithValue("sexo", obj.sexo);
+                    cmd.Parameters.AddWithValue("observaciones", obj.observaciones);
+                    cmd.Parameters.AddWithValue("estado", obj.estado);
+
+                    // Parámetros de salida
+                    cmd.Parameters.Add("idUsuarioResultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+
+                    // Abrir la conexión y ejecutar el comando
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+
+                    // Obtener valores de los parámetros de salida
+                    idAlumnoGenerado = Convert.ToInt32(cmd.Parameters["idUsuarioResultado"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                idAlumnoGenerado = 0;
+                mensaje = "Error al registrar el alumno: " + ex.Message;
+            }
+
+            return idAlumnoGenerado;
+        }
+
     }
 }

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CapaNegocio
@@ -15,6 +16,12 @@ namespace CapaNegocio
         public List<Alumno> Listar()
         {
             return objCapaDatos.Listar();
+        }
+
+
+        public int Registrar(Alumno obj, out string mensaje)
+        {
+            return objCapaDatos.Registrar(obj, out mensaje);
         }
     }
 }

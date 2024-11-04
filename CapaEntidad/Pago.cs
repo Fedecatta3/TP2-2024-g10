@@ -15,5 +15,6 @@ namespace CapaEntidad
         public string fecha { get; set; }
         public decimal cantidad { get; set; }
         public decimal total {get;set;}
+        public decimal recargo { get; set; }
     }
 }

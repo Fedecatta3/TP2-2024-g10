@@ -42,7 +42,7 @@ namespace CapaPresentacion
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxContactoEmerg = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxRutaImagen = new System.Windows.Forms.TextBox();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.checkBoxFemenino = new System.Windows.Forms.CheckBox();
@@ -50,11 +50,17 @@ namespace CapaPresentacion
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BCargarImagen = new FontAwesome.Sharp.IconButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxIDalumno = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.BConfirmarAlumno = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxTipoMembresia = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxCoachs = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -186,15 +192,15 @@ namespace CapaPresentacion
             this.label1.TabIndex = 26;
             this.label1.Text = "Contacto emergencia";
             // 
-            // textBox7
+            // textBoxRutaImagen
             // 
-            this.textBox7.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textBox7.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(16, 246);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(203, 24);
-            this.textBox7.TabIndex = 29;
+            this.textBoxRutaImagen.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBoxRutaImagen.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.textBoxRutaImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRutaImagen.Location = new System.Drawing.Point(16, 246);
+            this.textBoxRutaImagen.Name = "textBoxRutaImagen";
+            this.textBoxRutaImagen.Size = new System.Drawing.Size(203, 20);
+            this.textBoxRutaImagen.TabIndex = 29;
             // 
             // textBoxTelefono
             // 
@@ -225,6 +231,7 @@ namespace CapaPresentacion
             this.checkBoxFemenino.TabIndex = 32;
             this.checkBoxFemenino.Text = "Femenino";
             this.checkBoxFemenino.UseVisualStyleBackColor = true;
+            this.checkBoxFemenino.CheckedChanged += new System.EventHandler(this.checkBoxFemenino_CheckedChanged);
             // 
             // checkBoxMasculino
             // 
@@ -236,6 +243,7 @@ namespace CapaPresentacion
             this.checkBoxMasculino.TabIndex = 33;
             this.checkBoxMasculino.Text = "Masculino";
             this.checkBoxMasculino.UseVisualStyleBackColor = true;
+            this.checkBoxMasculino.CheckedChanged += new System.EventHandler(this.checkBoxMasculino_CheckedChanged);
             // 
             // textBoxObservaciones
             // 
@@ -259,9 +267,15 @@ namespace CapaPresentacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBoxCoachs);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.comboBoxPlan);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.comboBoxTipoMembresia);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.textBoxObservaciones);
-            this.groupBox1.Controls.Add(this.iconButton1);
+            this.groupBox1.Controls.Add(this.BCargarImagen);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.checkBoxMasculino);
             this.groupBox1.Controls.Add(this.label6);
@@ -271,7 +285,7 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.textBoxEmail);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.textBoxRutaImagen);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBoxContactoEmerg);
             this.groupBox1.Controls.Add(this.textBoxDNI);
@@ -283,14 +297,41 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 341);
+            this.groupBox1.Size = new System.Drawing.Size(776, 403);
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
+            // 
+            // BCargarImagen
+            // 
+            this.BCargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BCargarImagen.IconChar = FontAwesome.Sharp.IconChar.CameraAlt;
+            this.BCargarImagen.IconColor = System.Drawing.Color.Black;
+            this.BCargarImagen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BCargarImagen.IconSize = 40;
+            this.BCargarImagen.Location = new System.Drawing.Point(16, 38);
+            this.BCargarImagen.Margin = new System.Windows.Forms.Padding(0);
+            this.BCargarImagen.Name = "BCargarImagen";
+            this.BCargarImagen.Size = new System.Drawing.Size(46, 44);
+            this.BCargarImagen.TabIndex = 4;
+            this.BCargarImagen.UseVisualStyleBackColor = true;
+            this.BCargarImagen.Click += new System.EventHandler(this.BCargarImagen_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.siluetaPerfilPersona__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 203);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // textBoxIDalumno
             // 
             this.textBoxIDalumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIDalumno.Location = new System.Drawing.Point(12, 366);
+            this.textBoxIDalumno.Location = new System.Drawing.Point(12, 421);
             this.textBoxIDalumno.Name = "textBoxIDalumno";
             this.textBoxIDalumno.Size = new System.Drawing.Size(27, 24);
             this.textBoxIDalumno.TabIndex = 39;
@@ -310,7 +351,7 @@ namespace CapaPresentacion
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 35;
             this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(529, 366);
+            this.BCancelar.Location = new System.Drawing.Point(529, 421);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(115, 35);
             this.BCancelar.TabIndex = 27;
@@ -332,7 +373,7 @@ namespace CapaPresentacion
             this.BConfirmarAlumno.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BConfirmarAlumno.IconSize = 35;
             this.BConfirmarAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BConfirmarAlumno.Location = new System.Drawing.Point(653, 366);
+            this.BConfirmarAlumno.Location = new System.Drawing.Point(653, 421);
             this.BConfirmarAlumno.Name = "BConfirmarAlumno";
             this.BConfirmarAlumno.Size = new System.Drawing.Size(135, 35);
             this.BConfirmarAlumno.TabIndex = 26;
@@ -341,37 +382,76 @@ namespace CapaPresentacion
             this.BConfirmarAlumno.UseVisualStyleBackColor = false;
             this.BConfirmarAlumno.Click += new System.EventHandler(this.BConfirmarAlumno_Click);
             // 
-            // iconButton1
+            // comboBoxTipoMembresia
             // 
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CameraAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(16, 38);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(46, 44);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.comboBoxTipoMembresia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoMembresia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoMembresia.FormattingEnabled = true;
+            this.comboBoxTipoMembresia.Location = new System.Drawing.Point(23, 363);
+            this.comboBoxTipoMembresia.Name = "comboBoxTipoMembresia";
+            this.comboBoxTipoMembresia.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxTipoMembresia.TabIndex = 37;
             // 
-            // pictureBox1
+            // label11
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.siluetaPerfilPersona__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 203);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(19, 340);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(139, 20);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "TIPO MEMBRESIA:";
+            // 
+            // comboBoxPlan
+            // 
+            this.comboBoxPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPlan.FormattingEnabled = true;
+            this.comboBoxPlan.Location = new System.Drawing.Point(288, 363);
+            this.comboBoxPlan.Name = "comboBoxPlan";
+            this.comboBoxPlan.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxPlan.TabIndex = 39;
+            this.comboBoxPlan.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlan_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(284, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 20);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "PLAN ENTRENAMIENTO:";
+            // 
+            // comboBoxCoachs
+            // 
+            this.comboBoxCoachs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCoachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCoachs.FormattingEnabled = true;
+            this.comboBoxCoachs.Location = new System.Drawing.Point(552, 363);
+            this.comboBoxCoachs.Name = "comboBoxCoachs";
+            this.comboBoxCoachs.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxCoachs.TabIndex = 41;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(548, 340);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 20);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "COACH A CARGO:";
             // 
             // NuevoAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.ClientSize = new System.Drawing.Size(800, 466);
             this.Controls.Add(this.textBoxIDalumno);
             this.Controls.Add(this.BCancelar);
             this.Controls.Add(this.BConfirmarAlumno);
@@ -380,6 +460,7 @@ namespace CapaPresentacion
             this.Name = "NuevoAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NUEVO ALUMNO";
+            this.Load += new System.EventHandler(this.NuevoAlumno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -390,7 +471,7 @@ namespace CapaPresentacion
 
         #endregion
         private System.Windows.Forms.PictureBox pictureBox1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BCargarImagen;
         private System.Windows.Forms.TextBox textBoxApellido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -404,7 +485,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxContactoEmerg;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxRutaImagen;
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox checkBoxFemenino;
@@ -415,5 +496,11 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton BConfirmarAlumno;
         private FontAwesome.Sharp.IconButton BCancelar;
         private System.Windows.Forms.TextBox textBoxIDalumno;
+        private System.Windows.Forms.ComboBox comboBoxCoachs;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxPlan;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBoxTipoMembresia;
+        private System.Windows.Forms.Label label11;
     }
 }

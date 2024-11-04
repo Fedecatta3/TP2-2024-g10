@@ -346,5 +346,42 @@ namespace CapaDatos
             return lista;
         }
 
+
+
+        public List<PlanEntrenamiento> ListarPlanesPorCoachs(int idUsuario)
+        {
+            List<PlanEntrenamiento> listaPlanes = new List<PlanEntrenamiento>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_LISTAR_PLAN_POR_COACHS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Agregar el parámetro que está esperando el procedimiento almacenado
+                cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+
+                conexion.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    PlanEntrenamiento plan = new PlanEntrenamiento
+                    {
+                        id_plan = Convert.ToInt32(reader["id_plan"]),
+                        nombre = reader["nombre"].ToString(),
+                        fechaInicio = Convert.ToDateTime(reader["fechaInicio"]),
+                        fechaFin = Convert.ToDateTime(reader["fechaFin"]),
+                        cantSeries = Convert.ToInt32(reader["cantSeries"]),
+                        estado = Convert.ToBoolean(reader["estado"])
+                    };
+                    listaPlanes.Add(plan);
+                }
+                reader.Close();
+            }
+
+            return listaPlanes;
+        }
+
+
     }
 }

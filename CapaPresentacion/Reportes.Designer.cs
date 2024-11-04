@@ -36,29 +36,33 @@ namespace CapaPresentacion
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cantUsuarios = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.cantCoachs = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.totalIngresos = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
+            this.cantAlumnos = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
+            this.cantPlanes = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.comboBoxReportes = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -143,6 +147,7 @@ namespace CapaPresentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MistyRose;
+            this.panel1.Controls.Add(this.cantUsuarios);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.iconPictureBox1);
@@ -151,27 +156,27 @@ namespace CapaPresentacion
             this.panel1.Size = new System.Drawing.Size(155, 49);
             this.panel1.TabIndex = 60;
             // 
-            // label2
+            // cantUsuarios
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(50, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 16);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "00";
+            this.cantUsuarios.AutoSize = true;
+            this.cantUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantUsuarios.ForeColor = System.Drawing.Color.OrangeRed;
+            this.cantUsuarios.Location = new System.Drawing.Point(121, 25);
+            this.cantUsuarios.Name = "cantUsuarios";
+            this.cantUsuarios.Size = new System.Drawing.Size(32, 16);
+            this.cantUsuarios.TabIndex = 62;
+            this.cantUsuarios.Text = "000";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(47, 4);
+            this.label1.Location = new System.Drawing.Point(47, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.Size = new System.Drawing.Size(62, 16);
             this.label1.TabIndex = 61;
-            this.label1.Text = "Cant Usuarios";
+            this.label1.Text = "Usuarios";
             // 
             // iconPictureBox1
             // 
@@ -190,35 +195,36 @@ namespace CapaPresentacion
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MistyRose;
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.cantCoachs);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.iconPictureBox2);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(365, 12);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(155, 49);
             this.panel2.TabIndex = 61;
             // 
-            // label3
+            // cantCoachs
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(50, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 16);
-            this.label3.TabIndex = 62;
-            this.label3.Text = "00";
+            this.cantCoachs.AutoSize = true;
+            this.cantCoachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantCoachs.ForeColor = System.Drawing.Color.OrangeRed;
+            this.cantCoachs.Location = new System.Drawing.Point(120, 25);
+            this.cantCoachs.Name = "cantCoachs";
+            this.cantCoachs.Size = new System.Drawing.Size(32, 16);
+            this.cantCoachs.TabIndex = 62;
+            this.cantCoachs.Text = "000";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label6.Location = new System.Drawing.Point(50, 4);
+            this.label6.Location = new System.Drawing.Point(47, 8);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 16);
+            this.label6.Size = new System.Drawing.Size(54, 16);
             this.label6.TabIndex = 61;
-            this.label6.Text = "Cant Coachs";
+            this.label6.Text = "Coachs";
             // 
             // iconPictureBox2
             // 
@@ -237,7 +243,7 @@ namespace CapaPresentacion
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MistyRose;
-            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.totalIngresos);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.iconPictureBox3);
             this.panel3.Location = new System.Drawing.Point(12, 12);
@@ -245,16 +251,16 @@ namespace CapaPresentacion
             this.panel3.Size = new System.Drawing.Size(155, 49);
             this.panel3.TabIndex = 62;
             // 
-            // label7
+            // totalIngresos
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label7.Location = new System.Drawing.Point(47, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 16);
-            this.label7.TabIndex = 62;
-            this.label7.Text = "$ 0000";
+            this.totalIngresos.AutoSize = true;
+            this.totalIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalIngresos.ForeColor = System.Drawing.Color.OrangeRed;
+            this.totalIngresos.Location = new System.Drawing.Point(47, 20);
+            this.totalIngresos.Name = "totalIngresos";
+            this.totalIngresos.Size = new System.Drawing.Size(52, 16);
+            this.totalIngresos.TabIndex = 62;
+            this.totalIngresos.Text = "$ 0000";
             // 
             // label8
             // 
@@ -284,35 +290,36 @@ namespace CapaPresentacion
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.MistyRose;
-            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.cantAlumnos);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.iconPictureBox4);
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(544, 12);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(155, 49);
             this.panel4.TabIndex = 63;
             // 
-            // label9
+            // cantAlumnos
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label9.Location = new System.Drawing.Point(49, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 16);
-            this.label9.TabIndex = 62;
-            this.label9.Text = "00";
+            this.cantAlumnos.AutoSize = true;
+            this.cantAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantAlumnos.ForeColor = System.Drawing.Color.OrangeRed;
+            this.cantAlumnos.Location = new System.Drawing.Point(120, 26);
+            this.cantAlumnos.Name = "cantAlumnos";
+            this.cantAlumnos.Size = new System.Drawing.Size(32, 16);
+            this.cantAlumnos.TabIndex = 62;
+            this.cantAlumnos.Text = "000";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label10.Location = new System.Drawing.Point(49, 4);
+            this.label10.Location = new System.Drawing.Point(46, 8);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 16);
+            this.label10.Size = new System.Drawing.Size(60, 16);
             this.label10.TabIndex = 61;
-            this.label10.Text = "Cant Alumnos";
+            this.label10.Text = "Alumnos";
             // 
             // iconPictureBox4
             // 
@@ -331,35 +338,36 @@ namespace CapaPresentacion
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MistyRose;
-            this.panel5.Controls.Add(this.label11);
+            this.panel5.Controls.Add(this.cantPlanes);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.iconPictureBox5);
+            this.panel5.Controls.Add(this.label9);
             this.panel5.Location = new System.Drawing.Point(723, 12);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(155, 49);
             this.panel5.TabIndex = 64;
             // 
-            // label11
+            // cantPlanes
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label11.Location = new System.Drawing.Point(50, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(24, 16);
-            this.label11.TabIndex = 62;
-            this.label11.Text = "00";
+            this.cantPlanes.AutoSize = true;
+            this.cantPlanes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantPlanes.ForeColor = System.Drawing.Color.OrangeRed;
+            this.cantPlanes.Location = new System.Drawing.Point(106, 25);
+            this.cantPlanes.Name = "cantPlanes";
+            this.cantPlanes.Size = new System.Drawing.Size(24, 16);
+            this.cantPlanes.TabIndex = 62;
+            this.cantPlanes.Text = "00";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label12.Location = new System.Drawing.Point(47, 4);
+            this.label12.Location = new System.Drawing.Point(50, 7);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 16);
+            this.label12.Size = new System.Drawing.Size(50, 16);
             this.label12.TabIndex = 61;
-            this.label12.Text = "Cant Planes";
+            this.label12.Text = "Planes";
             // 
             // iconPictureBox5
             // 
@@ -435,6 +443,50 @@ namespace CapaPresentacion
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.UseVisualStyleBackColor = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(47, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "registrados:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(47, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 16);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "registrados:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label7.Location = new System.Drawing.Point(46, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "registrados:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label9.Location = new System.Drawing.Point(50, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "creados:";
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,28 +541,32 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label cantUsuarios;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label cantCoachs;
         private System.Windows.Forms.Label label6;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label totalIngresos;
         private System.Windows.Forms.Label label8;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label cantAlumnos;
         private System.Windows.Forms.Label label10;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label cantPlanes;
         private System.Windows.Forms.Label label12;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
         private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.ComboBox comboBoxReportes;
         private System.Windows.Forms.Label label14;
         private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label9;
     }
 }

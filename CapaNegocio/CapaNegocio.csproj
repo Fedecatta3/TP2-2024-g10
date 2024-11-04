@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,6 +48,7 @@
     <Compile Include="CN_Horario.cs" />
     <Compile Include="CN_medioPago.cs" />
     <Compile Include="CN_membresia.cs" />
+    <Compile Include="CN_Pago.cs" />
     <Compile Include="CN_permiso.cs" />
     <Compile Include="CN_PlanEntrenamiento.cs" />
     <Compile Include="CN_rol.cs" />
