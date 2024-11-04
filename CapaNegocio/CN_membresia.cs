@@ -16,5 +16,15 @@ namespace CapaNegocio
         {
             return objCD_Membresia.Listar(); // Llama al método que obtiene los datos de la base de datos
         }
+
+        public int Agregar(Membresia membresia, out string mensaje)
+        {
+            return objCD_Membresia.Agregar(membresia, out mensaje);
+        }
+
+        public int Editar(Membresia membresia, out string mensaje)
+        {
+            return objCD_Membresia.Editar(membresia, out mensaje);
+        }
     }
 }

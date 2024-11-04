@@ -16,5 +16,15 @@ namespace CapaNegocio
         {
             return objcd_medioPago.Listar();
         }
+
+        public int Agregar(MedioPago medioPago, out string mensaje)
+        {
+            return objcd_medioPago.Agregar(medioPago, out mensaje);
+        }
+
+        public int Editar(MedioPago medioPago, out string mensaje)
+        {
+            return objcd_medioPago.Editar(medioPago, out mensaje);
+        }
     }
 }

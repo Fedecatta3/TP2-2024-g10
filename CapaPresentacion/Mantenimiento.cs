@@ -30,19 +30,11 @@ namespace CapaPresentacion
         {
             List<Membresia> listaMembresias = objCN_Membresia.Listar();
 
-            DGV_Membresias.DataSource = null; // Limpia el DataSource anterior
-            DGV_Membresias.Columns.Clear();
-
-            // Enlazar la lista con el DataGridView
-            DGV_Membresias.DataSource = listaMembresias;
-
-            // Ajustar los nombres de las columnas
-            DGV_Membresias.Columns["id_membresia"].HeaderText = "ID";
-            DGV_Membresias.Columns["nombre"].HeaderText = "Nombre";
-            DGV_Membresias.Columns["duracion"].HeaderText = "Duración (días)";
-            DGV_Membresias.Columns["fecha_creacion"].HeaderText = "Fecha Creación";
-            DGV_Membresias.Columns["costo"].HeaderText = "Costo";
-            DGV_Membresias.Columns["estado"].HeaderText = "Estado";
+            foreach(Membresia item in listaMembresias)
+            {
+                dataGridMembresias.Rows.Add("Editar", item.id_membresia, item.nombre, item.duracion, item.fecha_creacion.ToString("dd/MM/yyyy"),
+                    item.costo, item.estado == true ? "Activo" : "Inactivo");
+            }
         }
 
         // Método para cargar medios de pago en el DataGridView
@@ -50,18 +42,11 @@ namespace CapaPresentacion
         {
             List<MedioPago> listaMediosDePago = objCN_MedioPago.Listar();
 
-            DGV_MediosDePago.DataSource = null; // Limpia el DataSource anterior
-            DGV_MediosDePago.Columns.Clear();
-
-            // Enlazar la lista con el DataGridView (asegúrate de tener un DataGridView para medios de pago)
-            DGV_MediosDePago.DataSource = listaMediosDePago;
-
-            // Ajustar los nombres de las columnas
-            DGV_MediosDePago.Columns["id_medioPago"].HeaderText = "ID";
-            DGV_MediosDePago.Columns["nombre"].HeaderText = "Nombre";
-            DGV_MediosDePago.Columns["comision"].HeaderText = "Comisión";
-            DGV_MediosDePago.Columns["fechaCreacion"].HeaderText = "Fecha Creación";
-            DGV_MediosDePago.Columns["estado"].HeaderText = "Estado";
+            foreach(MedioPago item in listaMediosDePago)
+            {
+                dataGridMediosPago.Rows.Add("Editar", item.id_medioPago, item.nombre, item.comision,
+                    item.fechaCreacion.ToString("dd/MM/yyyy"), item.estado == true ? "Activo" : "Inactivo");
+            }
         }
 
         private void BNuevaMembresia_Click(object sender, EventArgs e)
@@ -90,6 +75,69 @@ namespace CapaPresentacion
                 if (resultado == DialogResult.OK)
                 {
                     CargarMediosDePago(); // Actualizar la lista de medios de pago
+                }
+            }
+        }
+
+        private void dataGridMembresias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verificar si se hizo clic en la columna de editar
+            if (e.ColumnIndex == dataGridMembresias.Columns["accion"].Index && e.RowIndex >= 0)
+            {
+
+                Membresia objMembresia = new Membresia()
+                {
+                    id_membresia = Convert.ToInt32(dataGridMembresias.Rows[e.RowIndex].Cells["idMembresia"].Value),
+                    nombre = dataGridMembresias.Rows[e.RowIndex].Cells["nombreMembresia"].Value.ToString(),
+                    duracion = Convert.ToInt32(dataGridMembresias.Rows[e.RowIndex].Cells["duracion"].Value),
+                    fecha_creacion = DateTime.Parse(dataGridMembresias.Rows[e.RowIndex].Cells["fechaCreacionMemb"].Value.ToString()).Date,
+                    costo = Convert.ToDecimal(dataGridMembresias.Rows[e.RowIndex].Cells["costo"].Value),
+                    estado = dataGridMembresias.Rows[e.RowIndex].Cells["estado"].Value.ToString() == "Activo"
+                };
+
+                using (var modal = new NuevaMembresia())
+                {
+                    // Pasar los datos al formulario 
+                    modal.cargarDatosMembresia(objMembresia);
+
+                    // Mostrar el formulario como un modal
+                    var resultado = modal.ShowDialog();
+
+                    if (resultado == DialogResult.OK)
+                    {
+                        // Refrescar el DataGridView después de editar
+                        CargarMembresias();
+                    }
+                }
+            }
+        }
+
+        private void dataGridMediosPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridMediosPago.Columns["editar"].Index && e.RowIndex >= 0)
+            {
+                MedioPago objMedioPago = new MedioPago()
+                {
+                    id_medioPago = Convert.ToInt32(dataGridMediosPago.Rows[e.RowIndex].Cells["idMedioPago"].Value),
+                    nombre = dataGridMediosPago.Rows[e.RowIndex].Cells["nombreMedioPago"].Value.ToString(),
+                    comision = Convert.ToDecimal(dataGridMediosPago.Rows[e.RowIndex].Cells["comision"].Value),
+                    fechaCreacion = DateTime.Parse(dataGridMediosPago.Rows[e.RowIndex].Cells["fechaCreacion"].Value.ToString()).Date,
+                    estado = dataGridMediosPago.Rows[e.RowIndex].Cells["estadoMedioPago"].Value.ToString() == "Activo"
+                };
+
+                using (var modal = new NuevoMedioPago())
+                {
+                    // Pasar los datos al formulario 
+                    modal.cargarDatosMedioPago(objMedioPago);
+
+                    // Mostrar el formulario como un modal
+                    var resultado = modal.ShowDialog();
+
+                    if (resultado == DialogResult.OK)
+                    {
+                        // Refrescar el DataGridView después de editar
+                        CargarMediosDePago();
+                    }
                 }
             }
         }

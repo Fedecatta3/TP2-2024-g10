@@ -105,7 +105,7 @@ namespace CapaPresentacion
             this.dgvdataAgregarCoach.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvdataAgregarCoach.RowTemplate.Height = 30;
             this.dgvdataAgregarCoach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvdataAgregarCoach.Size = new System.Drawing.Size(544, 202);
+            this.dgvdataAgregarCoach.Size = new System.Drawing.Size(561, 202);
             this.dgvdataAgregarCoach.TabIndex = 46;
             this.dgvdataAgregarCoach.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdataAgregarCoach_CellDoubleClick);
             this.dgvdataAgregarCoach.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdataAgregarCoach_ColumnHeaderMouseClick);
@@ -187,7 +187,7 @@ namespace CapaPresentacion
             this.Blimpiar.IconColor = System.Drawing.Color.White;
             this.Blimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Blimpiar.IconSize = 25;
-            this.Blimpiar.Location = new System.Drawing.Point(520, 14);
+            this.Blimpiar.Location = new System.Drawing.Point(538, 14);
             this.Blimpiar.Name = "Blimpiar";
             this.Blimpiar.Size = new System.Drawing.Size(35, 26);
             this.Blimpiar.TabIndex = 50;
@@ -207,7 +207,7 @@ namespace CapaPresentacion
             this.Bbuscar.IconColor = System.Drawing.Color.White;
             this.Bbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Bbuscar.IconSize = 20;
-            this.Bbuscar.Location = new System.Drawing.Point(483, 14);
+            this.Bbuscar.Location = new System.Drawing.Point(501, 14);
             this.Bbuscar.Name = "Bbuscar";
             this.Bbuscar.Size = new System.Drawing.Size(35, 26);
             this.Bbuscar.TabIndex = 49;
@@ -243,7 +243,7 @@ namespace CapaPresentacion
             // textBoxBuscar
             // 
             this.textBoxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuscar.Location = new System.Drawing.Point(302, 15);
+            this.textBoxBuscar.Location = new System.Drawing.Point(320, 15);
             this.textBoxBuscar.Name = "textBoxBuscar";
             this.textBoxBuscar.Size = new System.Drawing.Size(175, 24);
             this.textBoxBuscar.TabIndex = 51;
@@ -253,7 +253,7 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(568, 263);
+            this.ClientSize = new System.Drawing.Size(585, 263);
             this.Controls.Add(this.LnombreColumna);
             this.Controls.Add(this.LBuscar);
             this.Controls.Add(this.textBoxBuscar);

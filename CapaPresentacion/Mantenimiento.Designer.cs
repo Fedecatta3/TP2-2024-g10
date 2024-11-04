@@ -42,13 +42,6 @@ namespace CapaPresentacion
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.DGV_Membresias = new System.Windows.Forms.DataGridView();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCreacionMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accion = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -56,16 +49,25 @@ namespace CapaPresentacion
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.DGV_MediosDePago = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.EstadoMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridMembresias = new System.Windows.Forms.DataGridView();
+            this.dataGridMediosPago = new System.Windows.Forms.DataGridView();
+            this.Accion = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.idMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMembresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCreacionMemb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estadoMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comision = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idMedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accionMedioPago = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Membresias)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_MediosDePago)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMembresias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMediosPago)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,7 +78,7 @@ namespace CapaPresentacion
             this.groupBox1.Controls.Add(this.iconButton1);
             this.groupBox1.Controls.Add(this.comboBox4);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.DGV_Membresias);
+            this.groupBox1.Controls.Add(this.dataGridMembresias);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(866, 277);
@@ -174,81 +176,6 @@ namespace CapaPresentacion
             this.label14.TabIndex = 36;
             this.label14.Text = "Buscar por:";
             // 
-            // DGV_Membresias
-            // 
-            this.DGV_Membresias.AllowUserToAddRows = false;
-            this.DGV_Membresias.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Membresias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DGV_Membresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Membresias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Tipo,
-            this.Duracion,
-            this.FechaCreacionMembresia,
-            this.Costo,
-            this.Accion,
-            this.Estado});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_Membresias.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DGV_Membresias.Location = new System.Drawing.Point(13, 78);
-            this.DGV_Membresias.MultiSelect = false;
-            this.DGV_Membresias.Name = "DGV_Membresias";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_Membresias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DGV_Membresias.RowTemplate.Height = 30;
-            this.DGV_Membresias.Size = new System.Drawing.Size(840, 188);
-            this.DGV_Membresias.TabIndex = 21;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Nombre";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Width = 180;
-            // 
-            // Duracion
-            // 
-            this.Duracion.HeaderText = "Duracion";
-            this.Duracion.Name = "Duracion";
-            // 
-            // FechaCreacionMembresia
-            // 
-            this.FechaCreacionMembresia.HeaderText = "Fecha Creacion";
-            this.FechaCreacionMembresia.Name = "FechaCreacionMembresia";
-            this.FechaCreacionMembresia.Width = 120;
-            // 
-            // Costo
-            // 
-            this.Costo.HeaderText = "Costo";
-            this.Costo.Name = "Costo";
-            // 
-            // Accion
-            // 
-            this.Accion.HeaderText = "Accion";
-            this.Accion.Name = "Accion";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.textBox1);
@@ -257,7 +184,7 @@ namespace CapaPresentacion
             this.groupBox3.Controls.Add(this.iconButton4);
             this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.DGV_MediosDePago);
+            this.groupBox3.Controls.Add(this.dataGridMediosPago);
             this.groupBox3.Location = new System.Drawing.Point(12, 295);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(866, 200);
@@ -355,73 +282,178 @@ namespace CapaPresentacion
             this.label1.TabIndex = 42;
             this.label1.Text = "Buscar por:";
             // 
-            // DGV_MediosDePago
+            // dataGridMembresias
             // 
-            this.DGV_MediosDePago.AllowUserToAddRows = false;
-            this.DGV_MediosDePago.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridMembresias.AllowUserToAddRows = false;
+            this.dataGridMembresias.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMembresias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridMembresias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMembresias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Accion,
+            this.idMembresia,
+            this.nombreMembresia,
+            this.duracion,
+            this.fechaCreacionMemb,
+            this.costo,
+            this.Estado});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridMembresias.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridMembresias.Location = new System.Drawing.Point(13, 78);
+            this.dataGridMembresias.MultiSelect = false;
+            this.dataGridMembresias.Name = "dataGridMembresias";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridMembresias.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridMembresias.RowTemplate.Height = 30;
+            this.dataGridMembresias.Size = new System.Drawing.Size(840, 188);
+            this.dataGridMembresias.TabIndex = 41;
+            this.dataGridMembresias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMembresias_CellContentClick);
+            // 
+            // dataGridMediosPago
+            // 
+            this.dataGridMediosPago.AllowUserToAddRows = false;
+            this.dataGridMediosPago.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_MediosDePago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DGV_MediosDePago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_MediosDePago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Comision,
-            this.FechaCreacion,
-            this.dataGridViewButtonColumn2,
-            this.EstadoMedioPago});
+            this.dataGridMediosPago.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridMediosPago.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridMediosPago.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.accionMedioPago,
+            this.idMedioPago,
+            this.nombreMedioPago,
+            this.comision,
+            this.fechaCreacion,
+            this.estadoMedioPago});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGV_MediosDePago.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DGV_MediosDePago.Location = new System.Drawing.Point(14, 19);
-            this.DGV_MediosDePago.MultiSelect = false;
-            this.DGV_MediosDePago.Name = "DGV_MediosDePago";
+            this.dataGridMediosPago.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridMediosPago.Location = new System.Drawing.Point(13, 19);
+            this.dataGridMediosPago.MultiSelect = false;
+            this.dataGridMediosPago.Name = "dataGridMediosPago";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGV_MediosDePago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.DGV_MediosDePago.RowTemplate.Height = 30;
-            this.DGV_MediosDePago.Size = new System.Drawing.Size(606, 168);
-            this.DGV_MediosDePago.TabIndex = 40;
+            this.dataGridMediosPago.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridMediosPago.RowTemplate.Height = 30;
+            this.dataGridMediosPago.Size = new System.Drawing.Size(607, 168);
+            this.dataGridMediosPago.TabIndex = 46;
+            this.dataGridMediosPago.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridMediosPago_CellContentClick);
             // 
-            // Nombre
+            // Accion
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.Accion.HeaderText = "Accion";
+            this.Accion.Name = "Accion";
             // 
-            // Comision
+            // idMembresia
             // 
-            this.Comision.HeaderText = "Comision";
-            this.Comision.Name = "Comision";
+            this.idMembresia.HeaderText = "ID";
+            this.idMembresia.Name = "idMembresia";
+            this.idMembresia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idMembresia.Visible = false;
             // 
-            // FechaCreacion
+            // nombreMembresia
             // 
-            this.FechaCreacion.HeaderText = "Fecha creacion";
-            this.FechaCreacion.Name = "FechaCreacion";
-            this.FechaCreacion.Width = 120;
+            this.nombreMembresia.HeaderText = "Nombre";
+            this.nombreMembresia.Name = "nombreMembresia";
+            this.nombreMembresia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nombreMembresia.Width = 180;
             // 
-            // dataGridViewButtonColumn2
+            // duracion
             // 
-            this.dataGridViewButtonColumn2.HeaderText = "Accion";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.duracion.HeaderText = "Duracion";
+            this.duracion.Name = "duracion";
+            this.duracion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.duracion.Width = 180;
             // 
-            // EstadoMedioPago
+            // fechaCreacionMemb
             // 
-            this.EstadoMedioPago.HeaderText = "Estado";
-            this.EstadoMedioPago.Name = "EstadoMedioPago";
+            this.fechaCreacionMemb.HeaderText = "Fecha de creacion";
+            this.fechaCreacionMemb.Name = "fechaCreacionMemb";
+            this.fechaCreacionMemb.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaCreacionMemb.Width = 180;
+            // 
+            // costo
+            // 
+            this.costo.HeaderText = "Costo";
+            this.costo.Name = "costo";
+            this.costo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // estadoMedioPago
+            // 
+            this.estadoMedioPago.HeaderText = "Estado";
+            this.estadoMedioPago.Name = "estadoMedioPago";
+            this.estadoMedioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // fechaCreacion
+            // 
+            this.fechaCreacion.HeaderText = "Fecha de creacion";
+            this.fechaCreacion.Name = "fechaCreacion";
+            this.fechaCreacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fechaCreacion.Width = 180;
+            // 
+            // comision
+            // 
+            this.comision.HeaderText = "Comision";
+            this.comision.Name = "comision";
+            this.comision.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.comision.Width = 180;
+            // 
+            // nombreMedioPago
+            // 
+            this.nombreMedioPago.HeaderText = "Nombre";
+            this.nombreMedioPago.Name = "nombreMedioPago";
+            this.nombreMedioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.nombreMedioPago.Width = 180;
+            // 
+            // idMedioPago
+            // 
+            this.idMedioPago.HeaderText = "ID";
+            this.idMedioPago.Name = "idMedioPago";
+            this.idMedioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idMedioPago.Visible = false;
+            // 
+            // accionMedioPago
+            // 
+            this.accionMedioPago.HeaderText = "Accion";
+            this.accionMedioPago.Name = "accionMedioPago";
             // 
             // Mantenimiento
             // 
@@ -435,10 +467,10 @@ namespace CapaPresentacion
             this.Text = "ListaUsuarios";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Membresias)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_MediosDePago)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMembresias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridMediosPago)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -447,30 +479,32 @@ namespace CapaPresentacion
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView DGV_Membresias;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label14;
         private FontAwesome.Sharp.IconButton BNuevaMembresia;
         private FontAwesome.Sharp.IconButton BNuevoMedioPago;
-        private System.Windows.Forms.DataGridView DGV_MediosDePago;
         private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Duracion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacionMembresia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Costo;
-        private System.Windows.Forms.DataGridViewButtonColumn Accion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Comision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoMedioPago;
+        private System.Windows.Forms.DataGridView dataGridMembresias;
+        private System.Windows.Forms.DataGridView dataGridMediosPago;
+        private System.Windows.Forms.DataGridViewButtonColumn Accion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMembresia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreMembresia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacionMemb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewButtonColumn accionMedioPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMedioPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreMedioPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comision;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estadoMedioPago;
     }
 }

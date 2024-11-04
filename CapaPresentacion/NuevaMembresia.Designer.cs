@@ -30,6 +30,9 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.textBoxDuracion = new System.Windows.Forms.TextBox();
+            this.BGuardarMembresia = new FontAwesome.Sharp.IconButton();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,14 +43,14 @@ namespace CapaPresentacion
             this.textBoxCosto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxNombreMembresia = new System.Windows.Forms.TextBox();
-            this.BGuardarUsuario = new FontAwesome.Sharp.IconButton();
-            this.textBoxDuracion = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxID);
             this.groupBox1.Controls.Add(this.textBoxDuracion);
+            this.groupBox1.Controls.Add(this.BGuardarMembresia);
             this.groupBox1.Controls.Add(this.textBoxFecha);
             this.groupBox1.Controls.Add(this.BCancelar);
             this.groupBox1.Controls.Add(this.label4);
@@ -63,6 +66,49 @@ namespace CapaPresentacion
             this.groupBox1.Size = new System.Drawing.Size(411, 219);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BackColor = System.Drawing.Color.White;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(198, 175);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(24, 24);
+            this.textBoxID.TabIndex = 59;
+            this.textBoxID.Text = "0";
+            this.textBoxID.Visible = false;
+            // 
+            // textBoxDuracion
+            // 
+            this.textBoxDuracion.BackColor = System.Drawing.Color.White;
+            this.textBoxDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDuracion.Location = new System.Drawing.Point(216, 112);
+            this.textBoxDuracion.Name = "textBoxDuracion";
+            this.textBoxDuracion.Size = new System.Drawing.Size(177, 24);
+            this.textBoxDuracion.TabIndex = 60;
+            this.textBoxDuracion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDuracion_KeyPress);
+            // 
+            // BGuardarMembresia
+            // 
+            this.BGuardarMembresia.BackColor = System.Drawing.Color.Green;
+            this.BGuardarMembresia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BGuardarMembresia.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BGuardarMembresia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BGuardarMembresia.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BGuardarMembresia.ForeColor = System.Drawing.Color.White;
+            this.BGuardarMembresia.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.BGuardarMembresia.IconColor = System.Drawing.Color.White;
+            this.BGuardarMembresia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BGuardarMembresia.IconSize = 30;
+            this.BGuardarMembresia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BGuardarMembresia.Location = new System.Drawing.Point(275, 164);
+            this.BGuardarMembresia.Name = "BGuardarMembresia";
+            this.BGuardarMembresia.Size = new System.Drawing.Size(118, 35);
+            this.BGuardarMembresia.TabIndex = 27;
+            this.BGuardarMembresia.Text = "GUARDAR";
+            this.BGuardarMembresia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BGuardarMembresia.UseVisualStyleBackColor = false;
+            this.BGuardarMembresia.Click += new System.EventHandler(this.BGuardarUsuario_Click);
             // 
             // textBoxFecha
             // 
@@ -86,7 +132,7 @@ namespace CapaPresentacion
             this.BCancelar.IconColor = System.Drawing.Color.White;
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 30;
-            this.BCancelar.Location = new System.Drawing.Point(358, 164);
+            this.BCancelar.Location = new System.Drawing.Point(234, 164);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(35, 35);
             this.BCancelar.TabIndex = 28;
@@ -155,6 +201,7 @@ namespace CapaPresentacion
             this.textBoxCosto.Name = "textBoxCosto";
             this.textBoxCosto.Size = new System.Drawing.Size(177, 24);
             this.textBoxCosto.TabIndex = 43;
+            this.textBoxCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCosto_KeyPress);
             // 
             // label6
             // 
@@ -176,48 +223,16 @@ namespace CapaPresentacion
             this.textBoxNombreMembresia.Size = new System.Drawing.Size(177, 24);
             this.textBoxNombreMembresia.TabIndex = 41;
             // 
-            // BGuardarUsuario
-            // 
-            this.BGuardarUsuario.BackColor = System.Drawing.Color.Green;
-            this.BGuardarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BGuardarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BGuardarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BGuardarUsuario.Font = new System.Drawing.Font("Microsoft PhagsPa", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BGuardarUsuario.ForeColor = System.Drawing.Color.White;
-            this.BGuardarUsuario.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.BGuardarUsuario.IconColor = System.Drawing.Color.White;
-            this.BGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BGuardarUsuario.IconSize = 30;
-            this.BGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BGuardarUsuario.Location = new System.Drawing.Point(158, 237);
-            this.BGuardarUsuario.Name = "BGuardarUsuario";
-            this.BGuardarUsuario.Size = new System.Drawing.Size(118, 57);
-            this.BGuardarUsuario.TabIndex = 27;
-            this.BGuardarUsuario.Text = "GUARDAR";
-            this.BGuardarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BGuardarUsuario.UseVisualStyleBackColor = false;
-            this.BGuardarUsuario.Click += new System.EventHandler(this.BGuardarUsuario_Click);
-            // 
-            // textBoxDuracion
-            // 
-            this.textBoxDuracion.BackColor = System.Drawing.Color.White;
-            this.textBoxDuracion.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDuracion.Location = new System.Drawing.Point(216, 112);
-            this.textBoxDuracion.Name = "textBoxDuracion";
-            this.textBoxDuracion.Size = new System.Drawing.Size(177, 24);
-            this.textBoxDuracion.TabIndex = 60;
-            // 
             // NuevaMembresia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 301);
-            this.Controls.Add(this.BGuardarUsuario);
+            this.ClientSize = new System.Drawing.Size(434, 245);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "NuevaMembresia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar nueva Membresia";
+            this.Text = "Membresia";
             this.Load += new System.EventHandler(this.NuevaMembresia_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -237,8 +252,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton BCancelar;
-        private FontAwesome.Sharp.IconButton BGuardarUsuario;
+        private FontAwesome.Sharp.IconButton BGuardarMembresia;
         private System.Windows.Forms.TextBox textBoxFecha;
         private System.Windows.Forms.TextBox textBoxDuracion;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }

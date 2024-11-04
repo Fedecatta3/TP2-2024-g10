@@ -31,6 +31,7 @@ namespace CapaPresentacion
         {
             this.BGuardarMedioPago = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
@@ -56,9 +57,9 @@ namespace CapaPresentacion
             this.BGuardarMedioPago.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BGuardarMedioPago.IconSize = 30;
             this.BGuardarMedioPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BGuardarMedioPago.Location = new System.Drawing.Point(159, 214);
+            this.BGuardarMedioPago.Location = new System.Drawing.Point(275, 147);
             this.BGuardarMedioPago.Name = "BGuardarMedioPago";
-            this.BGuardarMedioPago.Size = new System.Drawing.Size(118, 57);
+            this.BGuardarMedioPago.Size = new System.Drawing.Size(118, 35);
             this.BGuardarMedioPago.TabIndex = 29;
             this.BGuardarMedioPago.Text = "GUARDAR";
             this.BGuardarMedioPago.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -67,6 +68,8 @@ namespace CapaPresentacion
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBoxID);
+            this.groupBox1.Controls.Add(this.BGuardarMedioPago);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.textBoxFecha);
             this.groupBox1.Controls.Add(this.BCancelar);
@@ -81,6 +84,16 @@ namespace CapaPresentacion
             this.groupBox1.Size = new System.Drawing.Size(411, 197);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BackColor = System.Drawing.Color.White;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(15, 152);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(24, 24);
+            this.textBoxID.TabIndex = 60;
+            this.textBoxID.Text = "0";
             // 
             // label3
             // 
@@ -115,7 +128,7 @@ namespace CapaPresentacion
             this.BCancelar.IconColor = System.Drawing.Color.White;
             this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BCancelar.IconSize = 30;
-            this.BCancelar.Location = new System.Drawing.Point(358, 147);
+            this.BCancelar.Location = new System.Drawing.Point(234, 148);
             this.BCancelar.Name = "BCancelar";
             this.BCancelar.Size = new System.Drawing.Size(35, 35);
             this.BCancelar.TabIndex = 28;
@@ -162,6 +175,7 @@ namespace CapaPresentacion
             this.textBoxComision.Name = "textBoxComision";
             this.textBoxComision.Size = new System.Drawing.Size(177, 24);
             this.textBoxComision.TabIndex = 43;
+            this.textBoxComision.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxComision_KeyPress);
             // 
             // label6
             // 
@@ -187,13 +201,12 @@ namespace CapaPresentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(434, 281);
-            this.Controls.Add(this.BGuardarMedioPago);
+            this.ClientSize = new System.Drawing.Size(434, 219);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "NuevoMedioPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar nuevo Medio de Pago";
+            this.Text = "Medio de Pago";
             this.Load += new System.EventHandler(this.NuevoMedioPago_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -214,5 +227,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.TextBox textBoxNombreMedioPago;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxFecha;
+        private System.Windows.Forms.TextBox textBoxID;
     }
 }
