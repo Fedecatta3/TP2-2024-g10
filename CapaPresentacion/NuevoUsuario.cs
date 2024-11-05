@@ -47,6 +47,9 @@ namespace CapaPresentacion
         {
             if(usuarioValor == 1)
             {
+                // Limitar el DateTimePicker para que solo permita fechas entre hace 120 años y hace 16 años
+                dateTimePicker1.MaxDate = DateTime.Today.AddYears(-16);
+                dateTimePicker1.MinDate = DateTime.Today.AddYears(-120);
 
                 // Cargar ComboBox de Estado
                 comboBoxEstado.Items.Add(new opcionCombo() { Valor = 1, Texto = "Activo" });

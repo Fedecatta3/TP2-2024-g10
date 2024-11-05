@@ -119,6 +119,12 @@ namespace CapaPresentacion
                 return;
             }
 
+            // Validacion para la carga de imagen
+            if (pictureBox1.Image == null)
+            {
+                MessageBox.Show("Por favor, cargue una imagen antes de continuar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             // Validar longitud del teléfono
             if (textBoxTelefono.Text.Length < 7 || textBoxTelefono.Text.Length > 15)
             {
@@ -277,20 +283,19 @@ namespace CapaPresentacion
                 // Almacenar la ruta o el nombre del archivo para usarlo al guardar
                 this.rutaImagen = openFileDialog.FileName;
             }
-            else
-            {
-                this.pictureBox1.Image = Properties.Resources.siluetaPerfilPersona;
-            }
 
             textBoxRutaImagen.Text = rutaImagen;
         }
 
         private void NuevoAlumno_Load(object sender, EventArgs e)
         {
-            // Asignar la imagen por defecto
-            this.pictureBox1.Image = Properties.Resources.siluetaPerfilPersona;
-            this.pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-        
+            if(textBoxIDalumno.Text == "0")
+            {
+                // Limitar el DateTimePicker para que solo permita fechas entre hace 120 años y hace 10 años
+                dateTimePicker1.MaxDate = DateTime.Today.AddYears(-10); 
+                dateTimePicker1.MinDate = DateTime.Today.AddYears(-120); 
+
+            }
         }
 
         private void checkBoxFemenino_CheckedChanged(object sender, EventArgs e)
@@ -336,6 +341,60 @@ namespace CapaPresentacion
             }
         }
 
-        
+        private void textBoxDNI_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxDNI.Text.Length > 8)
+            {
+                // limita el campo a 8 digitos
+                textBoxDNI.Text = textBoxDNI.Text.Substring(0, 8);
+                textBoxDNI.SelectionStart = textBoxDNI.Text.Length; //coloca el cursor al final del texto
+            }
+        }
+
+        private void textBoxDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo admite numeros
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; //ignora la tecla si no es numero o backspace
+            }
+        }
+
+        private void textBoxTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo admite numeros
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; //ignora la tecla si no es numero o backspace
+            }
+        }
+
+        private void textBoxContactoEmerg_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //solo admite numeros
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true; //ignora la tecla si no es numero o backspace
+            }
+        }
+
+        private void textBoxNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y espacios
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true; // Ignora la tecla si no es letra o espacio
+            }
+        }
+
+        private void textBoxApellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permitir solo letras y espacios
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ')
+            {
+                e.Handled = true; // Ignora la tecla si no es letra o espacio
+            }
+        }
+
     }
 }

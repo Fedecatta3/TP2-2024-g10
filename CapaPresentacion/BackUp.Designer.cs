@@ -29,10 +29,10 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BGenerarBackup = new FontAwesome.Sharp.IconButton();
+            this.BRutaBackup = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.BCancelar = new FontAwesome.Sharp.IconButton();
+            this.BConectar = new FontAwesome.Sharp.IconButton();
             this.comboBoxCoach = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -41,76 +41,79 @@ namespace CapaPresentacion
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // iconButton2
+            // BGenerarBackup
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.OrangeRed;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 35;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(358, 265);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(160, 49);
-            this.iconButton2.TabIndex = 39;
-            this.iconButton2.Text = "GENERAR BACK-UP";
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.BGenerarBackup.BackColor = System.Drawing.Color.OrangeRed;
+            this.BGenerarBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BGenerarBackup.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BGenerarBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BGenerarBackup.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BGenerarBackup.ForeColor = System.Drawing.Color.White;
+            this.BGenerarBackup.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BGenerarBackup.IconColor = System.Drawing.Color.White;
+            this.BGenerarBackup.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BGenerarBackup.IconSize = 35;
+            this.BGenerarBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BGenerarBackup.Location = new System.Drawing.Point(358, 265);
+            this.BGenerarBackup.Name = "BGenerarBackup";
+            this.BGenerarBackup.Size = new System.Drawing.Size(160, 49);
+            this.BGenerarBackup.TabIndex = 39;
+            this.BGenerarBackup.Text = "GENERAR BACK-UP";
+            this.BGenerarBackup.UseVisualStyleBackColor = false;
+            this.BGenerarBackup.Click += new System.EventHandler(this.BGenerarBackup_Click);
             // 
-            // iconButton1
+            // BRutaBackup
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.DimGray;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 35;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(591, 196);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(102, 26);
-            this.iconButton1.TabIndex = 38;
-            this.iconButton1.Text = "RUTA";
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.BRutaBackup.BackColor = System.Drawing.Color.DimGray;
+            this.BRutaBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BRutaBackup.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BRutaBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BRutaBackup.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BRutaBackup.ForeColor = System.Drawing.Color.White;
+            this.BRutaBackup.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BRutaBackup.IconColor = System.Drawing.Color.White;
+            this.BRutaBackup.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BRutaBackup.IconSize = 35;
+            this.BRutaBackup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BRutaBackup.Location = new System.Drawing.Point(591, 196);
+            this.BRutaBackup.Name = "BRutaBackup";
+            this.BRutaBackup.Size = new System.Drawing.Size(102, 26);
+            this.BRutaBackup.TabIndex = 38;
+            this.BRutaBackup.Text = "RUTA";
+            this.BRutaBackup.UseVisualStyleBackColor = false;
+            this.BRutaBackup.Click += new System.EventHandler(this.BRutaBackup_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(176, 199);
+            this.label1.Location = new System.Drawing.Point(161, 199);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 21);
+            this.label1.Size = new System.Drawing.Size(133, 21);
             this.label1.TabIndex = 37;
-            this.label1.Text = "Ruta guardar:";
+            this.label1.Text = "Ruta de archivo:";
             // 
-            // BCancelar
+            // BConectar
             // 
-            this.BCancelar.BackColor = System.Drawing.Color.DimGray;
-            this.BCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BCancelar.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCancelar.ForeColor = System.Drawing.Color.White;
-            this.BCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.BCancelar.IconColor = System.Drawing.Color.White;
-            this.BCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BCancelar.IconSize = 35;
-            this.BCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCancelar.Location = new System.Drawing.Point(591, 138);
-            this.BCancelar.Name = "BCancelar";
-            this.BCancelar.Size = new System.Drawing.Size(102, 26);
-            this.BCancelar.TabIndex = 36;
-            this.BCancelar.Text = "CONECTAR";
-            this.BCancelar.UseVisualStyleBackColor = false;
+            this.BConectar.BackColor = System.Drawing.Color.DimGray;
+            this.BConectar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BConectar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BConectar.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BConectar.ForeColor = System.Drawing.Color.White;
+            this.BConectar.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.BConectar.IconColor = System.Drawing.Color.White;
+            this.BConectar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BConectar.IconSize = 35;
+            this.BConectar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BConectar.Location = new System.Drawing.Point(591, 138);
+            this.BConectar.Name = "BConectar";
+            this.BConectar.Size = new System.Drawing.Size(102, 26);
+            this.BConectar.TabIndex = 36;
+            this.BConectar.Text = "CONECTAR";
+            this.BConectar.UseVisualStyleBackColor = false;
+            this.BConectar.Click += new System.EventHandler(this.BConectar_Click);
             // 
             // comboBoxCoach
             // 
@@ -166,10 +169,10 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 507);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.BGenerarBackup);
+            this.Controls.Add(this.BRutaBackup);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.BCancelar);
+            this.Controls.Add(this.BConectar);
             this.Controls.Add(this.comboBoxCoach);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxNombre);
@@ -186,10 +189,10 @@ namespace CapaPresentacion
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BGenerarBackup;
+        private FontAwesome.Sharp.IconButton BRutaBackup;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton BCancelar;
+        private FontAwesome.Sharp.IconButton BConectar;
         private System.Windows.Forms.ComboBox comboBoxCoach;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxNombre;

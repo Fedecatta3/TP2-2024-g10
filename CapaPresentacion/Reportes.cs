@@ -23,8 +23,6 @@ namespace CapaPresentacion
 
         }
 
-        public static object ConfigurationManager { get; private set; }
-
         private void Reportes_Load(object sender, EventArgs e)
         {
             // Configuración del DataGridView
@@ -93,12 +91,6 @@ namespace CapaPresentacion
             return count;
         }
 
-        private void comboBoxReportes_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            // Cuando se selecciona un elemento en el ComboBox, llenar el DataGridView
-            string tipo = comboBoxReportes.SelectedItem.ToString().Split(' ')[0]; // Obtener solo el nombre del tipo
-            CargarDatos(tipo);
-        }
 
         private void CargarDatos(string tipo)
         {
@@ -161,6 +153,14 @@ namespace CapaPresentacion
         {
             int cantidadUsuarios = ObtenerCantidad("Usuarios"); // Obtener cantidad de usuarios
             cantUsuarios.Text = $" {cantidadUsuarios}"; // Actualiza el texto del Label
+        }
+
+
+        private void comboBoxReportes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Cuando se selecciona un elemento en el ComboBox, llenar el DataGridView
+            string tipo = comboBoxReportes.SelectedItem.ToString().Split(' ')[0]; // Obtener solo el nombre del tipo
+            CargarDatos(tipo);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

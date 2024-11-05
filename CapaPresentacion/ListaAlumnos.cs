@@ -55,14 +55,6 @@ namespace CapaPresentacion
             labelCantidad.Text = $"{dgvdata.Rows.Count} alumnos";
         }
 
-        /*private void BVerFicha_Click(object sender, EventArgs e)
-        {
-            //Modal para ver ficha del alumno
-            using (var modal = new FichaAlumno())
-            {
-                var resultado = modal.ShowDialog();
-            }
-        }*/
 
         private void BNuevoAlumno_Click(object sender, EventArgs e)
         {

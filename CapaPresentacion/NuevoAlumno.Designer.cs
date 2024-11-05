@@ -50,17 +50,17 @@ namespace CapaPresentacion
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxCoachs = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxTipoMembresia = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.BCargarImagen = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBoxIDalumno = new System.Windows.Forms.TextBox();
             this.BCancelar = new FontAwesome.Sharp.IconButton();
             this.BConfirmarAlumno = new FontAwesome.Sharp.IconButton();
-            this.comboBoxTipoMembresia = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBoxPlan = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxCoachs = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,7 @@ namespace CapaPresentacion
             this.textBoxApellido.Name = "textBoxApellido";
             this.textBoxApellido.Size = new System.Drawing.Size(240, 24);
             this.textBoxApellido.TabIndex = 17;
+            this.textBoxApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxApellido_KeyPress);
             // 
             // label3
             // 
@@ -102,6 +103,7 @@ namespace CapaPresentacion
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(240, 24);
             this.textBoxNombre.TabIndex = 16;
+            this.textBoxNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxNombre_KeyPress);
             // 
             // textBoxDNI
             // 
@@ -110,6 +112,8 @@ namespace CapaPresentacion
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(240, 24);
             this.textBoxDNI.TabIndex = 19;
+            this.textBoxDNI.TextChanged += new System.EventHandler(this.textBoxDNI_TextChanged);
+            this.textBoxDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxDNI_KeyPress);
             // 
             // label5
             // 
@@ -180,6 +184,7 @@ namespace CapaPresentacion
             this.textBoxContactoEmerg.Name = "textBoxContactoEmerg";
             this.textBoxContactoEmerg.Size = new System.Drawing.Size(240, 24);
             this.textBoxContactoEmerg.TabIndex = 27;
+            this.textBoxContactoEmerg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxContactoEmerg_KeyPress);
             // 
             // label1
             // 
@@ -199,6 +204,7 @@ namespace CapaPresentacion
             this.textBoxRutaImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRutaImagen.Location = new System.Drawing.Point(16, 246);
             this.textBoxRutaImagen.Name = "textBoxRutaImagen";
+            this.textBoxRutaImagen.ReadOnly = true;
             this.textBoxRutaImagen.Size = new System.Drawing.Size(203, 20);
             this.textBoxRutaImagen.TabIndex = 29;
             // 
@@ -209,6 +215,7 @@ namespace CapaPresentacion
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(240, 24);
             this.textBoxTelefono.TabIndex = 31;
+            this.textBoxTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxTelefono_KeyPress);
             // 
             // label9
             // 
@@ -301,6 +308,70 @@ namespace CapaPresentacion
             this.groupBox1.TabIndex = 37;
             this.groupBox1.TabStop = false;
             // 
+            // comboBoxCoachs
+            // 
+            this.comboBoxCoachs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCoachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCoachs.FormattingEnabled = true;
+            this.comboBoxCoachs.Location = new System.Drawing.Point(552, 363);
+            this.comboBoxCoachs.Name = "comboBoxCoachs";
+            this.comboBoxCoachs.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxCoachs.TabIndex = 41;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(548, 340);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(135, 20);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "COACH A CARGO:";
+            // 
+            // comboBoxPlan
+            // 
+            this.comboBoxPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxPlan.FormattingEnabled = true;
+            this.comboBoxPlan.Location = new System.Drawing.Point(288, 363);
+            this.comboBoxPlan.Name = "comboBoxPlan";
+            this.comboBoxPlan.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxPlan.TabIndex = 39;
+            this.comboBoxPlan.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlan_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(284, 340);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(186, 20);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "PLAN ENTRENAMIENTO:";
+            // 
+            // comboBoxTipoMembresia
+            // 
+            this.comboBoxTipoMembresia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTipoMembresia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTipoMembresia.FormattingEnabled = true;
+            this.comboBoxTipoMembresia.Location = new System.Drawing.Point(23, 363);
+            this.comboBoxTipoMembresia.Name = "comboBoxTipoMembresia";
+            this.comboBoxTipoMembresia.Size = new System.Drawing.Size(200, 26);
+            this.comboBoxTipoMembresia.TabIndex = 37;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(19, 340);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(139, 20);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "TIPO MEMBRESIA:";
+            // 
             // BCargarImagen
             // 
             this.BCargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -318,9 +389,9 @@ namespace CapaPresentacion
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.siluetaPerfilPersona__1_;
             this.pictureBox1.Location = new System.Drawing.Point(15, 37);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 203);
@@ -381,70 +452,6 @@ namespace CapaPresentacion
             this.BConfirmarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BConfirmarAlumno.UseVisualStyleBackColor = false;
             this.BConfirmarAlumno.Click += new System.EventHandler(this.BConfirmarAlumno_Click);
-            // 
-            // comboBoxTipoMembresia
-            // 
-            this.comboBoxTipoMembresia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTipoMembresia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxTipoMembresia.FormattingEnabled = true;
-            this.comboBoxTipoMembresia.Location = new System.Drawing.Point(23, 363);
-            this.comboBoxTipoMembresia.Name = "comboBoxTipoMembresia";
-            this.comboBoxTipoMembresia.Size = new System.Drawing.Size(200, 26);
-            this.comboBoxTipoMembresia.TabIndex = 37;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(19, 340);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 20);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "TIPO MEMBRESIA:";
-            // 
-            // comboBoxPlan
-            // 
-            this.comboBoxPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxPlan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxPlan.FormattingEnabled = true;
-            this.comboBoxPlan.Location = new System.Drawing.Point(288, 363);
-            this.comboBoxPlan.Name = "comboBoxPlan";
-            this.comboBoxPlan.Size = new System.Drawing.Size(200, 26);
-            this.comboBoxPlan.TabIndex = 39;
-            this.comboBoxPlan.SelectedIndexChanged += new System.EventHandler(this.comboBoxPlan_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(284, 340);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 20);
-            this.label2.TabIndex = 40;
-            this.label2.Text = "PLAN ENTRENAMIENTO:";
-            // 
-            // comboBoxCoachs
-            // 
-            this.comboBoxCoachs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCoachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCoachs.FormattingEnabled = true;
-            this.comboBoxCoachs.Location = new System.Drawing.Point(552, 363);
-            this.comboBoxCoachs.Name = "comboBoxCoachs";
-            this.comboBoxCoachs.Size = new System.Drawing.Size(200, 26);
-            this.comboBoxCoachs.TabIndex = 41;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(548, 340);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(135, 20);
-            this.label12.TabIndex = 42;
-            this.label12.Text = "COACH A CARGO:";
             // 
             // NuevoAlumno
             // 

@@ -37,12 +37,14 @@ namespace CapaPresentacion
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cantUsuarios = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cantCoachs = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.totalIngresos = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,18 +53,16 @@ namespace CapaPresentacion
             this.cantAlumnos = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.cantPlanes = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.comboBoxReportes = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -143,6 +143,7 @@ namespace CapaPresentacion
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(866, 351);
             this.dataGridView1.TabIndex = 52;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
@@ -166,6 +167,17 @@ namespace CapaPresentacion
             this.cantUsuarios.Size = new System.Drawing.Size(32, 16);
             this.cantUsuarios.TabIndex = 62;
             this.cantUsuarios.Text = "000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(47, 24);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "registrados:";
             // 
             // label1
             // 
@@ -239,6 +251,17 @@ namespace CapaPresentacion
             this.iconPictureBox2.Size = new System.Drawing.Size(41, 42);
             this.iconPictureBox2.TabIndex = 61;
             this.iconPictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Location = new System.Drawing.Point(47, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 16);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "registrados:";
             // 
             // panel3
             // 
@@ -335,6 +358,17 @@ namespace CapaPresentacion
             this.iconPictureBox4.TabIndex = 61;
             this.iconPictureBox4.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label7.Location = new System.Drawing.Point(46, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.TabIndex = 71;
+            this.label7.Text = "registrados:";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MistyRose;
@@ -383,6 +417,17 @@ namespace CapaPresentacion
             this.iconPictureBox5.TabIndex = 61;
             this.iconPictureBox5.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label9.Location = new System.Drawing.Point(50, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "creados:";
+            // 
             // iconButton4
             // 
             this.iconButton4.BackColor = System.Drawing.Color.LimeGreen;
@@ -412,6 +457,7 @@ namespace CapaPresentacion
             this.comboBoxReportes.Name = "comboBoxReportes";
             this.comboBoxReportes.Size = new System.Drawing.Size(205, 26);
             this.comboBoxReportes.TabIndex = 66;
+            this.comboBoxReportes.SelectedIndexChanged += new System.EventHandler(this.comboBoxReportes_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -442,50 +488,6 @@ namespace CapaPresentacion
             this.iconButton3.TabIndex = 69;
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(47, 24);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "registrados:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(47, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 16);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "registrados:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label7.Location = new System.Drawing.Point(46, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
-            this.label7.TabIndex = 71;
-            this.label7.Text = "registrados:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label9.Location = new System.Drawing.Point(50, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 16);
-            this.label9.TabIndex = 72;
-            this.label9.Text = "creados:";
             // 
             // Reportes
             // 
