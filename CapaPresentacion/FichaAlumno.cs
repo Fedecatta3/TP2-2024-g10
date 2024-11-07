@@ -48,7 +48,7 @@ namespace CapaPresentacion
                 {
                     labelNombreCompleto.Text = item.nombre + " " + item.apellido;
                     labelDNI.Text = item.dni;
-                    labelFechaNacimiento.Text = item.fecha_nacimiento.ToString();
+                    labelFechaNacimiento.Text = item.fecha_nacimiento.ToString("dd/MM/yyyy");
                     labelEmail.Text = item.email;
                     labelSexo.Text = item.sexo;
                     labelTelefono.Text = item.telefono;

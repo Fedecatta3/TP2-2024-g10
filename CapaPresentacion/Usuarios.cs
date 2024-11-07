@@ -23,7 +23,7 @@ namespace CapaPresentacion
         private void BNuevoUsuario_Click(object sender, EventArgs e)
         {
             //Modal para agregar nuevo usuario
-            using (var modal = new NuevoUsuario(1))
+            using (var modal = new NuevoUsuario(usuarioActual))
             {
                 modal.UsuarioRegistrado += NuevoUsuario_UsuarioRegistrado; // Evento
                 var resultado = modal.ShowDialog();
@@ -46,13 +46,13 @@ namespace CapaPresentacion
 
         private void NuevoUsuario_UsuarioRegistrado()
         {
-            if (usuarioActual.id_rol.id_rol == 2) //usuario administrador, solo se listan coachs y administradores
+            if (usuarioActual.id_rol.id_rol == 2) //usuario administrador, solo se listan coachs 
             {
                 List<Usuario> listausuario = new CN_usuario().Listar();
                 dgvdata.Rows.Clear(); // Limpia el DataGrid antes de actualizar
                 foreach (Usuario item in listausuario)
                 {
-                    if (item.id_rol.id_rol != 1)
+                    if (item.id_rol.id_rol != 1 && item.id_rol.id_rol != 2)
                     {
                         // Verifica si el usuario está activo o inactivo
                         string accion = item.estado ? "Eliminar" : "Restaurar";
@@ -177,7 +177,7 @@ namespace CapaPresentacion
                 int id_usuario = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idUsuario"].Value);
 
                 // Abrir el formulario de NuevoUsuario con los datos seleccionados
-                using (var modal = new NuevoUsuario(0))
+                using (var modal = new NuevoUsuario(usuarioActual))
                 {
                     // Pasar los datos al formulario de NuevoUsuario
                     modal.CargarDatosUsuario(id_usuario);
@@ -195,7 +195,7 @@ namespace CapaPresentacion
                 }
             }
 
-
+            
             // Verificar si se hizo click en la columna de eliminar
             if (e.ColumnIndex == dgvdata.Columns["eliminar"].Index && e.RowIndex >= 0)
             {

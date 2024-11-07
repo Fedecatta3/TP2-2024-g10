@@ -31,16 +31,35 @@ namespace CapaPresentacion
         // Método para cargar planes de entrenamiento en el DataGridView
         private void CargarPlanesDeEntrenamiento()
         {
-            List<PlanEntrenamiento> listaPlanes = objCN_PlanEntrenamiento.Listar();
-
-            dgvdataListaPlanes.Rows.Clear();
-            foreach (PlanEntrenamiento item in listaPlanes)
+            if(usuarioActual.id_rol.id_rol == 2) //Usuario Administrador ve todos los planes
             {
-                string accion = item.estado ? "Eliminar" : "Restaurar";
+                List<PlanEntrenamiento> listaPlanes = objCN_PlanEntrenamiento.Listar();
 
-                dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio,
+                dgvdataListaPlanes.Rows.Clear();
+                foreach (PlanEntrenamiento item in listaPlanes)
+                {
+                    string accion = item.estado ? "Eliminar" : "Restaurar";
+
+                    dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio,
                     item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
+                }
+
+            }else if(usuarioActual.id_rol.id_rol == 3) // Usuario coach ve solo sus planes
+            {
+                labelTITULO.Text = "MIS PLANES";
+
+                List<PlanEntrenamiento> listaPlanes = objCN_PlanEntrenamiento.ListarPlanesPorCoachs(usuarioActual.id_usuario);
+                
+                dgvdataListaPlanes.Rows.Clear();
+                foreach (PlanEntrenamiento item in listaPlanes)
+                {
+                    string accion = item.estado ? "Eliminar" : "Restaurar";
+
+                    dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio,
+                    item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
+                }
             }
+            
 
             labelCantPlanes.Text = $"{dgvdataListaPlanes.Rows.Count} planes";
         }

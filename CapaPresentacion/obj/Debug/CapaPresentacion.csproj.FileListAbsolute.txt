@@ -285,3 +285,8 @@ C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPres
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.AgregarCoachAlPlan.resources
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.AgregarHorarioUsuario.resources
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.DetallesPlanEntrenamiento.resources
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\itextsharp.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\itextsharp.xml

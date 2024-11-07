@@ -45,3 +45,8 @@ C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaDatos\obj\Debug\CapaDatos.cspro
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaDatos\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaDatos\bin\Debug\itextsharp.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaDatos\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaDatos\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaDatos\bin\Debug\itextsharp.xml

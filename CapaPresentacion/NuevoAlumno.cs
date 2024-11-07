@@ -18,6 +18,8 @@ namespace CapaPresentacion
     {
         private string rutaImagen;
 
+        public event Action AlumnoRegistrado;
+
         public NuevoAlumno()
         {
             InitializeComponent();
@@ -43,8 +45,8 @@ namespace CapaPresentacion
             // Añadir los coachs al ComboBox
             foreach (Usuario item in listausuario)
             {
-                // Verifica si el usuario es un coach 
-                if (item.id_rol.id_rol == 3)
+                // Verifica si el usuario es un coach y esta activo
+                if (item.id_rol.id_rol == 3 && item.estado == true)
                 {
                     // Agregar el coach como un nuevo item en el ComboBox
                     comboBoxCoachs.Items.Add(new { Text = $"{item.nombre} {item.apellido}", Value = item.id_usuario });
@@ -92,8 +94,11 @@ namespace CapaPresentacion
             // Añadir las membresías al ComboBox
             foreach (Membresia item in listaMembresias)
             {
-                // Agregar la membresía como un nuevo item en el ComboBox
-                comboBoxTipoMembresia.Items.Add(new { Text = item.nombre, Value = item.id_membresia });
+                if(item.estado == true)
+                {
+                    // Agregar la membresía como un nuevo item en el ComboBox
+                    comboBoxTipoMembresia.Items.Add(new { Text = item.nombre, Value = item.id_membresia });
+                }
             }
 
             // Configura el ComboBox para mostrar el texto adecuado
@@ -218,7 +223,7 @@ namespace CapaPresentacion
             {
                 // Mensaje de éxito
                 MessageBox.Show(mensaje);
-
+                AlumnoRegistrado?.Invoke(); //evento
 
                 Alumno alumnoCreado = new Alumno
                 {

@@ -11,6 +11,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
+using System.Diagnostics;
+
 namespace CapaPresentacion
 {
     public partial class CobrarCuotaAlumno : Form
@@ -36,6 +42,15 @@ namespace CapaPresentacion
             cargarMediosDePago();
 
             cargarDataGridPago();
+
+
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = dataGridView1.DefaultCellStyle.BackColor;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = dataGridView1.DefaultCellStyle.ForeColor;
+
         }
 
         private void cargarMediosDePago()
@@ -46,8 +61,10 @@ namespace CapaPresentacion
 
             foreach (MedioPago item in listaMediosDePago)
             {
-               
-                comboBoxFormaPago.Items.Add(new { Text = item.nombre, Value = item.id_medioPago });
+               if(item.estado == true)
+                {
+                    comboBoxFormaPago.Items.Add(new { Text = item.nombre, Value = item.id_medioPago });
+                }
             }
 
             // Configura el ComboBox para mostrar el texto adecuado
@@ -146,12 +163,97 @@ namespace CapaPresentacion
             }
 
             CN_Pago objPago = new CN_Pago();
-            bool exito = objPago.ProcesarPago(nuevoPago, detalles);
+            int idPagoGenerado = objPago.ProcesarPago(nuevoPago, detalles);
 
-            if (exito)
+            if (idPagoGenerado > 0)
             {
                 MessageBox.Show("El pago se realizó correctamente!", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
+
+                // GENERAR ARCHIVO PDF
+                string rutaGuardado = @"C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\PdfsDePagos\"; //Ruta donde se guardaran los pdf generados
+
+                // Nombre del archivo con formato de fecha, hora actual, nombre y apellido del alumno
+                string nombreArchivo = $"{DateTime.Now:ddMMyyHHmmss}_{objAlumno.nombre}_{objAlumno.apellido}.pdf";
+                string rutaCompleta = Path.Combine(rutaGuardado, nombreArchivo);
+
+                // Si la carpeta no existe se crea una nueva
+                if (!Directory.Exists(rutaGuardado))
+                {
+                    Directory.CreateDirectory(rutaGuardado);
+                }
+
+
+                // Estructura de la factura
+                string paginaHTML = Properties.Resources.plantilla.ToString();
+
+                // Remplazar los campos de la estructura de la factura
+                paginaHTML = paginaHTML.Replace("@numeroFactura", idPagoGenerado.ToString());
+                paginaHTML = paginaHTML.Replace("@dniAlumno", objAlumno.dni);
+                paginaHTML = paginaHTML.Replace("@nombreAlumno", objAlumno.nombre + " " + objAlumno.apellido);
+                paginaHTML = paginaHTML.Replace("@fecha", textBoxFecha.Text);
+
+                List<Usuario> listausuario = new CN_usuario().Listar();
+                var usuario = listausuario.FirstOrDefault(u => u.id_usuario == objAlumno.id_usuario);
+                paginaHTML = paginaHTML.Replace("@nombreCoach", $"{usuario.nombre} {usuario.apellido}");
+
+                List<PlanEntrenamiento> listaPlanes = new CN_PlanEntrenamiento().Listar();
+                var plan = listaPlanes.FirstOrDefault(p => p.id_plan == objAlumno.id_plan);
+                paginaHTML = paginaHTML.Replace("@nombrePlan", plan.nombre);
+
+
+                string formaMedioPago = comboBoxFormaPago.Text;
+                paginaHTML = paginaHTML.Replace("@nombreMedioPago", formaMedioPago);
+
+                paginaHTML = paginaHTML.Replace("@subtotal", textBoxSubTotal.Text);
+                paginaHTML = paginaHTML.Replace("@recargo", textBoxRecargo.Text);
+                paginaHTML = paginaHTML.Replace("@montototal", textBoxTotal.Text);
+
+
+                string filas = string.Empty;
+                foreach(DataGridViewRow row in dataGridView1.Rows)
+                {
+                    filas += "<tr>";
+                    filas += "<td>" + row.Cells["Membresia"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["Periodo"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["Monto"].Value.ToString() + "</td>";
+                    filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
+                    filas += "</tr>";
+                }
+                paginaHTML = paginaHTML.Replace("@filas", filas);
+
+
+                try
+                {
+                    //Archivo de memoria
+                    using (FileStream stream = new FileStream(rutaCompleta, FileMode.Create))
+                    {
+                        // Guardado del PDF
+                        Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25); //tipo hoja y margenes
+
+                        PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+                        pdfDoc.Open();
+                        pdfDoc.Add(new Phrase(""));
+
+                        using (StringReader sr = new StringReader(paginaHTML))
+                        {
+                            XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                        }
+
+                        pdfDoc.Close();
+
+                        //stream.Close();
+                    }
+
+                    // Abrir el archivo PDF automáticamente
+                    Process.Start(rutaCompleta);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ocurrió un error al generar o abrir el PDF: " + ex.Message);
+                }
+
                 this.Close();
             }
             else

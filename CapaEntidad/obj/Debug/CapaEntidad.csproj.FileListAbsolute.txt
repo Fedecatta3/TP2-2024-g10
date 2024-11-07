@@ -18,3 +18,9 @@ C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaEntidad\obj\Debug\CapaEntidad.c
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaEntidad\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaEntidad\bin\Debug\itextsharp.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaEntidad\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaEntidad\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaEntidad\bin\Debug\itextsharp.xml
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaEntidad\obj\Debug\CapaEntidad.csproj.CopyComplete

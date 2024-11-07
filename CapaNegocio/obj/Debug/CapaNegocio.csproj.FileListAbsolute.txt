@@ -55,3 +55,8 @@ C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaNegocio\obj\Debug\CapaNegocio.c
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\RODRIGUEZ\Source\Repos\TP2-2024-g10\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaNegocio\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaNegocio\bin\Debug\itextsharp.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaNegocio\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaNegocio\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaNegocio\bin\Debug\itextsharp.xml

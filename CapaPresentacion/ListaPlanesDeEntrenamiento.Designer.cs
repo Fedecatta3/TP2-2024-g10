@@ -41,7 +41,7 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelCantPlanes = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.labelTITULO = new System.Windows.Forms.Label();
             this.BLimpiar = new FontAwesome.Sharp.IconButton();
             this.Bbuscar = new FontAwesome.Sharp.IconButton();
             this.dgvdataListaPlanes = new System.Windows.Forms.DataGridView();
@@ -83,18 +83,18 @@ namespace CapaPresentacion
             this.label3.TabIndex = 45;
             this.label3.Text = "Cantidad de planes:";
             // 
-            // label13
+            // labelTITULO
             // 
-            this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label13.Location = new System.Drawing.Point(12, 5);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(866, 40);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "LISTA DE PLANES";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelTITULO.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelTITULO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelTITULO.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTITULO.ForeColor = System.Drawing.Color.OrangeRed;
+            this.labelTITULO.Location = new System.Drawing.Point(12, 5);
+            this.labelTITULO.Name = "labelTITULO";
+            this.labelTITULO.Size = new System.Drawing.Size(866, 40);
+            this.labelTITULO.TabIndex = 39;
+            this.labelTITULO.Text = "LISTA DE PLANES";
+            this.labelTITULO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BLimpiar
             // 
@@ -354,7 +354,7 @@ namespace CapaPresentacion
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BLimpiar);
             this.Controls.Add(this.Bbuscar);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.labelTITULO);
             this.Controls.Add(this.dgvdataListaPlanes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaPlanesDeEntrenamiento";
@@ -371,7 +371,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton BLimpiar;
         private FontAwesome.Sharp.IconButton Bbuscar;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label labelTITULO;
         private System.Windows.Forms.DataGridView dgvdataListaPlanes;
         private System.Windows.Forms.Label LnombreColumna;
         private System.Windows.Forms.TextBox textBoxBusqueda;

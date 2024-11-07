@@ -33,14 +33,14 @@ namespace CapaPresentacion
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxConfirmarPass = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.labelConfirmarContraseña = new System.Windows.Forms.Label();
             this.comboBoxEstado = new System.Windows.Forms.ComboBox();
             this.textBoxPass = new System.Windows.Forms.TextBox();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelContraseña = new System.Windows.Forms.Label();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
@@ -65,14 +65,14 @@ namespace CapaPresentacion
             // 
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.textBoxConfirmarPass);
-            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.labelConfirmarContraseña);
             this.groupBox1.Controls.Add(this.comboBoxEstado);
             this.groupBox1.Controls.Add(this.textBoxPass);
             this.groupBox1.Controls.Add(this.comboBoxRol);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.textBoxEmail);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.labelContraseña);
             this.groupBox1.Controls.Add(this.textBoxTelefono);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBoxApellido);
@@ -110,16 +110,16 @@ namespace CapaPresentacion
             this.textBoxConfirmarPass.TabIndex = 25;
             this.textBoxConfirmarPass.TextChanged += new System.EventHandler(this.textBoxConfirmarPass_TextChanged);
             // 
-            // label9
+            // labelConfirmarContraseña
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(271, 153);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 20);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Confirmar contraseña *";
+            this.labelConfirmarContraseña.AutoSize = true;
+            this.labelConfirmarContraseña.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelConfirmarContraseña.ForeColor = System.Drawing.Color.Black;
+            this.labelConfirmarContraseña.Location = new System.Drawing.Point(271, 153);
+            this.labelConfirmarContraseña.Name = "labelConfirmarContraseña";
+            this.labelConfirmarContraseña.Size = new System.Drawing.Size(172, 20);
+            this.labelConfirmarContraseña.TabIndex = 23;
+            this.labelConfirmarContraseña.Text = "Confirmar contraseña *";
             // 
             // comboBoxEstado
             // 
@@ -181,16 +181,16 @@ namespace CapaPresentacion
             this.label8.TabIndex = 18;
             this.label8.Text = "E-mail *";
             // 
-            // label10
+            // labelContraseña
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(14, 153);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 20);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Contraseña *";
+            this.labelContraseña.AutoSize = true;
+            this.labelContraseña.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContraseña.ForeColor = System.Drawing.Color.Black;
+            this.labelContraseña.Location = new System.Drawing.Point(14, 153);
+            this.labelContraseña.Name = "labelContraseña";
+            this.labelContraseña.Size = new System.Drawing.Size(99, 20);
+            this.labelContraseña.TabIndex = 22;
+            this.labelContraseña.Text = "Contraseña *";
             // 
             // textBoxTelefono
             // 
@@ -391,11 +391,11 @@ namespace CapaPresentacion
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxConfirmarPass;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label labelConfirmarContraseña;
         private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.TextBox textBoxTelefono;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label12;

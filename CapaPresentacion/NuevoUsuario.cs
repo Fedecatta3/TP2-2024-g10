@@ -17,12 +17,12 @@ namespace CapaPresentacion
     public partial class NuevoUsuario : Form
     {
         public event Action UsuarioRegistrado;
-        private int usuarioValor = 0;
+        private Usuario usuarioActual_;
 
-        public NuevoUsuario(int usuarioNuevo) //si recibe 1 es nuevo Usuario, si recibe 0 es modificacion de Usuario
+        public NuevoUsuario(Usuario usuarioActual) //si recibe 1 es nuevo Usuario, si recibe 0 es modificacion de Usuario
         {
             InitializeComponent();
-            usuarioValor = usuarioNuevo;
+            usuarioActual_ = usuarioActual;
         }
 
         private void BCancelar_Click(object sender, EventArgs e)
@@ -45,7 +45,7 @@ namespace CapaPresentacion
 
         private void NuevoUsuario_Load(object sender, EventArgs e)
         {
-            if(usuarioValor == 1)
+            if(textBoxID.Text == "0")
             {
                 // Limitar el DateTimePicker para que solo permita fechas entre hace 120 años y hace 16 años
                 dateTimePicker1.MaxDate = DateTime.Today.AddYears(-16);
@@ -58,15 +58,27 @@ namespace CapaPresentacion
                 comboBoxEstado.ValueMember = "Valor";
                 comboBoxEstado.SelectedIndex = 0; // Selecciona el primer elemento por defecto al crear un nuevo usuario
 
+
                 // Cargar ComboBox de Roles
                 List<Rol> listarol = new CN_rol().Listar();
-                foreach (Rol item in listarol)
+
+                if (usuarioActual_.id_rol.id_rol == 1) //Usuario propietario se listan todos los roles
                 {
-                    comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                    foreach (Rol item in listarol)
+                    {
+                        comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                    }
+                }else if(usuarioActual_.id_rol.id_rol == 2) // Usuario ADM solo se lista el rol coach
+                {
+                    foreach (Rol item in listarol.Where(r => r.id_rol == 3))
+                    {
+                        comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                    }
                 }
+
                 comboBoxRol.DisplayMember = "Texto";
                 comboBoxRol.ValueMember = "Valor";
-                comboBoxRol.SelectedIndex = 0; // Selecciona el primer elemento por defecto al crear un nuevo usuario
+                comboBoxRol.SelectedIndex = 0;
             }
         }
 
@@ -241,17 +253,35 @@ namespace CapaPresentacion
             textBoxPass.Text = usuario.contraseña;
             dateTimePicker1.Value = Convert.ToDateTime(usuario.fecha_nacimiento);
 
-            //carga de comboBox rol
-            int valorRol = usuario.id_rol.id_rol - 1;
 
+            // Cargar ComboBox de Roles
             List<Rol> listarol = new CN_rol().Listar();
-            foreach (Rol item in listarol)
+
+            if (usuarioActual_.id_rol.id_rol == 1) //Usuario propietario se listan todos los roles
             {
-                comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                int valorRol = usuario.id_rol.id_rol - 1;
+
+                foreach (Rol item in listarol)
+                {
+                    comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                }
+
+                comboBoxRol.DisplayMember = "Texto";
+                comboBoxRol.ValueMember = "Valor";
+                comboBoxRol.SelectedIndex = valorRol;
             }
-            comboBoxRol.DisplayMember = "Texto";
-            comboBoxRol.ValueMember = "Valor";
-            comboBoxRol.SelectedIndex = valorRol;
+            else if (usuarioActual_.id_rol.id_rol == 2) // Usuario ADM solo se lista el rol coach
+            {
+                foreach (Rol item in listarol.Where(r => r.id_rol == 3))
+                {
+                    comboBoxRol.Items.Add(new opcionCombo() { Valor = item.id_rol, Texto = item.descripcion });
+                }
+
+                comboBoxRol.DisplayMember = "Texto";
+                comboBoxRol.ValueMember = "Valor";
+                comboBoxRol.SelectedIndex = 0;
+            }
+
 
             //carga comboBox de Estado
             int valorEstado = usuario.estado ? 0 : 1;

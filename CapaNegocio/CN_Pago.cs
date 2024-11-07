@@ -13,7 +13,7 @@ namespace CapaNegocio
     public class CN_Pago
     {
         private CD_Pago objPago = new CD_Pago();
-        public bool ProcesarPago(Pago pago, List<PagoDetalle> detalles)
+        public int ProcesarPago(Pago pago, List<PagoDetalle> detalles)
         {
             int idPago = objPago.RegistrarPago(pago);  // Registrar el pago y obtener el ID generado
 
@@ -24,13 +24,13 @@ namespace CapaNegocio
                     detalle.id_pago = new Pago { id_pago = idPago };  // Asignar el ID de pago al detalle
                     if (!objPago.RegistrarPagoDetalle(detalle))
                     {
-                        return false;  // Si falla la inserción de algún detalle, retornar false
+                        return -1;  // Si falla la inserción de algún detalle, retornar -1 indicando error
                     }
                 }
-                return true;
+                return idPago;
             }
 
-            return false;
+            return -1; // Si no se generó el pago, retornar -1
         }
 
     }
