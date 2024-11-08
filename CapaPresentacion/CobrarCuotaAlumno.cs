@@ -80,7 +80,10 @@ namespace CapaPresentacion
             {
                 if(item.id_membresia == objAlumno.id_membresia)
                 {
-                    dataGridView1.Rows.Add(item.nombre, DateTime.Now.ToString("dd/MM/yyyy"), item.costo, "1");
+                    // Obtener el mes actual como nombre
+                    string mesActual = DateTime.Now.ToString("MMMM");
+
+                    dataGridView1.Rows.Add(item.nombre, mesActual, item.costo, "1");
                 }
             }
 
@@ -155,7 +158,7 @@ namespace CapaPresentacion
                     PagoDetalle detalle = new PagoDetalle
                     {
                         id_membresia = new Membresia { id_membresia = objAlumno.id_membresia },
-                        periodo = DateTime.Parse(row.Cells["periodo"].Value.ToString()).Month,
+                        periodo = ConvertirMesANumero(row.Cells["periodo"].Value.ToString()),
                         monto = Convert.ToDecimal(row.Cells["monto"].Value)
                     };
                     detalles.Add(detalle);
@@ -286,5 +289,17 @@ namespace CapaPresentacion
             // Volver a calcular el subtotal al cambiar el medio de pago
             SumarMontos();
         }
+
+
+        private int ConvertirMesANumero(string nombreMes)
+        {
+            DateTime mes;
+            if (DateTime.TryParseExact(nombreMes, "MMMM", System.Globalization.CultureInfo.CurrentCulture, System.Globalization.DateTimeStyles.None, out mes))
+            {
+                return mes.Month;
+            }
+            return 0; // Valor de respaldo si la conversión falla
+        }
+
     }
 }

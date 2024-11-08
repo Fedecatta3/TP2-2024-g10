@@ -20,17 +20,86 @@ namespace CapaPresentacion
 
         public event Action AlumnoRegistrado;
 
+        public event Action AlumnoEditado;
+
+
         public NuevoAlumno()
         {
             InitializeComponent();
 
+            if(textBoxIDalumno.Text == "0")
+            {
+                // Deshabilitar el ComboBox de coachs al inicio
+                comboBoxCoachs.Enabled = false;
 
-            // Deshabilitar el ComboBox de coachs al inicio
-            comboBoxCoachs.Enabled = false;
+            }
 
             CargarCoachs();
             CargarPlanes();
             CargarMembresias();
+
+        }
+
+        // Metodo para cargar el formulario con los datos del Alumno a modificar
+        public void CargarDatosAlumno(int idAlumno)
+        {
+            BCancelar.Visible = false;
+
+            List<Alumno> listaAlumno = new CN_Alumno().Listar();
+
+            foreach (Alumno item in listaAlumno)
+            {
+                if(item.id_alumno == idAlumno)
+                {
+                    // Asignar los valores a los controles del formulario
+                    textBoxIDalumno.Text = item.id_alumno.ToString();
+                    textBoxNombre.Text = item.nombre;
+                    textBoxApellido.Text = item.apellido;
+                    textBoxEmail.Text = item.email;
+                    textBoxDNI.Text = item.dni;
+                    textBoxTelefono.Text = item.telefono;
+                    textBoxContactoEmerg.Text = item.contacto_emergencia;
+                    textBoxObservaciones.Text = item.observaciones;
+                    dateTimePicker1.Value = item.fecha_nacimiento;
+                    textBoxRutaImagen.Text = item.foto;
+
+                    rutaImagen = item.foto;
+                    pictureBox1.Image = Image.FromFile(rutaImagen); // Cargar la imagen si está disponible
+
+                    // Asignar el sexo
+                    if (item.sexo == "Masculino")
+                        checkBoxMasculino.Checked = true;
+                    else
+                        checkBoxFemenino.Checked = true;
+
+
+                    // Seleccionar el plan en el ComboBox
+                    var planItem = comboBoxPlan.Items.Cast<dynamic>()
+                        .FirstOrDefault(p => p.Value == item.id_plan);
+                    if (planItem != null)
+                    {
+                        comboBoxPlan.SelectedItem = planItem;
+                    }
+
+                    // Seleccionar el coach en el ComboBox
+                    var coachItem = comboBoxCoachs.Items.Cast<dynamic>()
+                        .FirstOrDefault(c => c.Value == item.id_usuario);
+                    if (coachItem != null)
+                    {
+                        comboBoxCoachs.SelectedItem = coachItem;
+                    }
+
+
+                    // Seleccionar la membresía en el ComboBox
+                    var membresiaItem = comboBoxTipoMembresia.Items.Cast<dynamic>()
+                        .FirstOrDefault(m => m.Value == item.id_membresia);
+                    if (membresiaItem != null)
+                    {
+                        comboBoxTipoMembresia.SelectedItem = membresiaItem;
+                    }
+                }
+            }
+
         }
 
         // Método para cargar los coachs en el ComboBox
@@ -196,6 +265,7 @@ namespace CapaPresentacion
             // Crear un objeto Alumno 
             Alumno alumno = new Alumno
             {
+                id_alumno = Convert.ToInt32(textBoxIDalumno.Text),
                 id_usuario = ((dynamic)comboBoxCoachs.SelectedItem).Value,
                 id_membresia = ((dynamic)comboBoxTipoMembresia.SelectedItem).Value,
                 id_plan = ((dynamic)comboBoxPlan.SelectedItem).Value,
@@ -212,44 +282,65 @@ namespace CapaPresentacion
                 estado = true
             };
 
-            
-            int idUsuarioGenerado = new CN_Alumno().Registrar(alumno, out mensaje);
-
-            if (idUsuarioGenerado == 0) //mensaje de error 
+            if(textBoxIDalumno.Text == "0") //Nuevo alumno
             {
-                MessageBox.Show(mensaje);
+                int idUsuarioGenerado = new CN_Alumno().Registrar(alumno, out mensaje);
+
+                if (idUsuarioGenerado == 0) //mensaje de error 
+                {
+                    MessageBox.Show(mensaje);
+                }
+                else
+                {
+                    // Mensaje de éxito
+                    MessageBox.Show(mensaje);
+                    AlumnoRegistrado?.Invoke(); //evento
+
+                    Alumno alumnoCreado = new Alumno
+                    {
+                        id_usuario = ((dynamic)comboBoxCoachs.SelectedItem).Value,
+                        id_membresia = ((dynamic)comboBoxTipoMembresia.SelectedItem).Value,
+                        id_plan = ((dynamic)comboBoxPlan.SelectedItem).Value,
+                        id_alumno = idUsuarioGenerado,
+                        nombre = textBoxNombre.Text,
+                        apellido = textBoxApellido.Text,
+                        email = textBoxEmail.Text,
+                        telefono = textBoxTelefono.Text,
+                        foto = rutaImagen,  // La ruta de la imagen seleccionada
+                        dni = textBoxDNI.Text,
+                        fecha_nacimiento = dateTimePicker1.Value,
+                        contacto_emergencia = textBoxContactoEmerg.Text,
+                        sexo = sexoCheckBox,
+                        observaciones = textBoxObservaciones.Text,
+                        estado = true
+                    };
+
+                    //Modal para cobrar la inscripcion del alumno
+                    using (var modal = new CobrarCuotaAlumno(alumnoCreado))
+                    {
+                        var resultado = modal.ShowDialog();
+
+                        this.Close(); //cierra modal actual
+                    }
+                }
             }
-            else
+            else //Alumno a modificar
             {
-                // Mensaje de éxito
-                MessageBox.Show(mensaje);
-                AlumnoRegistrado?.Invoke(); //evento
 
-                Alumno alumnoCreado = new Alumno
+                bool resultado = new CN_Alumno().Editar(alumno, out mensaje);
+
+                if (resultado)
                 {
-                    id_usuario = ((dynamic)comboBoxCoachs.SelectedItem).Value,
-                    id_membresia = ((dynamic)comboBoxTipoMembresia.SelectedItem).Value,
-                    id_plan = ((dynamic)comboBoxPlan.SelectedItem).Value,
-                    id_alumno = idUsuarioGenerado,
-                    nombre = textBoxNombre.Text,
-                    apellido = textBoxApellido.Text,
-                    email = textBoxEmail.Text,
-                    telefono = textBoxTelefono.Text,
-                    foto = rutaImagen,  // La ruta de la imagen seleccionada
-                    dni = textBoxDNI.Text,
-                    fecha_nacimiento = dateTimePicker1.Value,
-                    contacto_emergencia = textBoxContactoEmerg.Text,
-                    sexo = sexoCheckBox,
-                    observaciones = textBoxObservaciones.Text,
-                    estado = true
-                };
+                    MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                //Modal para cobrar la inscripcion del alumno
-                using (var modal = new CobrarCuotaAlumno(alumnoCreado))
+                    AlumnoRegistrado?.Invoke();
+                    AlumnoEditado?.Invoke(); 
+
+                    this.Close();
+                }
+                else
                 {
-                    var resultado = modal.ShowDialog();
-
-                    this.Close(); //cierra modal actual
+                    MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

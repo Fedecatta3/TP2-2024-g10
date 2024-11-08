@@ -60,6 +60,7 @@ namespace CapaPresentacion
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -103,19 +104,16 @@ namespace CapaPresentacion
             // 
             this.Membresia.HeaderText = "Membresia";
             this.Membresia.Name = "Membresia";
-            this.Membresia.Width = 180;
             // 
             // Periodo
             // 
             this.Periodo.HeaderText = "Periodo";
             this.Periodo.Name = "Periodo";
-            this.Periodo.Width = 180;
             // 
             // Monto
             // 
             this.Monto.HeaderText = "Monto";
             this.Monto.Name = "Monto";
-            this.Monto.Width = 180;
             // 
             // Cantidad
             // 

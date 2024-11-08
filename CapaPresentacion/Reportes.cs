@@ -40,6 +40,7 @@ namespace CapaPresentacion
 
 
             // Actualizar contadores al cargar el formulario
+            ActualizarContadorPagos();
             ActualizarContadorCoachs();
             ActualizarContadorAlumnos();
             ActualizarContadorPlanes();
@@ -54,20 +55,17 @@ namespace CapaPresentacion
 
             switch (tipo)
             {
-                case "Pagos":
-                    query = "SELECT COUNT(*) FROM Pago";
-                    break;
                 case "Alumnos":
-                    query = "SELECT COUNT(*) FROM Alumno";
+                    query = "SELECT COUNT(*) FROM Alumno WHERE estado = 1";
                     break;
                 case "Coachs":
-                    query = "SELECT COUNT(*) FROM Usuario WHERE id_rol = 3";
+                    query = "SELECT COUNT(*) FROM Usuario WHERE id_rol = 3 AND estado = 1";
                     break;
                 case "Planes de entrenamiento":
-                    query = "SELECT COUNT(*) FROM PlanEntrenamiento";
+                    query = "SELECT COUNT(*) FROM PlanEntrenamiento WHERE estado = 1";
                     break;
-                case "Usuarios": // Añadido para contar todos los usuarios
-                    query = "SELECT COUNT(*) FROM Usuario";
+                case "Usuarios": // Añadido para contar todos los administradores
+                    query = "SELECT COUNT(*) FROM Usuario WHERE id_rol = 2 AND estado = 1";
                     break;
             }
 
@@ -89,6 +87,33 @@ namespace CapaPresentacion
             }
 
             return count;
+        }
+
+        // Devuelve el total de ingresos
+        private decimal ObtenerCantidadPagos()
+        {
+            decimal total = 0;
+            string query = "SELECT SUM(total) FROM Pago";
+
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+                try
+                {
+                    connection.Open();
+                    object result = command.ExecuteScalar();
+                    total = (result == DBNull.Value) ? 0 : Convert.ToDecimal(result);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al obtener el total de ingresos: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
+
+            return total;
         }
 
 
@@ -129,6 +154,12 @@ namespace CapaPresentacion
                     connection.Close();
                 }
             }
+        }
+
+        private void ActualizarContadorPagos()
+        {
+            decimal totalIngresosDecimal = ObtenerCantidadPagos(); // Obtener cantidad de ingresos
+            totalIngresos.Text = $" {totalIngresosDecimal:C}"; // Actualiza el texto del Label
         }
 
         private void ActualizarContadorCoachs()
@@ -172,6 +203,11 @@ namespace CapaPresentacion
                 var cellValue = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                 MessageBox.Show($"Has seleccionado: {cellValue}");
             }
+        }
+
+        private void Bbuscar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -94,7 +94,8 @@ namespace CapaPresentacion
                 //Modal para ver ficha del alumno
                 using (var modal = new FichaAlumno(idAlumno))
                 {
-                    var resultado = modal.ShowDialog();
+                    modal.AlumnoActualizado += () => CargarAlumnos(); // evento para actualizar dataGrid
+                    modal.ShowDialog();
                 }
             }
         }

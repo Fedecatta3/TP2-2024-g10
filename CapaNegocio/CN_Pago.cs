@@ -33,5 +33,15 @@ namespace CapaNegocio
             return -1; // Si no se generó el pago, retornar -1
         }
 
+
+        public List<Pago> ListarPagos()
+        {
+            return objPago.ListarPagos();
+        }
+
+        public List<PagoDetalle> ListarPagoDetalles(int idPago)
+        {
+            return objPago.ListarPagoDetalles(idPago);
+        }
     }
 }

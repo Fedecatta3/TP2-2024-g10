@@ -94,6 +94,12 @@
     <Compile Include="CobrarCuotaAlumno.Designer.cs">
       <DependentUpon>CobrarCuotaAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="DetalleDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetalleDePago.Designer.cs">
+      <DependentUpon>DetalleDePago.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetallesPlanEntrenamiento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CobrarCuotaAlumno.resx">
       <DependentUpon>CobrarCuotaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetalleDePago.resx">
+      <DependentUpon>DetalleDePago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetallesPlanEntrenamiento.resx">
       <DependentUpon>DetallesPlanEntrenamiento.cs</DependentUpon>

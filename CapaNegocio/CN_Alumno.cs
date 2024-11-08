@@ -23,5 +23,25 @@ namespace CapaNegocio
         {
             return objCapaDatos.Registrar(obj, out mensaje);
         }
+
+        public bool VerificarCuotaAlumno(int idAlumno, out int mesesAdeudados, out string cuotaAlDia)
+        {
+            return objCapaDatos.VerificarCuotaAlumno(idAlumno, out mesesAdeudados, out cuotaAlDia);
+        }
+
+        public bool EliminarAlumno(int idAlumno, out string mensaje)
+        {
+            return objCapaDatos.EliminarAlumno(idAlumno, out mensaje);
+        }
+
+        public bool RestaurarAlumno(int idAlumno, out string mensaje)
+        {
+            return objCapaDatos.RestaurarAlumno(idAlumno, out mensaje);
+        }
+
+        public bool Editar(Alumno obj, out string mensaje)
+        {
+            return objCapaDatos.Editar(obj, out mensaje);
+        }
     }
 }

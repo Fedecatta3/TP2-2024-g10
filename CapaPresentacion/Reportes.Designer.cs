@@ -59,10 +59,10 @@ namespace CapaPresentacion
             this.label12 = new System.Windows.Forms.Label();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
+            this.Bbuscar = new FontAwesome.Sharp.IconButton();
             this.comboBoxReportes = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.Blimpiar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -162,7 +162,7 @@ namespace CapaPresentacion
             this.cantUsuarios.AutoSize = true;
             this.cantUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantUsuarios.ForeColor = System.Drawing.Color.OrangeRed;
-            this.cantUsuarios.Location = new System.Drawing.Point(121, 25);
+            this.cantUsuarios.Location = new System.Drawing.Point(114, 25);
             this.cantUsuarios.Name = "cantUsuarios";
             this.cantUsuarios.Size = new System.Drawing.Size(32, 16);
             this.cantUsuarios.TabIndex = 62;
@@ -175,20 +175,20 @@ namespace CapaPresentacion
             this.label2.ForeColor = System.Drawing.Color.OrangeRed;
             this.label2.Location = new System.Drawing.Point(47, 24);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 16);
+            this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 63;
-            this.label2.Text = "registrados:";
+            this.label2.Text = "activos:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(47, 8);
+            this.label1.Location = new System.Drawing.Point(47, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(106, 16);
             this.label1.TabIndex = 61;
-            this.label1.Text = "Usuarios";
+            this.label1.Text = "Administradores";
             // 
             // iconPictureBox1
             // 
@@ -221,7 +221,7 @@ namespace CapaPresentacion
             this.cantCoachs.AutoSize = true;
             this.cantCoachs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantCoachs.ForeColor = System.Drawing.Color.OrangeRed;
-            this.cantCoachs.Location = new System.Drawing.Point(120, 25);
+            this.cantCoachs.Location = new System.Drawing.Point(109, 24);
             this.cantCoachs.Name = "cantCoachs";
             this.cantCoachs.Size = new System.Drawing.Size(32, 16);
             this.cantCoachs.TabIndex = 62;
@@ -259,9 +259,9 @@ namespace CapaPresentacion
             this.label3.ForeColor = System.Drawing.Color.OrangeRed;
             this.label3.Location = new System.Drawing.Point(47, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 16);
+            this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 70;
-            this.label3.Text = "registrados:";
+            this.label3.Text = "activos:";
             // 
             // panel3
             // 
@@ -279,7 +279,7 @@ namespace CapaPresentacion
             this.totalIngresos.AutoSize = true;
             this.totalIngresos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalIngresos.ForeColor = System.Drawing.Color.OrangeRed;
-            this.totalIngresos.Location = new System.Drawing.Point(47, 20);
+            this.totalIngresos.Location = new System.Drawing.Point(47, 24);
             this.totalIngresos.Name = "totalIngresos";
             this.totalIngresos.Size = new System.Drawing.Size(52, 16);
             this.totalIngresos.TabIndex = 62;
@@ -290,7 +290,7 @@ namespace CapaPresentacion
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label8.Location = new System.Drawing.Point(47, 4);
+            this.label8.Location = new System.Drawing.Point(47, 6);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(94, 16);
             this.label8.TabIndex = 61;
@@ -327,7 +327,7 @@ namespace CapaPresentacion
             this.cantAlumnos.AutoSize = true;
             this.cantAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantAlumnos.ForeColor = System.Drawing.Color.OrangeRed;
-            this.cantAlumnos.Location = new System.Drawing.Point(120, 26);
+            this.cantAlumnos.Location = new System.Drawing.Point(110, 25);
             this.cantAlumnos.Name = "cantAlumnos";
             this.cantAlumnos.Size = new System.Drawing.Size(32, 16);
             this.cantAlumnos.TabIndex = 62;
@@ -365,9 +365,9 @@ namespace CapaPresentacion
             this.label7.ForeColor = System.Drawing.Color.OrangeRed;
             this.label7.Location = new System.Drawing.Point(46, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 16);
+            this.label7.Size = new System.Drawing.Size(54, 16);
             this.label7.TabIndex = 71;
-            this.label7.Text = "registrados:";
+            this.label7.Text = "activos:";
             // 
             // panel5
             // 
@@ -424,28 +424,29 @@ namespace CapaPresentacion
             this.label9.ForeColor = System.Drawing.Color.OrangeRed;
             this.label9.Location = new System.Drawing.Point(50, 24);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.Size = new System.Drawing.Size(54, 16);
             this.label9.TabIndex = 72;
-            this.label9.Text = "creados:";
+            this.label9.Text = "activos:";
             // 
-            // iconButton4
+            // Bbuscar
             // 
-            this.iconButton4.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton4.ForeColor = System.Drawing.Color.White;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 20;
-            this.iconButton4.Location = new System.Drawing.Point(780, 101);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(35, 24);
-            this.iconButton4.TabIndex = 68;
-            this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton4.UseVisualStyleBackColor = false;
+            this.Bbuscar.BackColor = System.Drawing.Color.LimeGreen;
+            this.Bbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Bbuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bbuscar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bbuscar.ForeColor = System.Drawing.Color.White;
+            this.Bbuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.Bbuscar.IconColor = System.Drawing.Color.White;
+            this.Bbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Bbuscar.IconSize = 20;
+            this.Bbuscar.Location = new System.Drawing.Point(780, 101);
+            this.Bbuscar.Name = "Bbuscar";
+            this.Bbuscar.Size = new System.Drawing.Size(35, 24);
+            this.Bbuscar.TabIndex = 68;
+            this.Bbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bbuscar.UseVisualStyleBackColor = false;
+            this.Bbuscar.Click += new System.EventHandler(this.Bbuscar_Click);
             // 
             // comboBoxReportes
             // 
@@ -470,32 +471,32 @@ namespace CapaPresentacion
             this.label14.TabIndex = 67;
             this.label14.Text = "Filtrar por:";
             // 
-            // iconButton3
+            // Blimpiar
             // 
-            this.iconButton3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 25;
-            this.iconButton3.Location = new System.Drawing.Point(832, 102);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(35, 24);
-            this.iconButton3.TabIndex = 69;
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton3.UseVisualStyleBackColor = false;
+            this.Blimpiar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Blimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Blimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Blimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Blimpiar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Blimpiar.ForeColor = System.Drawing.Color.White;
+            this.Blimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.Blimpiar.IconColor = System.Drawing.Color.White;
+            this.Blimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Blimpiar.IconSize = 25;
+            this.Blimpiar.Location = new System.Drawing.Point(832, 102);
+            this.Blimpiar.Name = "Blimpiar";
+            this.Blimpiar.Size = new System.Drawing.Size(35, 24);
+            this.Blimpiar.TabIndex = 69;
+            this.Blimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Blimpiar.UseVisualStyleBackColor = false;
             // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 507);
-            this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.iconButton4);
+            this.Controls.Add(this.Blimpiar);
+            this.Controls.Add(this.Bbuscar);
             this.Controls.Add(this.comboBoxReportes);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.panel5);
@@ -562,10 +563,10 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label cantPlanes;
         private System.Windows.Forms.Label label12;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
-        private FontAwesome.Sharp.IconButton iconButton4;
+        private FontAwesome.Sharp.IconButton Bbuscar;
         private System.Windows.Forms.ComboBox comboBoxReportes;
         private System.Windows.Forms.Label label14;
-        private FontAwesome.Sharp.IconButton iconButton3;
+        private FontAwesome.Sharp.IconButton Blimpiar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;

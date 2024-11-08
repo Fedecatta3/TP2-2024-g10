@@ -31,35 +31,41 @@ namespace CapaPresentacion
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.labelCantPagos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.IDusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MedioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvdata = new System.Windows.Forms.DataGridView();
+            this.verFactura = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.recargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelCantPagos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(153, 472);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
-            this.label1.TabIndex = 46;
-            this.label1.Text = "0 pagos";
+            this.labelCantPagos.AutoSize = true;
+            this.labelCantPagos.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCantPagos.ForeColor = System.Drawing.Color.Black;
+            this.labelCantPagos.Location = new System.Drawing.Point(154, 472);
+            this.labelCantPagos.Name = "labelCantPagos";
+            this.labelCantPagos.Size = new System.Drawing.Size(62, 20);
+            this.labelCantPagos.TabIndex = 46;
+            this.labelCantPagos.Text = "0 pagos";
             // 
             // label3
             // 
@@ -84,77 +90,6 @@ namespace CapaPresentacion
             this.label13.TabIndex = 39;
             this.label13.Text = "LISTA DE PAGOS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDusuario,
-            this.MedioPago,
-            this.Membresia,
-            this.Vencimiento,
-            this.Total,
-            this.Accion});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 51);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(866, 415);
-            this.dataGridView1.TabIndex = 38;
-            // 
-            // IDusuario
-            // 
-            this.IDusuario.HeaderText = "Alumno";
-            this.IDusuario.Name = "IDusuario";
-            this.IDusuario.Width = 200;
-            // 
-            // MedioPago
-            // 
-            this.MedioPago.HeaderText = "Medio de pago";
-            this.MedioPago.Name = "MedioPago";
-            this.MedioPago.Width = 150;
-            // 
-            // Membresia
-            // 
-            this.Membresia.HeaderText = "Fecha";
-            this.Membresia.Name = "Membresia";
-            this.Membresia.Width = 120;
-            // 
-            // Vencimiento
-            // 
-            this.Vencimiento.HeaderText = "Cantidad";
-            this.Vencimiento.Name = "Vencimiento";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
-            // Accion
-            // 
-            this.Accion.HeaderText = "Accion";
-            this.Accion.Name = "Accion";
-            this.Accion.Width = 110;
             // 
             // iconButton2
             // 
@@ -236,6 +171,134 @@ namespace CapaPresentacion
             this.dateTimePicker2.Size = new System.Drawing.Size(130, 24);
             this.dateTimePicker2.TabIndex = 50;
             // 
+            // dgvdata
+            // 
+            this.dgvdata.AllowUserToAddRows = false;
+            this.dgvdata.AllowUserToDeleteRows = false;
+            this.dgvdata.AllowUserToResizeColumns = false;
+            this.dgvdata.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.verFactura,
+            this.idPago,
+            this.alumno,
+            this.fecha,
+            this.subTotal,
+            this.recargo,
+            this.total,
+            this.medioPago});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvdata.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvdata.Location = new System.Drawing.Point(12, 51);
+            this.dgvdata.MultiSelect = false;
+            this.dgvdata.Name = "dgvdata";
+            this.dgvdata.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvdata.RowHeadersWidth = 30;
+            this.dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dgvdata.RowTemplate.Height = 30;
+            this.dgvdata.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvdata.Size = new System.Drawing.Size(866, 415);
+            this.dgvdata.TabIndex = 52;
+            this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
+            // 
+            // verFactura
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.verFactura.DefaultCellStyle = dataGridViewCellStyle3;
+            this.verFactura.HeaderText = "";
+            this.verFactura.Name = "verFactura";
+            this.verFactura.ReadOnly = true;
+            this.verFactura.Width = 5;
+            // 
+            // idPago
+            // 
+            this.idPago.HeaderText = "idPago";
+            this.idPago.Name = "idPago";
+            this.idPago.ReadOnly = true;
+            this.idPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idPago.Visible = false;
+            this.idPago.Width = 58;
+            // 
+            // alumno
+            // 
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.alumno.DefaultCellStyle = dataGridViewCellStyle4;
+            this.alumno.HeaderText = "Alumno";
+            this.alumno.Name = "alumno";
+            this.alumno.ReadOnly = true;
+            this.alumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.alumno.Width = 59;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha de pago";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.fecha.Width = 67;
+            // 
+            // subTotal
+            // 
+            this.subTotal.HeaderText = "Sub Total";
+            this.subTotal.Name = "subTotal";
+            this.subTotal.ReadOnly = true;
+            this.subTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.subTotal.Width = 65;
+            // 
+            // recargo
+            // 
+            this.recargo.HeaderText = "Recargo";
+            this.recargo.Name = "recargo";
+            this.recargo.ReadOnly = true;
+            this.recargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.recargo.Width = 67;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.total.Width = 45;
+            // 
+            // medioPago
+            // 
+            this.medioPago.HeaderText = "Medio de pago";
+            this.medioPago.Name = "medioPago";
+            this.medioPago.ReadOnly = true;
+            this.medioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.medioPago.Width = 67;
+            // 
             // Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,37 +308,40 @@ namespace CapaPresentacion
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCantPagos);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvdata);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Pagos";
             this.Text = "Pagos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Pagos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCantPagos;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDusuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MedioPago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Accion;
+        private System.Windows.Forms.DataGridView dgvdata;
+        private System.Windows.Forms.DataGridViewButtonColumn verFactura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn recargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medioPago;
     }
 }

@@ -439,7 +439,7 @@ namespace CapaPresentacion
             this.BConfirmarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BConfirmarAlumno.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BConfirmarAlumno.ForeColor = System.Drawing.Color.White;
-            this.BConfirmarAlumno.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.BConfirmarAlumno.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.BConfirmarAlumno.IconColor = System.Drawing.Color.White;
             this.BConfirmarAlumno.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BConfirmarAlumno.IconSize = 35;
@@ -448,7 +448,7 @@ namespace CapaPresentacion
             this.BConfirmarAlumno.Name = "BConfirmarAlumno";
             this.BConfirmarAlumno.Size = new System.Drawing.Size(135, 35);
             this.BConfirmarAlumno.TabIndex = 26;
-            this.BConfirmarAlumno.Text = "SIGUIENTE";
+            this.BConfirmarAlumno.Text = "GUARDAR";
             this.BConfirmarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BConfirmarAlumno.UseVisualStyleBackColor = false;
             this.BConfirmarAlumno.Click += new System.EventHandler(this.BConfirmarAlumno_Click);
@@ -466,7 +466,7 @@ namespace CapaPresentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "NuevoAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NUEVO ALUMNO";
+            this.Text = "ALUMNO";
             this.Load += new System.EventHandler(this.NuevoAlumno_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -18,6 +18,8 @@ namespace CapaPresentacion
         private int alumno;
         private CN_Alumno objCN_Alumno = new CN_Alumno(); // Capa de negocio para alumnos
 
+        public event Action AlumnoActualizado; // Evento para notificar al formulario principal
+
         public FichaAlumno(int idAlumno)
         {
             InitializeComponent();
@@ -46,6 +48,17 @@ namespace CapaPresentacion
             {
                 if (item.id_alumno == alumno)
                 {
+                    if(item.estado == true)
+                    {
+                        BbajaAlumno.Visible = true;
+                        BRestaurarAlumno.Visible = false;
+                    }
+                    else
+                    {
+                        BRestaurarAlumno.Visible = true;
+                        BbajaAlumno.Visible = false;
+                    }
+
                     labelNombreCompleto.Text = item.nombre + " " + item.apellido;
                     labelDNI.Text = item.dni;
                     labelFechaNacimiento.Text = item.fecha_nacimiento.ToString("dd/MM/yyyy");
@@ -89,6 +102,98 @@ namespace CapaPresentacion
                 labelPlanEntrenamiento.Text = plan.nombre;
             }
 
+        }
+
+        private void BbajaAlumno_Click(object sender, EventArgs e)
+        {
+            int mesesAdeudados;
+            string mensaje;
+
+            // control para saber si el alumno adeuda cuota
+            bool cuotaAlDia = objCN_Alumno.VerificarCuotaAlumno(alumno, out mesesAdeudados, out mensaje);
+
+            if (cuotaAlDia)
+            {
+                DialogResult resultado = MessageBox.Show("¿Estás seguro que deseas dar de baja a este alumno?", "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    bool alumnoEliminado = objCN_Alumno.EliminarAlumno(alumno, out mensaje);
+                    if (alumnoEliminado)
+                    {
+                        MessageBox.Show(mensaje);
+                        FichaAlumno_Load(sender, e);
+
+                        AlumnoActualizado?.Invoke(); // Disparar el evento para que el formulario principal actualice el DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
+                }
+            }
+            else
+            {
+                DialogResult resultado = MessageBox.Show($"El alumno adeuda cuota.\n ¿Deseas dar de baja a este alumno?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                
+                if (resultado == DialogResult.Yes)
+                {
+                    bool alumnoEliminado = objCN_Alumno.EliminarAlumno(alumno, out mensaje);
+                    if (alumnoEliminado)
+                    {
+                        MessageBox.Show(mensaje);
+                        FichaAlumno_Load(sender, e);
+
+                        AlumnoActualizado?.Invoke(); // Disparar el evento para que el formulario principal actualice el DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje);
+                    }
+                }
+            }
+
+        }
+
+        private void BRestaurarAlumno_Click(object sender, EventArgs e)
+        {
+            string mensaje;
+
+            DialogResult resultado = MessageBox.Show("¿Estás seguro que deseas dar de alta a este alumno?", "Confirmar alta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (resultado == DialogResult.Yes)
+            {
+                bool alumnoRestaurado = objCN_Alumno.RestaurarAlumno(alumno, out mensaje);
+                if (alumnoRestaurado)
+                {
+                    MessageBox.Show(mensaje);
+                    FichaAlumno_Load(sender, e);
+
+                    AlumnoActualizado?.Invoke(); // Disparar el evento para que el formulario principal actualice el DataGridView
+                }
+                else
+                {
+                    MessageBox.Show(mensaje);
+                }
+            }
+        }
+
+        private void BModificarAlumno_Click(object sender, EventArgs e)
+        {
+            using (var modal = new NuevoAlumno())
+            {
+                modal.CargarDatosAlumno(alumno);
+
+                modal.AlumnoEditado += RefrescarDatosAlumno;
+
+                var resultado = modal.ShowDialog();
+
+            }
+        }
+
+        private void RefrescarDatosAlumno()
+        {
+            // Recargar los datos del alumno
+            FichaAlumno_Load(this, EventArgs.Empty);
         }
     }
 }

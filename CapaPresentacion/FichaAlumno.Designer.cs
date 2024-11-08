@@ -48,16 +48,17 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BModificarAlumno = new FontAwesome.Sharp.IconButton();
-            this.BCuentaCorriente = new FontAwesome.Sharp.IconButton();
+            this.BListaDePagos = new FontAwesome.Sharp.IconButton();
             this.BCobrarCuota = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.BbajaAlumno = new FontAwesome.Sharp.IconButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelTipoMembresia = new System.Windows.Forms.Label();
-            this.labelCoachAcargo = new System.Windows.Forms.Label();
             this.labelPlanEntrenamiento = new System.Windows.Forms.Label();
+            this.labelCoachAcargo = new System.Windows.Forms.Label();
+            this.labelTipoMembresia = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BRestaurarAlumno = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -279,7 +280,7 @@ namespace CapaPresentacion
             // 
             // BModificarAlumno
             // 
-            this.BModificarAlumno.BackColor = System.Drawing.Color.Green;
+            this.BModificarAlumno.BackColor = System.Drawing.Color.Gold;
             this.BModificarAlumno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BModificarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.BModificarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,27 +298,28 @@ namespace CapaPresentacion
             this.BModificarAlumno.Text = "Modificar datos";
             this.BModificarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BModificarAlumno.UseVisualStyleBackColor = false;
+            this.BModificarAlumno.Click += new System.EventHandler(this.BModificarAlumno_Click);
             // 
-            // BCuentaCorriente
+            // BListaDePagos
             // 
-            this.BCuentaCorriente.BackColor = System.Drawing.Color.Green;
-            this.BCuentaCorriente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BCuentaCorriente.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.BCuentaCorriente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BCuentaCorriente.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCuentaCorriente.ForeColor = System.Drawing.Color.White;
-            this.BCuentaCorriente.IconChar = FontAwesome.Sharp.IconChar.Receipt;
-            this.BCuentaCorriente.IconColor = System.Drawing.Color.White;
-            this.BCuentaCorriente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BCuentaCorriente.IconSize = 30;
-            this.BCuentaCorriente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BCuentaCorriente.Location = new System.Drawing.Point(594, 61);
-            this.BCuentaCorriente.Name = "BCuentaCorriente";
-            this.BCuentaCorriente.Size = new System.Drawing.Size(184, 35);
-            this.BCuentaCorriente.TabIndex = 29;
-            this.BCuentaCorriente.Text = "Lista de pagos";
-            this.BCuentaCorriente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BCuentaCorriente.UseVisualStyleBackColor = false;
+            this.BListaDePagos.BackColor = System.Drawing.Color.Gold;
+            this.BListaDePagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BListaDePagos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BListaDePagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BListaDePagos.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BListaDePagos.ForeColor = System.Drawing.Color.White;
+            this.BListaDePagos.IconChar = FontAwesome.Sharp.IconChar.Receipt;
+            this.BListaDePagos.IconColor = System.Drawing.Color.White;
+            this.BListaDePagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BListaDePagos.IconSize = 30;
+            this.BListaDePagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BListaDePagos.Location = new System.Drawing.Point(594, 61);
+            this.BListaDePagos.Name = "BListaDePagos";
+            this.BListaDePagos.Size = new System.Drawing.Size(184, 35);
+            this.BListaDePagos.TabIndex = 29;
+            this.BListaDePagos.Text = "Lista de pagos";
+            this.BListaDePagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BListaDePagos.UseVisualStyleBackColor = false;
             // 
             // BCobrarCuota
             // 
@@ -341,26 +343,28 @@ namespace CapaPresentacion
             this.BCobrarCuota.UseVisualStyleBackColor = false;
             this.BCobrarCuota.Click += new System.EventHandler(this.BCobrarCuota_Click);
             // 
-            // iconButton1
+            // BbajaAlumno
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.Red;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(594, 400);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(184, 35);
-            this.iconButton1.TabIndex = 31;
-            this.iconButton1.Text = "Dar de baja";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.BbajaAlumno.BackColor = System.Drawing.Color.Red;
+            this.BbajaAlumno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BbajaAlumno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BbajaAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BbajaAlumno.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BbajaAlumno.ForeColor = System.Drawing.Color.White;
+            this.BbajaAlumno.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.BbajaAlumno.IconColor = System.Drawing.Color.White;
+            this.BbajaAlumno.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BbajaAlumno.IconSize = 30;
+            this.BbajaAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BbajaAlumno.Location = new System.Drawing.Point(594, 400);
+            this.BbajaAlumno.Name = "BbajaAlumno";
+            this.BbajaAlumno.Size = new System.Drawing.Size(184, 35);
+            this.BbajaAlumno.TabIndex = 31;
+            this.BbajaAlumno.Text = "Dar de baja";
+            this.BbajaAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BbajaAlumno.UseVisualStyleBackColor = false;
+            this.BbajaAlumno.Visible = false;
+            this.BbajaAlumno.Click += new System.EventHandler(this.BbajaAlumno_Click);
             // 
             // groupBox2
             // 
@@ -376,49 +380,16 @@ namespace CapaPresentacion
             this.groupBox2.TabIndex = 34;
             this.groupBox2.TabStop = false;
             // 
-            // label1
+            // labelPlanEntrenamiento
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 20);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Membresia:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(6, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
-            this.label2.TabIndex = 31;
-            this.label2.Text = "Coach a cargo:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label5.Location = new System.Drawing.Point(6, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(172, 20);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "Plan de entrenamiento:";
-            // 
-            // labelTipoMembresia
-            // 
-            this.labelTipoMembresia.AutoSize = true;
-            this.labelTipoMembresia.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTipoMembresia.ForeColor = System.Drawing.Color.Black;
-            this.labelTipoMembresia.Location = new System.Drawing.Point(103, 16);
-            this.labelTipoMembresia.Name = "labelTipoMembresia";
-            this.labelTipoMembresia.Size = new System.Drawing.Size(67, 20);
-            this.labelTipoMembresia.TabIndex = 33;
-            this.labelTipoMembresia.Text = "Sin dato.";
+            this.labelPlanEntrenamiento.AutoSize = true;
+            this.labelPlanEntrenamiento.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPlanEntrenamiento.ForeColor = System.Drawing.Color.Black;
+            this.labelPlanEntrenamiento.Location = new System.Drawing.Point(184, 83);
+            this.labelPlanEntrenamiento.Name = "labelPlanEntrenamiento";
+            this.labelPlanEntrenamiento.Size = new System.Drawing.Size(67, 20);
+            this.labelPlanEntrenamiento.TabIndex = 35;
+            this.labelPlanEntrenamiento.Text = "Sin dato.";
             // 
             // labelCoachAcargo
             // 
@@ -431,29 +402,86 @@ namespace CapaPresentacion
             this.labelCoachAcargo.TabIndex = 34;
             this.labelCoachAcargo.Text = "Sin dato.";
             // 
-            // labelPlanEntrenamiento
+            // labelTipoMembresia
             // 
-            this.labelPlanEntrenamiento.AutoSize = true;
-            this.labelPlanEntrenamiento.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPlanEntrenamiento.ForeColor = System.Drawing.Color.Black;
-            this.labelPlanEntrenamiento.Location = new System.Drawing.Point(184, 83);
-            this.labelPlanEntrenamiento.Name = "labelPlanEntrenamiento";
-            this.labelPlanEntrenamiento.Size = new System.Drawing.Size(67, 20);
-            this.labelPlanEntrenamiento.TabIndex = 35;
-            this.labelPlanEntrenamiento.Text = "Sin dato.";
+            this.labelTipoMembresia.AutoSize = true;
+            this.labelTipoMembresia.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTipoMembresia.ForeColor = System.Drawing.Color.Black;
+            this.labelTipoMembresia.Location = new System.Drawing.Point(103, 16);
+            this.labelTipoMembresia.Name = "labelTipoMembresia";
+            this.labelTipoMembresia.Size = new System.Drawing.Size(67, 20);
+            this.labelTipoMembresia.TabIndex = 33;
+            this.labelTipoMembresia.Text = "Sin dato.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label5.Location = new System.Drawing.Point(6, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(172, 20);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Plan de entrenamiento:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Location = new System.Drawing.Point(6, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Coach a cargo:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Membresia:";
+            // 
+            // BRestaurarAlumno
+            // 
+            this.BRestaurarAlumno.BackColor = System.Drawing.Color.Green;
+            this.BRestaurarAlumno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BRestaurarAlumno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BRestaurarAlumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BRestaurarAlumno.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BRestaurarAlumno.ForeColor = System.Drawing.Color.White;
+            this.BRestaurarAlumno.IconChar = FontAwesome.Sharp.IconChar.ArrowUp;
+            this.BRestaurarAlumno.IconColor = System.Drawing.Color.White;
+            this.BRestaurarAlumno.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BRestaurarAlumno.IconSize = 30;
+            this.BRestaurarAlumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BRestaurarAlumno.Location = new System.Drawing.Point(594, 400);
+            this.BRestaurarAlumno.Name = "BRestaurarAlumno";
+            this.BRestaurarAlumno.Size = new System.Drawing.Size(184, 35);
+            this.BRestaurarAlumno.TabIndex = 35;
+            this.BRestaurarAlumno.Text = "Dar de alta";
+            this.BRestaurarAlumno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BRestaurarAlumno.UseVisualStyleBackColor = false;
+            this.BRestaurarAlumno.Visible = false;
+            this.BRestaurarAlumno.Click += new System.EventHandler(this.BRestaurarAlumno_Click);
             // 
             // FichaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 441);
+            this.ClientSize = new System.Drawing.Size(790, 445);
+            this.Controls.Add(this.BRestaurarAlumno);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.BbajaAlumno);
             this.Controls.Add(this.BCobrarCuota);
-            this.Controls.Add(this.BCuentaCorriente);
+            this.Controls.Add(this.BListaDePagos);
             this.Controls.Add(this.BModificarAlumno);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FichaAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FICHA DEL ALUMNO";
@@ -488,9 +516,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label labelObservacion;
         private System.Windows.Forms.Label label16;
         private FontAwesome.Sharp.IconButton BModificarAlumno;
-        private FontAwesome.Sharp.IconButton BCuentaCorriente;
+        private FontAwesome.Sharp.IconButton BListaDePagos;
         private FontAwesome.Sharp.IconButton BCobrarCuota;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton BbajaAlumno;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
@@ -498,5 +526,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label labelPlanEntrenamiento;
         private System.Windows.Forms.Label labelCoachAcargo;
         private System.Windows.Forms.Label labelTipoMembresia;
+        private FontAwesome.Sharp.IconButton BRestaurarAlumno;
     }
 }

@@ -68,5 +68,72 @@ namespace CapaDatos
             return resultado;
         }
 
+        public List<Pago> ListarPagos()
+        {
+            List<Pago> listaPagos = new List<Pago>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_LISTAR_PAGOS", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                conexion.Open();
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        Pago pago = new Pago
+                        {
+                            id_pago = Convert.ToInt32(dr["id_pago"]),
+                            id_usuario = new Usuario { id_usuario = Convert.ToInt32(dr["id_usuario"]) },
+                            id_alumno = new Alumno { id_alumno = Convert.ToInt32(dr["id_alumno"]) },
+                            id_medioPago = new MedioPago { id_medioPago = Convert.ToInt32(dr["id_medioPago"]) },
+                            fecha = dr["fecha"].ToString(),
+                            cantidad = Convert.ToDecimal(dr["cantidad"]),
+                            total = Convert.ToDecimal(dr["total"]),
+                            recargo = Convert.ToDecimal(dr["recargo"])
+                        };
+                        listaPagos.Add(pago);
+                    }
+                }
+            }
+
+            return listaPagos;
+        }
+
+
+
+        public List<PagoDetalle> ListarPagoDetalles(int idPago)
+        {
+            List<PagoDetalle> listaDetalles = new List<PagoDetalle>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_LISTAR_DETALLES_PAGO", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id_pago", idPago);
+
+                conexion.Open();
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    while (dr.Read())
+                    {
+                        PagoDetalle detalle = new PagoDetalle
+                        {
+                            id_pagoDetalle = Convert.ToInt32(dr["id_pagoDetalle"]),
+                            id_pago = new Pago { id_pago = Convert.ToInt32(dr["id_pago"]) },
+                            id_membresia = new Membresia { id_membresia = Convert.ToInt32(dr["id_membresia"]) },
+                            periodo = Convert.ToInt32(dr["periodo"]),
+                            monto = Convert.ToDecimal(dr["monto"])
+                        };
+                        listaDetalles.Add(detalle);
+                    }
+                }
+            }
+
+            return listaDetalles;
+        }
+
     }
 }
