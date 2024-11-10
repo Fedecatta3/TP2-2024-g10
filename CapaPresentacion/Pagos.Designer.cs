@@ -38,12 +38,12 @@ namespace CapaPresentacion
             this.labelCantPagos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Blimpiar = new FontAwesome.Sharp.IconButton();
+            this.Bbuscar = new FontAwesome.Sharp.IconButton();
+            this.dateTimePickerDesde = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
             this.dgvdata = new System.Windows.Forms.DataGridView();
             this.verFactura = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,53 +91,55 @@ namespace CapaPresentacion
             this.label13.Text = "LISTA DE PAGOS";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // iconButton2
+            // Blimpiar
             // 
-            this.iconButton2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.iconButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.Location = new System.Drawing.Point(830, 13);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(35, 24);
-            this.iconButton2.TabIndex = 44;
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton2.UseVisualStyleBackColor = false;
+            this.Blimpiar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Blimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Blimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Blimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Blimpiar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Blimpiar.ForeColor = System.Drawing.Color.White;
+            this.Blimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            this.Blimpiar.IconColor = System.Drawing.Color.White;
+            this.Blimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Blimpiar.IconSize = 25;
+            this.Blimpiar.Location = new System.Drawing.Point(830, 13);
+            this.Blimpiar.Name = "Blimpiar";
+            this.Blimpiar.Size = new System.Drawing.Size(35, 24);
+            this.Blimpiar.TabIndex = 44;
+            this.Blimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Blimpiar.UseVisualStyleBackColor = false;
+            this.Blimpiar.Click += new System.EventHandler(this.Blimpiar_Click);
             // 
-            // iconButton1
+            // Bbuscar
             // 
-            this.iconButton1.BackColor = System.Drawing.Color.LimeGreen;
-            this.iconButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconButton1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(779, 13);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(35, 24);
-            this.iconButton1.TabIndex = 43;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.Bbuscar.BackColor = System.Drawing.Color.LimeGreen;
+            this.Bbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Bbuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bbuscar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bbuscar.ForeColor = System.Drawing.Color.White;
+            this.Bbuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.Bbuscar.IconColor = System.Drawing.Color.White;
+            this.Bbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Bbuscar.IconSize = 20;
+            this.Bbuscar.Location = new System.Drawing.Point(779, 13);
+            this.Bbuscar.Name = "Bbuscar";
+            this.Bbuscar.Size = new System.Drawing.Size(35, 24);
+            this.Bbuscar.TabIndex = 43;
+            this.Bbuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Bbuscar.UseVisualStyleBackColor = false;
+            this.Bbuscar.Click += new System.EventHandler(this.Bbuscar_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerDesde
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(450, 13);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 24);
-            this.dateTimePicker1.TabIndex = 48;
+            this.dateTimePickerDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDesde.Location = new System.Drawing.Point(450, 13);
+            this.dateTimePickerDesde.Name = "dateTimePickerDesde";
+            this.dateTimePickerDesde.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePickerDesde.Size = new System.Drawing.Size(130, 24);
+            this.dateTimePickerDesde.TabIndex = 48;
             // 
             // label4
             // 
@@ -161,15 +163,15 @@ namespace CapaPresentacion
             this.label5.TabIndex = 51;
             this.label5.Text = "Hasta:";
             // 
-            // dateTimePicker2
+            // dateTimePickerHasta
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(643, 13);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.Size = new System.Drawing.Size(130, 24);
-            this.dateTimePicker2.TabIndex = 50;
+            this.dateTimePickerHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerHasta.Location = new System.Drawing.Point(643, 13);
+            this.dateTimePickerHasta.Name = "dateTimePickerHasta";
+            this.dateTimePickerHasta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePickerHasta.Size = new System.Drawing.Size(130, 24);
+            this.dateTimePickerHasta.TabIndex = 50;
             // 
             // dgvdata
             // 
@@ -180,7 +182,7 @@ namespace CapaPresentacion
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -237,7 +239,6 @@ namespace CapaPresentacion
             this.verFactura.HeaderText = "";
             this.verFactura.Name = "verFactura";
             this.verFactura.ReadOnly = true;
-            this.verFactura.Width = 5;
             // 
             // idPago
             // 
@@ -246,7 +247,6 @@ namespace CapaPresentacion
             this.idPago.ReadOnly = true;
             this.idPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idPago.Visible = false;
-            this.idPago.Width = 58;
             // 
             // alumno
             // 
@@ -257,7 +257,6 @@ namespace CapaPresentacion
             this.alumno.Name = "alumno";
             this.alumno.ReadOnly = true;
             this.alumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.alumno.Width = 59;
             // 
             // fecha
             // 
@@ -265,7 +264,6 @@ namespace CapaPresentacion
             this.fecha.Name = "fecha";
             this.fecha.ReadOnly = true;
             this.fecha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fecha.Width = 67;
             // 
             // subTotal
             // 
@@ -273,7 +271,6 @@ namespace CapaPresentacion
             this.subTotal.Name = "subTotal";
             this.subTotal.ReadOnly = true;
             this.subTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.subTotal.Width = 65;
             // 
             // recargo
             // 
@@ -281,7 +278,6 @@ namespace CapaPresentacion
             this.recargo.Name = "recargo";
             this.recargo.ReadOnly = true;
             this.recargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.recargo.Width = 67;
             // 
             // total
             // 
@@ -289,7 +285,6 @@ namespace CapaPresentacion
             this.total.Name = "total";
             this.total.ReadOnly = true;
             this.total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.total.Width = 45;
             // 
             // medioPago
             // 
@@ -297,7 +292,6 @@ namespace CapaPresentacion
             this.medioPago.Name = "medioPago";
             this.medioPago.ReadOnly = true;
             this.medioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.medioPago.Width = 67;
             // 
             // Pagos
             // 
@@ -305,13 +299,13 @@ namespace CapaPresentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 507);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePickerHasta);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerDesde);
             this.Controls.Add(this.labelCantPagos);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.iconButton2);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.Blimpiar);
+            this.Controls.Add(this.Bbuscar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.dgvdata);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -327,13 +321,13 @@ namespace CapaPresentacion
         #endregion
         private System.Windows.Forms.Label labelCantPagos;
         private System.Windows.Forms.Label label3;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton Blimpiar;
+        private FontAwesome.Sharp.IconButton Bbuscar;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDesde;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerHasta;
         private System.Windows.Forms.DataGridView dgvdata;
         private System.Windows.Forms.DataGridViewButtonColumn verFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPago;

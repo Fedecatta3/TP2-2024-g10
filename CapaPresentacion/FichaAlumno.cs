@@ -195,5 +195,15 @@ namespace CapaPresentacion
             // Recargar los datos del alumno
             FichaAlumno_Load(this, EventArgs.Empty);
         }
+
+        private void BListaDePagos_Click(object sender, EventArgs e)
+        {
+            using (var modal = new ListaPagosPorAlumno(alumno))
+            {
+
+                var resultado = modal.ShowDialog();
+
+            }
+        }
     }
 }

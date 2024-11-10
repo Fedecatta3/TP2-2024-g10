@@ -33,6 +33,8 @@ namespace CapaPresentacion
         {
             if(usuarioActual.id_rol.id_rol == 2) //Usuario Administrador ve todos los planes
             {
+                BNuevoPlan.Visible = false;
+
                 List<PlanEntrenamiento> listaPlanes = objCN_PlanEntrenamiento.Listar();
 
                 dgvdataListaPlanes.Rows.Clear();

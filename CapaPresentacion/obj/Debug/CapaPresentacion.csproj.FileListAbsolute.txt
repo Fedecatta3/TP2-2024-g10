@@ -291,3 +291,4 @@ C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\itextsha
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\bin\Debug\itextsharp.xml
 C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.DetalleDePago.resources
+C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\CapaPresentacion\obj\Debug\CapaPresentacion.ListaPagosPorAlumno.resources

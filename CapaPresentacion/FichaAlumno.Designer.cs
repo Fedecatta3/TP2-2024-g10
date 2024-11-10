@@ -320,6 +320,7 @@ namespace CapaPresentacion
             this.BListaDePagos.Text = "Lista de pagos";
             this.BListaDePagos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BListaDePagos.UseVisualStyleBackColor = false;
+            this.BListaDePagos.Click += new System.EventHandler(this.BListaDePagos_Click);
             // 
             // BCobrarCuota
             // 
