@@ -36,11 +36,23 @@
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.100.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.100.0\lib\netstandard2.0\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.6.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="FontAwesome.Sharp.Fakes">
       <HintPath>FakesAssemblies\FontAwesome.Sharp.Fakes.dll</HintPath>
+    </Reference>
+    <Reference Include="Irony, Version=1.0.11.0, Culture=neutral, PublicKeyToken=ca48ace7223ead47, processorArchitecture=MSIL">
+      <HintPath>..\packages\Irony.NetCore.1.0.11\lib\net461\Irony.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
@@ -53,10 +65,32 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="SixLabors.Fonts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>..\packages\SixLabors.Fonts.1.0.0\lib\netstandard2.0\SixLabors.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Data.SqlXml" />
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,93 +101,140 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
+    <Reference Include="XLParser, Version=1.5.2.0, Culture=neutral, PublicKeyToken=63397e1e46bb91b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\XLParser.1.5.2\lib\net461\XLParser.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarCoachAlPlan.cs" />
+    <Compile Include="AgregarCoachAlPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregarCoachAlPlan.Designer.cs">
       <DependentUpon>AgregarCoachAlPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarHorarioUsuario.cs" />
+    <Compile Include="AgregarHorarioUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AgregarHorarioUsuario.Designer.cs">
       <DependentUpon>AgregarHorarioUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="BackUp.cs" />
+    <Compile Include="BackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BackUp.Designer.cs">
       <DependentUpon>BackUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="CobrarCuotaAlumno.cs" />
+    <Compile Include="CobrarCuotaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CobrarCuotaAlumno.Designer.cs">
       <DependentUpon>CobrarCuotaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetalleDePago.cs" />
+    <Compile Include="DetalleDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DetalleDePago.Designer.cs">
       <DependentUpon>DetalleDePago.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetallesPlanEntrenamiento.cs" />
+    <Compile Include="DetallesPlanEntrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DetallesPlanEntrenamiento.Designer.cs">
       <DependentUpon>DetallesPlanEntrenamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="FichaAlumno.cs" />
+    <Compile Include="FichaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FichaAlumno.Designer.cs">
       <DependentUpon>FichaAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicio.cs" />
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaAlumnos.cs" />
+    <Compile Include="ListaAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListaAlumnos.Designer.cs">
       <DependentUpon>ListaAlumnos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaPagosPorAlumno.cs" />
+    <Compile Include="ListaPagosPorAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListaPagosPorAlumno.Designer.cs">
       <DependentUpon>ListaPagosPorAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaPlanesDeEntrenamiento.cs" />
+    <Compile Include="ListaPlanesDeEntrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ListaPlanesDeEntrenamiento.Designer.cs">
       <DependentUpon>ListaPlanesDeEntrenamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mantenimiento.cs" />
+    <Compile Include="Mantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Mantenimiento.Designer.cs">
       <DependentUpon>Mantenimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevaMembresia.cs" />
+    <Compile Include="NuevaMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevaMembresia.Designer.cs">
       <DependentUpon>NuevaMembresia.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoAlumno.cs" />
+    <Compile Include="NuevoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoAlumno.Designer.cs">
       <DependentUpon>NuevoAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoEjercicio.cs" />
+    <Compile Include="NuevoEjercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoEjercicio.Designer.cs">
       <DependentUpon>NuevoEjercicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoMedioPago.cs" />
+    <Compile Include="NuevoMedioPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoMedioPago.Designer.cs">
       <DependentUpon>NuevoMedioPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoPlanEntrenamiento.cs" />
+    <Compile Include="NuevoPlanEntrenamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoPlanEntrenamiento.Designer.cs">
       <DependentUpon>NuevoPlanEntrenamiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevoUsuario.cs" />
+    <Compile Include="NuevoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="NuevoUsuario.Designer.cs">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pagos.cs" />
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Pagos.Designer.cs">
       <DependentUpon>Pagos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reportes.cs" />
+    <Compile Include="Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes.Designer.cs">
       <DependentUpon>Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usuarios.cs" />
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal.cs" />
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
