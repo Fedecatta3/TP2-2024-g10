@@ -29,12 +29,15 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.labelHasta = new System.Windows.Forms.Label();
+            this.dateTimePickerHasta = new System.Windows.Forms.DateTimePicker();
+            this.labelDesde = new System.Windows.Forms.Label();
+            this.dateTimePickerDesde = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cantUsuarios = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,8 +65,8 @@ namespace CapaPresentacion
             this.Bbuscar = new FontAwesome.Sharp.IconButton();
             this.comboBoxReportes = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.Blimpiar = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.BGenerarEXCEL = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -76,74 +79,98 @@ namespace CapaPresentacion
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
-            // label5
+            // labelHasta
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(636, 85);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 15);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Hasta:";
+            this.labelHasta.AutoSize = true;
+            this.labelHasta.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHasta.Location = new System.Drawing.Point(392, 83);
+            this.labelHasta.Name = "labelHasta";
+            this.labelHasta.Size = new System.Drawing.Size(42, 15);
+            this.labelHasta.TabIndex = 59;
+            this.labelHasta.Text = "Hasta:";
             // 
-            // dateTimePicker2
+            // dateTimePickerHasta
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(639, 102);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.Size = new System.Drawing.Size(130, 24);
-            this.dateTimePicker2.TabIndex = 58;
+            this.dateTimePickerHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerHasta.Location = new System.Drawing.Point(395, 100);
+            this.dateTimePickerHasta.Name = "dateTimePickerHasta";
+            this.dateTimePickerHasta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePickerHasta.Size = new System.Drawing.Size(130, 24);
+            this.dateTimePickerHasta.TabIndex = 58;
             // 
-            // label4
+            // labelDesde
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(493, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Desde:";
+            this.labelDesde.AutoSize = true;
+            this.labelDesde.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDesde.Location = new System.Drawing.Point(248, 83);
+            this.labelDesde.Name = "labelDesde";
+            this.labelDesde.Size = new System.Drawing.Size(46, 15);
+            this.labelDesde.TabIndex = 57;
+            this.labelDesde.Text = "Desde:";
             // 
-            // dateTimePicker1
+            // dateTimePickerDesde
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(496, 103);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 24);
-            this.dateTimePicker1.TabIndex = 56;
+            this.dateTimePickerDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDesde.Location = new System.Drawing.Point(252, 101);
+            this.dateTimePickerDesde.Name = "dateTimePickerDesde";
+            this.dateTimePickerDesde.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimePickerDesde.Size = new System.Drawing.Size(130, 24);
+            this.dateTimePickerDesde.TabIndex = 56;
             // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label13.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.OrangeRed;
             this.label13.Location = new System.Drawing.Point(12, 73);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(866, 64);
             this.label13.TabIndex = 53;
-            this.label13.Text = "REPORTES";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 144);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(866, 351);
-            this.dataGridView1.TabIndex = 52;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridView.Location = new System.Drawing.Point(12, 144);
+            this.dataGridView.MultiSelect = false;
+            this.dataGridView.Name = "dataGridView";
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(866, 351);
+            this.dataGridView.TabIndex = 52;
+            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel1
             // 
@@ -440,7 +467,7 @@ namespace CapaPresentacion
             this.Bbuscar.IconColor = System.Drawing.Color.White;
             this.Bbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Bbuscar.IconSize = 20;
-            this.Bbuscar.Location = new System.Drawing.Point(780, 101);
+            this.Bbuscar.Location = new System.Drawing.Point(536, 99);
             this.Bbuscar.Name = "Bbuscar";
             this.Bbuscar.Size = new System.Drawing.Size(35, 24);
             this.Bbuscar.TabIndex = 68;
@@ -454,9 +481,9 @@ namespace CapaPresentacion
             this.comboBoxReportes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxReportes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxReportes.FormattingEnabled = true;
-            this.comboBoxReportes.Location = new System.Drawing.Point(274, 103);
+            this.comboBoxReportes.Location = new System.Drawing.Point(25, 101);
             this.comboBoxReportes.Name = "comboBoxReportes";
-            this.comboBoxReportes.Size = new System.Drawing.Size(205, 26);
+            this.comboBoxReportes.Size = new System.Drawing.Size(209, 26);
             this.comboBoxReportes.TabIndex = 66;
             this.comboBoxReportes.SelectedIndexChanged += new System.EventHandler(this.comboBoxReportes_SelectedIndexChanged);
             // 
@@ -465,37 +492,41 @@ namespace CapaPresentacion
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(271, 85);
+            this.label14.Location = new System.Drawing.Point(22, 83);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 15);
             this.label14.TabIndex = 67;
             this.label14.Text = "Filtrar por:";
             // 
-            // Blimpiar
+            // BGenerarEXCEL
             // 
-            this.Blimpiar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.Blimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Blimpiar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Blimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Blimpiar.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Blimpiar.ForeColor = System.Drawing.Color.White;
-            this.Blimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            this.Blimpiar.IconColor = System.Drawing.Color.White;
-            this.Blimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.Blimpiar.IconSize = 25;
-            this.Blimpiar.Location = new System.Drawing.Point(832, 102);
-            this.Blimpiar.Name = "Blimpiar";
-            this.Blimpiar.Size = new System.Drawing.Size(35, 24);
-            this.Blimpiar.TabIndex = 69;
-            this.Blimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Blimpiar.UseVisualStyleBackColor = false;
+            this.BGenerarEXCEL.BackColor = System.Drawing.Color.OrangeRed;
+            this.BGenerarEXCEL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BGenerarEXCEL.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.BGenerarEXCEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BGenerarEXCEL.Font = new System.Drawing.Font("Microsoft PhagsPa", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BGenerarEXCEL.ForeColor = System.Drawing.Color.White;
+            this.BGenerarEXCEL.IconChar = FontAwesome.Sharp.IconChar.FileExcel;
+            this.BGenerarEXCEL.IconColor = System.Drawing.Color.White;
+            this.BGenerarEXCEL.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BGenerarEXCEL.IconSize = 25;
+            this.BGenerarEXCEL.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BGenerarEXCEL.Location = new System.Drawing.Point(713, 95);
+            this.BGenerarEXCEL.Name = "BGenerarEXCEL";
+            this.BGenerarEXCEL.Size = new System.Drawing.Size(159, 29);
+            this.BGenerarEXCEL.TabIndex = 70;
+            this.BGenerarEXCEL.Text = "EXPORTAR EN EXCEL";
+            this.BGenerarEXCEL.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BGenerarEXCEL.UseVisualStyleBackColor = false;
+            this.BGenerarEXCEL.Visible = false;
+            this.BGenerarEXCEL.Click += new System.EventHandler(this.BGenerarEXCEL_Click);
             // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 507);
-            this.Controls.Add(this.Blimpiar);
+            this.Controls.Add(this.BGenerarEXCEL);
             this.Controls.Add(this.Bbuscar);
             this.Controls.Add(this.comboBoxReportes);
             this.Controls.Add(this.label14);
@@ -504,17 +535,17 @@ namespace CapaPresentacion
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.labelHasta);
+            this.Controls.Add(this.dateTimePickerHasta);
+            this.Controls.Add(this.labelDesde);
+            this.Controls.Add(this.dateTimePickerDesde);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Reportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Reportes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
@@ -537,12 +568,12 @@ namespace CapaPresentacion
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label labelHasta;
+        private System.Windows.Forms.DateTimePicker dateTimePickerHasta;
+        private System.Windows.Forms.Label labelDesde;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDesde;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label cantUsuarios;
         private System.Windows.Forms.Label label1;
@@ -566,10 +597,10 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton Bbuscar;
         private System.Windows.Forms.ComboBox comboBoxReportes;
         private System.Windows.Forms.Label label14;
-        private FontAwesome.Sharp.IconButton Blimpiar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
+        private FontAwesome.Sharp.IconButton BGenerarEXCEL;
     }
 }

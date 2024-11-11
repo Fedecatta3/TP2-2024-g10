@@ -60,6 +60,7 @@
     <Compile Include="CN_Pago.cs" />
     <Compile Include="CN_permiso.cs" />
     <Compile Include="CN_PlanEntrenamiento.cs" />
+    <Compile Include="CN_Reportes.cs" />
     <Compile Include="CN_rol.cs" />
     <Compile Include="CN_usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

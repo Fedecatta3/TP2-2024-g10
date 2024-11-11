@@ -61,6 +61,13 @@
     <Compile Include="Permiso.cs" />
     <Compile Include="PlanEjercicio.cs" />
     <Compile Include="PlanEntrenamiento.cs" />
+    <Compile Include="ReporteAlumnosActivos.cs" />
+    <Compile Include="ReporteCoachs.cs" />
+    <Compile Include="ReporteDetallePlanesEntrenamiento.cs" />
+    <Compile Include="ReporteIngresosPorMedioPago.cs" />
+    <Compile Include="ReporteIngresosPorMembresia.cs" />
+    <Compile Include="ReportePagosPorAlumno.cs" />
+    <Compile Include="ReporteTotalIngresosMensuales.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Rol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

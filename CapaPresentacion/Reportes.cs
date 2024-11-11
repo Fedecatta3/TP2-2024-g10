@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Configuration;
-using System.Data.SqlClient;
+using CapaEntidad;
+using CapaNegocio;
+
 
 namespace CapaPresentacion
 {
@@ -25,19 +27,44 @@ namespace CapaPresentacion
 
         private void Reportes_Load(object sender, EventArgs e)
         {
+            dataGridView.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dataGridView.ReadOnly = true;
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.DefaultCellStyle.SelectionBackColor = dataGridView.DefaultCellStyle.BackColor;
+            dataGridView.DefaultCellStyle.SelectionForeColor = dataGridView.DefaultCellStyle.ForeColor;
+
             // Configuración del DataGridView
-            dataGridView1.AutoGenerateColumns = true; // Generar columnas automáticamente
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Seleccionar filas completas
+            dataGridView.AutoGenerateColumns = true; // Generar columnas automáticamente
+            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Seleccionar filas completas
 
             // Agregar los tipos de reportes al ComboBox
-            comboBoxReportes.Items.Clear();
+            /*comboBoxReportes.Items.Clear();
             string[] reportTypes = { "Pagos", "Alumnos", "Coachs", "Planes de entrenamiento" };
             foreach (string tipo in reportTypes)
             {
                 //int count = ObtenerCantidad(tipo);
                 comboBoxReportes.Items.Add($"{tipo}");
-            }
+            }*/
 
+
+            // Cargar los reportes en el ComboBox
+            comboBoxReportes.Items.Clear();
+            string[] reportTypes = { "Alumnos activos", "Lista de coachs", "Total ingresos mensuales",
+                             "Planes de entrenamiento", "Ingresos por medio de pago", "Lista de pagos", "Ingresos por membresia" };
+
+            comboBoxReportes.Items.AddRange(reportTypes);
+
+            // Inicialmente ocultar los DateTimePicker
+            dateTimePickerDesde.Visible = false;
+            dateTimePickerHasta.Visible = false;
+            labelDesde.Visible = false;
+            labelHasta.Visible = false;
+
+            Bbuscar.Visible = false;
+
+            // Suscribir al evento SelectedIndexChanged del ComboBox
+            comboBoxReportes.SelectedIndexChanged += comboBoxReportes_SelectedIndexChanged;
 
             // Actualizar contadores al cargar el formulario
             ActualizarContadorPagos();
@@ -143,7 +170,7 @@ namespace CapaPresentacion
                 {
                     connection.Open();
                     adapter.Fill(dataTable);
-                    dataGridView1.DataSource = dataTable; // Asignar el DataTable al DataGridView
+                    dataGridView.DataSource = dataTable; // Asignar el DataTable al DataGridView
                 }
                 catch (Exception ex)
                 {
@@ -190,8 +217,156 @@ namespace CapaPresentacion
         private void comboBoxReportes_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Cuando se selecciona un elemento en el ComboBox, llenar el DataGridView
-            string tipo = comboBoxReportes.SelectedItem.ToString().Split(' ')[0]; // Obtener solo el nombre del tipo
-            CargarDatos(tipo);
+            /*string tipo = comboBoxReportes.SelectedItem.ToString().Split(' ')[0]; // Obtener solo el nombre del tipo
+            CargarDatos(tipo);*/
+
+            // Obtener el reporte seleccionado
+            string reporteSeleccionado = comboBoxReportes.SelectedItem.ToString();
+
+            BGenerarEXCEL.Visible = true;
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Reportes que requieren un rango de fechas
+            if (reporteSeleccionado == "Lista de pagos" ||
+                reporteSeleccionado == "Ingresos por medio de pago" ||
+                reporteSeleccionado == "Ingresos por membresia")
+            {
+                // Activar DateTimePicker si el reporte necesita fechas
+                dateTimePickerDesde.Visible = true;
+                dateTimePickerHasta.Visible = true;
+                labelDesde.Visible = true;
+                labelHasta.Visible = true;
+
+                Bbuscar.Visible = true;
+            }
+            else
+            {
+                // Desactivar DateTimePicker si el reporte no necesita fechas
+                dateTimePickerDesde.Visible = false;
+                dateTimePickerHasta.Visible = false;
+                labelDesde.Visible = false;
+                labelHasta.Visible = false;
+                Bbuscar.Visible = false;
+
+                switch (reporteSeleccionado)
+                {
+                    case "Alumnos activos":
+                        reporteAlumnosActivos();
+                        break;
+
+                    case "Lista de coachs":
+                        reporteListaCoachs();
+                        break;
+
+                    case "Planes de entrenamiento":
+                        reportePlanesEntrenamiento();
+                        break;
+
+                    case "Total ingresos mensuales":
+                        reporteIngresosMensuales();
+                        break;
+
+                    default:
+                        
+                        break;
+                }
+            }
+        }
+
+        private void reporteAlumnosActivos()
+        {
+            List<ReporteAlumnosActivos> lista = new CN_Reportes().ObtenerReporteAlumnosActivos();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("Alumno", "Alumno");
+            dataGridView.Columns.Add("Dni", "DNI");
+            dataGridView.Columns.Add("FechaNacimiento", "Fecha Nacimiento");
+            dataGridView.Columns.Add("Sexo", "Sexo");
+            dataGridView.Columns.Add("Email", "Email");
+            dataGridView.Columns.Add("Telefono", "Telefono");
+            dataGridView.Columns.Add("Membresia", "Membresia");
+            dataGridView.Columns.Add("PlanEntrenamiento", "Plan de entrenamiento");
+            dataGridView.Columns.Add("CoachAcargo", "Coach a cargo");
+
+            // Cargar los registros
+            foreach (ReporteAlumnosActivos item in lista)
+            {
+                dataGridView.Rows.Add(new object[] {item.Alumno, item.Dni, item.FechaNacimiento, item.Sexo,
+                                 item.Email, item.Telefono, item.Membresia, item.PlanEntrenamiento, item.CoachAcargo});
+            }
+        }
+
+        private void reporteListaCoachs()
+        {
+            List<ReporteCoachs> lista = new CN_Reportes().ObtenerReporteCoachs();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("Coach", "Coach");
+            dataGridView.Columns.Add("Dni", "DNI");
+            dataGridView.Columns.Add("FechaNacimiento", "Fecha Nacimiento");
+            dataGridView.Columns.Add("Email", "Email");
+            dataGridView.Columns.Add("Telefono", "Telefono");
+            dataGridView.Columns.Add("CantidadAlumnos", "Cant de alumnos");
+            dataGridView.Columns.Add("CantidadPlanesEntrenamiento", "Cant de Planes de entrenamiento");
+
+            // Cargar los registros
+            foreach (ReporteCoachs item in lista)
+            {
+                dataGridView.Rows.Add(new object[] {item.Coach, item.Dni, item.FechaNacimiento,
+                                  item.Email, item.Telefono, item.CantidadAlumnos, item.CantidadPlanesEntrenamiento});
+            }
+        }
+
+        private void reportePlanesEntrenamiento()
+        {
+            List<ReporteDetallePlanesEntrenamiento> lista = new CN_Reportes().ObtenerReporteDetallePlanesEntrenamiento();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("PlanEntrenamiento", "Plan Entrenamiento");
+            dataGridView.Columns.Add("CantSeries", "Cant de Series");
+            dataGridView.Columns.Add("FechaInicio", "Fecha de inicio");
+            dataGridView.Columns.Add("FechaFin", "Fecha de fin");
+            dataGridView.Columns.Add("CantidadEjercicios", "Cant de Ejercicios");
+            dataGridView.Columns.Add("CantidadAlumnos", "Cant de alumnos");
+            dataGridView.Columns.Add("CantidadCoachsAsociados", "Cant de Coachs Asociados");
+
+            // Cargar los registros
+            foreach (ReporteDetallePlanesEntrenamiento item in lista)
+            {
+                dataGridView.Rows.Add(new object[] {item.PlanEntrenamiento, item.CantSeries, item.FechaInicio, item.FechaFin,
+                                                    item.CantidadEjercicios, item.CantidadAlumnos, item.CantidadCoachsAsociados});
+            }
+        }
+
+        private void reporteIngresosMensuales()
+        {
+            List<ReporteTotalIngresosMensuales> lista = new CN_Reportes().ObtenerReporteTotalIngresosMensuales();
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("año", "Año");
+            dataGridView.Columns.Add("mes", "Mes");
+            dataGridView.Columns.Add("CantPagosMensuales", "Cant de Pagos mensuales");
+            dataGridView.Columns.Add("TotalIngresos", "Total de Ingresos");
+
+            // Cargar los registros
+            foreach (ReporteTotalIngresosMensuales item in lista)
+            {
+                dataGridView.Rows.Add(new object[] {item.Año, item.Mes, item.CantPagosMensuales, "$ " + item.TotalIngresos});
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -200,12 +375,103 @@ namespace CapaPresentacion
             if (e.RowIndex >= 0)
             {
                 // Obtener la celda seleccionada
-                var cellValue = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                var cellValue = dataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
                 MessageBox.Show($"Has seleccionado: {cellValue}");
             }
         }
 
         private void Bbuscar_Click(object sender, EventArgs e)
+        {
+            string reporteSeleccionado = comboBoxReportes.SelectedItem?.ToString();
+
+            DateTime desde = dateTimePickerDesde.Value;
+            DateTime hasta = dateTimePickerHasta.Value;
+
+            if (desde > hasta)
+            {
+                MessageBox.Show("El valor 'desde' no puede ser superior del valor 'hasta'");
+                return;
+            }
+
+            switch (reporteSeleccionado)
+            {
+                case "Ingresos por medio de pago":
+                    reporteIngresosPorMedioDePago(desde, hasta);
+                    break;
+
+                case "Lista de pagos":
+                    reporteListadDePagos(desde, hasta);
+                    break;
+
+                case "Ingresos por membresia":
+                    reporteIngresosPorMembresia(desde, hasta);
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private void reporteIngresosPorMedioDePago(DateTime desde, DateTime hasta)
+        {
+            List<ReporteIngresosPorMedioPago> lista = new CN_Reportes().ObtenerReporteIngresosPorMedioPago(desde, hasta);
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("MedioDePago", "Medio De Pago");
+            dataGridView.Columns.Add("TotalRecaudado", "Total Recaudado");
+            dataGridView.Columns.Add("CantidadTransacciones", "Cantidad Transacciones");
+
+            // Cargar los registros
+            foreach (ReporteIngresosPorMedioPago item in lista)
+            {
+                dataGridView.Rows.Add(new object[] {item.MedioDePago, "$ " + item.TotalRecaudado, item.CantidadTransacciones });
+            }
+        }
+
+        private void reporteListadDePagos(DateTime desde, DateTime hasta)
+        {
+            List<ReportePagosPorAlumno> lista = new CN_Reportes().ObtenerReportePagosPorAlumno(desde, hasta);
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("Alumno", "Alumno");
+            dataGridView.Columns.Add("Fecha", "Fecha");
+            dataGridView.Columns.Add("Total", "Total");
+            dataGridView.Columns.Add("MedioDePago", "Medio De Pago");
+            dataGridView.Columns.Add("Membresia", "Membresia");
+
+            // Cargar los registros
+            foreach (ReportePagosPorAlumno item in lista)
+            {
+                dataGridView.Rows.Add(new object[] { item.Alumno, item.Fecha, "$ " + item.Total, item.MedioDePago, item.Membresia });
+            }
+        }
+
+        private void reporteIngresosPorMembresia(DateTime desde, DateTime hasta)
+        {
+            List<ReporteIngresosPorMembresia> lista = new CN_Reportes().ObtenerReporteIngresosPorMembresia(desde, hasta);
+
+            dataGridView.Columns.Clear();
+            dataGridView.Rows.Clear();
+
+            // Agregar columnas de forma individual
+            dataGridView.Columns.Add("Membresia", "Membresia");
+            dataGridView.Columns.Add("duracion", "Duracion");
+            dataGridView.Columns.Add("Ingreso", "Ingreso");
+
+            // Cargar los registros
+            foreach (ReporteIngresosPorMembresia item in lista)
+            {
+                dataGridView.Rows.Add(new object[] { item.Membresia, item.Duracion + " dias", "$ " + item.Ingreso});
+            }
+        }
+
+        private void BGenerarEXCEL_Click(object sender, EventArgs e)
         {
 
         }
