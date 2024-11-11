@@ -33,10 +33,6 @@ namespace CapaPresentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxRecargo = new System.Windows.Forms.TextBox();
             this.BCobrarInscripcion = new FontAwesome.Sharp.IconButton();
@@ -52,6 +48,9 @@ namespace CapaPresentacion
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.NombreAlumno = new System.Windows.Forms.Label();
+            this.Membresia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Monto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,8 +73,7 @@ namespace CapaPresentacion
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Membresia,
             this.Periodo,
-            this.Monto,
-            this.Cantidad});
+            this.Monto});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,26 +97,6 @@ namespace CapaPresentacion
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.Size = new System.Drawing.Size(765, 214);
             this.dataGridView1.TabIndex = 20;
-            // 
-            // Membresia
-            // 
-            this.Membresia.HeaderText = "Membresia";
-            this.Membresia.Name = "Membresia";
-            // 
-            // Periodo
-            // 
-            this.Periodo.HeaderText = "Periodo";
-            this.Periodo.Name = "Periodo";
-            // 
-            // Monto
-            // 
-            this.Monto.HeaderText = "Monto";
-            this.Monto.Name = "Monto";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
             // 
             // label1
             // 
@@ -303,6 +281,21 @@ namespace CapaPresentacion
             this.NombreAlumno.TabIndex = 65;
             this.NombreAlumno.Text = "Nombre completo - DNI";
             // 
+            // Membresia
+            // 
+            this.Membresia.HeaderText = "Membresia";
+            this.Membresia.Name = "Membresia";
+            // 
+            // Periodo
+            // 
+            this.Periodo.HeaderText = "Periodo";
+            this.Periodo.Name = "Periodo";
+            // 
+            // Monto
+            // 
+            this.Monto.HeaderText = "Monto";
+            this.Monto.Name = "Monto";
+            // 
             // CobrarCuotaAlumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,6 +343,5 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn Membresia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Periodo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Monto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
     }
 }

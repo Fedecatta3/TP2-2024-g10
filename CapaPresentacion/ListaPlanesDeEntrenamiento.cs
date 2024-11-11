@@ -46,7 +46,10 @@ namespace CapaPresentacion
                     item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
                 }
 
-            }else if(usuarioActual.id_rol.id_rol == 3) // Usuario coach ve solo sus planes
+                dgvdataListaPlanes.Columns["editar"].Visible = false;
+                dgvdataListaPlanes.Columns["eliminar"].Visible = false;
+            }
+            else if(usuarioActual.id_rol.id_rol == 3) // Usuario coach ve solo sus planes
             {
                 labelTITULO.Text = "MIS PLANES";
 

@@ -28,12 +28,40 @@ namespace CapaPresentacion
 
         private void BCobrarCuota_Click(object sender, EventArgs e)
         {
-            /*
-            //Modal para cobrar cuota del alumno
-            using (var modal = new CobrarCuotaAlumno())
+            List<Alumno> listaAlumnos = objCN_Alumno.Listar();
+
+            foreach (Alumno item in listaAlumnos)
             {
-                var resultado = modal.ShowDialog();
-            }*/
+                if (item.id_alumno == alumno)
+                {
+                    // Crear un objeto Alumno 
+                    Alumno objAlumno = new Alumno
+                    {
+                        id_alumno = item.id_alumno,
+                        id_usuario = item.id_usuario,
+                        id_membresia = item.id_membresia,
+                        id_plan = item.id_plan,
+                        nombre = item.nombre,
+                        apellido = item.apellido,
+                        email = item.email,
+                        telefono = item.telefono,
+                        foto = item.foto, 
+                        dni = item.dni,
+                        fecha_nacimiento = item.fecha_nacimiento,
+                        contacto_emergencia = item.contacto_emergencia,
+                        sexo = item.sexo,
+                        observaciones = item.observaciones,
+                        estado = item.estado
+                    };
+
+                    //Modal para cobrar cuota del alumno
+                    using (var modal = new CobrarCuotaAlumno(objAlumno, 1))
+                    {
+                        var resultado = modal.ShowDialog();
+                    }
+                }
+            }
+
         }
 
         private void FichaAlumno_Load(object sender, EventArgs e)

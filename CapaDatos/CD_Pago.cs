@@ -135,5 +135,42 @@ namespace CapaDatos
             return listaDetalles;
         }
 
+
+        public List<FechaAdeudada> ObtenerFechasAdeudadas(int idAlumno)
+        {
+            List<FechaAdeudada> fechas = new List<FechaAdeudada>();
+
+            using (SqlConnection conexion = new SqlConnection(Conexion.cadena))
+            {
+                SqlCommand cmd = new SqlCommand("SP_ObtenerFechasAdeudadas", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@id_alumno", idAlumno);
+
+                conexion.Open();
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                        // Leer los resultados
+                        while (reader.Read())
+                        {
+                            fechas.Add(new FechaAdeudada
+                            {
+                                IdAlumno = Convert.ToInt32(reader["id_alumno"]),
+                                Nombre = reader["nombre"].ToString(),
+                                Apellido = reader["apellido"].ToString(),
+                                DniAlumno = Convert.ToInt32(reader["dni"]),
+                                FechasAdeudada = Convert.ToDateTime(reader["fecha_adeudada"]),
+                                NombreMembresia = reader["nombreMembresia"].ToString(),
+                                CostoMembresia = Convert.ToDecimal(reader["costo"])
+                            });
+
+                        }
+                }
+
+            }
+                
+            return fechas;
+        }
     }
 }

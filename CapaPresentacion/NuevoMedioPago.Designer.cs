@@ -94,6 +94,7 @@ namespace CapaPresentacion
             this.textBoxID.Size = new System.Drawing.Size(24, 24);
             this.textBoxID.TabIndex = 60;
             this.textBoxID.Text = "0";
+            this.textBoxID.Visible = false;
             // 
             // label3
             // 

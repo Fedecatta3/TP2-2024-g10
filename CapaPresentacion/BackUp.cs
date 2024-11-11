@@ -81,7 +81,9 @@ namespace CapaPresentacion
                 using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-G37IKCE\SQLEXPRESS;Initial Catalog=GymMaster;Integrated Security=True"))
                 {
                     connection.Open();
-                    string query = $"BACKUP DATABASE [{nombreBaseDatos}] TO DISK = '{Path.Combine(rutaGuardado, "backup.bak")}'";
+                    string archivoBackup = Path.Combine(rutaGuardado, $"{nombreBaseDatos}_backup_{DateTime.Now:yyyyMMdd_HHmmss}.bak");
+                    string query = $"BACKUP DATABASE [{nombreBaseDatos}] TO DISK = '{archivoBackup}'";
+
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         command.ExecuteNonQuery();

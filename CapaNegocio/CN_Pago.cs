@@ -43,5 +43,12 @@ namespace CapaNegocio
         {
             return objPago.ListarPagoDetalles(idPago);
         }
+
+
+
+        public List<FechaAdeudada> ObtenerFechasAdeudadas(int idAlumno)
+        {
+            return objPago.ObtenerFechasAdeudadas(idAlumno);
+        }
     }
 }

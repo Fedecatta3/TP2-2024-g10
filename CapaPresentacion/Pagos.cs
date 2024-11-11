@@ -38,7 +38,7 @@ namespace CapaPresentacion
                 var alumno = listaAlumnos.FirstOrDefault(a => a.id_alumno == item.id_alumno.id_alumno);
                 var medioPago = listaMediosPago.FirstOrDefault(m => m.id_medioPago == item.id_medioPago.id_medioPago);
 
-                dgvdata.Rows.Add(new object[]{" Ver factura ", item.id_pago, alumno.nombre + " " + alumno.apellido,
+                dgvdata.Rows.Add(new object[]{" Ver factura ", item.id_pago, alumno.id_alumno, alumno.nombre + " " + alumno.apellido,
                                     item.fecha, "$ " + item.cantidad, "+ $ " + item.recargo, "$ " + item.total, medioPago.nombre});
             }
 
@@ -62,7 +62,9 @@ namespace CapaPresentacion
                 // Obtener el ID del pago de la fila seleccionada
                 int idPago = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idPago"].Value);
 
-                using (var modal = new DetalleDePago(idPago))
+                int idAlumno = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idAlumno"].Value);
+
+                using (var modal = new DetalleDePago(idPago, idAlumno))
                 {
                     // Mostrar el formulario como un modal
                     var resultado = modal.ShowDialog();

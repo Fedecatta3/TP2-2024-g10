@@ -42,14 +42,14 @@ namespace CapaPresentacion
                     if(item.id_usuario == usuarioActual.id_usuario)
                     {
                         dgvdata.Rows.Add(new object[]{"Ver ficha",item.id_alumno,item.nombre, item.apellido,item.dni,
-                        item.email,item.fecha_nacimiento.ToString("dd/MM/yyyy"),item.telefono, item.contacto_emergencia, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
+                        item.email,item.fecha_nacimiento.ToString("dd/MM/yyyy"),item.telefono, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
 
                     }
                 }
                 else
                 {
                     dgvdata.Rows.Add(new object[]{"Ver ficha",item.id_alumno,item.nombre, item.apellido,item.dni,
-                    item.email,item.fecha_nacimiento.ToString("dd/MM/yyyy"),item.telefono, item.contacto_emergencia, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
+                    item.email,item.fecha_nacimiento.ToString("dd/MM/yyyy"),item.telefono, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
 
                 }
             }

@@ -32,8 +32,8 @@ namespace CapaPresentacion
 
             foreach(Membresia item in listaMembresias)
             {
-                dataGridMembresias.Rows.Add("Editar", item.id_membresia, item.nombre, item.duracion, item.fecha_creacion.ToString("dd/MM/yyyy"),
-                    item.costo, item.estado == true ? "Activo" : "Inactivo");
+                dataGridMembresias.Rows.Add("Editar", item.id_membresia, item.nombre, item.duracion, 
+                    item.costo, item.fecha_creacion.ToString("dd/MM/yyyy"), item.estado == true ? "Activo" : "Inactivo");
             }
         }
 
@@ -90,8 +90,8 @@ namespace CapaPresentacion
                     id_membresia = Convert.ToInt32(dataGridMembresias.Rows[e.RowIndex].Cells["idMembresia"].Value),
                     nombre = dataGridMembresias.Rows[e.RowIndex].Cells["nombreMembresia"].Value.ToString(),
                     duracion = Convert.ToInt32(dataGridMembresias.Rows[e.RowIndex].Cells["duracion"].Value),
-                    fecha_creacion = DateTime.Parse(dataGridMembresias.Rows[e.RowIndex].Cells["fechaCreacionMemb"].Value.ToString()).Date,
                     costo = Convert.ToDecimal(dataGridMembresias.Rows[e.RowIndex].Cells["costo"].Value),
+                    fecha_creacion = DateTime.Parse(dataGridMembresias.Rows[e.RowIndex].Cells["fechaCreacionMemb"].Value.ToString()).Date,
                     estado = dataGridMembresias.Rows[e.RowIndex].Cells["estado"].Value.ToString() == "Activo"
                 };
 
@@ -114,7 +114,7 @@ namespace CapaPresentacion
 
         private void dataGridMediosPago_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridMediosPago.Columns["editar"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == dataGridMediosPago.Columns["accionMedioPago"].Index && e.RowIndex >= 0)
             {
                 MedioPago objMedioPago = new MedioPago()
                 {

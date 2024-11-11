@@ -316,7 +316,7 @@ namespace CapaPresentacion
                     };
 
                     //Modal para cobrar la inscripcion del alumno
-                    using (var modal = new CobrarCuotaAlumno(alumnoCreado))
+                    using (var modal = new CobrarCuotaAlumno(alumnoCreado, 0))
                     {
                         var resultado = modal.ShowDialog();
 

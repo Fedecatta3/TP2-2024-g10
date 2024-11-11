@@ -22,14 +22,16 @@ namespace CapaPresentacion
     public partial class CobrarCuotaAlumno : Form
     {
         private Alumno objAlumno;
+        private int valor_; // para identificar si se trata de una inscripcion(0) o cobro de cuota(1)
 
         private decimal comisionPorcentaje = 0; // Variable para almacenar la comisión
 
-        public CobrarCuotaAlumno(Alumno alumno)
+        public CobrarCuotaAlumno(Alumno alumno, int valor)
         {
             InitializeComponent();
 
             objAlumno = alumno;
+            valor_ = valor;
 
             NombreAlumno.Text = objAlumno.nombre + " " + objAlumno.apellido + " - " + objAlumno.dni;
 
@@ -41,8 +43,14 @@ namespace CapaPresentacion
 
             cargarMediosDePago();
 
-            cargarDataGridPago();
-
+            if(valor_ == 0)
+            {
+                cargarDataGridInscripcion();
+            }
+            else if(valor_ == 1)
+            {
+                cargarDataGridCobroCuota();
+            }
 
             dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dataGridView1.ReadOnly = true;
@@ -72,8 +80,10 @@ namespace CapaPresentacion
             comboBoxFormaPago.ValueMember = "Value";  
         }
 
-        private void cargarDataGridPago()
+        private void cargarDataGridInscripcion()
         {
+            dataGridView1.Rows.Clear();
+
             List<Membresia> listaMembresias = new CN_membresia().Listar();
 
             foreach (Membresia item in listaMembresias)
@@ -83,7 +93,34 @@ namespace CapaPresentacion
                     // Obtener el mes actual como nombre
                     string mesActual = DateTime.Now.ToString("MMMM");
 
-                    dataGridView1.Rows.Add(item.nombre, mesActual, item.costo, "1");
+                    dataGridView1.Rows.Add(item.nombre, mesActual, item.costo);
+                }
+            }
+
+            SumarMontos();
+        }
+
+        private void cargarDataGridCobroCuota()
+        {
+            dataGridView1.Rows.Clear();
+
+
+            List<FechaAdeudada> listaPagos = new CN_Pago().ObtenerFechasAdeudadas(objAlumno.id_alumno);
+
+            if(listaPagos.Count == 0)
+            {
+                MessageBox.Show("El alumno no tiene pagos pendientes.", " ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+
+            foreach (FechaAdeudada item in listaPagos)
+            {
+                if (item.IdAlumno == objAlumno.id_alumno)
+                {
+                    // Obtener solo el nombre del mes
+                    string mesAdeudado = item.FechasAdeudada.ToString("MMMM");
+
+                    dataGridView1.Rows.Add(item.NombreMembresia, mesAdeudado, item.CostoMembresia);
                 }
             }
 
@@ -174,18 +211,19 @@ namespace CapaPresentacion
                 this.DialogResult = DialogResult.OK;
 
                 // GENERAR ARCHIVO PDF
-                string rutaGuardado = @"C:\Users\RODRIGUEZ\source\repos\TP2-2024-g10\PdfsDePagos\"; //Ruta donde se guardaran los pdf generados
+                string carpetaGuardado = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PdfsDePagos");
 
                 // Nombre del archivo con formato de fecha, hora actual, nombre y apellido del alumno
                 string nombreArchivo = $"{DateTime.Now:ddMMyyHHmmss}_{objAlumno.nombre}_{objAlumno.apellido}.pdf";
-                string rutaCompleta = Path.Combine(rutaGuardado, nombreArchivo);
+                string rutaCompleta = Path.Combine(carpetaGuardado, nombreArchivo);
 
                 // Si la carpeta no existe se crea una nueva
-                if (!Directory.Exists(rutaGuardado))
+                if (!Directory.Exists(carpetaGuardado))
                 {
-                    Directory.CreateDirectory(rutaGuardado);
+                    Directory.CreateDirectory(carpetaGuardado);
                 }
 
+               
 
                 // Estructura de la factura
                 string paginaHTML = Properties.Resources.plantilla.ToString();
@@ -220,12 +258,12 @@ namespace CapaPresentacion
                     filas += "<td>" + row.Cells["Membresia"].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells["Periodo"].Value.ToString() + "</td>";
                     filas += "<td>" + row.Cells["Monto"].Value.ToString() + "</td>";
-                    filas += "<td>" + row.Cells["Cantidad"].Value.ToString() + "</td>";
                     filas += "</tr>";
                 }
                 paginaHTML = paginaHTML.Replace("@filas", filas);
 
 
+                MessageBox.Show("Generando factura...", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 try
                 {
                     //Archivo de memoria
@@ -245,8 +283,6 @@ namespace CapaPresentacion
                         }
 
                         pdfDoc.Close();
-
-                        //stream.Close();
                     }
 
                     // Abrir el archivo PDF automáticamente

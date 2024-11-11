@@ -103,15 +103,15 @@ namespace CapaPresentacion
         private void textBoxComision_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Solo admite números y un punto decimal
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ',')
             {
-                e.Handled = true; // Ignora la tecla si no es número, backspace o punto
+                e.Handled = true; // Ignora la tecla si no es número, backspace o coma
             }
 
             // Verifica que solo haya un punto decimal
-            if (e.KeyChar == '.' && ((TextBox)sender).Text.Contains("."))
+            if (e.KeyChar == '.' && ((TextBox)sender).Text.Contains(","))
             {
-                e.Handled = true; // Ignora la tecla si ya hay un punto
+                e.Handled = true; // Ignora la tecla si ya hay una coma
             }
         }
 

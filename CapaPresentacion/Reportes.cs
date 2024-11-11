@@ -13,6 +13,8 @@ using System.Data.SqlClient;
 using CapaEntidad;
 using CapaNegocio;
 
+using ClosedXML.Excel;
+using System.IO;
 
 namespace CapaPresentacion
 {
@@ -352,6 +354,23 @@ namespace CapaPresentacion
 
         private void reporteIngresosMensuales()
         {
+            // Diccionario para mapear los números a los nombres de los meses
+            Dictionary<int, string> meses = new Dictionary<int, string>
+            {
+                { 1, "Enero" },
+                { 2, "Febrero" },
+                { 3, "Marzo" },
+                { 4, "Abril" },
+                { 5, "Mayo" },
+                { 6, "Junio" },
+                { 7, "Julio" },
+                { 8, "Agosto" },
+                { 9, "Septiembre" },
+                { 10, "Octubre" },
+                { 11, "Noviembre" },
+                { 12, "Diciembre" }
+            };
+
             List<ReporteTotalIngresosMensuales> lista = new CN_Reportes().ObtenerReporteTotalIngresosMensuales();
 
             dataGridView.Columns.Clear();
@@ -366,7 +385,10 @@ namespace CapaPresentacion
             // Cargar los registros
             foreach (ReporteTotalIngresosMensuales item in lista)
             {
-                dataGridView.Rows.Add(new object[] {item.Año, item.Mes, item.CantPagosMensuales, "$ " + item.TotalIngresos});
+                // Obtén el nombre del mes a partir del diccionario
+                string nombreMes = meses.ContainsKey(item.Mes) ? meses[item.Mes] : "Mes desconocido";
+
+                dataGridView.Rows.Add(new object[] {item.Año, nombreMes, item.CantPagosMensuales, "$ " + item.TotalIngresos});
             }
         }
 
@@ -474,7 +496,74 @@ namespace CapaPresentacion
 
         private void BGenerarEXCEL_Click(object sender, EventArgs e)
         {
+            if(dataGridView.Rows.Count < 1)
+            {
+                MessageBox.Show("No hay datos para exportar", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                string reporteSeleccionado = comboBoxReportes.SelectedItem?.ToString();
 
+                DataTable dt = new DataTable();
+
+                // Insercion de cabeceras en el excel
+                foreach (DataGridViewColumn columna in dataGridView.Columns)
+                {
+                    if(columna.HeaderText != "") //columnas que tienen encabezado
+                    {
+                        dt.Columns.Add(columna.HeaderText, typeof(string));
+                    }
+                }
+
+                // Insercion de filas
+                foreach(DataGridViewRow fila in dataGridView.Rows)
+                {
+                    if (fila.Visible) // solo filas que estan visibles
+                    {
+                        // Array para almacenar las celdas de la fila
+                        object[] rowData = new object[dataGridView.Columns.Count];
+
+                        // Recorrer las columnas de la fila y agregar cada celda al array
+                        for (int i = 0; i < dataGridView.Columns.Count; i++)
+                        {
+                            rowData[i] = fila.Cells[i].Value?.ToString() ?? ""; // Manejar celdas nulas
+                        }
+
+                        dt.Rows.Add(rowData);
+                    }
+                }
+
+                // Obtener la ruta relativa a la carpeta "Reportes" dentro del proyecto
+                string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Reportes");
+
+                // Crear la carpeta "Reportes" si no existe
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                // Ruta de guardado dentro de la carpeta "Reportes"
+                string rutaGuardado = Path.Combine(folderPath, $"REPORTE_{reporteSeleccionado}_{DateTime.Now:ddMMyyyyHHmmss}.xlsx");
+
+
+                MessageBox.Show("Generando archivo Excel...", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    XLWorkbook wb = new XLWorkbook();
+                    var hoja = wb.Worksheets.Add(dt, "Informe");
+                    hoja.ColumnsUsed().AdjustToContents();
+                    wb.SaveAs(rutaGuardado);
+
+                    // Abrir automáticamente el archivo generado
+                    System.Diagnostics.Process.Start("explorer.exe", rutaGuardado);
+
+                    //MessageBox.Show("Reporte generado y abierto", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al generar el reporte: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
         }
     }
 }

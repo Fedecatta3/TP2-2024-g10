@@ -29,17 +29,17 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelTITULO = new System.Windows.Forms.Label();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
@@ -47,6 +47,9 @@ namespace CapaPresentacion
             this.labelCantidad = new System.Windows.Forms.Label();
             this.BNuevoAlumno = new FontAwesome.Sharp.IconButton();
             this.dgvdata = new System.Windows.Forms.DataGridView();
+            this.LnombreColumna = new System.Windows.Forms.Label();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
+            this.LBuscar = new System.Windows.Forms.Label();
             this.verFicha = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,12 +58,8 @@ namespace CapaPresentacion
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contactoEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LnombreColumna = new System.Windows.Forms.Label();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
-            this.LBuscar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,19 +166,19 @@ namespace CapaPresentacion
             this.dgvdata.AllowUserToDeleteRows = false;
             this.dgvdata.AllowUserToResizeColumns = false;
             this.dgvdata.AllowUserToResizeRows = false;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
-            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.verFicha,
@@ -190,29 +189,28 @@ namespace CapaPresentacion
             this.email,
             this.FechaNacimiento,
             this.dataGridViewTextBoxColumn4,
-            this.contactoEmergencia,
             this.sexo,
             this.Estado});
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvdata.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvdata.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvdata.Location = new System.Drawing.Point(12, 51);
             this.dgvdata.MultiSelect = false;
             this.dgvdata.Name = "dgvdata";
             this.dgvdata.ReadOnly = true;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdata.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvdata.RowHeadersWidth = 30;
             this.dgvdata.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dgvdata.RowTemplate.Height = 30;
@@ -221,116 +219,6 @@ namespace CapaPresentacion
             this.dgvdata.TabIndex = 41;
             this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
             this.dgvdata.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdata_ColumnHeaderMouseClick);
-            // 
-            // verFicha
-            // 
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.Black;
-            this.verFicha.DefaultCellStyle = dataGridViewCellStyle36;
-            this.verFicha.HeaderText = "";
-            this.verFicha.Name = "verFicha";
-            this.verFicha.ReadOnly = true;
-            this.verFicha.Width = 5;
-            // 
-            // idAlumno
-            // 
-            this.idAlumno.HeaderText = "ID";
-            this.idAlumno.Name = "idAlumno";
-            this.idAlumno.ReadOnly = true;
-            this.idAlumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.idAlumno.Visible = false;
-            this.idAlumno.Width = 25;
-            // 
-            // Nombre
-            // 
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.Black;
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle37;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 63;
-            // 
-            // Apellido
-            // 
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Apellido.Width = 64;
-            // 
-            // dni
-            // 
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.Black;
-            this.dni.DefaultCellStyle = dataGridViewCellStyle38;
-            this.dni.HeaderText = "DNI";
-            this.dni.Name = "dni";
-            this.dni.ReadOnly = true;
-            this.dni.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dni.Width = 37;
-            // 
-            // email
-            // 
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Black;
-            this.email.DefaultCellStyle = dataGridViewCellStyle39;
-            this.email.HeaderText = "E-mail";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.email.Width = 52;
-            // 
-            // FechaNacimiento
-            // 
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.Black;
-            this.FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle40;
-            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
-            this.FechaNacimiento.Name = "FechaNacimiento";
-            this.FechaNacimiento.ReadOnly = true;
-            this.FechaNacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.FechaNacimiento.Width = 111;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle41;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 68;
-            // 
-            // contactoEmergencia
-            // 
-            this.contactoEmergencia.HeaderText = "Contacto de emergencia";
-            this.contactoEmergencia.Name = "contactoEmergencia";
-            this.contactoEmergencia.ReadOnly = true;
-            this.contactoEmergencia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.contactoEmergencia.Width = 145;
-            // 
-            // sexo
-            // 
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            this.sexo.ReadOnly = true;
-            this.sexo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.sexo.Width = 45;
-            // 
-            // Estado
-            // 
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.Black;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle42;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Estado.Width = 57;
             // 
             // LnombreColumna
             // 
@@ -364,6 +252,98 @@ namespace CapaPresentacion
             this.LBuscar.TabIndex = 52;
             this.LBuscar.Text = "Buscar por:";
             this.LBuscar.Visible = false;
+            // 
+            // verFicha
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.verFicha.DefaultCellStyle = dataGridViewCellStyle3;
+            this.verFicha.HeaderText = "";
+            this.verFicha.Name = "verFicha";
+            this.verFicha.ReadOnly = true;
+            // 
+            // idAlumno
+            // 
+            this.idAlumno.HeaderText = "ID";
+            this.idAlumno.Name = "idAlumno";
+            this.idAlumno.ReadOnly = true;
+            this.idAlumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idAlumno.Visible = false;
+            // 
+            // Nombre
+            // 
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dni
+            // 
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.dni.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dni.HeaderText = "DNI";
+            this.dni.Name = "dni";
+            this.dni.ReadOnly = true;
+            this.dni.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // email
+            // 
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.email.DefaultCellStyle = dataGridViewCellStyle6;
+            this.email.HeaderText = "E-mail";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            this.email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // FechaNacimiento
+            // 
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.FechaNacimiento.DefaultCellStyle = dataGridViewCellStyle7;
+            this.FechaNacimiento.HeaderText = "Fecha Nacimiento";
+            this.FechaNacimiento.Name = "FechaNacimiento";
+            this.FechaNacimiento.ReadOnly = true;
+            this.FechaNacimiento.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // sexo
+            // 
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            this.sexo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Estado
+            // 
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ListaAlumnos
             // 
@@ -399,6 +379,9 @@ namespace CapaPresentacion
         private System.Windows.Forms.Label labelCantidad;
         private FontAwesome.Sharp.IconButton BNuevoAlumno;
         private System.Windows.Forms.DataGridView dgvdata;
+        private System.Windows.Forms.Label LnombreColumna;
+        private System.Windows.Forms.TextBox textBoxBusqueda;
+        private System.Windows.Forms.Label LBuscar;
         private System.Windows.Forms.DataGridViewButtonColumn verFicha;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
@@ -407,11 +390,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaNacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn contactoEmergencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Label LnombreColumna;
-        private System.Windows.Forms.TextBox textBoxBusqueda;
-        private System.Windows.Forms.Label LBuscar;
     }
 }

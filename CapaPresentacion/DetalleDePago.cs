@@ -1,14 +1,22 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
+using DocumentFormat.OpenXml.Wordprocessing;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using Document = iTextSharp.text.Document;
+using PageSize = iTextSharp.text.PageSize;
 
 namespace CapaPresentacion
 {
@@ -18,12 +26,14 @@ namespace CapaPresentacion
         private CN_medioPago objCN_MedioPago = new CN_medioPago();
 
         private int idPago;
+        private int idAlumno;
 
-        public DetalleDePago(int id_pago)
+        public DetalleDePago(int id_pago, int id_alumno)
         {
             InitializeComponent();
 
             idPago = id_pago;
+            idAlumno = id_alumno;
 
             cargarFormulario(idPago);
         }
@@ -60,7 +70,7 @@ namespace CapaPresentacion
                     string nombreMes = meses.ContainsKey(item.periodo) ? meses[item.periodo] : "Mes desconocido";
 
                     nroFactura.Text = item.id_pago.id_pago.ToString();
-                    dgvdata.Rows.Add(new object[] { item.id_pago.id_pago, membresia.nombre, nombreMes, "$ " + item.monto, "" });
+                    dgvdata.Rows.Add(new object[] { item.id_pago.id_pago, membresia.nombre, nombreMes, "$ " + item.monto});
                 }
                 
             }
@@ -76,7 +86,7 @@ namespace CapaPresentacion
                     var alumno = listaAlumnos.FirstOrDefault(a => a.id_alumno == item.id_alumno.id_alumno);
                     var medioPago = listaMediosPago.FirstOrDefault(m => m.id_medioPago == item.id_medioPago.id_medioPago);
 
-                    //fecha.Text = item.fecha;
+
                     fecha.Text = DateTime.Parse(item.fecha).ToString("dd/MM/yyyy");
                     nombreCompletoAlumno.Text = alumno.nombre + " " + alumno.apellido;
                     DNIalumno.Text = alumno.dni;
@@ -97,6 +107,94 @@ namespace CapaPresentacion
             dgvdata.AllowUserToDeleteRows = false;
             dgvdata.DefaultCellStyle.SelectionBackColor = dgvdata.DefaultCellStyle.BackColor;
             dgvdata.DefaultCellStyle.SelectionForeColor = dgvdata.DefaultCellStyle.ForeColor;
+        }
+
+        private void BGenerarPDF_Click(object sender, EventArgs e)
+        {
+            // GENERAR ARCHIVO PDF
+            string carpetaGuardado = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "PdfsDePagos");
+
+            // Nombre del archivo con formato de fecha, hora actual, nombre y apellido del alumno
+            string nombreArchivo = $"{DateTime.Now:ddMMyyHHmmss}_{nombreCompletoAlumno.Text}.pdf";
+            string rutaCompleta = Path.Combine(carpetaGuardado, nombreArchivo);
+
+            // Si la carpeta no existe se crea una nueva
+            if (!Directory.Exists(carpetaGuardado))
+            {
+                Directory.CreateDirectory(carpetaGuardado);
+            }
+
+
+
+            // Estructura de la factura
+            string paginaHTML = Properties.Resources.plantilla.ToString();
+
+            // Remplazar los campos de la estructura de la factura
+            paginaHTML = paginaHTML.Replace("@numeroFactura", nroFactura.Text);
+            paginaHTML = paginaHTML.Replace("@dniAlumno", DNIalumno.Text);
+            paginaHTML = paginaHTML.Replace("@nombreAlumno", nombreCompletoAlumno.Text);
+            paginaHTML = paginaHTML.Replace("@fecha", fecha.Text);
+
+            List<Alumno> listaAlumnos = objCN_Alumno.Listar();
+            var alumno = listaAlumnos.FirstOrDefault(a => a.id_alumno == idAlumno);
+
+            List<Usuario> listausuario = new CN_usuario().Listar();
+            var usuario = listausuario.FirstOrDefault(u => u.id_usuario == alumno.id_usuario);
+            paginaHTML = paginaHTML.Replace("@nombreCoach", $"{usuario.nombre} {usuario.apellido}");
+
+            List<PlanEntrenamiento> listaPlanes = new CN_PlanEntrenamiento().Listar();
+            var plan = listaPlanes.FirstOrDefault(p => p.id_plan == alumno.id_plan);
+            paginaHTML = paginaHTML.Replace("@nombrePlan", plan.nombre);
+
+
+            paginaHTML = paginaHTML.Replace("@nombreMedioPago", medioPagoTX.Text);
+
+            paginaHTML = paginaHTML.Replace("@subtotal", subTotal.Text);
+            paginaHTML = paginaHTML.Replace("@recargo", recargo.Text);
+            paginaHTML = paginaHTML.Replace("@montototal", total.Text);
+
+
+            string filas = string.Empty;
+            foreach (DataGridViewRow row in dgvdata.Rows)
+            {
+                filas += "<tr>";
+                filas += "<td>" + row.Cells["Membresia"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Periodo"].Value.ToString() + "</td>";
+                filas += "<td>" + row.Cells["Monto"].Value.ToString() + "</td>";
+                filas += "</tr>";
+            }
+            paginaHTML = paginaHTML.Replace("@filas", filas);
+
+
+            MessageBox.Show("Generando factura...", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                //Archivo de memoria
+                using (FileStream stream = new FileStream(rutaCompleta, FileMode.Create))
+                {
+                    // Guardado del PDF
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25); //tipo hoja y margenes
+
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+                    using (StringReader sr = new StringReader(paginaHTML))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+                }
+
+                // Abrir el archivo PDF automáticamente
+                Process.Start(rutaCompleta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al generar o abrir el PDF: " + ex.Message);
+            }
         }
     }
 }

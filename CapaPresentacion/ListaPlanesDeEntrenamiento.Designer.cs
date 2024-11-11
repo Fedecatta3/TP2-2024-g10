@@ -145,7 +145,7 @@ namespace CapaPresentacion
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvdataListaPlanes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvdataListaPlanes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvdataListaPlanes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvdataListaPlanes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -204,7 +204,6 @@ namespace CapaPresentacion
             this.Editar.HeaderText = "";
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
-            this.Editar.Width = 5;
             // 
             // eliminar
             // 
@@ -215,7 +214,6 @@ namespace CapaPresentacion
             this.eliminar.HeaderText = "";
             this.eliminar.Name = "eliminar";
             this.eliminar.ReadOnly = true;
-            this.eliminar.Width = 5;
             // 
             // idPlan
             // 
@@ -224,7 +222,6 @@ namespace CapaPresentacion
             this.idPlan.ReadOnly = true;
             this.idPlan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idPlan.Visible = false;
-            this.idPlan.Width = 47;
             // 
             // Nombre
             // 
@@ -235,7 +232,6 @@ namespace CapaPresentacion
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 63;
             // 
             // fechaInicio
             // 
@@ -243,7 +239,6 @@ namespace CapaPresentacion
             this.fechaInicio.Name = "fechaInicio";
             this.fechaInicio.ReadOnly = true;
             this.fechaInicio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaInicio.Width = 77;
             // 
             // fechaFin
             // 
@@ -254,7 +249,6 @@ namespace CapaPresentacion
             this.fechaFin.Name = "fechaFin";
             this.fechaFin.ReadOnly = true;
             this.fechaFin.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fechaFin.Width = 66;
             // 
             // series
             // 
@@ -265,7 +259,6 @@ namespace CapaPresentacion
             this.series.Name = "series";
             this.series.ReadOnly = true;
             this.series.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.series.Width = 53;
             // 
             // detallesPlan
             // 
@@ -273,7 +266,6 @@ namespace CapaPresentacion
             this.detallesPlan.Name = "detallesPlan";
             this.detallesPlan.ReadOnly = true;
             this.detallesPlan.Text = "";
-            this.detallesPlan.Width = 75;
             // 
             // Estado
             // 
@@ -284,7 +276,6 @@ namespace CapaPresentacion
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             this.Estado.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Estado.Width = 57;
             // 
             // LnombreColumna
             // 

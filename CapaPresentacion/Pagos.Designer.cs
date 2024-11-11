@@ -47,6 +47,7 @@ namespace CapaPresentacion
             this.dgvdata = new System.Windows.Forms.DataGridView();
             this.verFactura = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -196,6 +197,7 @@ namespace CapaPresentacion
             this.dgvdata.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.verFactura,
             this.idPago,
+            this.idAlumno,
             this.alumno,
             this.fecha,
             this.subTotal,
@@ -247,6 +249,14 @@ namespace CapaPresentacion
             this.idPago.ReadOnly = true;
             this.idPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.idPago.Visible = false;
+            // 
+            // idAlumno
+            // 
+            this.idAlumno.HeaderText = "idAlumno";
+            this.idAlumno.Name = "idAlumno";
+            this.idAlumno.ReadOnly = true;
+            this.idAlumno.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idAlumno.Visible = false;
             // 
             // alumno
             // 
@@ -331,6 +341,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridView dgvdata;
         private System.Windows.Forms.DataGridViewButtonColumn verFactura;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;

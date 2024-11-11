@@ -66,7 +66,7 @@ namespace CapaPresentacion
                 // Obtener el ID del pago de la fila seleccionada
                 int idPago = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idPago"].Value);
 
-                using (var modal = new DetalleDePago(idPago))
+                using (var modal = new DetalleDePago(idPago, id_alumno))
                 {
                     // Mostrar el formulario como un modal
                     var resultado = modal.ShowDialog();
