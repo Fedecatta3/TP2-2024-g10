@@ -34,9 +34,10 @@ namespace CapaPresentacion
             {
                 if (item.id_rol.id_rol == 3 && item.id_usuario != usuarioActual.id_usuario) //solo lista usuarios 'coach' y el registro del usuario actual saltea
                 {
+                    DateTime fechaNacimiento = DateTime.Parse(item.fecha_nacimiento);
 
                     dgvdataAgregarCoach.Rows.Add(new object[]{item.id_usuario,item.nombre, item.apellido,item.dni,
-                        item.email,item.fecha_nacimiento,item.telefono});
+                        item.email,fechaNacimiento.ToString("dd/MM/yyyy"),item.telefono});
                 }
             }
 

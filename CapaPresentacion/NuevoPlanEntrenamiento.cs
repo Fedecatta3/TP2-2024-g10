@@ -82,8 +82,10 @@ namespace CapaPresentacion
 
         private void NuevoPlanEntrenamiento_Load(object sender, EventArgs e)
         {
+            DateTime fechaNacimiento = DateTime.Parse(usuarioActual.fecha_nacimiento);
+
             dataGridCoachSeleccionados.Rows.Add(" ", usuarioActual.id_usuario, usuarioActual.nombre, usuarioActual.apellido,
-                usuarioActual.dni, usuarioActual.email, usuarioActual.fecha_nacimiento, usuarioActual.telefono);
+                usuarioActual.dni, usuarioActual.email, fechaNacimiento.ToString("dd/MM/yyyy"), usuarioActual.telefono);
         }
 
         private void dataGridCoachSeleccionados_CellContentClick(object sender, DataGridViewCellEventArgs e)

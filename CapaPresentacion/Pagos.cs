@@ -35,11 +35,13 @@ namespace CapaPresentacion
             List<Pago> listaPagos = new CN_Pago().ListarPagos();
             foreach(Pago item in listaPagos)
             {
+                DateTime fechaPago = DateTime.Parse(item.fecha);
+
                 var alumno = listaAlumnos.FirstOrDefault(a => a.id_alumno == item.id_alumno.id_alumno);
                 var medioPago = listaMediosPago.FirstOrDefault(m => m.id_medioPago == item.id_medioPago.id_medioPago);
 
                 dgvdata.Rows.Add(new object[]{" Ver factura ", item.id_pago, alumno.id_alumno, alumno.nombre + " " + alumno.apellido,
-                                    item.fecha, "$ " + item.cantidad, "+ $ " + item.recargo, "$ " + item.total, medioPago.nombre});
+                                   fechaPago.ToString("dd/MM/yyyy"), "$ " + item.cantidad, "+ $ " + item.recargo, "$ " + item.total, medioPago.nombre});
             }
 
             labelCantPagos.Text = $"{dgvdata.Rows.Count} pagos";
@@ -107,7 +109,7 @@ namespace CapaPresentacion
                     var alumno = listaAlumnos.FirstOrDefault(a => a.id_alumno == item.id_alumno.id_alumno);
                     var medioPago = listaMediosPago.FirstOrDefault(m => m.id_medioPago == item.id_medioPago.id_medioPago);
 
-                    dgvdata.Rows.Add(new object[]{" Ver factura ",item.id_pago,alumno.nombre + " " + alumno.apellido,item.fecha,"$ " + item.cantidad,
+                    dgvdata.Rows.Add(new object[]{" Ver factura ",item.id_pago, alumno.id_alumno, alumno.nombre + " " + alumno.apellido,item.fecha,"$ " + item.cantidad,
                         "+ $ " + item.recargo,"$ " + item.total,medioPago.nombre});
                 }
             }

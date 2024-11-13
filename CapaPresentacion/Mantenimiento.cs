@@ -28,6 +28,8 @@ namespace CapaPresentacion
         // Método para cargar membresías en el DataGridView
         private void CargarMembresias()
         {
+            dataGridMembresias.Rows.Clear();
+
             List<Membresia> listaMembresias = objCN_Membresia.Listar();
 
             foreach(Membresia item in listaMembresias)
@@ -40,6 +42,8 @@ namespace CapaPresentacion
         // Método para cargar medios de pago en el DataGridView
         private void CargarMediosDePago()
         {
+            dataGridMediosPago.Rows.Clear();
+
             List<MedioPago> listaMediosDePago = objCN_MedioPago.Listar();
 
             foreach(MedioPago item in listaMediosDePago)
@@ -54,13 +58,10 @@ namespace CapaPresentacion
             //Modal para agregar nueva membresia
             using (var modal = new NuevaMembresia())
             {
+
+                modal.MembresiaRegistrada += CargarMembresias; // Evento
                 var resultado = modal.ShowDialog();
 
-                // Si se agregó una nueva membresía, actualizar el DataGridView
-                if (resultado == DialogResult.OK)
-                {
-                    CargarMembresias(); // Actualizar la lista de membresías
-                }
             }
         }
 
@@ -69,13 +70,10 @@ namespace CapaPresentacion
             //Modal para agregar nuevo medio de pago
             using (var modal = new NuevoMedioPago())
             {
+
+                modal.MedioDePagoRegistrado += CargarMediosDePago; // Evento
                 var resultado = modal.ShowDialog();
 
-                // Si se agregó un nuevo medio de pago, actualizar el DataGridView
-                if (resultado == DialogResult.OK)
-                {
-                    CargarMediosDePago(); // Actualizar la lista de medios de pago
-                }
             }
         }
 
@@ -99,6 +97,8 @@ namespace CapaPresentacion
                 {
                     // Pasar los datos al formulario 
                     modal.cargarDatosMembresia(objMembresia);
+
+                    modal.MembresiaRegistrada += CargarMembresias; // Evento
 
                     // Mostrar el formulario como un modal
                     var resultado = modal.ShowDialog();
@@ -129,6 +129,8 @@ namespace CapaPresentacion
                 {
                     // Pasar los datos al formulario 
                     modal.cargarDatosMedioPago(objMedioPago);
+
+                    modal.MedioDePagoRegistrado += CargarMediosDePago; // Evento
 
                     // Mostrar el formulario como un modal
                     var resultado = modal.ShowDialog();

@@ -15,6 +15,8 @@ namespace CapaPresentacion
 {
     public partial class NuevaMembresia : Form
     {
+        public event Action MembresiaRegistrada;
+
         public NuevaMembresia()
         {
             InitializeComponent();
@@ -67,6 +69,8 @@ namespace CapaPresentacion
                     else
                     {
                         MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MembresiaRegistrada?.Invoke();
+
                         this.Close();
                     }
                 }
@@ -81,6 +85,8 @@ namespace CapaPresentacion
                     else
                     {
                         MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MembresiaRegistrada?.Invoke();
+
                         this.Close();
                     }
                 }

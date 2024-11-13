@@ -48,9 +48,24 @@ namespace CapaPresentacion
                 }
                 else
                 {
+                    // Verifica si el alumno adeuda cuotas
+                    bool cuotaAlDia = objCN_Alumno.VerificarCuotaAlumno(item.id_alumno, out int mesesAdeudados, out string mensaje);
+
+                    var row = dgvdata.Rows.Add(new object[]{
+                        "Ver ficha", item.id_alumno, item.nombre, item.apellido, item.dni,
+                        item.email, item.fecha_nacimiento.ToString("dd/MM/yyyy"), item.telefono, item.sexo, item.estado == true ? "Activo" : "Inactivo"
+                    });
+
+                    // Cambia el color de la fila si adeuda cuota
+                    if (!cuotaAlDia)
+                    {
+                        dgvdata.Rows[row].DefaultCellStyle.BackColor = Color.MistyRose; // Cambia el color de la fila si adeuda cuota
+                    }
+
+                    /*
                     dgvdata.Rows.Add(new object[]{"Ver ficha",item.id_alumno,item.nombre, item.apellido,item.dni,
                     item.email,item.fecha_nacimiento.ToString("dd/MM/yyyy"),item.telefono, item.sexo, item.estado == true ? "Activo" : "Inactivo"});
-
+                    */
                 }
             }
 
@@ -74,6 +89,7 @@ namespace CapaPresentacion
             if (usuarioActual.id_rol.descripcion == "Coach")
             {
                 BNuevoAlumno.Visible = false;
+                groupBox1.Visible = false;
             }
 
             // Cambia el color de texto de la fila seleccionada en el DataGridView
@@ -92,10 +108,10 @@ namespace CapaPresentacion
                 int idAlumno = Convert.ToInt32(dgvdata.Rows[e.RowIndex].Cells["idAlumno"].Value);
 
                 //Modal para ver ficha del alumno
-                using (var modal = new FichaAlumno(idAlumno))
+                using (var modal = new FichaAlumno(idAlumno, usuarioActual))
                 {
                     modal.AlumnoActualizado += () => CargarAlumnos(); // evento para actualizar dataGrid
-                    modal.ShowDialog();
+                    var resultado = modal.ShowDialog();
                 }
             }
         }

@@ -45,13 +45,15 @@ namespace CapaPresentacion
             {
                 if(item.id_alumno.id_alumno == id_alumno)
                 {
+                    DateTime fechaPago = DateTime.Parse(item.fecha);
+
                     var alumno = listaAlumnos.FirstOrDefault(a => a.id_alumno == item.id_alumno.id_alumno);
                     var medioPago = listaMediosPago.FirstOrDefault(m => m.id_medioPago == item.id_medioPago.id_medioPago);
 
                     labelAlumno.Text = alumno.nombre + " " + alumno.apellido;
 
                     dgvdata.Rows.Add(new object[]{" Ver factura ", item.id_pago,
-                                    item.fecha, "$ " + item.cantidad, "+ $ " + item.recargo, "$ " + item.total, medioPago.nombre});
+                                    fechaPago.ToString("dd/MM/yyyy"), "$ " + item.cantidad, "+ $ " + item.recargo, "$ " + item.total, medioPago.nombre});
                 }
                 
             }

@@ -54,30 +54,38 @@ namespace CapaPresentacion
                 {
                     if (item.id_rol.id_rol != 1 && item.id_rol.id_rol != 2)
                     {
+                        DateTime fechaNacimiento = DateTime.Parse(item.fecha_nacimiento);
+
                         // Verifica si el usuario está activo o inactivo
                         string accion = item.estado ? "Eliminar" : "Restaurar";
 
                         dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
-                        item.email,item.fecha_nacimiento,item.telefono,"Ver horario",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
+                        item.email,fechaNacimiento.ToString("dd/MM/yyyy"),item.telefono,"Ver horario",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
                     }
                 }
 
                 labelCantUsuarios.Text = $"{dgvdata.Rows.Count} usuarios";
             }
-            else //para usuario Propietario se listan todos 
+            else //para usuario Propietario se listan administradores y propietarios 
             {
                 List<Usuario> listausuario = new CN_usuario().Listar();
                 dgvdata.Rows.Clear(); // Limpia el DataGrid antes de actualizar
                 foreach (Usuario item in listausuario)
                 {
-                    // Verifica si el usuario está activo o inactivo
-                    string accion = item.estado ? "Eliminar" : "Restaurar";
+                    if (item.id_rol.id_rol == 1 || item.id_rol.id_rol == 2)
+                    {
+                        DateTime fechaNacimiento = DateTime.Parse(item.fecha_nacimiento);
 
-                    dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
-                    item.email,item.fecha_nacimiento,item.telefono,"Ver horario",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
+                        // Verifica si el usuario está activo o inactivo
+                        string accion = item.estado ? "Eliminar" : "Restaurar";
+
+                        dgvdata.Rows.Add(new object[]{"Editar",accion,item.id_usuario,item.nombre, item.apellido,item.dni,
+                        item.email,fechaNacimiento.ToString("dd/MM/yyyy"),item.telefono,"Ver horario",item.id_rol.descripcion,item.estado == true ? "Activo" : "Inactivo", item.contraseña });
+                    }
+                        
                 }
 
-                labelCantUsuarios.Text = $"{listausuario.Count} usuarios";
+                labelCantUsuarios.Text = $"{dgvdata.Rows.Count} usuarios";
             }
         }
 

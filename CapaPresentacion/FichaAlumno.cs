@@ -19,11 +19,22 @@ namespace CapaPresentacion
         private CN_Alumno objCN_Alumno = new CN_Alumno(); // Capa de negocio para alumnos
 
         public event Action AlumnoActualizado; // Evento para notificar al formulario principal
+        private Usuario usuarioActual;
 
-        public FichaAlumno(int idAlumno)
+        public FichaAlumno(int idAlumno, Usuario usuario)
         {
             InitializeComponent();
             alumno = idAlumno;
+
+            usuarioActual = usuario;
+            if (usuarioActual.id_rol.id_rol == 3)
+            {
+                BModificarAlumno.Visible = false;
+                BListaDePagos.Visible = false;
+                BCobrarCuota.Visible = false;
+                BRestaurarAlumno.Visible = false;
+                BbajaAlumno.Visible = false;
+            }
         }
 
         private void BCobrarCuota_Click(object sender, EventArgs e)
@@ -76,12 +87,12 @@ namespace CapaPresentacion
             {
                 if (item.id_alumno == alumno)
                 {
-                    if(item.estado == true)
+                    if(item.estado == true && usuarioActual.id_rol.id_rol == 2)
                     {
                         BbajaAlumno.Visible = true;
                         BRestaurarAlumno.Visible = false;
                     }
-                    else
+                    else if (item.estado == false && usuarioActual.id_rol.id_rol == 2)
                     {
                         BRestaurarAlumno.Visible = true;
                         BbajaAlumno.Visible = false;

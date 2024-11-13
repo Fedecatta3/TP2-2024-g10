@@ -37,8 +37,6 @@ namespace CapaPresentacion
             this.labelCantPagos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvdata = new System.Windows.Forms.DataGridView();
-            this.labelAlumno = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.verFactura = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +44,8 @@ namespace CapaPresentacion
             this.recargo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medioPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelAlumno = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdata)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +80,7 @@ namespace CapaPresentacion
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvdata.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvdata.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -127,6 +127,59 @@ namespace CapaPresentacion
             this.dgvdata.TabIndex = 55;
             this.dgvdata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdata_CellContentClick);
             // 
+            // verFactura
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.verFactura.DefaultCellStyle = dataGridViewCellStyle3;
+            this.verFactura.HeaderText = "";
+            this.verFactura.Name = "verFactura";
+            this.verFactura.ReadOnly = true;
+            // 
+            // idPago
+            // 
+            this.idPago.HeaderText = "idPago";
+            this.idPago.Name = "idPago";
+            this.idPago.ReadOnly = true;
+            this.idPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.idPago.Visible = false;
+            // 
+            // fecha
+            // 
+            this.fecha.HeaderText = "Fecha de pago";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
+            this.fecha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // subTotal
+            // 
+            this.subTotal.HeaderText = "Sub Total";
+            this.subTotal.Name = "subTotal";
+            this.subTotal.ReadOnly = true;
+            this.subTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // recargo
+            // 
+            this.recargo.HeaderText = "Recargo";
+            this.recargo.Name = "recargo";
+            this.recargo.ReadOnly = true;
+            this.recargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Total";
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            this.total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // medioPago
+            // 
+            this.medioPago.HeaderText = "Medio de pago";
+            this.medioPago.Name = "medioPago";
+            this.medioPago.ReadOnly = true;
+            this.medioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // labelAlumno
             // 
             this.labelAlumno.AutoSize = true;
@@ -148,66 +201,6 @@ namespace CapaPresentacion
             this.label2.Size = new System.Drawing.Size(69, 20);
             this.label2.TabIndex = 56;
             this.label2.Text = "Alumno:";
-            // 
-            // verFactura
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.verFactura.DefaultCellStyle = dataGridViewCellStyle3;
-            this.verFactura.HeaderText = "";
-            this.verFactura.Name = "verFactura";
-            this.verFactura.ReadOnly = true;
-            this.verFactura.Width = 5;
-            // 
-            // idPago
-            // 
-            this.idPago.HeaderText = "idPago";
-            this.idPago.Name = "idPago";
-            this.idPago.ReadOnly = true;
-            this.idPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.idPago.Visible = false;
-            this.idPago.Width = 58;
-            // 
-            // fecha
-            // 
-            this.fecha.HeaderText = "Fecha de pago";
-            this.fecha.Name = "fecha";
-            this.fecha.ReadOnly = true;
-            this.fecha.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.fecha.Width = 67;
-            // 
-            // subTotal
-            // 
-            this.subTotal.HeaderText = "Sub Total";
-            this.subTotal.Name = "subTotal";
-            this.subTotal.ReadOnly = true;
-            this.subTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.subTotal.Width = 65;
-            // 
-            // recargo
-            // 
-            this.recargo.HeaderText = "Recargo";
-            this.recargo.Name = "recargo";
-            this.recargo.ReadOnly = true;
-            this.recargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.recargo.Width = 67;
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Total";
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
-            this.total.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.total.Width = 45;
-            // 
-            // medioPago
-            // 
-            this.medioPago.HeaderText = "Medio de pago";
-            this.medioPago.Name = "medioPago";
-            this.medioPago.ReadOnly = true;
-            this.medioPago.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.medioPago.Width = 67;
             // 
             // ListaPagosPorAlumno
             // 

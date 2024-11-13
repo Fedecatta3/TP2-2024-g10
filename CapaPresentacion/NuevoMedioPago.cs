@@ -15,6 +15,7 @@ namespace CapaPresentacion
 {
     public partial class NuevoMedioPago : Form
     {
+        public event Action MedioDePagoRegistrado;
         public NuevoMedioPago()
         {
             InitializeComponent();
@@ -65,6 +66,8 @@ namespace CapaPresentacion
                     else
                     {
                         MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MedioDePagoRegistrado?.Invoke();
+
                         this.Close();
                     }
                 }
@@ -79,6 +82,8 @@ namespace CapaPresentacion
                     else
                     {
                         MessageBox.Show(mensaje, "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MedioDePagoRegistrado?.Invoke();
+
                         this.Close();
                     }
                 }

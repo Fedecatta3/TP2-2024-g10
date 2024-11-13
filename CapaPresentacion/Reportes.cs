@@ -41,16 +41,6 @@ namespace CapaPresentacion
             dataGridView.AutoGenerateColumns = true; // Generar columnas automáticamente
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Seleccionar filas completas
 
-            // Agregar los tipos de reportes al ComboBox
-            /*comboBoxReportes.Items.Clear();
-            string[] reportTypes = { "Pagos", "Alumnos", "Coachs", "Planes de entrenamiento" };
-            foreach (string tipo in reportTypes)
-            {
-                //int count = ObtenerCantidad(tipo);
-                comboBoxReportes.Items.Add($"{tipo}");
-            }*/
-
-
             // Cargar los reportes en el ComboBox
             comboBoxReportes.Items.Clear();
             string[] reportTypes = { "Alumnos activos", "Lista de coachs", "Total ingresos mensuales",
@@ -70,7 +60,6 @@ namespace CapaPresentacion
             comboBoxReportes.SelectedIndexChanged += comboBoxReportes_SelectedIndexChanged;
 
             // Actualizar contadores al cargar el formulario
-            ActualizarContadorPagos();
             ActualizarContadorCoachs();
             ActualizarContadorAlumnos();
             ActualizarContadorPlanes();
@@ -119,78 +108,6 @@ namespace CapaPresentacion
             return count;
         }
 
-        // Devuelve el total de ingresos
-        private decimal ObtenerCantidadPagos()
-        {
-            decimal total = 0;
-            string query = "SELECT SUM(total) FROM Pago";
-
-            using (SqlCommand command = new SqlCommand(query, connection))
-            {
-                try
-                {
-                    connection.Open();
-                    object result = command.ExecuteScalar();
-                    total = (result == DBNull.Value) ? 0 : Convert.ToDecimal(result);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al obtener el total de ingresos: " + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
-
-            return total;
-        }
-
-
-        private void CargarDatos(string tipo)
-        {
-            string query = "";
-            switch (tipo)
-            {
-                case "Pagos":
-                    query = "SELECT * FROM Pago"; // Cambia esto si necesitas campos específicos
-                    break;
-                case "Alumnos":
-                    query = "SELECT nombre, apellido, email, telefono, foto, dni, fecha_nacimiento, contacto_emergencia, sexo, observaciones, estado FROM Alumno"; ; // Cambia esto si necesitas campos específicos
-                    break;
-                case "Coachs":
-                    query = "SELECT nombre, email, telefono, dni, fecha_nacimiento, estado FROM Usuario WHERE id_rol = 3"; ; // Cambia esto si necesitas campos específicos
-                    break;
-                case "Planes":
-                    query = "SELECT nombre, fechaInicio, fechaFin, cantSeries, estado FROM PlanEntrenamiento"; // Cambia esto si necesitas campos específicos
-                    break;
-            }
-
-            using (SqlDataAdapter adapter = new SqlDataAdapter(query, connection))
-            {
-                DataTable dataTable = new DataTable();
-                try
-                {
-                    connection.Open();
-                    adapter.Fill(dataTable);
-                    dataGridView.DataSource = dataTable; // Asignar el DataTable al DataGridView
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al cargar datos: " + ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
-        }
-
-        private void ActualizarContadorPagos()
-        {
-            decimal totalIngresosDecimal = ObtenerCantidadPagos(); // Obtener cantidad de ingresos
-            totalIngresos.Text = $" {totalIngresosDecimal:C}"; // Actualiza el texto del Label
-        }
 
         private void ActualizarContadorCoachs()
         {
@@ -219,10 +136,6 @@ namespace CapaPresentacion
 
         private void comboBoxReportes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Cuando se selecciona un elemento en el ComboBox, llenar el DataGridView
-            /*string tipo = comboBoxReportes.SelectedItem.ToString().Split(' ')[0]; // Obtener solo el nombre del tipo
-            CargarDatos(tipo);*/
-
             // Obtener el reporte seleccionado
             string reporteSeleccionado = comboBoxReportes.SelectedItem.ToString();
 
@@ -299,7 +212,7 @@ namespace CapaPresentacion
             // Cargar los registros
             foreach (ReporteAlumnosActivos item in lista)
             {
-                dataGridView.Rows.Add(new object[] {item.Alumno, item.Dni, item.FechaNacimiento, item.Sexo,
+                dataGridView.Rows.Add(new object[] {item.Alumno, item.Dni, item.FechaNacimiento.ToString("dd/MM/yyyy"), item.Sexo,
                                  item.Email, item.Telefono, item.Membresia, item.PlanEntrenamiento, item.CoachAcargo});
             }
         }
@@ -323,7 +236,7 @@ namespace CapaPresentacion
             // Cargar los registros
             foreach (ReporteCoachs item in lista)
             {
-                dataGridView.Rows.Add(new object[] {item.Coach, item.Dni, item.FechaNacimiento,
+                dataGridView.Rows.Add(new object[] {item.Coach, item.Dni, item.FechaNacimiento.ToString("dd/MM/yyyy"),
                                   item.Email, item.Telefono, item.CantidadAlumnos, item.CantidadPlanesEntrenamiento});
             }
         }
@@ -347,7 +260,7 @@ namespace CapaPresentacion
             // Cargar los registros
             foreach (ReporteDetallePlanesEntrenamiento item in lista)
             {
-                dataGridView.Rows.Add(new object[] {item.PlanEntrenamiento, item.CantSeries, item.FechaInicio, item.FechaFin,
+                dataGridView.Rows.Add(new object[] {item.PlanEntrenamiento, item.CantSeries, item.FechaInicio.ToString("dd/MM/yyyy"), item.FechaFin.ToString("dd/MM/yyyy"),
                                                     item.CantidadEjercicios, item.CantidadAlumnos, item.CantidadCoachsAsociados});
             }
         }
@@ -471,7 +384,7 @@ namespace CapaPresentacion
             // Cargar los registros
             foreach (ReportePagosPorAlumno item in lista)
             {
-                dataGridView.Rows.Add(new object[] { item.Alumno, item.Fecha, "$ " + item.Total, item.MedioDePago, item.Membresia });
+                dataGridView.Rows.Add(new object[] { item.Alumno, item.Fecha.ToString("dd/MM/yyyy"), "$ " + item.Total, item.MedioDePago, item.Membresia });
             }
         }
 

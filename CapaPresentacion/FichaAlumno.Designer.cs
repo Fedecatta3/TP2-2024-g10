@@ -95,7 +95,7 @@ namespace CapaPresentacion
             this.labelObservacion.AutoSize = true;
             this.labelObservacion.Font = new System.Drawing.Font("Microsoft PhagsPa", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelObservacion.ForeColor = System.Drawing.Color.Black;
-            this.labelObservacion.Location = new System.Drawing.Point(118, 234);
+            this.labelObservacion.Location = new System.Drawing.Point(6, 254);
             this.labelObservacion.Name = "labelObservacion";
             this.labelObservacion.Size = new System.Drawing.Size(67, 20);
             this.labelObservacion.TabIndex = 30;
@@ -475,13 +475,13 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 445);
-            this.Controls.Add(this.BRestaurarAlumno);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.BbajaAlumno);
             this.Controls.Add(this.BCobrarCuota);
             this.Controls.Add(this.BListaDePagos);
             this.Controls.Add(this.BModificarAlumno);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.BRestaurarAlumno);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FichaAlumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

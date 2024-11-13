@@ -42,8 +42,8 @@ namespace CapaPresentacion
                 {
                     string accion = item.estado ? "Eliminar" : "Restaurar";
 
-                    dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio,
-                    item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
+                    dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio.ToString("dd/MM/yyyy"),
+                    item.fechaFin.ToString("dd/MM/yyyy"), item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
                 }
 
                 dgvdataListaPlanes.Columns["editar"].Visible = false;
@@ -60,8 +60,8 @@ namespace CapaPresentacion
                 {
                     string accion = item.estado ? "Eliminar" : "Restaurar";
 
-                    dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio,
-                    item.fechaFin, item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
+                    dgvdataListaPlanes.Rows.Add(new object[] {"Editar", accion, item.id_plan, item.nombre, item.fechaInicio.ToString("dd/MM/yyyy"),
+                    item.fechaFin.ToString("dd/MM/yyyy"), item.cantSeries, "Ver detalles", item.estado == true ? "Activo" : "Inactivo" });
                 }
             }
             
