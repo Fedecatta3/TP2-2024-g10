@@ -1,0 +1,13 @@
+Contraseñas Usuarios GymMaster
+
+----- Usuario Propietario ------
+Dni: 12345678
+contraseña: propietario
+
+----- Usuario Administrador ------
+Dni: 44444444
+contraseña: administrador
+
+----- Usuario Coach ------
+Dni: 55555555
+contraseña: profesor
